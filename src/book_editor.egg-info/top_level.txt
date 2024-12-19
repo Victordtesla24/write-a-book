@@ -1,0 +1,5 @@
+book_editor
+components
+data
+models
+utils

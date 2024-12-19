@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Editor</title>
+    <style>
+        :root {
+            --primary-color: #1e88e5;
+            --secondary-color: #64b5f6;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .editor {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 400px;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            line-height: 1.6;
+            resize: vertical;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Book Editor</h1>
+        <div class="editor">
+            <div class="toolbar">
+                <button onclick="saveDocument()">Save</button>
+                <button onclick="newDocument()">New</button>
+                <button onclick="exportDocument()">Export</button>
+            </div>
+            <textarea id="editor-content" placeholder="Start writing here..."></textarea>
+            <div class="status-bar">
+                <span id="word-count">Words: 0</span>
+                <span id="last-saved">Last saved: Never</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateWordCount() {
+            const content = document.getElementById('editor-content').value;
+            const wordCount = content.trim() ? content.trim().split(/\s+/).length : 0;
+            document.getElementById('word-count').textContent = `Words: ${wordCount}`;
+        }
+
+        function saveDocument() {
+            const timestamp = new Date().toLocaleTimeString();
+            document.getElementById('last-saved').textContent = `Last saved: ${timestamp}`;
+        }
+
+        function newDocument() {
+            if (confirm('Start a new document? Any unsaved changes will be lost.')) {
+                document.getElementById('editor-content').value = '';
+                updateWordCount();
+            }
+        }
+
+        function exportDocument() {
+            const content = document.getElementById('editor-content').value;
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'document.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        document.getElementById('editor-content').addEventListener('input', updateWordCount);
+    </script>
+</body>
+</html>
