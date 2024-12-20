@@ -1,6 +1,6 @@
 # Project Status Report
 
-Last Updated: Fri Dec 20 14:16:35 AEDT 2024
+Last Updated: Fri Dec 20 14:55:44 AEDT 2024
 
 ## Directory Structure
 
@@ -16,6 +16,7 @@ Last Updated: Fri Dec 20 14:16:35 AEDT 2024
 │   ├── auto_fix.log.md.tmp
 │   ├── auto_fix.log.pylint
 │   ├── lint_report.log
+│   ├── markdown_errors.log
 │   ├── verify_and_fix.log
 │   ├── verify_and_fix.log.1
 │   └── verify_and_fix.log.2
@@ -36,8 +37,6 @@ Last Updated: Fri Dec 20 14:16:35 AEDT 2024
 │   │   ├── config
 │   │   ├── core
 │   │   ├── docs
-│   │   ├── scripts
-│   │   ├── static
 │   │   ├── templates
 │   │   ├── README.md
 │   │   ├── __init__.py
@@ -160,69 +159,23 @@ Last Updated: Fri Dec 20 14:16:35 AEDT 2024
 ├── streamlit_app.py
 └── verify_and_fix.log
 
-39 directories, 115 files
+37 directories, 116 files
 ```
 
 ## Recent Changes
 
-- [2024-12-20 12:11:44] Update project files
-- [2024-12-20 11:40:23] Update project files
-- [2024-12-20 11:39:32] Update project files
-- [2024-12-20 04:39:16] Update project files
-- [2024-12-20 04:37:04] Update project files
-
+- Initial commit
 ## Lint Report
 
 ```shell
-************* Module src.book_editor.app.core.editor
-src/book_editor/app/core/editor.py:47:4: W0237: Parameter 'o' has been renamed to 'obj' in overriding 'DateTimeEncoder.default' method (arguments-renamed)
-src/book_editor/app/core/editor.py:81:15: W0718: Catching too general exception Exception (broad-exception-caught)
-src/book_editor/app/core/editor.py:82:12: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-src/book_editor/app/core/editor.py:130:15: W0718: Catching too general exception Exception (broad-exception-caught)
-src/book_editor/app/core/editor.py:131:12: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-src/book_editor/app/core/editor.py:146:17: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-src/book_editor/app/core/editor.py:153:12: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-src/book_editor/app/core/editor.py:179:15: W0718: Catching too general exception Exception (broad-exception-caught)
-src/book_editor/app/core/editor.py:165:17: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-src/book_editor/app/core/editor.py:180:12: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-src/book_editor/app/core/editor.py:190:15: W0718: Catching too general exception Exception (broad-exception-caught)
-src/book_editor/app/core/editor.py:191:12: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-src/book_editor/app/core/editor.py:229:15: W0718: Catching too general exception Exception (broad-exception-caught)
-src/book_editor/app/core/editor.py:230:12: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-src/book_editor/app/core/editor.py:249:15: W0718: Catching too general exception Exception (broad-exception-caught)
-src/book_editor/app/core/editor.py:250:12: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-************* Module tests.test_app_config
-tests/test_app_config.py:4:0: W0611: Unused import pytest (unused-import)
 ************* Module tests.test_core_editor_extended
 tests/test_core_editor_extended.py:23:11: W0212: Access to a protected member _autosave_enabled of a client class (protected-access)
-************* Module tests.test_app_core
-tests/test_app_core.py:137:38: W0613: Unused argument 'mock_sidebar' (unused-argument)
-************* Module tests.test_text_editor_extended
-tests/test_text_editor_extended.py:21:15: W0212: Access to a protected member _undo_stack of a client class (protected-access)
-tests/test_text_editor_extended.py:22:15: W0212: Access to a protected member _redo_stack of a client class (protected-access)
-tests/test_text_editor_extended.py:36:12: W0212: Access to a protected member _undo_stack of a client class (protected-access)
-tests/test_text_editor_extended.py:138:15: W0212: Access to a protected member _undo_stack of a client class (protected-access)
-tests/test_text_editor_extended.py:142:15: W0212: Access to a protected member _undo_stack of a client class (protected-access)
-tests/test_text_editor_extended.py:143:15: W0212: Access to a protected member _redo_stack of a client class (protected-access)
-tests/test_text_editor_extended.py:148:15: W0212: Access to a protected member _undo_stack of a client class (protected-access)
-tests/test_text_editor_extended.py:153:15: W0212: Access to a protected member _redo_stack of a client class (protected-access)
-************* Module tests.test_book
-tests/test_book.py:13:11: C1803: "book.metadata == {}" can be simplified to "not book.metadata", if it is strictly a sequence, as an empty dict is falsey (use-implicit-booleaness-not-comparison)
-************* Module tests.test_main
-tests/test_main.py:69:4: C0415: Import outside toplevel (src.book_editor.main.main) (import-outside-toplevel)
 ************* Module tests.test_core_editor
 tests/test_core_editor.py:113:11: W0212: Access to a protected member _autosave_enabled of a client class (protected-access)
-tests/test_core_editor.py:186:8: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
-tests/test_core_editor.py:186:8: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-tests/test_core_editor.py:193:4: W0212: Access to a protected member _metadata of a client class (protected-access)
-tests/test_core_editor.py:198:18: W0212: Access to a protected member _html_content of a client class (protected-access)
-tests/test_core_editor.py:203:11: W0212: Access to a protected member _html_content of a client class (protected-access)
-tests/test_core_editor.py:289:4: W0212: Access to a protected member _metadata of a client class (protected-access)
-tests/test_core_editor.py:290:4: W0212: Access to a protected member _metadata of a client class (protected-access)
-************* Module tests.test_settings
-tests/test_settings.py:4:0: W0611: Unused import pytest (unused-import)
+tests/test_core_editor.py:288:4: W0212: Access to a protected member _metadata of a client class (protected-access)
+tests/test_core_editor.py:291:4: W0212: Access to a protected member _metadata of a client class (protected-access)
 
 ------------------------------------------------------------------
-Your code has been rated at 9.81/10 (previous run: 9.81/10, +0.00)
+Your code has been rated at 9.98/10 (previous run: 9.98/10, +0.00)
 
 ```

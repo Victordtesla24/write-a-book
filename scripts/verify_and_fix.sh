@@ -332,31 +332,115 @@ generate_commit_message() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $message"
 }
 
+# Function to setup git configuration
+setup_git_config() {
+    log "Setting up git configuration..."
+    if [ -d ".git" ]; then
+        # Configure git if not already configured
+        if ! git config --get user.email >/dev/null; then
+            git config --global user.email "cline@example.com"
+        fi
+        if ! git config --get user.name >/dev/null; then
+            git config --global user.name "Cline"
+        fi
+    fi
+}
+
+# Function to cleanup git state
+cleanup_git() {
+    log "Cleaning up git state..."
+    if [ -d ".git" ]; then
+        # Reset any staged changes that weren't committed
+        git reset >/dev/null 2>&1 || true
+        # Clean untracked files
+        git clean -fd >/dev/null 2>&1 || true
+    fi
+}
+
 # Function to setup GitHub repository
 setup_github() {
     log "Setting up GitHub repository..."
     if [ -d ".git" ]; then
-        git add .
-        commit_msg=$(generate_commit_message)
-        git commit -m "$commit_msg"
-        git branch -M main
+        # Setup git config first
+        setup_git_config
+        
+        # Add all changes
+        git add . || {
+            error_log "Failed to stage changes"
+            cleanup_git
+            return 1
+        }
+        
+        # Check if there are any changes to commit
+        if ! git diff --cached --quiet; then
+            # Generate timestamp
+            timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+            
+            # Generate commit message based on actual changes
+            commit_msg=$(git diff --cached --name-status | awk '
+                BEGIN { OFS=". "; python=""; markdown=""; tests="" }
+                /^[AM].*\.py$/ && $2 !~ /^tests\// { python = python $2 " " }
+                /^[AM].*\.md$/ { markdown = markdown $2 " " }
+                /^[AM].*test.*\.py$/ { tests = tests $2 " " }
+                END {
+                    msg = ""
+                    if (python != "") msg = msg "Update Python files: " python
+                    if (markdown != "") msg = msg "Update documentation: " markdown
+                    if (tests != "") msg = msg "Update tests: " tests
+                    if (msg == "") msg = "Update project files"
+                    print msg
+                }')
+            
+            # Combine timestamp and message
+            commit_msg="[$timestamp] $commit_msg"
+            
+            # Commit changes with the generated message
+            if ! git commit -m "$commit_msg"; then
+                error_log "Failed to commit changes"
+                cleanup_git
+                return 1
+            fi
+            
+            # Rename branch to main if needed
+            if [ "$(git rev-parse --abbrev-ref HEAD)" != "main" ]; then
+                git branch -M main || {
+                    error_log "Failed to rename branch to main"
+                    cleanup_git
+                    return 1
+                }
+            fi
+            
+            log "Successfully committed changes"
+        else
+            log "No changes to commit"
+        fi
     fi
 }
 
 # Main function
 main() {
     log "Starting verification and fixes..."
-    setup_venv
-    run_auto_fix
-    setup_markdown_tools
-    setup_streamlit_structure
-    verify_streamlit_deps
-    fix_markdown_files
-    fix_python_files
-    run_linting
-    update_project_status
-    setup_github
+    
+    # Set up error handling
+    trap 'echo "Error: Script failed" >&2; cleanup_git; exit 1' ERR
+    trap 'echo "Script interrupted" >&2; cleanup_git; exit 1' INT TERM
+    
+    # Run all tasks
+    setup_venv || exit 1
+    run_auto_fix || exit 1
+    setup_markdown_tools || exit 1
+    setup_streamlit_structure || exit 1
+    verify_streamlit_deps || exit 1
+    fix_markdown_files || exit 1
+    fix_python_files || exit 1
+    run_linting || exit 1
+    update_project_status || exit 1
+    setup_github || exit 1
+    
+    # Clean exit
     log "All verifications and fixes completed successfully!"
+    trap - ERR INT TERM
+    exit 0
 }
 
 # Run main function

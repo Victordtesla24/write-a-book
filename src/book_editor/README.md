@@ -23,23 +23,20 @@ A streamlit-based web application for writing and editing books with template su
 ```bash
 git clone https://github.com/yourusername/book-editor.git
 cd book-editor
-
-```text
+```
 
 2. Create and activate a virtual environment:
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-```text
+```
 
 3. Install the package:
 
 ```bash
 pip install -e ".[dev]"
-
-```text
+```
 
 ## Usage
 
@@ -47,8 +44,7 @@ pip install -e ".[dev]"
 
 ```bash
 streamlit run app/main.py
-
-```text
+```
 
 2. Open your web browser and navigate to the URL shown in the terminal (typically <http://localhost:8501>)
 
@@ -74,8 +70,7 @@ streamlit run app/main.py
 
 ```bash
 pytest tests/
-
-```text
+```
 
 ### Code Quality
 
@@ -84,8 +79,7 @@ black .
 isort .
 flake8 .
 pylint app tests
-
-```text
+```
 
 ### Documentation
 
