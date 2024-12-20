@@ -1,0 +1,20 @@
+{
+  "name": "default",
+  "category": "general",
+  "metadata": {
+    "description": "",
+    "tags": [],
+    "format": "markdown",
+    "created_at": "",
+    "updated_at": "",
+    "word_count": 0
+  },
+  "styles": {
+    "borders": {},
+    "colors": {},
+    "fonts": {
+      "font-family": "Arial"
+    }
+  },
+  "layouts": []
+}

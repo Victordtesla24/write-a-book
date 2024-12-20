@@ -1,0 +1,12 @@
+{
+  "categories": [
+    {
+      "name": "general",
+      "description": "Default template category"
+    },
+    {
+      "name": "test",
+      "description": "Test category"
+    }
+  ]
+}

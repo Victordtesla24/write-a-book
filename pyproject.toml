@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "book-editor"
+version = "0.1.0"
+description = "A Streamlit-based book editor with template management"
+requires-python = ">=3.8"
+dependencies = [
+    "streamlit>=1.41.1",
+    "markdown>=3.7",
+    "pygments>=2.18.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.1.1",
+    "isort>=5.13.2",
+    "autopep8>=2.0.4",
+    "autoflake>=2.2.1",
+    "pylint>=3.0.3",
+]
+
+[tool.black]
+line-length = 79
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+line_length = 79
+multi_line_output = 3
+
+[tool.pylint.messages_control]
+disable = [
+    "C0111",  # missing-docstring
+    "C0103",  # invalid-name
+    "W0511",  # fixme
+    "R0903",  # too-few-public-methods
+    "R0913",  # too-many-arguments
+    "R0914",  # too-many-locals
+    "R0801",  # duplicate-code
+    "E0401",  # import-error
+    "C0301",  # line-too-long
+]
+
+[tool.pylint.format]
+max-line-length = 79
+
+[tool.pylint.basic]
+good-names = ["i", "j", "k", "ex", "Run", "_", "f", "fp"]

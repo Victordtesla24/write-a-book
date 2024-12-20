@@ -1,0 +1,10 @@
+************* Module tests.test_core_editor_extended
+tests/test_core_editor_extended.py:23:11: W0212: Access to a protected member _autosave_enabled of a client class (protected-access)
+************* Module tests.test_core_editor
+tests/test_core_editor.py:113:11: W0212: Access to a protected member _autosave_enabled of a client class (protected-access)
+tests/test_core_editor.py:288:4: W0212: Access to a protected member _metadata of a client class (protected-access)
+tests/test_core_editor.py:291:4: W0212: Access to a protected member _metadata of a client class (protected-access)
+
+------------------------------------------------------------------
+Your code has been rated at 9.98/10 (previous run: 9.98/10, +0.00)
+
