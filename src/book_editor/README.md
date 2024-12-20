@@ -25,14 +25,14 @@ git clone https://github.com/yourusername/book-editor.git
 cd book-editor
 ```
 
-2. Create and activate a virtual environment:
+2.Create and activate a virtual environment:
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install the package:
+3.Install the package:
 
 ```bash
 pip install -e ".[dev]"
@@ -46,7 +46,7 @@ pip install -e ".[dev]"
 streamlit run app/main.py
 ```
 
-2. Open your web browser and navigate to the URL shown in the terminal (typically <http://localhost:8501>)
+2.Open your web browser and navigate to the URL shown in the terminal (typically <http://localhost:8501>)
 
 3. Use the sidebar to:
 
