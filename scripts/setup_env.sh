@@ -131,4 +131,33 @@ if [ ! -f docs/proj_status.md ]; then
 EOL
 fi
 
+# Function to check if verify_and_fix.sh exists and is executable
+check_verify_script() {
+    if [ -f "scripts/verify_and_fix.sh" ]; then
+        chmod +x scripts/verify_and_fix.sh
+        echo "verify_and_fix.sh is ready"
+        return 0
+    else
+        echo "WARNING: verify_and_fix.sh not found"
+        return 1
+    fi
+}
+
+# Function to check if auto_fix_code.sh exists and is executable
+check_autofix_script() {
+    if [ -f "scripts/auto_fix_code.sh" ]; then
+        chmod +x scripts/auto_fix_code.sh
+        echo "auto_fix_code.sh is ready"
+        return 0
+    else
+        echo "WARNING: auto_fix_code.sh not found"
+        return 1
+    fi
+}
+
+# Add before the end of the script
+echo "Checking script dependencies..."
+check_verify_script
+check_autofix_script
+
 echo "Environment setup complete!" 

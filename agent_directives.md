@@ -1,6 +1,7 @@
 # Rules for AI
 
-## Core Responsibilities
+#
+# Core Responsibilities
 
 - Autonomous, proficient coding agent focused on project quality, automation, and cost-effectiveness.
 
@@ -10,7 +11,8 @@
 
 - Prioritize user interests, reduce waste, and find alternative solutions to cut costs.
 
-## Script Management
+#
+# Script Management
 
 Maintain and execute:
 
@@ -20,11 +22,13 @@ Maintain and execute:
 
 - @run_tests.sh: Comprehensive testing and reporting.
 
-## Resource Management
+#
+# Resource Management
 
 - Monitor and adjust memory, AI response, and token usage thresholds as needed.
 
-## Automation & Error Handling
+#
+# Automation & Error Handling
 
 - Monitor and update scripts, logs, and configurations.
 
@@ -32,7 +36,8 @@ Maintain and execute:
 
 - Utilize error pattern detection and automated fixing from @verify_and_fix.sh.
 
-## Version Control & Testing
+#
+# Version Control & Testing
 
 - Maintain clean commit history and handle conflicts.
 
@@ -40,7 +45,8 @@ Maintain and execute:
 
 - Generate detailed reports and improve test coverage.
 
-## Documentation
+#
+# Documentation
 
 - Automatically update README.md, changelog, API docs, and architecture diagrams.
 

@@ -26,8 +26,50 @@ fix_markdown() {
         return 0
     fi
     
+    # Create a temporary file
+    local temp_file=$(mktemp)
+    
     # Fix MD014: Remove $ from shell commands while preserving indentation
-    perl -i -0pe 's/^(\s*)\$\s+/\1/gm' "$file"
+    perl -0pe 's/^(\s*)\$\s+/\1/gm' "$file" > "$temp_file"
+    
+    # Fix MD022: Headers should be surrounded by blank lines
+    perl -0pe 's/^([^\n])(#[^#])/\1\n\2/gm' "$temp_file" | \
+    perl -0pe 's/(#[^\n]+)\n([^\n])/\1\n\n\2/gm' > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Fix MD023: Headers must start at the beginning of the line
+    perl -0pe 's/^[ \t]+(#+)[ \t]*([^\n]+)/\1 \2/gm' "$temp_file" > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Fix MD031: Fenced code blocks should be surrounded by blank lines
+    perl -0pe 's/([^\n])\n```/\1\n\n```/gm' "$temp_file" | \
+    perl -0pe 's/```\n([^\n])/```\n\n\1/gm' > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Fix MD032: Lists should be surrounded by blank lines
+    perl -0pe 's/([^\n])\n([-*+]|\d+\.) /\1\n\n\2 /gm' "$temp_file" | \
+    perl -0pe 's/([-*+]|\d+\.) ([^\n]+)\n([^\n-*+\d ])/\1 \2\n\n\3/gm' > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Fix MD034: Bare URLs should be enclosed in angle brackets
+    perl -0pe 's/(?<![<\(])(http[s]?:\/\/[^\s\)>]+)(?![>\)])/\<\1\>/g' "$temp_file" > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Fix MD037: Spaces inside emphasis markers
+    perl -0pe 's/\*\s+([^\s*][^*]*[^\s*])\s+\*/\*\1\*/g' "$temp_file" | \
+    perl -0pe 's/_\s+([^\s_][^_]*[^\s_])\s+_/_\1_/g' > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Fix MD047: Files should end with a single newline
+    perl -0pe 's/\n+$/\n/' "$temp_file" > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Apply fixes back to original file
+    mv "$temp_file" "$file"
+    
+    # Verify fixes
+    if command -v markdownlint >/dev/null 2>&1; then
+        markdownlint "$file" > "$LOG_FILE.md.tmp" 2>&1 || true
+        if [ -s "$LOG_FILE.md.tmp" ]; then
+            log "Some Markdown issues remain in $file:"
+            cat "$LOG_FILE.md.tmp" >> "$LOG_FILE"
+        else
+            log "Successfully fixed all Markdown issues in $file"
+        fi
+    fi
 }
 
 # Function to fix Python issues
@@ -174,11 +216,34 @@ else
     log "Some errors remain - check logs for details"
 fi
 
+# Function to check project structure
+check_project_structure() {
+    local required_files=(
+        "setup.py"
+        "requirements.txt"
+        "README.md"
+        ".gitignore"
+        "src/__init__.py"
+        "tests/__init__.py"
+    )
+    
+    for file in "${required_files[@]}"; do
+        if [ ! -f "$file" ]; then
+            log "Missing required file: $file"
+            return 1
+        fi
+    done
+    return 0
+}
+
 # Add before script end
 if [ ${#SKIPPED_FILES[@]} -gt 0 ]; then
     log "WARNING: The following files were skipped due to permissions:"
     printf '%s\n' "${SKIPPED_FILES[@]}" | tee -a "$LOG_FILE"
     chmod u+w "${SKIPPED_FILES[@]}" 2>/dev/null || log "ERROR: Could not fix permissions"
 fi
+
+# Check project structure at the end
+check_project_structure || log "WARNING: Some required project files are missing"
 
 echo "Auto-fix complete!"

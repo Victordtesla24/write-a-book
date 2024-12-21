@@ -298,7 +298,48 @@ fix_markdown_files() {
     if [ ! -z "$markdown_files" ]; then
         echo "$markdown_files" | while read -r file; do
             log "Processing $file..."
-            # Add your markdown fixing logic here
+            
+            # Skip files in excluded directories
+            if [[ "$file" == *"/venv/"* ]] || [[ "$file" == *"/cursor_env/"* ]]; then
+                log "Skipping markdown file in excluded directory: $file"
+                continue
+            fi
+            
+            # Check initial state
+            local initial_errors=0
+            if command -v markdownlint >/dev/null 2>&1; then
+                markdownlint "$file" > "$LOG_DIR/pre_fix_$$.md" 2>&1 || initial_errors=$?
+            fi
+            
+            # Apply fixes using auto_fix_code.sh
+            if [ -f "scripts/auto_fix_code.sh" ]; then
+                # Extract just the fix_markdown function
+                local temp_script=$(mktemp)
+                sed -n '/^fix_markdown()/,/^}/p' scripts/auto_fix_code.sh > "$temp_script"
+                # Source the function and call it
+                source "$temp_script"
+                fix_markdown "$file"
+                rm "$temp_script"
+            fi
+            
+            # Verify fixes
+            if command -v markdownlint >/dev/null 2>&1; then
+                local final_errors=0
+                markdownlint "$file" > "$LOG_DIR/post_fix_$$.md" 2>&1 || final_errors=$?
+                
+                if [ $final_errors -eq 0 ]; then
+                    log "Successfully fixed all Markdown issues in $file"
+                elif [ $final_errors -lt $initial_errors ]; then
+                    log "Reduced Markdown issues in $file from $initial_errors to $final_errors"
+                    cat "$LOG_DIR/post_fix_$$.md" >> "$MARKDOWN_ERRORS_FILE"
+                else
+                    log "WARNING: Could not fix all Markdown issues in $file"
+                    cat "$LOG_DIR/post_fix_$$.md" >> "$MARKDOWN_ERRORS_FILE"
+                fi
+                
+                # Cleanup
+                rm -f "$LOG_DIR/pre_fix_$$.md" "$LOG_DIR/post_fix_$$.md"
+            fi
         done
     fi
     return 0
@@ -542,6 +583,37 @@ cleanup_git() {
     fi
 }
 
+# Function to initialize new project
+init_project() {
+    log "Initializing new project..."
+    
+    # Check if this is a new project
+    if [ ! -f "setup.py" ] && [ ! -d "src" ]; then
+        log "New project detected. Running initial setup..."
+        
+        # Run setup_env.sh first
+        if [ -f "scripts/setup_env.sh" ]; then
+            chmod +x scripts/setup_env.sh
+            ./scripts/setup_env.sh || {
+                error_log "Initial setup failed"
+                return 1
+            }
+        fi
+        
+        # Initialize additional project structure
+        setup_streamlit_structure
+        setup_markdown_tools
+        verify_streamlit_deps
+        
+        # Create initial documentation with proper formatting
+        update_documentation
+        
+        log "Initial project setup completed"
+    else
+        log "Existing project detected, skipping initialization"
+    fi
+}
+
 # Main function with optimized flow
 main() {
     log "Starting verification and fixes..."
@@ -553,8 +625,14 @@ main() {
     # Initialize file cache first
     init_file_cache
     
+    # Check for --init flag
+    if [[ "$1" == "--init" ]]; then
+        init_project || exit 1
+    fi
+    
     # Run all tasks
     setup_venv || exit 1
+    setup_git_config || exit 1  # Added git config setup
     run_auto_fix || exit 1
     setup_markdown_tools || exit 1
     setup_streamlit_structure || exit 1
@@ -571,6 +649,6 @@ main() {
     exit 0
 }
 
-# Run main function
-main
+# Run main function with arguments
+main "$@"
 
