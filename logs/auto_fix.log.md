@@ -39,47 +39,19 @@
 ./agent_directives.md:49 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Documentation"]
 
 ./agent_directives.md:49 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Documentation"]
-./docs/proj_status.md:5 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./docs/proj_status.md:3 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
 
-./docs/proj_status.md:5 MD025/single-title/single-h1 Multiple top-level headings in the same document
-./docs/proj_status.md:6 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Summary of Resolved Errors"]
+./docs/proj_status.md:3 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./docs/proj_status.md:4 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Current Phase: 1"]
 
-./docs/proj_status.md:6 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Summary of Resolved Errors"]
-./docs/proj_status.md:10 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./docs/proj_status.md:4 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Current Phase: 1"]
+./docs/proj_status.md:16 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
 
-./docs/proj_status.md:10 MD024/no-duplicate-heading Multiple headings with the same content
-./docs/proj_status.md:10 MD025/single-title/single-h1 Multiple top-level headings in the same document
-./docs/proj_status.md:11 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Current Implementation Status"]
+./docs/proj_status.md:16 MD024/no-duplicate-heading Multiple headings with the same content
+./docs/proj_status.md:16 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./docs/proj_status.md:17 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Next Steps"]
 
-./docs/proj_status.md:11 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Current Implementation Status"]
-./docs/proj_status.md:17 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
-
-./docs/proj_status.md:17 MD024/no-duplicate-heading Multiple headings with the same content
-./docs/proj_status.md:17 MD025/single-title/single-h1 Multiple top-level headings in the same document
-./docs/proj_status.md:18 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Test Coverage Report"]
-
-./docs/proj_status.md:18 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Test Coverage Report"]
-./docs/proj_status.md:20 MD003/heading-style Heading style [Expected: atx; Actual: setext]
-./docs/proj_status.md:20 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "Name                                     Stmts   Miss  Cover"]
-./docs/proj_status.md:22 MD003/heading-style Heading style [Expected: atx; Actual: setext]
-./docs/proj_status.md:22 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "src/__init__.py                              2      0   100%"]
-./docs/proj_status.md:22 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "src/__init__.py                              2      0   100%"]
-./docs/proj_status.md:60 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
-
-./docs/proj_status.md:60 MD024/no-duplicate-heading Multiple headings with the same content
-./docs/proj_status.md:60 MD025/single-title/single-h1 Multiple top-level headings in the same document
-./docs/proj_status.md:61 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Lint Report"]
-
-./docs/proj_status.md:61 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Lint Report"]
-./docs/proj_status.md:63 MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
-./docs/proj_status.md:67 MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
-./docs/proj_status.md:72 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
-
-./docs/proj_status.md:72 MD024/no-duplicate-heading Multiple headings with the same content
-./docs/proj_status.md:72 MD025/single-title/single-h1 Multiple top-level headings in the same document
-./docs/proj_status.md:73 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Recent Changes"]
-
-./docs/proj_status.md:73 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Recent Changes"]
+./docs/proj_status.md:17 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Next Steps"]
 ./docs/implementation_plan.md:3 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
 
 ./docs/implementation_plan.md:3 MD025/single-title/single-h1 Multiple top-level headings in the same document
