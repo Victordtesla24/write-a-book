@@ -351,12 +351,15 @@ setup_markdown_tools() {
     if [ ! -f .markdownlint.json ]; then
         cat > .markdownlint.json << EOL
 {
-    "MD022": true,
-    "MD031": true,
-    "MD032": true,
-    "MD034": true,
-    "MD041": true,
-    "line-length": false
+    "MD001": false,
+    "MD022": false,
+    "MD024": false,
+    "MD025": false,
+    "MD041": false,
+    "default": true,
+    "line-length": false,
+    "no-hard-tabs": true,
+    "whitespace": false
 }
 EOL
     fi
