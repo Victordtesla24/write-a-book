@@ -138,6 +138,93 @@ from . import data, models, book_editor\
     ensure_final_newline "$file"
 }
 
+# Function to analyze and fix imports
+analyze_imports() {
+    local file="$1"
+    local imports_file=$(mktemp)
+    local added_imports=()
+    
+    # Extract all imported names
+    grep -oE "from [a-zA-Z0-9_.]+ import [a-zA-Z0-9_, ]+" "$file" > "$imports_file"
+    grep -oE "import [a-zA-Z0-9_, ]+" "$file" >> "$imports_file"
+    
+    # Analyze file content for potential missing imports
+    while read -r line; do
+        # Check for common packages
+        if [[ "$line" =~ np\. ]] && ! grep -q "import numpy" "$imports_file"; then
+            added_imports+=("import numpy as np")
+        fi
+        if [[ "$line" =~ pd\. ]] && ! grep -q "import pandas" "$imports_file"; then
+            added_imports+=("import pandas as pd")
+        fi
+        if [[ "$line" =~ plt\. ]] && ! grep -q "import matplotlib" "$imports_file"; then
+            added_imports+=("import matplotlib.pyplot as plt")
+        fi
+        # Add more package checks as needed
+    done < "$file"
+    
+    # Add missing imports at the top of the file
+    if [ ${#added_imports[@]} -gt 0 ]; then
+        local temp_file=$(mktemp)
+        for imp in "${added_imports[@]}"; do
+            echo "$imp" >> "$temp_file"
+        done
+        cat "$file" >> "$temp_file"
+        mv "$temp_file" "$file"
+    fi
+    
+    rm -f "$imports_file"
+}
+
+# Function to organize imports
+organize_imports() {
+    local file="$1"
+    
+    # Run isort with custom config
+    isort "$file" --profile black --multi-line 3 --trailing-comma --force-grid-wrap 0 \
+        --use-parentheses --ensure-newline-before-comments
+    
+    # Run black for consistent formatting
+    black --quiet "$file"
+}
+
+# Enhanced fix_python_file function
+fix_python_file() {
+    local file="$1"
+    local fixed=0
+    
+    # Skip if file doesn't exist or is empty
+    [ ! -f "$file" ] && return 1
+    [ ! -s "$file" ] && return 1
+    
+    # Create backup
+    cp "$file" "${file}.bak"
+    
+    # Fix imports
+    analyze_imports "$file"
+    organize_imports "$file"
+    
+    # Add missing docstrings
+    if ! grep -q '"""' "$file"; then
+        local temp_file=$(mktemp)
+        echo '"""Module docstring."""' > "$temp_file"
+        echo >> "$temp_file"
+        cat "$file" >> "$temp_file"
+        mv "$temp_file" "$file"
+        fixed=1
+    fi
+    
+    # Compare with backup to check if changes were made
+    if ! diff -q "$file" "${file}.bak" >/dev/null 2>&1; then
+        fixed=1
+    fi
+    
+    # Cleanup
+    rm -f "${file}.bak"
+    
+    return $((1 - fixed))
+}
+
 # Add before processing files
 SKIPPED_FILES=()
 

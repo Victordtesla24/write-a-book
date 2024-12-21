@@ -1,146 +1,158 @@
-[2024-12-21 11:37:29] Starting verification and fixes...
-[2024-12-21 11:37:29] Initializing file cache...
-[2024-12-21 11:37:29] Setting up virtual environment...
-[2024-12-21 11:37:32] Setting up git configuration...
-[2024-12-21 11:37:32] Running auto_fix_code.sh...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_components.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_app_config.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_core_editor_extended.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_editor.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_app_core.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_text_editor_extended.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_book.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_storage.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_app_core_editor.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_main.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_core_editor.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_template.py...
-[2024-12-21 11:37:33] Processing Python file: ./tests/test_settings.py...
-[2024-12-21 11:37:33] Processing Python file: ./streamlit_app.py...
-[2024-12-21 11:37:33] Processing Python file: ./setup.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/utils/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/models/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/models/book.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/components/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/components/text_editor.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/components/editor.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/core/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/core/template.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/core/editor.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/app/core/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/app/core/editor.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/app/config/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/app/config/settings.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/app/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/config/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/config/settings.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/types.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/book_editor/main.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/data/__init__.py...
-[2024-12-21 11:37:33] Processing Python file: ./src/data/storage.py...
-[2024-12-21 11:37:34] Processing markdown file: ./agent_directives.md...
-[2024-12-21 11:37:34] Successfully fixed all Markdown issues in ./agent_directives.md
-[2024-12-21 11:37:34] Processing markdown file: ./.pytest_cache/README.md...
-[2024-12-21 11:37:34] Successfully fixed all Markdown issues in ./.pytest_cache/README.md
-[2024-12-21 11:37:34] Processing markdown file: ./docs/proj_status.md...
-[2024-12-21 11:37:34] Successfully fixed all Markdown issues in ./docs/proj_status.md
-[2024-12-21 11:37:34] Processing markdown file: ./docs/implementation_plan.md...
-[2024-12-21 11:37:34] Successfully fixed all Markdown issues in ./docs/implementation_plan.md
-[2024-12-21 11:37:34] Processing markdown file: ./README.md...
-[2024-12-21 11:37:35] Successfully fixed all Markdown issues in ./README.md
-[2024-12-21 11:37:35] Processing markdown file: ./logs/auto_fix.log.md...
-[2024-12-21 11:37:35] Successfully fixed all Markdown issues in ./logs/auto_fix.log.md
-[2024-12-21 11:37:35] Processing markdown file: ./venv/lib/python3.13/site-packages/idna-3.10.dist-info/LICENSE.md...
-[2024-12-21 11:37:35] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/idna-3.10.dist-info/LICENSE.md
-[2024-12-21 11:37:35] Processing markdown file: ./venv/lib/python3.13/site-packages/Markdown-3.7.dist-info/LICENSE.md...
-[2024-12-21 11:37:35] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/Markdown-3.7.dist-info/LICENSE.md
-[2024-12-21 11:37:35] Processing markdown file: ./venv/lib/python3.13/site-packages/narwhals-1.19.0.dist-info/licenses/LICENSE.md...
-[2024-12-21 11:37:35] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/narwhals-1.19.0.dist-info/licenses/LICENSE.md
-[2024-12-21 11:37:35] Processing markdown file: ./venv/lib/python3.13/site-packages/altair/jupyter/js/README.md...
-[2024-12-21 11:37:35] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/altair/jupyter/js/README.md
-[2024-12-21 11:37:35] Processing markdown file: ./venv/lib/python3.13/site-packages/numpy/random/LICENSE.md...
-[2024-12-21 11:37:35] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/numpy/random/LICENSE.md
-[2024-12-21 11:37:35] Processing markdown file: ./venv/lib/python3.13/site-packages/README.md...
-[2024-12-21 11:37:35] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/README.md
-[2024-12-21 11:37:35] Processing markdown file: ./venv/lib/python3.13/site-packages/black-24.10.0.dist-info/licenses/AUTHORS.md...
-[2024-12-21 11:37:35] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/black-24.10.0.dist-info/licenses/AUTHORS.md
-[2024-12-21 11:37:35] Processing markdown file: ./venv/lib/python3.13/site-packages/pyarrow/tests/data/orc/README.md...
-[2024-12-21 11:37:35] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/pyarrow/tests/data/orc/README.md
-[2024-12-21 11:37:35] Processing markdown file: ./src/book_editor/docs/changelog.md...
-[2024-12-21 11:37:35] Successfully fixed all Markdown issues in ./src/book_editor/docs/changelog.md
-[2024-12-21 11:37:35] Processing markdown file: ./src/book_editor/docs/proj_status.md...
-[2024-12-21 11:37:35] Successfully fixed all Markdown issues in ./src/book_editor/docs/proj_status.md
-[2024-12-21 11:37:35] Processing markdown file: ./src/book_editor/README.md...
-[2024-12-21 11:37:35] Successfully fixed all Markdown issues in ./src/book_editor/README.md
+[2024-12-21 11:45:00] Starting verification and fixes...
+[2024-12-21 11:45:00] Initializing file cache...
+[2024-12-21 11:45:00] Progress: [14%] Stage 1/7: env
+[2024-12-21 11:45:00] Setting up virtual environment...
+[2024-12-21 11:45:03] Progress: [28%] Stage 2/7: fixes
+[2024-12-21 11:45:03] Running auto_fix_code.sh...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_components.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_app_config.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_core_editor_extended.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_editor.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_app_core.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_text_editor_extended.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/__init__.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_book.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_storage.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_app_core_editor.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_main.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_core_editor.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_template.py...
+[2024-12-21 11:45:04] Processing Python file: ./tests/test_settings.py...
+[2024-12-21 11:45:04] Processing Python file: ./streamlit_app.py...
+[2024-12-21 11:45:04] Processing Python file: ./setup.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/__init__.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/utils/__init__.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/models/__init__.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/models/book.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/components/__init__.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/components/text_editor.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/components/editor.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/book_editor/core/__init__.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/book_editor/core/template.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/book_editor/core/editor.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/book_editor/app/core/__init__.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/book_editor/app/core/editor.py...
+[2024-12-21 11:45:04] Processing Python file: ./src/book_editor/app/config/__init__.py...
+[2024-12-21 11:45:05] Processing Python file: ./src/book_editor/app/config/settings.py...
+[2024-12-21 11:45:05] Processing Python file: ./src/book_editor/app/__init__.py...
+[2024-12-21 11:45:05] Processing Python file: ./src/book_editor/config/__init__.py...
+[2024-12-21 11:45:05] Processing Python file: ./src/book_editor/config/settings.py...
+[2024-12-21 11:45:05] Processing Python file: ./src/book_editor/__init__.py...
+[2024-12-21 11:45:05] Processing Python file: ./src/book_editor/types.py...
+[2024-12-21 11:45:05] Processing Python file: ./src/book_editor/main.py...
+[2024-12-21 11:45:05] Processing Python file: ./src/data/__init__.py...
+[2024-12-21 11:45:05] Processing Python file: ./src/data/storage.py...
+[2024-12-21 11:45:05] Processing markdown file: ./agent_directives.md...
+[2024-12-21 11:45:05] Successfully fixed all Markdown issues in ./agent_directives.md
+[2024-12-21 11:45:05] Processing markdown file: ./.pytest_cache/README.md...
+[2024-12-21 11:45:05] Successfully fixed all Markdown issues in ./.pytest_cache/README.md
+[2024-12-21 11:45:05] Processing markdown file: ./docs/proj_status.md...
+[2024-12-21 11:45:06] Some Markdown issues remain in ./docs/proj_status.md:
+[2024-12-21 11:45:06] Processing markdown file: ./docs/implementation_plan.md...
+[2024-12-21 11:45:06] Successfully fixed all Markdown issues in ./docs/implementation_plan.md
+[2024-12-21 11:45:06] Processing markdown file: ./README.md...
+[2024-12-21 11:45:06] Successfully fixed all Markdown issues in ./README.md
+[2024-12-21 11:45:06] Processing markdown file: ./logs/auto_fix.log.md...
+[2024-12-21 11:45:06] Successfully fixed all Markdown issues in ./logs/auto_fix.log.md
+[2024-12-21 11:45:06] Processing markdown file: ./venv/lib/python3.13/site-packages/idna-3.10.dist-info/LICENSE.md...
+[2024-12-21 11:45:06] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/idna-3.10.dist-info/LICENSE.md
+[2024-12-21 11:45:06] Processing markdown file: ./venv/lib/python3.13/site-packages/Markdown-3.7.dist-info/LICENSE.md...
+[2024-12-21 11:45:06] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/Markdown-3.7.dist-info/LICENSE.md
+[2024-12-21 11:45:06] Processing markdown file: ./venv/lib/python3.13/site-packages/narwhals-1.19.0.dist-info/licenses/LICENSE.md...
+[2024-12-21 11:45:06] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/narwhals-1.19.0.dist-info/licenses/LICENSE.md
+[2024-12-21 11:45:06] Processing markdown file: ./venv/lib/python3.13/site-packages/altair/jupyter/js/README.md...
+[2024-12-21 11:45:06] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/altair/jupyter/js/README.md
+[2024-12-21 11:45:06] Processing markdown file: ./venv/lib/python3.13/site-packages/numpy/random/LICENSE.md...
+[2024-12-21 11:45:06] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/numpy/random/LICENSE.md
+[2024-12-21 11:45:06] Processing markdown file: ./venv/lib/python3.13/site-packages/README.md...
+[2024-12-21 11:45:06] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/README.md
+[2024-12-21 11:45:06] Processing markdown file: ./venv/lib/python3.13/site-packages/black-24.10.0.dist-info/licenses/AUTHORS.md...
+[2024-12-21 11:45:06] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/black-24.10.0.dist-info/licenses/AUTHORS.md
+[2024-12-21 11:45:06] Processing markdown file: ./venv/lib/python3.13/site-packages/pyarrow/tests/data/orc/README.md...
+[2024-12-21 11:45:06] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/pyarrow/tests/data/orc/README.md
+[2024-12-21 11:45:06] Processing markdown file: ./src/book_editor/docs/changelog.md...
+[2024-12-21 11:45:06] Successfully fixed all Markdown issues in ./src/book_editor/docs/changelog.md
+[2024-12-21 11:45:06] Processing markdown file: ./src/book_editor/docs/proj_status.md...
+[2024-12-21 11:45:07] Successfully fixed all Markdown issues in ./src/book_editor/docs/proj_status.md
+[2024-12-21 11:45:07] Processing markdown file: ./src/book_editor/README.md...
+[2024-12-21 11:45:07] Successfully fixed all Markdown issues in ./src/book_editor/README.md
+error: cannot format /Users/admin/cursor/write-a-book/src/book_editor/__init__.py: Cannot parse for target version Python 3.8: 1:22: import streamlit as st"""
+error: cannot format /Users/admin/cursor/write-a-book/src/__init__.py: Cannot parse for target version Python 3.8: 3:10: from src. import book_editor, data, models
+reformatted /Users/admin/cursor/write-a-book/setup.py
 reformatted /Users/admin/cursor/write-a-book/src/book_editor/types.py
-reformatted /Users/admin/cursor/write-a-book/src/components/editor.py
+error: cannot format /Users/admin/cursor/write-a-book/streamlit_app.py: Cannot parse for target version Python 3.8: 4:12:     Optional"""Main,
 reformatted /Users/admin/cursor/write-a-book/src/components/text_editor.py
+reformatted /Users/admin/cursor/write-a-book/src/components/editor.py
 reformatted /Users/admin/cursor/write-a-book/src/data/storage.py
 reformatted /Users/admin/cursor/write-a-book/src/models/book.py
 reformatted /Users/admin/cursor/write-a-book/tests/test_app_config.py
-reformatted /Users/admin/cursor/write-a-book/streamlit_app.py
 reformatted /Users/admin/cursor/write-a-book/tests/test_components.py
 reformatted /Users/admin/cursor/write-a-book/src/book_editor/core/template.py
 reformatted /Users/admin/cursor/write-a-book/src/book_editor/main.py
+reformatted /Users/admin/cursor/write-a-book/tests/test_app_core_editor.py
 reformatted /Users/admin/cursor/write-a-book/tests/test_book.py
 reformatted /Users/admin/cursor/write-a-book/tests/test_app_core.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_app_core_editor.py
 reformatted /Users/admin/cursor/write-a-book/src/book_editor/core/editor.py
+reformatted /Users/admin/cursor/write-a-book/src/book_editor/app/core/editor.py
 reformatted /Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py
 reformatted /Users/admin/cursor/write-a-book/tests/test_settings.py
-reformatted /Users/admin/cursor/write-a-book/src/book_editor/app/core/editor.py
 reformatted /Users/admin/cursor/write-a-book/tests/test_storage.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_template.py
 reformatted /Users/admin/cursor/write-a-book/tests/test_editor.py
 reformatted /Users/admin/cursor/write-a-book/tests/test_main.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_core_editor.py
+reformatted /Users/admin/cursor/write-a-book/tests/test_template.py
 reformatted /Users/admin/cursor/write-a-book/tests/test_text_editor_extended.py
+reformatted /Users/admin/cursor/write-a-book/tests/test_core_editor.py
 
-All done! ✨ 🍰 ✨
-23 files reformatted, 15 files left unchanged.
+Oh no! 💥 💔 💥
+23 files reformatted, 12 files left unchanged, 3 files failed to reformat.
+Fixing /Users/admin/cursor/write-a-book/streamlit_app.py
 Skipped 2 files
 Verifying fixes...
-[2024-12-21 11:37:44] All fixes verified successfully!
+[2024-12-21 11:45:12] WARNING: Some Python errors remain
+[2024-12-21 11:45:13] WARNING: Some Markdown errors remain
+[2024-12-21 11:45:13] Some errors remain - check logs for details
 Auto-fix complete!
-[2024-12-21 11:37:44] Setting up markdown linting tools...
-[2024-12-21 11:37:44] Setting up advanced Streamlit directory structure...
-[2024-12-21 11:37:44] Verifying Streamlit dependencies...
-[2024-12-21 11:37:44] Fixing markdown files...
-[2024-12-21 11:37:44] Processing ./agent_directives.md...
-[2024-12-21 11:37:44] Successfully fixed all Markdown issues in ./agent_directives.md
-[2024-12-21 11:37:45] Successfully fixed all Markdown issues in ./agent_directives.md
-[2024-12-21 11:37:45] Processing ./.pytest_cache/README.md...
-[2024-12-21 11:37:45] Successfully fixed all Markdown issues in ./.pytest_cache/README.md
-[2024-12-21 11:37:45] Successfully fixed all Markdown issues in ./.pytest_cache/README.md
-[2024-12-21 11:37:45] Processing ./docs/proj_status.md...
-[2024-12-21 11:37:45] Successfully fixed all Markdown issues in ./docs/proj_status.md
-[2024-12-21 11:37:45] Successfully fixed all Markdown issues in ./docs/proj_status.md
-[2024-12-21 11:37:45] Processing ./docs/implementation_plan.md...
-[2024-12-21 11:37:46] Successfully fixed all Markdown issues in ./docs/implementation_plan.md
-[2024-12-21 11:37:46] Successfully fixed all Markdown issues in ./docs/implementation_plan.md
-[2024-12-21 11:37:46] Processing ./README.md...
-[2024-12-21 11:37:46] Successfully fixed all Markdown issues in ./README.md
-[2024-12-21 11:37:46] Successfully fixed all Markdown issues in ./README.md
-[2024-12-21 11:37:46] Processing ./logs/auto_fix.log.md...
-[2024-12-21 11:37:47] Successfully fixed all Markdown issues in ./logs/auto_fix.log.md
-[2024-12-21 11:37:47] Successfully fixed all Markdown issues in ./logs/auto_fix.log.md
-[2024-12-21 11:37:47] Processing ./src/book_editor/docs/changelog.md...
-[2024-12-21 11:37:47] Successfully fixed all Markdown issues in ./src/book_editor/docs/changelog.md
-[2024-12-21 11:37:47] Successfully fixed all Markdown issues in ./src/book_editor/docs/changelog.md
-[2024-12-21 11:37:47] Processing ./src/book_editor/docs/proj_status.md...
-[2024-12-21 11:37:48] Successfully fixed all Markdown issues in ./src/book_editor/docs/proj_status.md
-[2024-12-21 11:37:48] Successfully fixed all Markdown issues in ./src/book_editor/docs/proj_status.md
-[2024-12-21 11:37:48] Processing ./src/book_editor/README.md...
-[2024-12-21 11:37:48] Successfully fixed all Markdown issues in ./src/book_editor/README.md
-[2024-12-21 11:37:48] Successfully fixed all Markdown issues in ./src/book_editor/README.md
-[2024-12-21 11:37:48] Fixing Python files...
-[2024-12-21 11:37:48] Batch processing imports...
-[2024-12-21 11:37:50] Batch processing code style...
-[2024-12-21 11:37:50] Running linting checks...
-[2024-12-21 11:37:50] Running pytest...
+[2024-12-21 11:45:13] Progress: [42%] Stage 3/7: structure
+[2024-12-21 11:45:13] Setting up git configuration...
+[2024-12-21 11:45:13] Setting up markdown linting tools...
+[2024-12-21 11:45:13] Setting up advanced Streamlit directory structure...
+[2024-12-21 11:45:13] Verifying Streamlit dependencies...
+[2024-12-21 11:45:13] Progress: [57%] Stage 4/7: verification
+[2024-12-21 11:45:13] Fixing markdown files...
+[2024-12-21 11:45:13] Processing ./agent_directives.md...
+[2024-12-21 11:45:13] Successfully fixed all Markdown issues in ./agent_directives.md
+[2024-12-21 11:45:13] Successfully fixed all Markdown issues in ./agent_directives.md
+[2024-12-21 11:45:13] Processing ./.pytest_cache/README.md...
+[2024-12-21 11:45:14] Successfully fixed all Markdown issues in ./.pytest_cache/README.md
+[2024-12-21 11:45:14] Successfully fixed all Markdown issues in ./.pytest_cache/README.md
+[2024-12-21 11:45:14] Processing ./docs/proj_status.md...
+[2024-12-21 11:45:14] Some Markdown issues remain in ./docs/proj_status.md:
+./docs/proj_status.md:20 MD003/heading-style Heading style [Expected: atx; Actual: setext]
+./docs/proj_status.md:22 MD003/heading-style Heading style [Expected: atx; Actual: setext]
+[2024-12-21 11:45:14] WARNING: Could not fix all Markdown issues in ./docs/proj_status.md
+[2024-12-21 11:45:14] Processing ./docs/implementation_plan.md...
+[2024-12-21 11:45:15] Successfully fixed all Markdown issues in ./docs/implementation_plan.md
+[2024-12-21 11:45:15] Successfully fixed all Markdown issues in ./docs/implementation_plan.md
+[2024-12-21 11:45:15] Processing ./README.md...
+[2024-12-21 11:45:15] Successfully fixed all Markdown issues in ./README.md
+[2024-12-21 11:45:15] Successfully fixed all Markdown issues in ./README.md
+[2024-12-21 11:45:15] Processing ./logs/auto_fix.log.md...
+[2024-12-21 11:45:16] Successfully fixed all Markdown issues in ./logs/auto_fix.log.md
+[2024-12-21 11:45:16] Successfully fixed all Markdown issues in ./logs/auto_fix.log.md
+[2024-12-21 11:45:16] Processing ./src/book_editor/docs/changelog.md...
+[2024-12-21 11:45:16] Successfully fixed all Markdown issues in ./src/book_editor/docs/changelog.md
+[2024-12-21 11:45:16] Successfully fixed all Markdown issues in ./src/book_editor/docs/changelog.md
+[2024-12-21 11:45:16] Processing ./src/book_editor/docs/proj_status.md...
+[2024-12-21 11:45:16] Successfully fixed all Markdown issues in ./src/book_editor/docs/proj_status.md
+[2024-12-21 11:45:17] Successfully fixed all Markdown issues in ./src/book_editor/docs/proj_status.md
+[2024-12-21 11:45:17] Processing ./src/book_editor/README.md...
+[2024-12-21 11:45:17] Successfully fixed all Markdown issues in ./src/book_editor/README.md
+[2024-12-21 11:45:17] Successfully fixed all Markdown issues in ./src/book_editor/README.md
+[2024-12-21 11:45:17] Fixing Python files...
+[2024-12-21 11:45:17] Batch processing imports...
+[2024-12-21 11:45:18] Batch processing code style...
+[2024-12-21 11:45:19] Running linting checks...
+[2024-12-21 11:45:19] Running pytest...
 /Users/admin/cursor/write-a-book/venv/lib/python3.13/site-packages/pytest_asyncio/plugin.py:207: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
 The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
 
@@ -152,130 +164,374 @@ rootdir: /Users/admin/cursor/write-a-book
 configfile: pyproject.toml
 plugins: cov-6.0.0, asyncio-0.25.0, mock-3.14.0
 asyncio: mode=Mode.STRICT, asyncio_default_fixture_loop_scope=None
-collecting ... collected 104 items
+collecting ... collected 0 items / 13 errors
 
-tests/test_app_config.py::test_app_settings PASSED                       [  0%]
-tests/test_app_config.py::test_supported_formats PASSED                  [  1%]
-tests/test_app_config.py::test_theme_config PASSED                       [  2%]
-tests/test_app_config.py::test_editor_config PASSED                      [  3%]
-tests/test_app_config.py::test_preview_config PASSED                     [  4%]
-tests/test_app_config.py::test_logging_config PASSED                     [  5%]
-tests/test_app_core.py::test_app_editor_initialization PASSED            [  6%]
-tests/test_app_core.py::test_document_manager_operations PASSED          [  7%]
-tests/test_app_core.py::test_template_renderer_operations PASSED         [  8%]
-tests/test_app_core.py::test_preview_manager_operations PASSED           [  9%]
-tests/test_app_core.py::test_app_editor_document_handling PASSED         [ 10%]
-tests/test_app_core.py::test_app_editor_template_handling PASSED         [ 11%]
-tests/test_app_core.py::test_app_editor_error_handling PASSED            [ 12%]
-tests/test_app_core.py::test_document_manager_validation PASSED          [ 13%]
-tests/test_app_core.py::test_template_renderer_validation PASSED         [ 14%]
-tests/test_app_core.py::test_preview_manager_validation PASSED           [ 15%]
-tests/test_app_core_editor.py::test_template_renderer_operations PASSED  [ 16%]
-tests/test_app_core_editor.py::test_preview_manager_operations PASSED    [ 17%]
-tests/test_app_core_editor.py::test_app_editor_initialization PASSED     [ 18%]
-tests/test_app_core_editor.py::test_app_editor_document_operations PASSED [ 19%]
-tests/test_app_core_editor.py::test_app_editor_template_operations PASSED [ 20%]
-tests/test_app_core_editor.py::test_app_editor_validation PASSED         [ 21%]
-tests/test_book.py::test_book_creation PASSED                            [ 22%]
-tests/test_book.py::test_chapter_management PASSED                       [ 23%]
-tests/test_book.py::test_section_management PASSED                       [ 24%]
-tests/test_book.py::test_metadata_management PASSED                      [ 25%]
-tests/test_book.py::test_content_operations PASSED                       [ 25%]
-tests/test_book.py::test_chapter_operations PASSED                       [ 26%]
-tests/test_components.py::test_editor_component_initialization PASSED    [ 27%]
-tests/test_components.py::test_editor_content_update PASSED              [ 28%]
-tests/test_components.py::test_cursor_movement PASSED                    [ 29%]
-tests/test_components.py::test_text_selection PASSED                     [ 30%]
-tests/test_components.py::test_undo_redo PASSED                          [ 31%]
-tests/test_core_editor.py::test_document_creation PASSED                 [ 32%]
-tests/test_core_editor.py::test_document_update PASSED                   [ 33%]
-tests/test_core_editor.py::test_document_html_rendering PASSED           [ 34%]
-tests/test_core_editor.py::test_document_serialization PASSED            [ 35%]
-tests/test_core_editor.py::test_editor_initialization PASSED             [ 36%]
-tests/test_core_editor.py::test_document_management PASSED               [ 37%]
-tests/test_core_editor.py::test_text_analysis PASSED                     [ 38%]
-tests/test_core_editor.py::test_datetime_encoder PASSED                  [ 39%]
-tests/test_core_editor.py::test_error_handling PASSED                    [ 40%]
-tests/test_core_editor.py::test_document_format_handling PASSED          [ 41%]
-tests/test_core_editor.py::test_empty_document_handling PASSED           [ 42%]
-tests/test_core_editor.py::test_css_generation PASSED                    [ 43%]
-tests/test_core_editor.py::test_datetime_handling PASSED                 [ 44%]
-tests/test_core_editor.py::test_text_analysis_edge_cases PASSED          [ 45%]
-tests/test_core_editor.py::test_document_to_dict_error_handling PASSED   [ 46%]
-tests/test_core_editor_extended.py::test_editor_initialization PASSED    [ 47%]
-tests/test_core_editor_extended.py::test_editor_document_creation PASSED [ 48%]
-tests/test_core_editor_extended.py::test_editor_document_saving PASSED   [ 49%]
-tests/test_core_editor_extended.py::test_editor_document_loading PASSED  [ 50%]
-tests/test_core_editor_extended.py::test_editor_document_listing PASSED  [ 50%]
-tests/test_core_editor_extended.py::test_editor_text_analysis PASSED     [ 51%]
-tests/test_core_editor_extended.py::test_editor_html_rendering PASSED    [ 52%]
-tests/test_core_editor_extended.py::test_text_analysis_edge_cases PASSED [ 53%]
-tests/test_core_editor_extended.py::test_autosave_enabled PASSED         [ 54%]
-tests/test_editor.py::test_editor_initialization PASSED                  [ 55%]
-tests/test_editor.py::test_book_loading PASSED                           [ 56%]
-tests/test_editor.py::test_chapter_navigation PASSED                     [ 57%]
-tests/test_editor.py::test_content_editing PASSED                        [ 58%]
-tests/test_editor.py::test_chapter_management PASSED                     [ 59%]
-tests/test_editor.py::test_error_handling PASSED                         [ 60%]
-tests/test_editor.py::test_undo_redo_stack PASSED                        [ 61%]
-tests/test_editor.py::test_empty_undo_redo PASSED                        [ 62%]
-tests/test_editor.py::test_chapter_validation PASSED                     [ 63%]
-tests/test_editor.py::test_chapter_index_adjustment PASSED               [ 64%]
-tests/test_editor.py::test_multiple_chapter_operations PASSED            [ 65%]
-tests/test_main.py::test_book_editor_initialization PASSED               [ 66%]
-tests/test_main.py::test_render_template_manager PASSED                  [ 67%]
-tests/test_main.py::test_main PASSED                                     [ 68%]
-tests/test_main.py::test_auto_save PASSED                                [ 69%]
-tests/test_main.py::test_template_management PASSED                      [ 70%]
-tests/test_main.py::test_template_search PASSED                          [ 71%]
-tests/test_main.py::test_template_preview PASSED                         [ 72%]
-tests/test_main.py::test_editor_content_handling PASSED                  [ 73%]
-tests/test_main.py::test_editor_statistics PASSED                        [ 74%]
-tests/test_main.py::test_document_history PASSED                         [ 75%]
-tests/test_settings.py::test_app_settings PASSED                         [ 75%]
-tests/test_settings.py::test_supported_formats PASSED                    [ 76%]
-tests/test_settings.py::test_theme_config PASSED                         [ 77%]
-tests/test_settings.py::test_editor_config PASSED                        [ 78%]
-tests/test_settings.py::test_preview_config PASSED                       [ 79%]
-tests/test_settings.py::test_logging_config PASSED                       [ 80%]
-tests/test_storage.py::test_storage_initialization PASSED                [ 81%]
-tests/test_storage.py::test_file_operations PASSED                       [ 82%]
-tests/test_storage.py::test_directory_operations PASSED                  [ 83%]
-tests/test_storage.py::test_backup_operations PASSED                     [ 84%]
-tests/test_storage.py::test_error_handling PASSED                        [ 85%]
-tests/test_template.py::test_template_creation PASSED                    [ 86%]
-tests/test_template.py::test_template_serialization PASSED               [ 87%]
-tests/test_template.py::test_template_manager_categories PASSED          [ 88%]
-tests/test_template.py::test_template_manager_save_load PASSED           [ 89%]
-tests/test_template.py::test_template_manager_listing PASSED             [ 90%]
-tests/test_template.py::test_template_search PASSED                      [ 91%]
-tests/test_text_editor_extended.py::test_editor_initialization PASSED    [ 92%]
-tests/test_text_editor_extended.py::test_content_management PASSED       [ 93%]
-tests/test_text_editor_extended.py::test_cursor_movement_bounds PASSED   [ 94%]
-tests/test_text_editor_extended.py::test_text_selection_operations PASSED [ 95%]
-tests/test_text_editor_extended.py::test_undo_redo_operations PASSED     [ 96%]
-tests/test_text_editor_extended.py::test_empty_operations PASSED         [ 97%]
-tests/test_text_editor_extended.py::test_cursor_selection_interaction PASSED [ 98%]
-tests/test_text_editor_extended.py::test_content_state_management PASSED [ 99%]
-tests/test_text_editor_extended.py::test_selection_edge_cases PASSED     [100%]
-
-============================= 104 passed in 1.98s ==============================
-
---------------------------------------------------------------------
-Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
-
-[2024-12-21 11:37:57] Running additional checks...
-[2024-12-21 11:37:57] Checking markdown file: ./agent_directives.md
-[2024-12-21 11:37:57] Checking markdown file: ./.pytest_cache/README.md
-[2024-12-21 11:37:57] Checking markdown file: ./docs/proj_status.md
-[2024-12-21 11:37:57] Checking markdown file: ./docs/implementation_plan.md
-[2024-12-21 11:37:57] Checking markdown file: ./README.md
-[2024-12-21 11:37:57] Checking markdown file: ./logs/auto_fix.log.md
-[2024-12-21 11:37:57] Checking markdown file: ./src/book_editor/docs/changelog.md
-[2024-12-21 11:37:57] Checking markdown file: ./src/book_editor/docs/proj_status.md
-[2024-12-21 11:37:57] Checking markdown file: ./src/book_editor/README.md
-[2024-12-21 11:37:57] Pylint score: 0.00
-0.00
-0.00/10.00
-[2024-12-21 11:37:57] Updating project documentation...
-[2024-12-21 11:37:57] Auto-committing changes to GitHub...
+==================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_app_config.py ___________________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_app_config.py:4: in <module>
+    from src.book_editor.app.config.settings import (
+E     File "/Users/admin/cursor/write-a-book/src/__init__.py", line 3
+E       from src. import book_editor, data, models
+E                 ^^^^^^
+E   SyntaxError: invalid syntax
+___________________ ERROR collecting tests/test_app_core.py ____________________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_app_core.py:10: in <module>
+    from book_editor.core.template import Template
+E     File "/Users/admin/cursor/write-a-book/src/book_editor/__init__.py", line 1
+E       import streamlit as st"""
+E                             ^^^
+E   SyntaxError: invalid syntax
+________________ ERROR collecting tests/test_app_core_editor.py ________________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_app_core_editor.py:10: in <module>
+    from src.book_editor.app.core.editor import (
+E     File "/Users/admin/cursor/write-a-book/src/__init__.py", line 3
+E       from src. import book_editor, data, models
+E                 ^^^^^^
+E   SyntaxError: invalid syntax
+_____________________ ERROR collecting tests/test_book.py ______________________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_book.py:4: in <module>
+    from src.models.book import Book
+E     File "/Users/admin/cursor/write-a-book/src/__init__.py", line 3
+E       from src. import book_editor, data, models
+E                 ^^^^^^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_components.py ___________________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_components.py:4: in <module>
+    from src.components.text_editor import EditorComponent
+E     File "/Users/admin/cursor/write-a-book/src/__init__.py", line 3
+E       from src. import book_editor, data, models
+E                 ^^^^^^
+E   SyntaxError: invalid syntax
+__________________ ERROR collecting tests/test_core_editor.py __________________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_core_editor.py:12: in <module>
+    from src.book_editor.core.editor import DateTimeEncoder, Document, Editor
+E     File "/Users/admin/cursor/write-a-book/src/__init__.py", line 3
+E       from src. import book_editor, data, models
+E                 ^^^^^^
+E   SyntaxError: invalid syntax
+_____________ ERROR collecting tests/test_core_editor_extended.py ______________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_core_editor_extended.py:10: in <module>
+    from src.book_editor.core.editor import Editor
+E     File "/Users/admin/cursor/write-a-book/src/__init__.py", line 3
+E       from src. import book_editor, data, models
+E                 ^^^^^^
+E   SyntaxError: invalid syntax
+____________________ ERROR collecting tests/test_editor.py _____________________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_editor.py:6: in <module>
+    from src.components.editor import Editor
+E     File "/Users/admin/cursor/write-a-book/src/__init__.py", line 3
+E       from src. import book_editor, data, models
+E                 ^^^^^^
+E   SyntaxError: invalid syntax
+_____________________ ERROR collecting tests/test_main.py ______________________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_main.py:11: in <module>
+    from src.book_editor.main import BookEditor, main, render_template_manager
+E     File "/Users/admin/cursor/write-a-book/src/__init__.py", line 3
+E       from src. import book_editor, data, models
+E                 ^^^^^^
+E   SyntaxError: invalid syntax
+___________________ ERROR collecting tests/test_settings.py ____________________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_settings.py:4: in <module>
+    from src.book_editor.config.settings import (
+E     File "/Users/admin/cursor/write-a-book/src/__init__.py", line 3
+E       from src. import book_editor, data, models
+E                 ^^^^^^
+E   SyntaxError: invalid syntax
+____________________ ERROR collecting tests/test_storage.py ____________________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_storage.py:11: in <module>
+    from src.data.storage import StorageManager
+E     File "/Users/admin/cursor/write-a-book/src/__init__.py", line 3
+E       from src. import book_editor, data, models
+E                 ^^^^^^
+E   SyntaxError: invalid syntax
+___________________ ERROR collecting tests/test_template.py ____________________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_template.py:9: in <module>
+    from book_editor.core.template import (
+E     File "/Users/admin/cursor/write-a-book/src/book_editor/__init__.py", line 1
+E       import streamlit as st"""
+E                             ^^^
+E   SyntaxError: invalid syntax
+_____________ ERROR collecting tests/test_text_editor_extended.py ______________
+venv/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+venv/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+venv/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:184: in exec_module
+    exec(co, module.__dict__)
+tests/test_text_editor_extended.py:6: in <module>
+    from src.components.text_editor import EditorComponent
+E     File "/Users/admin/cursor/write-a-book/src/__init__.py", line 3
+E       from src. import book_editor, data, models
+E                 ^^^^^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/test_app_config.py
+ERROR tests/test_app_core.py
+ERROR tests/test_app_core_editor.py
+ERROR tests/test_book.py
+ERROR tests/test_components.py
+ERROR tests/test_core_editor.py
+ERROR tests/test_core_editor_extended.py
+ERROR tests/test_editor.py
+ERROR tests/test_main.py
+ERROR tests/test_settings.py
+ERROR tests/test_storage.py
+ERROR tests/test_template.py
+ERROR tests/test_text_editor_extended.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 13 errors in 1.84s ==============================
+[2024-12-21 11:45:21] ERROR: Pytest failed
+[2024-12-21 11:45:21] Warning: Linting issues detected
+[2024-12-21 11:45:21] Progress: [71%] Stage 5/7: imports
+[2024-12-21 11:45:21] Fixing imports...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_components.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_app_config.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_core_editor_extended.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_editor.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_app_core.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_text_editor_extended.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/__init__.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_book.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_storage.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_app_core_editor.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_main.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_core_editor.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_template.py...
+[2024-12-21 11:45:21] Processing imports in ./tests/test_settings.py...
+[2024-12-21 11:45:21] Processing imports in ./streamlit_app.py...
+[2024-12-21 11:45:22] Processing imports in ./setup.py...
+[2024-12-21 11:45:22] Processing imports in ./src/__init__.py...
+[2024-12-21 11:45:22] Processing imports in ./src/utils/__init__.py...
+[2024-12-21 11:45:22] Processing imports in ./src/models/__init__.py...
+[2024-12-21 11:45:22] Processing imports in ./src/models/book.py...
+[2024-12-21 11:45:22] Processing imports in ./src/components/__init__.py...
+[2024-12-21 11:45:22] Processing imports in ./src/components/text_editor.py...
+[2024-12-21 11:45:22] Processing imports in ./src/components/editor.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/core/__init__.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/core/template.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/core/editor.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/app/core/__init__.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/app/core/editor.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/app/config/__init__.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/app/config/settings.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/app/__init__.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/config/__init__.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/config/settings.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/__init__.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/types.py...
+[2024-12-21 11:45:22] Processing imports in ./src/book_editor/main.py...
+[2024-12-21 11:45:22] Processing imports in ./src/data/__init__.py...
+[2024-12-21 11:45:22] Processing imports in ./src/data/storage.py...
+[2024-12-21 11:45:22] Optimizing imports with isort...
+Fixing /Users/admin/cursor/write-a-book/setup.py
+Fixing /Users/admin/cursor/write-a-book/streamlit_app.py
+[2024-12-21 11:45:23] Formatting code with black...
+[2024-12-21 11:45:25] Attempt 1 failed, retrying in 2s...
+[2024-12-21 11:45:28] Attempt 2 failed, retrying in 2s...
+[2024-12-21 11:45:31] Attempt 3 failed, retrying in 2s...
+[2024-12-21 11:45:33] Progress: [85%] Stage 6/7: docs
+[2024-12-21 11:45:33] Updating project documentation...
+[2024-12-21 11:45:33] Progress: [100%] Stage 7/7: commit
+[2024-12-21 11:45:33] Auto-committing changes to GitHub...

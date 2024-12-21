@@ -1,4 +1,5 @@
-# pylint: disable=redefined-outer-name
+import streamlit as st  # pylint: disable=redefined-outer-name
+
 """Test module for app core functionality."""
 
 import tempfile

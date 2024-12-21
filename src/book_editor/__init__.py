@@ -1,4 +1,4 @@
-"""
+import streamlit as st"""
 Book Editor - A streamlit-based book editing application
 """
 

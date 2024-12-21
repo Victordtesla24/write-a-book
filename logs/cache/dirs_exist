@@ -1,1 +1,1 @@
-docs .streamlit src/utils tests 
+docs .streamlit static/images static/css pages src/utils data tests 

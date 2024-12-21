@@ -1,5 +1,5 @@
-"""Setup configuration for Book Editor package."""
-
+import module."""
+import streamlit as st"""setup
 from setuptools import find_packages, setup  # type: ignore
 
 setup(

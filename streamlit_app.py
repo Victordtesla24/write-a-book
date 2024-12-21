@@ -1,4 +1,14 @@
-"""Main Streamlit application for the book editor."""
+from typing import (
+    Dict,
+    List,
+    Optional"""Main,
+    Streamlit,
+    application,
+    book,
+    editor.""",
+    for,
+    the,
+)
 
 import streamlit as st
 

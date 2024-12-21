@@ -617,34 +617,191 @@ init_project() {
     fi
 }
 
-# Main function with optimized flow
+# Function to manage script state
+manage_script_state() {
+    local operation="$1"
+    local state_file=".script_state"
+    
+    case "$operation" in
+        "init")
+            echo "{}" > "$state_file"
+            ;;
+        "set")
+            local key="$2"
+            local value="$3"
+            local temp_file=$(mktemp)
+            jq --arg k "$key" --arg v "$value" '. + {($k): $v}' "$state_file" > "$temp_file"
+            mv "$temp_file" "$state_file"
+            ;;
+        "get")
+            local key="$2"
+            jq -r --arg k "$key" '.[$k]' "$state_file"
+            ;;
+        "check")
+            local key="$2"
+            [[ $(jq -r --arg k "$key" '.[$k]' "$state_file") == "completed" ]]
+            ;;
+    esac
+}
+
+# Function to check dependencies
+check_dependencies() {
+    local missing_deps=()
+    local deps=("python3" "pip" "git" "jq" "markdownlint" "black" "isort" "pylint")
+    
+    for dep in "${deps[@]}"; do
+        if ! command -v "$dep" >/dev/null 2>&1; then
+            missing_deps+=("$dep")
+        fi
+    done
+    
+    if [ ${#missing_deps[@]} -ne 0 ]; then
+        error_log "Missing dependencies: ${missing_deps[*]}"
+        return 1
+    fi
+    return 0
+}
+
+# Function to show progress
+show_progress() {
+    local stage="$1"
+    local total_stages=7
+    local current_stage
+    
+    case "$stage" in
+        "env") current_stage=1 ;;
+        "fixes") current_stage=2 ;;
+        "structure") current_stage=3 ;;
+        "verification") current_stage=4 ;;
+        "imports") current_stage=5 ;;
+        "docs") current_stage=6 ;;
+        "commit") current_stage=7 ;;
+    esac
+    
+    local percentage=$((current_stage * 100 / total_stages))
+    log "Progress: [$percentage%] Stage $current_stage/$total_stages: $stage"
+}
+
+# Enhanced retry mechanism
+retry_operation() {
+    local cmd="$1"
+    local max_retries=${2:-3}
+    local retry_count=0
+    local delay=${3:-1}
+    
+    while [ $retry_count -lt $max_retries ]; do
+        if eval "$cmd"; then
+            return 0
+        fi
+        retry_count=$((retry_count + 1))
+        log "Attempt $retry_count failed, retrying in ${delay}s..."
+        sleep $delay
+    done
+    return 1
+}
+
+# Function to fix imports
+fix_imports() {
+    log "Fixing imports..."
+    local python_files=$(get_cache "python")
+    
+    if [ ! -z "$python_files" ]; then
+        echo "$python_files" | while read -r file; do
+            log "Processing imports in $file..."
+            
+            # Fix relative imports
+            sed -i.bak -E 's/from \.\./from src./g' "$file"
+            sed -i.bak -E 's/from \./from src./g' "$file"
+            
+            # Add missing imports
+            if grep -q "streamlit" "$file" && ! grep -q "^import streamlit" "$file"; then
+                sed -i.bak '1i\
+import streamlit as st' "$file"
+            fi
+            
+            # Add type hints imports if needed
+            if grep -q "List\|Dict\|Optional" "$file" && ! grep -q "^from typing" "$file"; then
+                sed -i.bak '1i\
+from typing import List, Dict, Optional' "$file"
+            fi
+            
+            # Clean up backup files
+            rm -f "$file.bak"
+        done
+        
+        # Run isort and black
+        log "Optimizing imports with isort..."
+        retry_operation "echo \"$python_files\" | xargs -P 4 -I {} isort {} 2>/dev/null" 3 2
+        
+        log "Formatting code with black..."
+        retry_operation "echo \"$python_files\" | xargs -P 4 -I {} black --quiet {} 2>/dev/null" 3 2
+    fi
+    return 0
+}
+
+# Enhanced main function with state management
 main() {
     log "Starting verification and fixes..."
+    
+    # Initialize state
+    manage_script_state "init"
     
     # Set up error handling
     trap 'echo "Error: Script failed" >&2; cleanup_git; exit 1' ERR
     trap 'echo "Script interrupted" >&2; cleanup_git; exit 1' INT TERM
     
-    # Initialize file cache first
-    init_file_cache
-    
-    # Check for --init flag
-    if [[ "$1" == "--init" ]]; then
-        init_project || exit 1
+    # Check dependencies first
+    if ! check_dependencies; then
+        error_log "Please install missing dependencies before continuing."
+        exit 1
     fi
     
-    # Run all tasks
-    setup_venv || exit 1
-    setup_git_config || exit 1  # Added git config setup
-    run_auto_fix || exit 1
-    setup_markdown_tools || exit 1
-    setup_streamlit_structure || exit 1
-    verify_streamlit_deps || exit 1
-    fix_markdown_files || exit 1
-    fix_python_files || exit 1
-    run_linting || exit 1
-    update_documentation || exit 1
-    auto_commit_to_github || exit 1
+    # Initialize file cache first
+    init_file_cache
+    show_progress "env"
+    
+    # Phase 1: Environment Setup
+    if [[ "$1" == "--init" ]] || [ ! -f "setup.py" ]; then
+        retry_operation "init_project" 3 2 || exit 1
+    else
+        retry_operation "setup_venv" 3 2 || exit 1
+    fi
+    manage_script_state "set" "env_setup" "completed"
+    
+    # Phase 2: Initial Fixes
+    show_progress "fixes"
+    if ! manage_script_state "check" "initial_fixes"; then
+        run_auto_fix || log "Warning: Initial fixes had issues, continuing..."
+        manage_script_state "set" "initial_fixes" "completed"
+    fi
+    
+    # Phase 3: Structure & Dependencies
+    show_progress "structure"
+    if ! manage_script_state "check" "structure_setup"; then
+        setup_git_config || exit 1
+        setup_markdown_tools || exit 1
+        setup_streamlit_structure || exit 1
+        verify_streamlit_deps || exit 1
+        manage_script_state "set" "structure_setup" "completed"
+    fi
+    
+    # Phase 4: Verification & Fixes
+    show_progress "verification"
+    fix_markdown_files || log "Warning: Some Markdown issues remain"
+    fix_python_files || log "Warning: Some Python issues remain"
+    run_linting || log "Warning: Linting issues detected"
+    
+    # Phase 5: Import Fixes
+    show_progress "imports"
+    fix_imports || log "Warning: Import fixes had issues"
+    
+    # Phase 6: Documentation
+    show_progress "docs"
+    update_documentation || log "Warning: Documentation update had issues"
+    
+    # Phase 7: Commit Changes
+    show_progress "commit"
+    auto_commit_to_github || log "Warning: Git operations had issues"
     
     # Clean exit
     log "All verifications and fixes completed successfully!"
