@@ -5842,3 +5842,949 @@
 [2024-12-21 12:26:08] Processing markdown file: ./src/book_editor/README.md...
 [2024-12-21 12:26:15] WARNING: Some Markdown errors remain
 [2024-12-21 12:26:15] Some errors remain - check logs for details
+[2024-12-21 12:30:46] Starting auto-fix process...
+[2024-12-21 12:30:50] Initial error count: 
+[2024-12-21 12:30:50] Starting fix iteration 1...
+[2024-12-21 12:30:50] Detecting error patterns...
+[2024-12-21 12:30:56] Detected        0 unique error patterns
+[2024-12-21 12:30:56] Fixing file: ./agent_directives.md
+[2024-12-21 12:30:56] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:30:56] Fixing file: ./tests/test_components.py
+[2024-12-21 12:30:56] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:30:57] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:30:57] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:30:57] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:30:58] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:30:58] Fixing file: ./tests/__init__.py
+[2024-12-21 12:30:58] Fixing file: ./tests/test_book.py
+[2024-12-21 12:30:58] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:30:59] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:30:59] Fixing file: ./tests/test_main.py
+[2024-12-21 12:30:59] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:31:00] Fixing file: ./tests/test_template.py
+[2024-12-21 12:31:00] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:31:00] Fixing file: ./streamlit_app.py
+[2024-12-21 12:31:01] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:31:01] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:31:01] Fixing file: ./README.md
+[2024-12-21 12:31:01] Fixing file: ./setup.py
+[2024-12-21 12:31:01] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:31:01] Fixing file: ./src/__init__.py
+[2024-12-21 12:31:01] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:31:01] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:31:02] Fixing file: ./src/models/book.py
+[2024-12-21 12:31:02] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:31:02] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:31:03] Fixing file: ./src/components/editor.py
+[2024-12-21 12:31:03] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:31:03] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:31:04] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:31:04] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:31:04] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:31:04] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:31:05] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:31:05] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:31:05] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:31:06] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:31:06] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:31:06] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:31:07] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:31:07] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:31:07] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:31:07] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:31:07] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:31:07] Fixing file: ./src/data/storage.py
+[2024-12-21 12:31:11] Errors after iteration 1:  (fixed 0)
+[2024-12-21 12:31:11] Starting fix iteration 2...
+[2024-12-21 12:31:11] Detecting error patterns...
+[2024-12-21 12:31:17] Detected        0 unique error patterns
+[2024-12-21 12:31:17] Fixing file: ./agent_directives.md
+[2024-12-21 12:31:17] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:31:17] Fixing file: ./tests/test_components.py
+[2024-12-21 12:31:18] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:31:18] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:31:18] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:31:18] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:31:19] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:31:19] Fixing file: ./tests/__init__.py
+[2024-12-21 12:31:19] Fixing file: ./tests/test_book.py
+[2024-12-21 12:31:20] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:31:20] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:31:20] Fixing file: ./tests/test_main.py
+[2024-12-21 12:31:20] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:31:21] Fixing file: ./tests/test_template.py
+[2024-12-21 12:31:21] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:31:21] Fixing file: ./streamlit_app.py
+[2024-12-21 12:31:22] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:31:22] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:31:22] Fixing file: ./README.md
+[2024-12-21 12:31:22] Fixing file: ./setup.py
+[2024-12-21 12:31:22] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:31:22] Fixing file: ./src/__init__.py
+[2024-12-21 12:31:22] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:31:23] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:31:23] Fixing file: ./src/models/book.py
+[2024-12-21 12:31:23] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:31:23] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:31:24] Fixing file: ./src/components/editor.py
+[2024-12-21 12:31:24] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:31:24] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:31:25] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:31:25] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:31:25] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:31:25] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:31:26] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:31:26] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:31:26] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:31:27] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:31:27] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:31:27] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:31:28] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:31:28] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:31:28] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:31:28] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:31:28] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:31:28] Fixing file: ./src/data/storage.py
+[2024-12-21 12:31:32] Errors after iteration 2:  (fixed 0)
+[2024-12-21 12:31:32] Insufficient improvement after iteration 2
+[2024-12-21 12:31:32] All fixes completed successfully!
+[2024-12-21 12:31:57] Starting auto-fix process...
+[2024-12-21 12:32:01] Initial error count: 0
+[2024-12-21 12:32:01] Starting fix iteration 1...
+[2024-12-21 12:32:01] Detecting error patterns...
+[2024-12-21 12:32:07] Detected        0 unique error patterns
+[2024-12-21 12:32:07] Fixing file: ./agent_directives.md
+[2024-12-21 12:32:07] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:32:07] Fixing file: ./tests/test_components.py
+[2024-12-21 12:32:07] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:32:08] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:32:08] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:32:08] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:32:08] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:32:09] Fixing file: ./tests/__init__.py
+[2024-12-21 12:32:09] Fixing file: ./tests/test_book.py
+[2024-12-21 12:32:09] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:32:10] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:32:10] Fixing file: ./tests/test_main.py
+[2024-12-21 12:32:10] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:32:11] Fixing file: ./tests/test_template.py
+[2024-12-21 12:32:11] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:32:11] Fixing file: ./streamlit_app.py
+[2024-12-21 12:32:11] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:32:11] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:32:11] Fixing file: ./README.md
+[2024-12-21 12:32:11] Fixing file: ./setup.py
+[2024-12-21 12:32:12] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:32:12] Fixing file: ./src/__init__.py
+[2024-12-21 12:32:12] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:32:12] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:32:13] Fixing file: ./src/models/book.py
+[2024-12-21 12:32:13] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:32:13] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:32:14] Fixing file: ./src/components/editor.py
+[2024-12-21 12:32:14] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:32:14] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:32:14] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:32:15] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:32:15] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:32:15] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:32:16] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:32:16] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:32:16] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:32:17] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:32:17] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:32:17] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:32:17] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:32:17] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:32:17] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:32:17] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:32:18] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:32:18] Fixing file: ./src/data/storage.py
+[2024-12-21 12:32:22] Errors after iteration 1: 0 (fixed 0)
+[2024-12-21 12:32:22] All issues resolved in iteration 1
+[2024-12-21 12:32:22] All fixes completed successfully!
+[2024-12-21 12:32:38] Starting auto-fix process...
+[2024-12-21 12:32:42] Initial error count: 0
+[2024-12-21 12:32:42] Starting fix iteration 1...
+[2024-12-21 12:32:42] Detecting error patterns...
+[2024-12-21 12:32:48] Detected        0 unique error patterns
+[2024-12-21 12:32:48] Fixing file: ./agent_directives.md
+[2024-12-21 12:32:48] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:32:48] Fixing file: ./tests/test_components.py
+[2024-12-21 12:32:48] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:32:49] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:32:49] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:32:49] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:32:50] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:32:50] Fixing file: ./tests/__init__.py
+[2024-12-21 12:32:50] Fixing file: ./tests/test_book.py
+[2024-12-21 12:32:51] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:32:51] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:32:51] Fixing file: ./tests/test_main.py
+[2024-12-21 12:32:51] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:32:52] Fixing file: ./tests/test_template.py
+[2024-12-21 12:32:52] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:32:52] Fixing file: ./streamlit_app.py
+[2024-12-21 12:32:53] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:32:53] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:32:53] Fixing file: ./README.md
+[2024-12-21 12:32:53] Fixing file: ./setup.py
+[2024-12-21 12:32:53] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:32:53] Fixing file: ./src/__init__.py
+[2024-12-21 12:32:53] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:32:54] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:32:54] Fixing file: ./src/models/book.py
+[2024-12-21 12:32:54] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:32:54] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:32:55] Fixing file: ./src/components/editor.py
+[2024-12-21 12:32:55] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:32:55] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:32:56] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:32:56] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:32:56] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:32:57] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:32:57] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:32:57] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:32:57] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:32:58] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:32:58] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:32:58] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:32:59] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:32:59] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:32:59] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:32:59] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:32:59] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:32:59] Fixing file: ./src/data/storage.py
+[2024-12-21 12:33:03] Errors after iteration 1: 0 (fixed 0)
+[2024-12-21 12:33:03] All issues resolved in iteration 1
+[2024-12-21 12:33:03] All fixes completed successfully!
+[2024-12-21 12:33:20] Starting auto-fix process...
+[2024-12-21 12:33:24] Initial error count: 0
+[2024-12-21 12:33:24] Starting fix iteration 1...
+[2024-12-21 12:33:24] Detecting error patterns...
+[2024-12-21 12:33:30] Detected        0 unique error patterns
+[2024-12-21 12:33:30] Fixing file: ./agent_directives.md
+[2024-12-21 12:33:30] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:33:30] Fixing file: ./tests/test_components.py
+[2024-12-21 12:33:30] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:33:31] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:33:31] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:33:31] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:33:32] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:33:32] Fixing file: ./tests/__init__.py
+[2024-12-21 12:33:32] Fixing file: ./tests/test_book.py
+[2024-12-21 12:33:32] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:33:33] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:33:33] Fixing file: ./tests/test_main.py
+[2024-12-21 12:33:33] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:33:34] Fixing file: ./tests/test_template.py
+[2024-12-21 12:33:34] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:33:34] Fixing file: ./streamlit_app.py
+[2024-12-21 12:33:35] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:33:35] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:33:35] Fixing file: ./README.md
+[2024-12-21 12:33:35] Fixing file: ./setup.py
+[2024-12-21 12:33:35] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:33:35] Fixing file: ./src/__init__.py
+[2024-12-21 12:33:35] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:33:35] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:33:36] Fixing file: ./src/models/book.py
+[2024-12-21 12:33:36] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:33:36] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:33:37] Fixing file: ./src/components/editor.py
+[2024-12-21 12:33:37] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:33:37] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:33:37] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:33:38] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:33:38] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:33:38] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:33:39] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:33:39] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:33:39] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:33:39] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:33:40] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:33:40] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:33:40] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:33:40] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:33:40] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:33:40] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:33:41] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:33:41] Fixing file: ./src/data/storage.py
+[2024-12-21 12:33:45] Errors after iteration 1: 0 (fixed 0)
+[2024-12-21 12:33:45] All issues resolved in iteration 1
+[2024-12-21 12:33:45] All fixes completed successfully!
+[2024-12-21 12:34:09] Starting auto-fix process...
+[2024-12-21 12:34:15] Initial error count: 0
+[2024-12-21 12:34:15] Starting fix iteration 1...
+[2024-12-21 12:34:15] Detecting error patterns...
+[2024-12-21 12:34:20] Detected        0 unique error patterns
+[2024-12-21 12:34:20] Fixing file: ./agent_directives.md
+[2024-12-21 12:34:20] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:34:20] Fixing file: ./tests/test_components.py
+[2024-12-21 12:34:20] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:34:21] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:34:21] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:34:21] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:34:22] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:34:22] Fixing file: ./tests/__init__.py
+[2024-12-21 12:34:22] Fixing file: ./tests/test_book.py
+[2024-12-21 12:34:23] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:34:23] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:34:23] Fixing file: ./tests/test_main.py
+[2024-12-21 12:34:40] Starting auto-fix process...
+[2024-12-21 12:34:46] Initial error count: 0
+[2024-12-21 12:34:46] Starting fix iteration 1...
+[2024-12-21 12:34:46] Detecting error patterns...
+[2024-12-21 12:34:51] Detected        0 unique error patterns
+[2024-12-21 12:34:51] Fixing file: ./agent_directives.md
+[2024-12-21 12:34:51] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:34:51] Fixing file: ./tests/test_components.py
+[2024-12-21 12:34:52] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:34:52] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:34:52] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:34:53] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:34:53] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:34:53] Fixing file: ./tests/__init__.py
+[2024-12-21 12:34:53] Fixing file: ./tests/test_book.py
+[2024-12-21 12:34:54] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:34:54] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:34:54] Fixing file: ./tests/test_main.py
+[2024-12-21 12:34:55] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:34:55] Fixing file: ./tests/test_template.py
+[2024-12-21 12:34:55] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:34:56] Fixing file: ./streamlit_app.py
+[2024-12-21 12:34:56] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:34:56] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:34:56] Fixing file: ./README.md
+[2024-12-21 12:34:56] Fixing file: ./setup.py
+[2024-12-21 12:34:56] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:34:56] Fixing file: ./src/__init__.py
+[2024-12-21 12:34:56] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:34:57] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:34:57] Fixing file: ./src/models/book.py
+[2024-12-21 12:34:57] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:34:58] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:34:58] Fixing file: ./src/components/editor.py
+[2024-12-21 12:34:58] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:34:59] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:34:59] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:34:59] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:34:59] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:35:00] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:35:00] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:35:00] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:35:01] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:35:01] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:35:01] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:35:02] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:35:02] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:35:02] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:35:02] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:35:02] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:35:02] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:35:02] Fixing file: ./src/data/storage.py
+[2024-12-21 12:35:08] Errors after iteration 1: 0 (fixed 0)
+[2024-12-21 12:35:08] All issues resolved in iteration 1
+[2024-12-21 12:35:08] All fixes completed successfully!
+[2024-12-21 12:37:42] Starting auto-fix process...
+[2024-12-21 12:37:48] Initial error count: 0
+[2024-12-21 12:37:48] Starting fix iteration 1...
+[2024-12-21 12:37:48] Detecting error patterns...
+[2024-12-21 12:37:53] Detected        0 unique error patterns
+[2024-12-21 12:37:53] Fixing file: ./agent_directives.md
+[2024-12-21 12:37:53] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:37:53] Fixing file: ./tests/test_components.py
+[2024-12-21 12:37:53] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:37:53] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:37:54] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:37:54] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:37:54] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:37:55] Fixing file: ./tests/__init__.py
+[2024-12-21 12:37:55] Fixing file: ./tests/test_book.py
+[2024-12-21 12:37:55] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:37:55] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:37:56] Fixing file: ./tests/test_main.py
+[2024-12-21 12:37:56] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:37:56] Fixing file: ./tests/test_template.py
+[2024-12-21 12:37:57] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:37:57] Fixing file: ./streamlit_app.py
+[2024-12-21 12:37:57] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:37:57] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:37:57] Fixing file: ./README.md
+[2024-12-21 12:37:57] Fixing file: ./setup.py
+[2024-12-21 12:37:57] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:37:57] Fixing file: ./src/__init__.py
+[2024-12-21 12:37:58] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:37:58] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:37:58] Fixing file: ./src/models/book.py
+[2024-12-21 12:37:59] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:37:59] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:37:59] Fixing file: ./src/components/editor.py
+[2024-12-21 12:37:59] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:38:00] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:38:00] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:38:00] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:38:01] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:38:01] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:38:01] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:38:02] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:38:02] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:38:02] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:38:02] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:38:03] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:38:03] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:38:03] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:38:03] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:38:03] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:38:03] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:38:04] Fixing file: ./src/data/storage.py
+[2024-12-21 12:38:09] Errors after iteration 1: 0 (fixed 0)
+[2024-12-21 12:38:09] All issues resolved in iteration 1
+[2024-12-21 12:38:09] All fixes completed successfully!
+[2024-12-21 12:40:42] Starting auto-fix process...
+[2024-12-21 12:40:46] Initial error count: 0
+[2024-12-21 12:40:46] Starting fix iteration 1...
+[2024-12-21 12:40:46] Detecting error patterns...
+[2024-12-21 12:40:52] Detected        0 unique error patterns
+[2024-12-21 12:40:52] Fixing file: ./agent_directives.md
+[2024-12-21 12:40:52] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:40:52] Fixing file: ./tests/test_components.py
+[2024-12-21 12:40:52] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:40:53] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:40:53] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:40:53] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:40:53] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:40:54] Fixing file: ./tests/__init__.py
+[2024-12-21 12:40:54] Fixing file: ./tests/test_book.py
+[2024-12-21 12:40:54] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:40:55] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:40:55] Fixing file: ./tests/test_main.py
+[2024-12-21 12:40:55] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:40:55] Fixing file: ./tests/test_template.py
+[2024-12-21 12:40:56] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:40:56] Fixing file: ./streamlit_app.py
+[2024-12-21 12:40:56] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:40:56] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:40:56] Fixing file: ./README.md
+[2024-12-21 12:40:56] Fixing file: ./setup.py
+[2024-12-21 12:40:57] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:40:57] Fixing file: ./src/__init__.py
+[2024-12-21 12:40:57] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:40:57] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:40:58] Fixing file: ./src/models/book.py
+[2024-12-21 12:40:58] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:40:58] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:40:58] Fixing file: ./src/components/editor.py
+[2024-12-21 12:40:59] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:40:59] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:40:59] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:41:00] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:41:00] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:41:00] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:41:00] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:41:01] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:41:01] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:41:01] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:41:02] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:41:02] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:41:02] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:41:02] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:41:02] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:41:02] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:41:02] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:41:03] Fixing file: ./src/data/storage.py
+[2024-12-21 12:41:07] Errors after iteration 1: 0 (fixed 0)
+[2024-12-21 12:41:07] All issues resolved in iteration 1
+[2024-12-21 12:41:07] All fixes completed successfully!
+[2024-12-21 12:42:32] Starting auto-fix process...
+[2024-12-21 12:42:37] Initial error count: 0
+[2024-12-21 12:42:37] Starting fix iteration 1...
+[2024-12-21 12:42:37] Detecting error patterns...
+[2024-12-21 12:42:43] Detected        0 unique error patterns
+[2024-12-21 12:42:43] Fixing file: ./agent_directives.md
+[2024-12-21 12:42:43] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:42:43] Fixing file: ./tests/test_components.py
+[2024-12-21 12:42:43] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:42:43] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:42:44] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:42:44] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:42:44] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:42:44] Fixing file: ./tests/__init__.py
+[2024-12-21 12:42:45] Fixing file: ./tests/test_book.py
+[2024-12-21 12:42:45] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:42:45] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:42:46] Fixing file: ./tests/test_main.py
+[2024-12-21 12:42:46] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:42:46] Fixing file: ./tests/test_template.py
+[2024-12-21 12:42:46] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:42:47] Fixing file: ./streamlit_app.py
+[2024-12-21 12:42:47] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:42:47] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:42:47] Fixing file: ./README.md
+[2024-12-21 12:42:47] Fixing file: ./setup.py
+[2024-12-21 12:42:47] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:42:47] Fixing file: ./src/__init__.py
+[2024-12-21 12:42:48] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:42:48] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:42:48] Fixing file: ./src/models/book.py
+[2024-12-21 12:42:48] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:42:49] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:42:49] Fixing file: ./src/components/editor.py
+[2024-12-21 12:42:49] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:42:50] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:42:50] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:42:50] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:42:51] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:42:51] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:42:51] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:42:51] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:42:52] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:42:52] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:42:52] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:42:53] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:42:53] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:42:53] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:42:53] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:42:53] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:42:53] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:42:53] Fixing file: ./src/data/storage.py
+[2024-12-21 12:42:59] Errors after iteration 1: 0 (fixed 0)
+[2024-12-21 12:42:59] All issues resolved in iteration 1
+[2024-12-21 12:42:59] All fixes completed successfully!
+[2024-12-21 12:47:40] Starting auto-fix process...
+[2024-12-21 12:47:40] Starting verify fix iteration 1...
+[2024-12-21 12:47:40] Fixing file: ./agent_directives.md
+[2024-12-21 12:47:40] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:47:40] Fixing file: ./tests/test_components.py
+[2024-12-21 12:47:41] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:47:41] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:47:41] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:47:42] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:47:42] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:47:42] Fixing file: ./tests/__init__.py
+[2024-12-21 12:47:43] Fixing file: ./tests/test_book.py
+[2024-12-21 12:47:43] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:47:43] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:47:43] Fixing file: ./tests/test_main.py
+[2024-12-21 12:47:44] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:47:44] Fixing file: ./tests/test_template.py
+[2024-12-21 12:47:44] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:47:45] Fixing file: ./streamlit_app.py
+[2024-12-21 12:47:45] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:47:45] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:47:45] Fixing file: ./README.md
+[2024-12-21 12:47:45] Fixing file: ./setup.py
+[2024-12-21 12:47:45] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:47:45] Fixing file: ./src/__init__.py
+[2024-12-21 12:47:45] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:47:46] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:47:46] Fixing file: ./src/models/book.py
+[2024-12-21 12:47:46] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:47:47] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:47:47] Fixing file: ./src/components/editor.py
+[2024-12-21 12:47:47] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:47:48] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:47:48] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:47:48] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:47:48] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:47:49] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:47:49] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:47:49] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:47:50] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:47:50] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:47:50] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:47:50] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:47:51] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:47:51] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:47:51] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:47:51] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:47:51] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:47:51] Fixing file: ./src/data/storage.py
+[2024-12-21 12:47:52] Starting verify fix iteration 2...
+[2024-12-21 12:47:52] Fixing file: ./agent_directives.md
+[2024-12-21 12:47:52] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:47:52] Fixing file: ./tests/test_components.py
+[2024-12-21 12:47:52] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:47:52] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:47:53] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:47:53] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:47:53] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:47:54] Fixing file: ./tests/__init__.py
+[2024-12-21 12:47:54] Fixing file: ./tests/test_book.py
+[2024-12-21 12:47:54] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:47:55] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:47:55] Fixing file: ./tests/test_main.py
+[2024-12-21 12:47:55] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:47:56] Fixing file: ./tests/test_template.py
+[2024-12-21 12:47:56] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:47:56] Fixing file: ./streamlit_app.py
+[2024-12-21 12:47:57] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:47:57] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:47:57] Fixing file: ./README.md
+[2024-12-21 12:47:57] Fixing file: ./setup.py
+[2024-12-21 12:47:57] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:47:57] Fixing file: ./src/__init__.py
+[2024-12-21 12:47:57] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:47:58] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:47:58] Fixing file: ./src/models/book.py
+[2024-12-21 12:47:58] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:47:58] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:47:59] Fixing file: ./src/components/editor.py
+[2024-12-21 12:47:59] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:47:59] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:48:00] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:48:00] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:48:00] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:48:01] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:48:01] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:48:01] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:48:01] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:48:02] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:48:02] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:48:02] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:48:03] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:48:03] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:48:03] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:48:03] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:48:03] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:48:03] Fixing file: ./src/data/storage.py
+[2024-12-21 12:48:03] Starting verify fix iteration 3...
+[2024-12-21 12:48:04] Fixing file: ./agent_directives.md
+[2024-12-21 12:48:04] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:48:04] Fixing file: ./tests/test_components.py
+[2024-12-21 12:48:04] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:48:04] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:48:05] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:48:05] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:48:05] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:48:05] Fixing file: ./tests/__init__.py
+[2024-12-21 12:48:06] Fixing file: ./tests/test_book.py
+[2024-12-21 12:48:06] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:48:06] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:48:07] Fixing file: ./tests/test_main.py
+[2024-12-21 12:48:07] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:48:07] Fixing file: ./tests/test_template.py
+[2024-12-21 12:48:07] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:48:08] Fixing file: ./streamlit_app.py
+[2024-12-21 12:48:08] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:48:08] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:48:08] Fixing file: ./README.md
+[2024-12-21 12:48:08] Fixing file: ./setup.py
+[2024-12-21 12:48:08] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:48:08] Fixing file: ./src/__init__.py
+[2024-12-21 12:48:09] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:48:09] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:48:09] Fixing file: ./src/models/book.py
+[2024-12-21 12:48:10] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:48:10] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:48:10] Fixing file: ./src/components/editor.py
+[2024-12-21 12:48:11] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:48:11] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:48:11] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:48:11] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:48:12] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:48:12] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:48:12] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:48:13] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:48:13] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:48:13] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:48:14] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:48:14] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:48:14] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:48:14] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:48:14] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:48:14] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:48:14] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:48:15] Fixing file: ./src/data/storage.py
+[2024-12-21 12:48:21] Initial error count: 0
+[2024-12-21 12:48:21] Starting fix iteration 1...
+[2024-12-21 12:48:21] Detecting error patterns...
+[2024-12-21 12:48:26] Detected        0 unique error patterns
+[2024-12-21 12:48:26] Fixing file: ./agent_directives.md
+[2024-12-21 12:48:26] Fixing file: ./.pytest_cache/README.md
+[2024-12-21 12:48:26] Fixing file: ./tests/test_components.py
+[2024-12-21 12:48:27] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:48:27] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:48:27] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:48:27] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:48:28] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:48:28] Fixing file: ./tests/__init__.py
+[2024-12-21 12:48:28] Fixing file: ./tests/test_book.py
+[2024-12-21 12:48:29] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:48:29] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:48:29] Fixing file: ./tests/test_main.py
+[2024-12-21 12:48:29] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:48:30] Fixing file: ./tests/test_template.py
+[2024-12-21 12:48:30] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:48:30] Fixing file: ./streamlit_app.py
+[2024-12-21 12:48:31] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:48:31] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:48:31] Fixing file: ./README.md
+[2024-12-21 12:48:31] Fixing file: ./setup.py
+[2024-12-21 12:48:31] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:48:31] Fixing file: ./src/__init__.py
+[2024-12-21 12:48:31] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:48:32] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:48:32] Fixing file: ./src/models/book.py
+[2024-12-21 12:48:32] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:48:32] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:48:33] Fixing file: ./src/components/editor.py
+[2024-12-21 12:48:33] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:48:33] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:48:34] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:48:34] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:48:34] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:48:35] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:48:35] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:48:35] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:48:35] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:48:36] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:48:36] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:48:36] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:48:37] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:48:37] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:48:37] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:48:37] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:48:37] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:48:37] Fixing file: ./src/data/storage.py
+[2024-12-21 12:48:43] Errors after iteration 1: 0 (fixed 0)
+[2024-12-21 12:48:43] All issues resolved in iteration 1
+[2024-12-21 12:48:43] All fixes completed successfully!
+[2024-12-21 12:50:57] Starting auto-fix process...
+[2024-12-21 12:50:57] Found error patterns:
+[2024-12-21 12:50:57] Starting verify fix iteration 1...
+[2024-12-21 12:50:58] Fixing file: ./agent_directives.md
+[2024-12-21 12:50:58] Fixing file: ./tests/test_components.py
+[2024-12-21 12:50:58] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:50:58] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:50:59] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:50:59] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:50:59] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:51:00] Fixing file: ./tests/__init__.py
+[2024-12-21 12:51:00] Fixing file: ./tests/test_book.py
+[2024-12-21 12:51:00] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:51:00] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:51:01] Fixing file: ./tests/test_main.py
+[2024-12-21 12:51:01] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:51:01] Fixing file: ./tests/test_template.py
+[2024-12-21 12:51:02] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:51:02] Fixing file: ./streamlit_app.py
+[2024-12-21 12:51:02] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:51:02] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:51:02] Fixing file: ./README.md
+[2024-12-21 12:51:02] Fixing file: ./setup.py
+[2024-12-21 12:51:03] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:51:03] Fixing file: ./src/__init__.py
+[2024-12-21 12:51:03] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:51:03] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:51:03] Fixing file: ./src/models/book.py
+[2024-12-21 12:51:04] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:51:04] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:51:04] Fixing file: ./src/components/editor.py
+[2024-12-21 12:51:05] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:51:05] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:51:05] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:51:06] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:51:06] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:51:06] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:51:06] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:51:07] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:51:07] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:51:07] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:51:08] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:51:08] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:51:08] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:51:08] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:51:08] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:51:08] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:51:09] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:51:09] Fixing file: ./src/data/storage.py
+[2024-12-21 12:51:09] Found error patterns:
+[2024-12-21 12:51:09] Starting verify fix iteration 2...
+[2024-12-21 12:51:09] Fixing file: ./agent_directives.md
+[2024-12-21 12:51:09] Fixing file: ./tests/test_components.py
+[2024-12-21 12:51:10] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:51:10] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:51:10] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:51:11] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:51:11] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:51:11] Fixing file: ./tests/__init__.py
+[2024-12-21 12:51:11] Fixing file: ./tests/test_book.py
+[2024-12-21 12:51:12] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:51:12] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:51:12] Fixing file: ./tests/test_main.py
+[2024-12-21 12:51:13] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:51:13] Fixing file: ./tests/test_template.py
+[2024-12-21 12:51:13] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:51:13] Fixing file: ./streamlit_app.py
+[2024-12-21 12:51:14] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:51:14] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:51:14] Fixing file: ./README.md
+[2024-12-21 12:51:14] Fixing file: ./setup.py
+[2024-12-21 12:51:14] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:51:14] Fixing file: ./src/__init__.py
+[2024-12-21 12:51:14] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:51:15] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:51:15] Fixing file: ./src/models/book.py
+[2024-12-21 12:51:15] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:51:16] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:51:16] Fixing file: ./src/components/editor.py
+[2024-12-21 12:51:16] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:51:17] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:51:17] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:51:17] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:51:18] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:51:18] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:51:18] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:51:18] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:51:19] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:51:19] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:51:19] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:51:20] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:51:20] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:51:20] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:51:20] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:51:20] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:51:20] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:51:21] Fixing file: ./src/data/storage.py
+[2024-12-21 12:51:21] Found error patterns:
+[2024-12-21 12:51:21] Starting verify fix iteration 3...
+[2024-12-21 12:51:21] Fixing file: ./agent_directives.md
+[2024-12-21 12:51:21] Fixing file: ./tests/test_components.py
+[2024-12-21 12:51:21] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:51:22] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:51:22] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:51:22] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:51:23] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:51:23] Fixing file: ./tests/__init__.py
+[2024-12-21 12:51:23] Fixing file: ./tests/test_book.py
+[2024-12-21 12:51:23] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:51:24] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:51:24] Fixing file: ./tests/test_main.py
+[2024-12-21 12:51:24] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:51:25] Fixing file: ./tests/test_template.py
+[2024-12-21 12:51:25] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:51:25] Fixing file: ./streamlit_app.py
+[2024-12-21 12:51:26] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:51:26] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:51:26] Fixing file: ./README.md
+[2024-12-21 12:51:26] Fixing file: ./setup.py
+[2024-12-21 12:51:26] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:51:26] Fixing file: ./src/__init__.py
+[2024-12-21 12:51:26] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:51:26] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:51:27] Fixing file: ./src/models/book.py
+[2024-12-21 12:51:27] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:51:27] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:51:28] Fixing file: ./src/components/editor.py
+[2024-12-21 12:51:28] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:51:28] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:51:29] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:51:29] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:51:29] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:51:29] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:51:30] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:51:30] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:51:30] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:51:31] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:51:31] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:51:31] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:51:32] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:51:32] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:51:32] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:51:32] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:51:32] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:51:32] Fixing file: ./src/data/storage.py
+[2024-12-21 12:51:32] Found error patterns:
+[2024-12-21 12:51:38] Initial error count: 0
+[2024-12-21 12:51:38] Starting fix iteration 1...
+[2024-12-21 12:51:38] Detecting error patterns...
+[2024-12-21 12:51:44] Detected        0 unique error patterns
+[2024-12-21 12:51:44] Fixing file: ./agent_directives.md
+[2024-12-21 12:51:44] Fixing file: ./tests/test_components.py
+[2024-12-21 12:51:44] Fixing file: ./tests/test_app_config.py
+[2024-12-21 12:51:45] Fixing file: ./tests/test_core_editor_extended.py
+[2024-12-21 12:51:45] Fixing file: ./tests/test_editor.py
+[2024-12-21 12:51:45] Fixing file: ./tests/test_app_core.py
+[2024-12-21 12:51:45] Fixing file: ./tests/test_text_editor_extended.py
+[2024-12-21 12:51:46] Fixing file: ./tests/__init__.py
+[2024-12-21 12:51:46] Fixing file: ./tests/test_book.py
+[2024-12-21 12:51:47] Fixing file: ./tests/test_storage.py
+[2024-12-21 12:51:47] Fixing file: ./tests/test_app_core_editor.py
+[2024-12-21 12:51:47] Fixing file: ./tests/test_main.py
+[2024-12-21 12:51:47] Fixing file: ./tests/test_core_editor.py
+[2024-12-21 12:51:48] Fixing file: ./tests/test_template.py
+[2024-12-21 12:51:48] Fixing file: ./tests/test_settings.py
+[2024-12-21 12:51:48] Fixing file: ./streamlit_app.py
+[2024-12-21 12:51:49] Fixing file: ./docs/proj_status.md
+[2024-12-21 12:51:49] Fixing file: ./docs/implementation_plan.md
+[2024-12-21 12:51:49] Fixing file: ./README.md
+[2024-12-21 12:51:49] Fixing file: ./setup.py
+[2024-12-21 12:51:49] Fixing file: ./logs/auto_fix.log.md
+[2024-12-21 12:51:49] Fixing file: ./src/__init__.py
+[2024-12-21 12:51:49] Fixing file: ./src/utils/__init__.py
+[2024-12-21 12:51:50] Fixing file: ./src/models/__init__.py
+[2024-12-21 12:51:50] Fixing file: ./src/models/book.py
+[2024-12-21 12:51:50] Fixing file: ./src/components/__init__.py
+[2024-12-21 12:51:51] Fixing file: ./src/components/text_editor.py
+[2024-12-21 12:51:51] Fixing file: ./src/components/editor.py
+[2024-12-21 12:51:51] Fixing file: ./src/book_editor/core/__init__.py
+[2024-12-21 12:51:51] Fixing file: ./src/book_editor/core/template.py
+[2024-12-21 12:51:52] Fixing file: ./src/book_editor/core/editor.py
+[2024-12-21 12:51:52] Fixing file: ./src/book_editor/app/core/__init__.py
+[2024-12-21 12:51:52] Fixing file: ./src/book_editor/app/core/editor.py
+[2024-12-21 12:51:53] Fixing file: ./src/book_editor/app/config/__init__.py
+[2024-12-21 12:51:53] Fixing file: ./src/book_editor/app/config/settings.py
+[2024-12-21 12:51:53] Fixing file: ./src/book_editor/app/__init__.py
+[2024-12-21 12:51:53] Fixing file: ./src/book_editor/config/__init__.py
+[2024-12-21 12:51:54] Fixing file: ./src/book_editor/config/settings.py
+[2024-12-21 12:51:54] Fixing file: ./src/book_editor/__init__.py
+[2024-12-21 12:51:54] Fixing file: ./src/book_editor/types.py
+[2024-12-21 12:51:55] Fixing file: ./src/book_editor/docs/changelog.md
+[2024-12-21 12:51:55] Fixing file: ./src/book_editor/docs/proj_status.md
+[2024-12-21 12:51:55] Fixing file: ./src/book_editor/README.md
+[2024-12-21 12:51:55] Fixing file: ./src/book_editor/main.py
+[2024-12-21 12:51:55] Fixing file: ./src/data/__init__.py
+[2024-12-21 12:51:55] Fixing file: ./src/data/storage.py
+[2024-12-21 12:52:01] Errors after iteration 1: 0 (fixed 0)
+[2024-12-21 12:52:01] All issues resolved in iteration 1
+[2024-12-21 12:52:01] All fixes completed successfully!
+[2024-12-21 12:56:44] Starting auto-fix process...
+[2024-12-21 12:56:44] Starting fix iteration 1 of 3
+[2024-12-21 12:56:44] Parsing verify_and_fix.log for errors...
+[2024-12-21 12:56:44] Found        0 errors to fix
+[2024-12-21 12:56:44] Error summary:
+[2024-12-21 12:56:44] No errors found, stopping
+[2024-12-21 12:56:44] All fixes completed successfully!
+[2024-12-21 12:59:25] Starting auto-fix process...
+[2024-12-21 12:59:25] Starting fix iteration 1 of 3
+[2024-12-21 12:59:25] Parsing verify_and_fix.log for errors...
+[2024-12-21 12:59:25] Found        0 errors to fix
+[2024-12-21 12:59:25] Error summary:
+[2024-12-21 12:59:25] No errors found, stopping
+[2024-12-21 12:59:25] All fixes completed successfully!
+[2024-12-21 13:00:18] Starting auto-fix process...
+[2024-12-21 13:00:18] Starting fix iteration 1 of 3
+[2024-12-21 13:00:18] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:00:18] No JSON error data found in log file
+[2024-12-21 13:00:18] No errors found, stopping
+[2024-12-21 13:00:18] All fixes completed successfully!
+[2024-12-21 13:01:00] Starting auto-fix process...
+[2024-12-21 13:01:00] Starting fix iteration 1 of 3
+[2024-12-21 13:01:00] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:01:00] Found        0 errors to fix
+[2024-12-21 13:01:00] No errors found in log
+[2024-12-21 13:01:00] No errors found, stopping
+[2024-12-21 13:01:00] All fixes completed successfully!
+[2024-12-21 13:01:45] Starting auto-fix process...
+[2024-12-21 13:01:45] Starting fix iteration 1 of 3
+[2024-12-21 13:01:45] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:01:45] No errors found in log
+[2024-12-21 13:01:45] No errors found, stopping
+[2024-12-21 13:01:45] All fixes completed successfully!
+[2024-12-21 13:02:39] Starting auto-fix process...
+[2024-12-21 13:02:39] Starting fix iteration 1 of 3
+[2024-12-21 13:02:39] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:02:39] No errors found in log
+[2024-12-21 13:02:39] No errors found, stopping
+[2024-12-21 13:02:39] All fixes completed successfully!

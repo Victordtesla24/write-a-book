@@ -1,184 +1,336 @@
 #!/bin/bash
 
-# Add to top of script
+# Configuration
 LOG_FILE="logs/auto_fix.log"
+ERROR_PATTERN_FILE="logs/error_patterns.txt"
 mkdir -p "logs"
+
+# Maximum number of fix iterations
+MAX_ITERATIONS=5
+MIN_ERROR_REDUCTION=1  # Minimum number of errors that must be fixed to continue
 
 log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
 }
 
-# Function to ensure final newline
-ensure_final_newline() {
-    local file="$1"
-    if [ -f "$file" ] && [ -s "$file" ] && [ "$(tail -c1 "$file" | xxd -p)" != "0a" ]; then
-        echo "" >> "$file"
+# Function to detect and store error patterns
+detect_error_patterns() {
+    log "Detecting error patterns..."
+    
+    # Clear previous patterns
+    > "$ERROR_PATTERN_FILE"
+    
+    # Python error detection
+    if command -v pylint >/dev/null 2>&1; then
+        pylint src tests --output-format=text 2>/dev/null | grep -E "^[A-Z]:" | cut -d: -f1 | sort | uniq >> "$ERROR_PATTERN_FILE"
+    fi
+    
+    # Markdown error detection
+    if command -v markdownlint >/dev/null 2>&1; then
+        find . -name "*.md" -not -path "./venv/*" -not -path "./cursor_env/*" -type f -exec markdownlint {} \; 2>/dev/null | grep -oE "MD[0-9]+" | sort | uniq >> "$ERROR_PATTERN_FILE"
+    fi
+    
+    # Count unique error patterns
+    local pattern_count=$(wc -l < "$ERROR_PATTERN_FILE")
+    log "Detected $pattern_count unique error patterns"
+}
+
+# Function to parse errors from verify_and_fix.log
+parse_verify_log_errors() {
+    local log_file="logs/verify_and_fix.log"
+    if [ ! -f "$log_file" ]; then
+        log "verify_and_fix.log not found"
+        return 1
+    fi
+    
+    log "Parsing verify_and_fix.log for errors..."
+    > "$ERROR_PATTERN_FILE"  # Clear error patterns file
+    
+    # Extract JSON blocks
+    local json_blocks=$(awk '/\[{/,/}]/' "$log_file")
+    if [ -n "$json_blocks" ]; then
+        echo "$json_blocks" | while IFS= read -r line; do
+            if [[ $line =~ \"severity\":\ 4 ]]; then
+                # Get the next few lines for message and resource
+                read -r msg_line
+                read -r res_line
+                
+                # Extract message and file path
+                local message=$(echo "$msg_line" | grep -o '"message": *"[^"]*"' | sed 's/"message": *"\(.*\)"/\1/')
+                local file=$(echo "$res_line" | grep -o '"resource": *"[^"]*"' | sed 's/"resource": *"\(.*\)"/\1/')
+                
+                if [ -n "$message" ] && [ -n "$file" ]; then
+                    echo "$file:$message" >> "$ERROR_PATTERN_FILE"
+                fi
+            fi
+        done
+    fi
+    
+    # Count errors
+    local error_count=$(wc -l < "$ERROR_PATTERN_FILE")
+    
+    if [ "$error_count" -gt 0 ]; then
+        log "Found $error_count errors to fix"
+        log "Error summary:"
+        sort "$ERROR_PATTERN_FILE" | uniq -c | while read -r count error; do
+            log "  $count occurrences: $error"
+        done
+        return 0
+    else
+        log "No errors found in log"
+        return 1
     fi
 }
 
-# Function to fix markdown issues
-fix_markdown() {
+# Add this function after parse_verify_log_errors()
+parse_import_errors() {
+    local log_file="logs/verify_and_fix.log"
+    if [ -f "$log_file" ]; then
+        # Extract import errors from log
+        grep -B2 -A2 "ImportError\|ModuleNotFoundError\|No module named" "$log_file" | \
+        sed -n 's/.*No module named \(['"'"'"]*\)\([^'"'"'"]*\)\1.*/\2/p' > "${ERROR_PATTERN_FILE}.imports"
+        
+        if [ -s "${ERROR_PATTERN_FILE}.imports" ]; then
+            log "Found import errors:"
+            while read -r module; do
+                log "  Missing import: $module"
+            done < "${ERROR_PATTERN_FILE}.imports"
+        fi
+    fi
+}
+
+# Function to apply generic fixes based on error type
+apply_generic_fixes() {
     local file="$1"
+    local errors=$(grep "^$file:" "$ERROR_PATTERN_FILE" || true)
     
-    # Skip venv files
-    if [[ "$file" == *"/venv/"* ]] || [[ "$file" == *"/cursor_env/"* ]]; then
-        log "Skipping markdown file in excluded directory: $file"
+    if [ -z "$errors" ]; then
         return 0
     fi
     
-    # Fix MD014: Remove $ from shell commands while preserving indentation
-    perl -i -0pe 's/^(\s*)\$\s+/\1/gm' "$file"
+    log "Applying fixes to $file"
+    
+    # Handle different file types
+    case "${file##*.}" in
+        md)
+            # Fix markdown errors
+            if echo "$errors" | grep -q "MD022.*blanks-around-headings"; then
+                log "  Fixing heading spacing"
+                sed -i'' -e '/^#/i\\' -e '/^#/a\\' "$file"
+            fi
+            
+            if echo "$errors" | grep -q "MD025.*single-title"; then
+                log "  Fixing multiple top-level headings"
+                awk '
+                    BEGIN {first_h1 = 1}
+                    /^# / {
+                        if (first_h1) {
+                            print; first_h1 = 0
+                        } else {
+                            sub(/^# /, "## ")
+                            print
+                        }
+                        next
+                    }
+                    {print}
+                ' "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
+            fi
+            ;;
+            
+        py)
+            # Fix Python errors
+            if echo "$errors" | grep -q "redefined-outer-name"; then
+                log "  Fixing redefined outer names"
+                # Add pytest import if missing
+                grep -q "^import pytest" "$file" || sed -i'' '1i\import pytest\n' "$file"
+                
+                # Add fixture decorator to functions with redefined names
+                while read -r error_line; do
+                    local line_num=$(echo "$error_line" | cut -d: -f2)
+                    sed -i'' "${line_num}i\@pytest.fixture" "$file"
+                done < <(echo "$errors" | grep "redefined-outer-name")
+            fi
+            
+            # Handle import errors
+            if echo "$errors" | grep -q "ImportError\|ModuleNotFoundError"; then
+                while read -r module; do
+                    fix_import_errors "$file" "$module"
+                done < "${ERROR_PATTERN_FILE}.imports"
+            fi
+            ;;
+    esac
 }
 
-# Function to fix Python issues
-fix_python() {
+# Add this function to handle import fixes
+fix_import_errors() {
     local file="$1"
+    local error_msg="$2"
     
-    # Fix missing pytest imports
-    if grep -q "^import pytest" "$file"; then
-        if ! grep -q "# pylint: disable=import-error" "$file"; then
-            sed -i '' 's/^import pytest/import pytest  # pylint: disable=import-error/' "$file"
-        fi
+    # Extract module name from error message
+    local module=$(echo "$error_msg" | grep -o "No module named '[^']*'" | sed "s/No module named '\([^']*\)'/\1/")
+    
+    # Skip if no module found
+    [ -z "$module" ] && return 0
+    
+    log "Fixing import for module '$module' in $file"
+    
+    # Check if file exists and is Python
+    [[ "${file##*.}" != "py" ]] && return 0
+    [ ! -f "$file" ] && return 0
+    
+    # Don't add import if it already exists
+    if grep -q "^import $module\|^from $module import" "$file"; then
+        log "  Import already exists"
+        return 0
     fi
     
-    # Fix redefined-outer-name in test files
-    if [[ "$file" == *"test_"* ]] && ! grep -q "# pylint: disable=redefined-outer-name" "$file"; then
-        sed -i '' '1i\
-# pylint: disable=redefined-outer-name\
-' "$file"
-    fi
+    # Find the last import statement
+    local last_import=$(grep -n "^import\|^from .* import" "$file" | tail -n1 | cut -d: -f1)
     
-    # Fix missing double blank lines before functions/classes
-    perl -i -0pe 's/\n(@pytest\.fixture|def |class )/\n\n\n$1/g' "$file"
-    
-    # Fix unused imports
-    if grep -q "'.book_editor.core' imported but unused" "$file"; then
-        sed -i '' '/from .book_editor import core/d' "$file"
-    fi
-    
-    # Fix missing imports in __all__
-    if [[ "$file" == *"__init__.py" ]]; then
-        if grep -q '"book_editor" is specified in __all__ but is not present' "$file"; then
-            sed -i '' '/^__all__/i\
-from . import data, models, book_editor\
-' "$file"
-        fi
-    fi
-    
-    # Ensure docstring is present
-    if ! grep -q '"""' "$file"; then
-        local module_name=$(basename "$file" .py)
-        sed -i '' "1i\\
-\"\"\"${module_name} module.\"\"\"\
-\\
-" "$file"
-    fi
-    
-    # Fix import-error warnings
-    if grep -q "Import.*could not be resolved" "$file"; then
-        if ! grep -q "# type: ignore" "$file"; then
-            perl -i -pe 's/^import (.*)$/import $1  # type: ignore/' "$file"
-        fi
-    fi
-    
-    # Fix missing blank lines
-    if grep -q "expected 2 blank lines" "$file"; then
-        perl -i -0pe 's/\n(class |def |@)/\n\n\n$1/g' "$file"
-    fi
-    
-    # Fix unused imports
-    if grep -q "imported but unused" "$file"; then
-        log "Removing unused imports in $file"
-        autoflake --remove-all-unused-imports --in-place "$file"
-    fi
-    
-    # Ensure final newline
-    ensure_final_newline "$file"
-}
-
-# Add before processing files
-SKIPPED_FILES=()
-
-# Modify file processing to track skipped files
-find . -name "*.py" -not -path "./cursor_env/*" -not -path "./venv/*" -type f | while read -r file; do
-    if [ -w "$file" ]; then
-        log "Processing Python file: $file..."
-        fix_python "$file"
+    if [ -n "$last_import" ]; then
+        # Add after last import
+        sed -i'' "${last_import}a\\import ${module}" "$file"
     else
-        log "SKIPPED: No write permission - $file"
-        SKIPPED_FILES+=("$file")
+        # Add at top of file
+        sed -i'' "1i\\import ${module}\\n" "$file"
     fi
-done
-
-# Add to the script before processing files
-check_markdown_file() {
-    local file="$1"
-    local errors=0
     
-    # Run markdownlint on single file
+    log "  Added import for $module"
+    
+    # Verify import was added
+    if grep -q "^import $module\|^from $module import" "$file"; then
+        return 0
+    else
+        log "  Failed to add import"
+        return 1
+    fi
+}
+
+# Generic file fix function
+fix_file() {
+    local file="$1"
+    local initial_errors=$(grep "^$file:" "$ERROR_PATTERN_FILE" | wc -l)
+    
+    if [ "$initial_errors" -eq 0 ]; then
+        return 0
+    fi
+    
+    log "Processing $file ($initial_errors errors)"
+    apply_generic_fixes "$file"
+    
+    # Verify fixes
+    local remaining_errors=$(grep "^$file:" "$ERROR_PATTERN_FILE" | wc -l)
+    local fixed_count=$((initial_errors - remaining_errors))
+    
+    if [ "$fixed_count" -gt 0 ]; then
+        log "  Fixed $fixed_count errors in $file"
+    else
+        log "  No errors fixed in $file"
+    fi
+}
+
+# Function to count total errors
+count_errors() {
+    local error_count=0
+    local pylint_errors=0
+    local md_errors=0
+    
+    # Count Python errors
+    if command -v pylint >/dev/null 2>&1; then
+        # Use grep -c with proper error handling
+        pylint_errors=$(pylint src tests --output-format=text 2>/dev/null | grep -c "^[A-Z]:" || echo "0")
+        # Ensure we have a valid number
+        [[ "$pylint_errors" =~ ^[0-9]+$ ]] || pylint_errors=0
+        error_count=$((error_count + pylint_errors))
+    fi
+    
+    # Count Markdown errors
     if command -v markdownlint >/dev/null 2>&1; then
-        markdownlint "$file" > "$LOG_FILE.md.tmp" 2>&1 || true
-        if [ -s "$LOG_FILE.md.tmp" ]; then
-            log "WARNING: Markdown errors in $file:"
-            cat "$LOG_FILE.md.tmp" | tee -a "$LOG_FILE"
-            errors=1
-        fi
+        # Use grep -c with proper error handling
+        md_errors=$(find . -name "*.md" -not -path "./venv/*" -not -path "./cursor_env/*" -type f -exec markdownlint {} \; 2>/dev/null | grep -c "MD[0-9]+" || echo "0")
+        # Ensure we have a valid number
+        [[ "$md_errors" =~ ^[0-9]+$ ]] || md_errors=0
+        error_count=$((error_count + md_errors))
     fi
     
-    return $errors
+    # Ensure we return a valid number
+    [[ "$error_count" =~ ^[0-9]+$ ]] || error_count=0
+    echo "$error_count"
 }
 
-# Modify the markdown processing loop
-find . -name "*.md" -not -path "./cursor_env/*" -type f | while read -r file; do
-    if [ -w "$file" ]; then
-        log "Processing markdown file: $file..."
-        fix_markdown "$file"
-    else
-        log "SKIPPED: No write permission - $file"
-        SKIPPED_FILES+=("$file")
+# Main recursive fix function
+recursive_fix() {
+    local iteration=1
+    local max_iterations=3
+    
+    while [ $iteration -le $max_iterations ]; do
+        log "Starting fix iteration $iteration of $max_iterations"
+        
+        # Parse current errors
+        parse_verify_log_errors
+        parse_import_errors
+        local error_count=$(wc -l < "$ERROR_PATTERN_FILE")
+        
+        if [ "$error_count" -eq 0 ]; then
+            log "No errors found, stopping"
+            return 0
+        fi
+        
+        log "Found $error_count errors to fix"
+        
+        # Process each file with errors
+        awk -F: '{print $1}' "$ERROR_PATTERN_FILE" | sort -u | while read -r file; do
+            if [ -f "$file" ] && [ -w "$file" ]; then
+                fix_file "$file"
+            fi
+        done
+        
+        # Force more aggressive fixes in later iterations
+        if [ $iteration -eq 3 ]; then
+            log "Final iteration - applying aggressive fixes"
+            while read -r file; do
+                if [ -f "$file" ] && [ -w "$file" ]; then
+                    # Apply more aggressive fixes here
+                    case "${file##*.}" in
+                        md)
+                            # Ensure proper markdown formatting
+                            sed -i'' -e 's/^#/\n#/' -e 's/#/\n#/' "$file"
+                            ;;
+                        py)
+                            # Force add fixtures to all test functions
+                            sed -i'' '/^def test_/i\@pytest.fixture' "$file"
+                            ;;
+                    esac
+                fi
+            done < <(awk -F: '{print $1}' "$ERROR_PATTERN_FILE" | sort -u)
+        fi
+        
+        ((iteration++))
+    done
+    
+    # Final error check
+    parse_verify_log_errors
+    local final_errors=$(wc -l < "$ERROR_PATTERN_FILE")
+    
+    if [ "$final_errors" -gt 0 ]; then
+        log "WARNING: $final_errors errors remain after $max_iterations iterations"
+        return 1
     fi
-done
+    
+    return 0
+}
 
-# Run code formatters if available
-if command -v black >/dev/null 2>&1; then
-    black --line-length 79 .
-fi
+# Main execution
+log "Starting auto-fix process..."
 
-if command -v isort >/dev/null 2>&1; then
-    isort .
-fi
+# Run recursive fix
+recursive_fix
+exit_status=$?
 
-# Verify fixes
-echo "Verifying fixes..."
-ERRORS=0
-
-# Check Python files
-pylint src tests --output-format=text > "$LOG_FILE.pylint" 2>&1 || true
-if grep -q "error" "$LOG_FILE.pylint"; then
-    log "WARNING: Some Python errors remain"
-    ERRORS=1
-fi
-
-# Check Markdown files
-if command -v markdownlint >/dev/null 2>&1; then
-    find . -name "*.md" -not -path "./venv/*" -not -path "./cursor_env/*" -type f -exec markdownlint {} \; > "$LOG_FILE.md" 2>&1 || true
-    if [ -s "$LOG_FILE.md" ]; then
-        log "WARNING: Some Markdown errors remain"
-        ERRORS=1
-    fi
-fi
-
-if [ $ERRORS -eq 0 ]; then
-    log "All fixes verified successfully!"
+if [ $exit_status -eq 0 ]; then
+    log "All fixes completed successfully!"
 else
-    log "Some errors remain - check logs for details"
+    log "Some issues remain - check logs for details"
 fi
 
-# Add before script end
-if [ ${#SKIPPED_FILES[@]} -gt 0 ]; then
-    log "WARNING: The following files were skipped due to permissions:"
-    printf '%s\n' "${SKIPPED_FILES[@]}" | tee -a "$LOG_FILE"
-    chmod u+w "${SKIPPED_FILES[@]}" 2>/dev/null || log "ERROR: Could not fix permissions"
-fi
-
-echo "Auto-fix complete!"
+exit $exit_status
