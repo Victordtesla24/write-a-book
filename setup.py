@@ -1,14 +1,9 @@
-import book
-import editor
-import for
-import package."""
-import script
-import streamlit as st"""Setup
-import the
+"""Setup configuration for Book Editor package."""
+
 from setuptools import find_packages, setup  # type: ignore
 
 setup(
-    name="book_editor",
+    name="book-editor",
     version="0.1.0",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
@@ -16,24 +11,16 @@ setup(
         "streamlit>=1.41.1",
         "markdown>=3.7",
         "pygments>=2.18.0",
-        "python-dotenv",
-        "pytest",
-        "pytest-cov",
-        "black",
-        "isort",
-        "flake8",
-        "pylint",
-        "autopep8",
     ],
     extras_require={
         "dev": [
-            "pytest",
-            "pytest-cov",
-            "black",
-            "isort",
-            "flake8",
-            "pylint",
-            "autopep8",
+            "black>=24.1.1",
+            "isort>=5.13.2",
+            "autopep8>=2.0.4",
+            "autoflake>=2.2.1",
+            "pylint>=3.0.3",
+            "pytest>=7.4.0",
+            "pytest-cov>=4.1.0",
         ]
     },
     python_requires=">=3.8",
@@ -49,8 +36,5 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: 3.11",
-        "Programming Language :: Python :: 3.12",
-        "Programming Language :: Python :: 3.13",
     ],
 )

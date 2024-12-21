@@ -1,350 +1,976 @@
-venvadmin@Vics-MacBook-Air write-a-book % chmod +x scripts/*.sh
-venvadmin@Vics-MacBook-Air write-a-book % ./scripts/verify_and_fix.sh
-[2024-12-20 16:19:54] Starting verification and fixes...
-[2024-12-20 16:19:54] Setting up virtual environment...
-[2024-12-20 16:19:56] Running auto_fix_code.sh...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_components.py...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_app_config.py...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_core_editor_extended.py...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_editor.py...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_app_core.py...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_text_editor_extended.py...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_book.py...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_storage.py...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_app_core_editor.py...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_main.py...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_core_editor.py...
-[2024-12-20 16:19:56] Processing Python file: ./tests/test_template.py...
-[2024-12-20 16:19:57] Processing Python file: ./tests/test_settings.py...
-[2024-12-20 16:19:57] Processing Python file: ./streamlit_app.py...
-[2024-12-20 16:19:57] Processing Python file: ./setup.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/__init__.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/utils/__init__.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/models/__init__.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/models/book.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/components/__init__.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/components/text_editor.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/components/editor.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/core/__init__.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/core/template.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/core/editor.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/app/core/__init__.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/app/core/editor.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/app/config/__init__.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/app/config/settings.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/app/__init__.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/config/__init__.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/config/settings.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/__init__.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/types.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/book_editor/main.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/data/__init__.py...
-[2024-12-20 16:19:57] Processing Python file: ./src/data/storage.py...
-[2024-12-20 16:19:57] Processing markdown file: ./agent_directives.md...
-[2024-12-20 16:19:57] Processing markdown file: ./.pytest_cache/README.md...
-[2024-12-20 16:19:57] Processing markdown file: ./docs/proj_status.md...
-[2024-12-20 16:19:57] Processing markdown file: ./docs/implementation_plan.md...
-[2024-12-20 16:19:57] Processing markdown file: ./README.md...
-[2024-12-20 16:19:57] Processing markdown file: ./logs/auto_fix.log.md...
-[2024-12-20 16:19:57] Processing markdown file: ./venv/lib/python3.13/site-packages/idna-3.10.dist-info/LICENSE.md...
-[2024-12-20 16:19:57] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/idna-3.10.dist-info/LICENSE.md
-[2024-12-20 16:19:57] Processing markdown file: ./venv/lib/python3.13/site-packages/Markdown-3.7.dist-info/LICENSE.md...
-[2024-12-20 16:19:57] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/Markdown-3.7.dist-info/LICENSE.md
-[2024-12-20 16:19:57] Processing markdown file: ./venv/lib/python3.13/site-packages/narwhals-1.19.0.dist-info/licenses/LICENSE.md...
-[2024-12-20 16:19:57] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/narwhals-1.19.0.dist-info/licenses/LICENSE.md
-[2024-12-20 16:19:57] Processing markdown file: ./venv/lib/python3.13/site-packages/altair/jupyter/js/README.md...
-[2024-12-20 16:19:57] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/altair/jupyter/js/README.md
-[2024-12-20 16:19:57] Processing markdown file: ./venv/lib/python3.13/site-packages/numpy/random/LICENSE.md...
-[2024-12-20 16:19:57] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/numpy/random/LICENSE.md
-[2024-12-20 16:19:57] Processing markdown file: ./venv/lib/python3.13/site-packages/README.md...
-[2024-12-20 16:19:57] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/README.md
-[2024-12-20 16:19:57] Processing markdown file: ./venv/lib/python3.13/site-packages/black-24.10.0.dist-info/licenses/AUTHORS.md...
-[2024-12-20 16:19:57] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/black-24.10.0.dist-info/licenses/AUTHORS.md
-[2024-12-20 16:19:57] Processing markdown file: ./venv/lib/python3.13/site-packages/pyarrow/tests/data/orc/README.md...
-[2024-12-20 16:19:57] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/pyarrow/tests/data/orc/README.md
-[2024-12-20 16:19:57] Processing markdown file: ./src/book_editor/docs/changelog.md...
-[2024-12-20 16:19:57] Processing markdown file: ./src/book_editor/docs/proj_status.md...
-[2024-12-20 16:19:57] Processing markdown file: ./src/book_editor/README.md...
-reformatted /Users/admin/cursor/write-a-book/src/book_editor/types.py
-reformatted /Users/admin/cursor/write-a-book/src/components/text_editor.py
-reformatted /Users/admin/cursor/write-a-book/src/data/storage.py
-reformatted /Users/admin/cursor/write-a-book/src/components/editor.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_app_config.py
-reformatted /Users/admin/cursor/write-a-book/streamlit_app.py
-reformatted /Users/admin/cursor/write-a-book/src/models/book.py
-reformatted /Users/admin/cursor/write-a-book/src/book_editor/core/template.py
-reformatted /Users/admin/cursor/write-a-book/src/book_editor/main.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_components.py
-reformatted /Users/admin/cursor/write-a-book/src/book_editor/core/editor.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_app_core_editor.py
-reformatted /Users/admin/cursor/write-a-book/src/book_editor/app/core/editor.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_book.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_app_core.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_settings.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_storage.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_template.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_text_editor_extended.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_editor.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_core_editor.py
-reformatted /Users/admin/cursor/write-a-book/tests/test_main.py
-
-All done! ✨ 🍰 ✨
-23 files reformatted, 14 files left unchanged.
-Fixing /Users/admin/cursor/write-a-book/tests/test_template.py
-Skipped 2 files
-Verifying fixes...
-[2024-12-20 16:20:01] All fixes verified successfully!
-Auto-fix complete!
-[2024-12-20 16:20:01] Setting up markdown linting tools...
-[2024-12-20 16:20:01] Setting up Streamlit directory structure...
-[2024-12-20 16:20:01] Verifying Streamlit dependencies...
-[2024-12-20 16:20:01] Fixing markdown files...
-[2024-12-20 16:20:01] Processing ./agent_directives.md...
-[2024-12-20 16:20:01] Processing ./.pytest_cache/README.md...
-[2024-12-20 16:20:01] Processing ./docs/proj_status.md...
-[2024-12-20 16:20:01] Processing ./docs/implementation_plan.md...
-[2024-12-20 16:20:01] Processing ./README.md...
-[2024-12-20 16:20:01] Processing ./logs/auto_fix.log.md...
-[2024-12-20 16:20:01] Processing ./src/book_editor/docs/changelog.md...
-[2024-12-20 16:20:01] Processing ./src/book_editor/docs/proj_status.md...
-[2024-12-20 16:20:01] Processing ./src/book_editor/README.md...
-[2024-12-20 16:20:01] Fixing Python files...
-[2024-12-20 16:20:01] Processing ./tests/test_components.py...
-[2024-12-20 16:20:01] Processing ./tests/test_app_config.py...
-[2024-12-20 16:20:01] Processing ./tests/test_core_editor_extended.py...
-[2024-12-20 16:20:02] Processing ./tests/test_editor.py...
-[2024-12-20 16:20:02] Processing ./tests/test_app_core.py...
-[2024-12-20 16:20:02] Processing ./tests/test_text_editor_extended.py...
-[2024-12-20 16:20:02] Processing ./tests/test_book.py...
-[2024-12-20 16:20:02] Processing ./tests/test_storage.py...
-[2024-12-20 16:20:02] Processing ./tests/test_app_core_editor.py...
-[2024-12-20 16:20:02] Processing ./tests/test_main.py...
-[2024-12-20 16:20:02] Processing ./tests/test_core_editor.py...
-[2024-12-20 16:20:02] Processing ./tests/test_template.py...
-[2024-12-20 16:20:02] Processing ./tests/test_settings.py...
-[2024-12-20 16:20:03] Processing ./streamlit_app.py...
-[2024-12-20 16:20:03] Processing ./setup.py...
-[2024-12-20 16:20:03] Processing ./src/__init__.py...
-[2024-12-20 16:20:03] Processing ./src/utils/__init__.py...
-[2024-12-20 16:20:03] Processing ./src/models/__init__.py...
-[2024-12-20 16:20:03] Processing ./src/models/book.py...
-[2024-12-20 16:20:03] Processing ./src/components/__init__.py...
-[2024-12-20 16:20:03] Processing ./src/components/text_editor.py...
-[2024-12-20 16:20:04] Processing ./src/components/editor.py...
-[2024-12-20 16:20:04] Processing ./src/book_editor/core/__init__.py...
-[2024-12-20 16:20:04] Processing ./src/book_editor/core/template.py...
-[2024-12-20 16:20:04] Processing ./src/book_editor/core/editor.py...
-[2024-12-20 16:20:04] Processing ./src/book_editor/app/core/__init__.py...
-[2024-12-20 16:20:04] Processing ./src/book_editor/app/core/editor.py...
-[2024-12-20 16:20:04] Processing ./src/book_editor/app/config/__init__.py...
-[2024-12-20 16:20:04] Processing ./src/book_editor/app/config/settings.py...
-[2024-12-20 16:20:04] Processing ./src/book_editor/app/__init__.py...
-[2024-12-20 16:20:04] Processing ./src/book_editor/config/__init__.py...
-[2024-12-20 16:20:05] Processing ./src/book_editor/config/settings.py...
-[2024-12-20 16:20:05] Processing ./src/book_editor/__init__.py...
-[2024-12-20 16:20:05] Processing ./src/book_editor/types.py...
-[2024-12-20 16:20:05] Processing ./src/book_editor/main.py...
-[2024-12-20 16:20:05] Processing ./src/data/__init__.py...
-[2024-12-20 16:20:05] Processing ./src/data/storage.py...
-[2024-12-20 16:20:05] Running linting checks...
-[2024-12-20 16:20:05] Running pytest...
-/Users/admin/cursor/write-a-book/venv/lib/python3.13/site-packages/pytest_asyncio/plugin.py:207: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
-The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
-
-  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
-============================= test session starts ==============================
-platform darwin -- Python 3.13.1, pytest-8.3.4, pluggy-1.5.0 -- /Users/admin/cursor/write-a-book/venv/bin/python
-cachedir: .pytest_cache
-rootdir: /Users/admin/cursor/write-a-book
-configfile: pyproject.toml
-plugins: cov-6.0.0, asyncio-0.25.0, mock-3.14.0
-asyncio: mode=Mode.STRICT, asyncio_default_fixture_loop_scope=None
-collecting ... collected 104 items
-
-tests/test_app_config.py::test_app_settings PASSED                       [  0%]
-tests/test_app_config.py::test_supported_formats PASSED                  [  1%]
-tests/test_app_config.py::test_theme_config PASSED                       [  2%]
-tests/test_app_config.py::test_editor_config PASSED                      [  3%]
-tests/test_app_config.py::test_preview_config PASSED                     [  4%]
-tests/test_app_config.py::test_logging_config PASSED                     [  5%]
-tests/test_app_core.py::test_app_editor_initialization PASSED            [  6%]
-tests/test_app_core.py::test_document_manager_operations PASSED          [  7%]
-tests/test_app_core.py::test_template_renderer_operations PASSED         [  8%]
-tests/test_app_core.py::test_preview_manager_operations PASSED           [  9%]
-tests/test_app_core.py::test_app_editor_document_handling PASSED         [ 10%]
-tests/test_app_core.py::test_app_editor_template_handling PASSED         [ 11%]
-tests/test_app_core.py::test_app_editor_error_handling PASSED            [ 12%]
-tests/test_app_core.py::test_document_manager_validation PASSED          [ 13%]
-tests/test_app_core.py::test_template_renderer_validation PASSED         [ 14%]
-tests/test_app_core.py::test_preview_manager_validation PASSED           [ 15%]
-tests/test_app_core_editor.py::test_template_renderer_operations PASSED  [ 16%]
-tests/test_app_core_editor.py::test_preview_manager_operations PASSED    [ 17%]
-tests/test_app_core_editor.py::test_app_editor_initialization PASSED     [ 18%]
-tests/test_app_core_editor.py::test_app_editor_document_operations PASSED [ 19%]
-tests/test_app_core_editor.py::test_app_editor_template_operations PASSED [ 20%]
-tests/test_app_core_editor.py::test_app_editor_validation PASSED         [ 21%]
-tests/test_book.py::test_book_creation PASSED                            [ 22%]
-tests/test_book.py::test_chapter_management PASSED                       [ 23%]
-tests/test_book.py::test_section_management PASSED                       [ 24%]
-tests/test_book.py::test_metadata_management PASSED                      [ 25%]
-tests/test_book.py::test_content_operations PASSED                       [ 25%]
-tests/test_book.py::test_chapter_operations PASSED                       [ 26%]
-tests/test_components.py::test_editor_component_initialization PASSED    [ 27%]
-tests/test_components.py::test_editor_content_update PASSED              [ 28%]
-tests/test_components.py::test_cursor_movement PASSED                    [ 29%]
-tests/test_components.py::test_text_selection PASSED                     [ 30%]
-tests/test_components.py::test_undo_redo PASSED                          [ 31%]
-tests/test_core_editor.py::test_document_creation PASSED                 [ 32%]
-tests/test_core_editor.py::test_document_update PASSED                   [ 33%]
-tests/test_core_editor.py::test_document_html_rendering FAILED           [ 34%]
-tests/test_core_editor.py::test_document_serialization PASSED            [ 35%]
-tests/test_core_editor.py::test_editor_initialization PASSED             [ 36%]
-tests/test_core_editor.py::test_document_management PASSED               [ 37%]
-tests/test_core_editor.py::test_text_analysis PASSED                     [ 38%]
-tests/test_core_editor.py::test_datetime_encoder PASSED                  [ 39%]
-tests/test_core_editor.py::test_error_handling PASSED                    [ 40%]
-tests/test_core_editor.py::test_document_format_handling PASSED          [ 41%]
-tests/test_core_editor.py::test_empty_document_handling PASSED           [ 42%]
-tests/test_core_editor.py::test_css_generation PASSED                    [ 43%]
-tests/test_core_editor.py::test_datetime_handling PASSED                 [ 44%]
-tests/test_core_editor.py::test_text_analysis_edge_cases PASSED          [ 45%]
-tests/test_core_editor.py::test_document_to_dict_error_handling PASSED   [ 46%]
-tests/test_core_editor_extended.py::test_editor_initialization FAILED    [ 47%]
-tests/test_core_editor_extended.py::test_editor_document_creation PASSED [ 48%]
-tests/test_core_editor_extended.py::test_editor_document_saving PASSED   [ 49%]
-tests/test_core_editor_extended.py::test_editor_document_loading PASSED  [ 50%]
-tests/test_core_editor_extended.py::test_editor_document_listing PASSED  [ 50%]
-tests/test_core_editor_extended.py::test_editor_text_analysis PASSED     [ 51%]
-tests/test_core_editor_extended.py::test_editor_html_rendering FAILED    [ 52%]
-tests/test_core_editor_extended.py::test_text_analysis_edge_cases PASSED [ 53%]
-tests/test_core_editor_extended.py::test_autosave_enabled FAILED         [ 54%]
-tests/test_editor.py::test_editor_initialization PASSED                  [ 55%]
-tests/test_editor.py::test_book_loading PASSED                           [ 56%]
-tests/test_editor.py::test_chapter_navigation PASSED                     [ 57%]
-tests/test_editor.py::test_content_editing PASSED                        [ 58%]
-tests/test_editor.py::test_chapter_management PASSED                     [ 59%]
-tests/test_editor.py::test_error_handling PASSED                         [ 60%]
-tests/test_editor.py::test_undo_redo_stack PASSED                        [ 61%]
-tests/test_editor.py::test_empty_undo_redo PASSED                        [ 62%]
-tests/test_editor.py::test_chapter_validation FAILED                     [ 63%]
-tests/test_editor.py::test_chapter_index_adjustment PASSED               [ 64%]
-tests/test_editor.py::test_multiple_chapter_operations PASSED            [ 65%]
-tests/test_main.py::test_book_editor_initialization PASSED               [ 66%]
-tests/test_main.py::test_render_template_manager PASSED                  [ 67%]
-tests/test_main.py::test_main PASSED                                     [ 68%]
-tests/test_main.py::test_auto_save PASSED                                [ 69%]
-tests/test_main.py::test_template_management PASSED                      [ 70%]
-tests/test_main.py::test_template_search PASSED                          [ 71%]
-tests/test_main.py::test_template_preview PASSED                         [ 72%]
-tests/test_main.py::test_editor_content_handling PASSED                  [ 73%]
-tests/test_main.py::test_editor_statistics PASSED                        [ 74%]
-tests/test_main.py::test_document_history PASSED                         [ 75%]
-tests/test_settings.py::test_app_settings PASSED                         [ 75%]
-tests/test_settings.py::test_supported_formats PASSED                    [ 76%]
-tests/test_settings.py::test_theme_config PASSED                         [ 77%]
-tests/test_settings.py::test_editor_config PASSED                        [ 78%]
-tests/test_settings.py::test_preview_config PASSED                       [ 79%]
-tests/test_settings.py::test_logging_config PASSED                       [ 80%]
-tests/test_storage.py::test_storage_initialization PASSED                [ 81%]
-tests/test_storage.py::test_file_operations PASSED                       [ 82%]
-tests/test_storage.py::test_directory_operations PASSED                  [ 83%]
-tests/test_storage.py::test_backup_operations PASSED                     [ 84%]
-tests/test_storage.py::test_error_handling PASSED                        [ 85%]
-tests/test_template.py::test_template_creation PASSED                    [ 86%]
-tests/test_template.py::test_template_serialization PASSED               [ 87%]
-tests/test_template.py::test_template_manager_categories PASSED          [ 88%]
-tests/test_template.py::test_template_manager_save_load PASSED           [ 89%]
-tests/test_template.py::test_template_manager_listing PASSED             [ 90%]
-tests/test_template.py::test_template_search PASSED                      [ 91%]
-tests/test_text_editor_extended.py::test_editor_initialization PASSED    [ 92%]
-tests/test_text_editor_extended.py::test_content_management PASSED       [ 93%]
-tests/test_text_editor_extended.py::test_cursor_movement_bounds PASSED   [ 94%]
-tests/test_text_editor_extended.py::test_text_selection_operations PASSED [ 95%]
-tests/test_text_editor_extended.py::test_undo_redo_operations PASSED     [ 96%]
-tests/test_text_editor_extended.py::test_empty_operations PASSED         [ 97%]
-tests/test_text_editor_extended.py::test_cursor_selection_interaction PASSED [ 98%]
-tests/test_text_editor_extended.py::test_content_state_management PASSED [ 99%]
-tests/test_text_editor_extended.py::test_selection_edge_cases PASSED     [100%]
-
-=================================== FAILURES ===================================
-_________________________ test_document_html_rendering _________________________
-
-    def test_document_html_rendering() -> None:
-        """Test HTML rendering with syntax highlighting."""
-        content = (
-            "# Title\n\n"
-            "```python\nprint('hello')\n```\n"
-            "```invalid\ncode\n```"
-        )
-        doc = Document(content=content, title="Test")
-        html = doc.get_html()
-    
-        # Check markdown conversion
->       assert '<h1 id="title">Title</h1>' in html
-E       assert '<h1 id="title">Title</h1>' in "<h1>Title</h1>\n<p><code>python\nprint('hello')</code>\n<code>invalid\ncode</code></p>"
-
-tests/test_core_editor.py:78: AssertionError
-__________________________ test_editor_initialization __________________________
-
-editor = <src.book_editor.core.editor.Editor object at 0x106e1a9c0>
-
-    def test_editor_initialization(editor):
-        """Test editor initialization."""
-        assert editor.storage_dir is not None
-        assert editor.current_document is None
->       assert editor.autosave_enabled is True
-E       AttributeError: 'Editor' object has no attribute 'autosave_enabled'. Did you mean: 'is_autosave_enabled'?
-
-tests/test_core_editor_extended.py:23: AttributeError
-__________________________ test_editor_html_rendering __________________________
-
-editor = <src.book_editor.core.editor.Editor object at 0x106e66950>
-
-    def test_editor_html_rendering(editor):
-        """Test HTML rendering functionality."""
-        # Test markdown rendering
-        doc = editor.new_document("Test")
-        doc.update_content("# Test\n**Bold** text")
-        html = doc.get_html()
->       assert '<h1 id="test">Test</h1>' in html
-E       assert '<h1 id="test">Test</h1>' in '<h1>Test</h1>\n<p><strong>Bold</strong> text</p>'
-
-tests/test_core_editor_extended.py:103: AssertionError
-____________________________ test_autosave_enabled _____________________________
-
-    def test_autosave_enabled():
-        """Test autosave enabled property."""
-        editor = Editor(Path("test_storage"))
->       assert editor.autosave_enabled
-E       AttributeError: 'Editor' object has no attribute 'autosave_enabled'. Did you mean: 'is_autosave_enabled'?
-
-tests/test_core_editor_extended.py:146: AttributeError
-___________________________ test_chapter_validation ____________________________
-
-editor = <src.components.editor.Editor object at 0x106e66250>
-sample_book = <src.models.book.Book object at 0x106f8eb30>
-
-    def test_chapter_validation(editor: Editor, sample_book: Book) -> None:
-        """Test chapter validation functionality."""
-        editor.load_book(sample_book)
-        assert editor.current_book is not None
-    
-        # Test empty title
-        with pytest.raises(ValueError):
-            editor.add_chapter("", "Content")
-    
-        # Test empty content (changed from None)
->       with pytest.raises(ValueError):
-E       Failed: DID NOT RAISE <class 'ValueError'>
-
-tests/test_editor.py:173: Failed
-=========================== short test summary info ============================
-FAILED tests/test_core_editor.py::test_document_html_rendering - assert '<h1 ...
-FAILED tests/test_core_editor_extended.py::test_editor_initialization - Attri...
-FAILED tests/test_core_editor_extended.py::test_editor_html_rendering - asser...
-FAILED tests/test_core_editor_extended.py::test_autosave_enabled - AttributeE...
-FAILED tests/test_editor.py::test_chapter_validation - Failed: DID NOT RAISE ...
-========================= 5 failed, 99 passed in 0.34s =========================
-[2024-12-20 16:20:06] ERROR: Pytest failed
-venvadmin@Vics-MacBook-Air write-a-book % 
+[{
+	"resource": "/Users/admin/cursor/write-a-book/streamlit_app.py",
+	"owner": "_generated_diagnostic_collection_name_#3",
+	"code": {
+		"value": "reportAttributeAccessIssue",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pyright/blob/main/docs/configuration.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "reportAttributeAccessIssue"
+		}
+	},
+	"severity": 8,
+	"message": "\"render_book_editor\" is unknown import symbol",
+	"source": "Pylance",
+	"startLineNumber": 7,
+	"startColumn": 34,
+	"endLineNumber": 7,
+	"endColumn": 52
+},{
+	"resource": "/Users/admin/cursor/write-a-book/streamlit_app.py",
+	"owner": "_generated_diagnostic_collection_name_#3",
+	"code": {
+		"value": "reportAttributeAccessIssue",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pyright/blob/main/docs/configuration.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "reportAttributeAccessIssue"
+		}
+	},
+	"severity": 8,
+	"message": "\"Storage\" is unknown import symbol",
+	"source": "Pylance",
+	"startLineNumber": 8,
+	"startColumn": 30,
+	"endLineNumber": 8,
+	"endColumn": 37
+},{
+	"resource": "/Users/admin/cursor/write-a-book/setup.py",
+	"owner": "_generated_diagnostic_collection_name_#3",
+	"code": {
+		"value": "reportMissingModuleSource",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pyright/blob/main/docs/configuration.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "reportMissingModuleSource"
+		}
+	},
+	"severity": 4,
+	"message": "Import \"setuptools\" could not be resolved from source",
+	"source": "Pylance",
+	"startLineNumber": 3,
+	"startColumn": 6,
+	"endLineNumber": 3,
+	"endColumn": 16
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 22,
+	"startColumn": 1,
+	"endLineNumber": 22,
+	"endColumn": 36
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 23,
+	"startColumn": 1,
+	"endLineNumber": 23,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 23,
+	"startColumn": 1,
+	"endLineNumber": 23,
+	"endColumn": 24
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 24,
+	"startColumn": 1,
+	"endLineNumber": 24,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 25,
+	"startColumn": 1,
+	"endLineNumber": 25,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD029",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md029.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD029/ol-prefix: Ordered list item prefix [Expected: 1; Actual: 2; Style: 1/1/1]",
+	"source": "markdownlint",
+	"startLineNumber": 27,
+	"startColumn": 1,
+	"endLineNumber": 27,
+	"endColumn": 4
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 27,
+	"startColumn": 1,
+	"endLineNumber": 27,
+	"endColumn": 38
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 28,
+	"startColumn": 1,
+	"endLineNumber": 28,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 28,
+	"startColumn": 1,
+	"endLineNumber": 28,
+	"endColumn": 24
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 29,
+	"startColumn": 1,
+	"endLineNumber": 29,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 30,
+	"startColumn": 1,
+	"endLineNumber": 30,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD029",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md029.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD029/ol-prefix: Ordered list item prefix [Expected: 1; Actual: 3; Style: 1/1/1]",
+	"source": "markdownlint",
+	"startLineNumber": 32,
+	"startColumn": 1,
+	"endLineNumber": 32,
+	"endColumn": 4
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 32,
+	"startColumn": 1,
+	"endLineNumber": 32,
+	"endColumn": 44
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 33,
+	"startColumn": 1,
+	"endLineNumber": 33,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 33,
+	"startColumn": 1,
+	"endLineNumber": 33,
+	"endColumn": 21
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 34,
+	"startColumn": 1,
+	"endLineNumber": 34,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 35,
+	"startColumn": 1,
+	"endLineNumber": 35,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD029",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md029.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD029/ol-prefix: Ordered list item prefix [Expected: 1; Actual: 4; Style: 1/1/1]",
+	"source": "markdownlint",
+	"startLineNumber": 37,
+	"startColumn": 1,
+	"endLineNumber": 37,
+	"endColumn": 4
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 37,
+	"startColumn": 1,
+	"endLineNumber": 37,
+	"endColumn": 36
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 38,
+	"startColumn": 1,
+	"endLineNumber": 38,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 38,
+	"startColumn": 1,
+	"endLineNumber": 38,
+	"endColumn": 38
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 39,
+	"startColumn": 1,
+	"endLineNumber": 39,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 24,
+	"startColumn": 1,
+	"endLineNumber": 24,
+	"endColumn": 11
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 30,
+	"startColumn": 1,
+	"endLineNumber": 30,
+	"endColumn": 11
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 37,
+	"startColumn": 1,
+	"endLineNumber": 37,
+	"endColumn": 11
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 45,
+	"startColumn": 1,
+	"endLineNumber": 45,
+	"endColumn": 11
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 51,
+	"startColumn": 1,
+	"endLineNumber": 51,
+	"endColumn": 23
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 52,
+	"startColumn": 1,
+	"endLineNumber": 52,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 52,
+	"startColumn": 1,
+	"endLineNumber": 52,
+	"endColumn": 21
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 53,
+	"startColumn": 1,
+	"endLineNumber": 53,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 54,
+	"startColumn": 1,
+	"endLineNumber": 54,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD029",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md029.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD029/ol-prefix: Ordered list item prefix [Expected: 1; Actual: 4; Style: 1/1/1]",
+	"source": "markdownlint",
+	"startLineNumber": 56,
+	"startColumn": 1,
+	"endLineNumber": 56,
+	"endColumn": 4
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 56,
+	"startColumn": 1,
+	"endLineNumber": 56,
+	"endColumn": 27
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 57,
+	"startColumn": 1,
+	"endLineNumber": 57,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 57,
+	"startColumn": 1,
+	"endLineNumber": 57,
+	"endColumn": 24
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 58,
+	"startColumn": 1,
+	"endLineNumber": 58,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/README.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 59,
+	"startColumn": 1,
+	"endLineNumber": 59,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 18,
+	"startColumn": 32,
+	"endLineNumber": 18,
+	"endColumn": 38
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 26,
+	"startColumn": 35,
+	"endLineNumber": 26,
+	"endColumn": 41
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 34,
+	"startColumn": 33,
+	"endLineNumber": 34,
+	"endColumn": 39
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 42,
+	"startColumn": 34,
+	"endLineNumber": 42,
+	"endColumn": 40
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 48,
+	"startColumn": 1,
+	"endLineNumber": 48,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 55,
+	"startColumn": 34,
+	"endLineNumber": 55,
+	"endColumn": 40
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 60,
+	"startColumn": 1,
+	"endLineNumber": 60,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 68,
+	"startColumn": 31,
+	"endLineNumber": 68,
+	"endColumn": 37
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 77,
+	"startColumn": 32,
+	"endLineNumber": 77,
+	"endColumn": 38
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 84,
+	"startColumn": 35,
+	"endLineNumber": 84,
+	"endColumn": 41
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 48,
+	"startColumn": 1,
+	"endLineNumber": 48,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor_extended.py",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 60,
+	"startColumn": 1,
+	"endLineNumber": 60,
+	"endColumn": 1
+}]

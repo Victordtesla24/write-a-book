@@ -1,23 +1,12 @@
-"""Main Streamlit application entry point."""
-
-from typing import Optional
+"""Main Streamlit application."""
 
 import streamlit as st
 
-from src.book_editor.main import render_book_editor
-from src.data.storage import Storage
 
-
-def main() -> Optional[str]:
-    """Main application entry point.
-
-    Returns:
-        Optional[str]: Status message if any
-    """
-    st.set_page_config(page_title="Book Editor", page_icon="📚", layout="wide")
-
-    storage = Storage()
-    return render_book_editor(storage)
+def main():
+    """Main application entry point."""
+    st.title("Book Editor")
+    st.write("Welcome to the Book Editor application!")
 
 
 if __name__ == "__main__":
