@@ -16,68 +16,83 @@ log() {
 # Function to detect and store error patterns
 detect_error_patterns() {
     log "Detecting error patterns..."
-    
-    # Clear previous patterns
     > "$ERROR_PATTERN_FILE"
     
-    # Python error detection
+    # First check markdown errors
+    parse_markdown_errors
+    
+    # Then check Python errors
     if command -v pylint >/dev/null 2>&1; then
-        pylint src tests --output-format=text 2>/dev/null | grep -E "^[A-Z]:" | cut -d: -f1 | sort | uniq >> "$ERROR_PATTERN_FILE"
+        pylint src tests --output-format=text 2>/dev/null | grep "^[A-Z]:" >> "$ERROR_PATTERN_FILE"
     fi
     
-    # Markdown error detection
-    if command -v markdownlint >/dev/null 2>&1; then
-        find . -name "*.md" -not -path "./venv/*" -not -path "./cursor_env/*" -type f -exec markdownlint {} \; 2>/dev/null | grep -oE "MD[0-9]+" | sort | uniq >> "$ERROR_PATTERN_FILE"
-    fi
+    # Count total errors
+    local error_count=$(wc -l < "$ERROR_PATTERN_FILE")
+    log "Detected $error_count unique error patterns"
     
-    # Count unique error patterns
-    local pattern_count=$(wc -l < "$ERROR_PATTERN_FILE")
-    log "Detected $pattern_count unique error patterns"
+    return 0
 }
 
-# Function to parse errors from verify_and_fix.log
+# Function to parse errors from verify_and_fix.log and auto_fix.log.md
 parse_verify_log_errors() {
     local log_file="logs/verify_and_fix.log"
-    if [ ! -f "$log_file" ]; then
-        log "verify_and_fix.log not found"
-        return 1
-    fi
+    local md_log="logs/auto_fix.log.md"
+    local found_errors=0
     
-    log "Parsing verify_and_fix.log for errors..."
     > "$ERROR_PATTERN_FILE"  # Clear error patterns file
     
-    # Extract JSON blocks
-    local json_blocks=$(awk '/\[{/,/}]/' "$log_file")
-    if [ -n "$json_blocks" ]; then
-        echo "$json_blocks" | while IFS= read -r line; do
-            if [[ $line =~ \"severity\":\ 4 ]]; then
-                # Get the next few lines for message and resource
-                read -r msg_line
-                read -r res_line
-                
-                # Extract message and file path
-                local message=$(echo "$msg_line" | grep -o '"message": *"[^"]*"' | sed 's/"message": *"\(.*\)"/\1/')
-                local file=$(echo "$res_line" | grep -o '"resource": *"[^"]*"' | sed 's/"resource": *"\(.*\)"/\1/')
-                
-                if [ -n "$message" ] && [ -n "$file" ]; then
-                    echo "$file:$message" >> "$ERROR_PATTERN_FILE"
+    # First check markdown errors
+    if [ -f "$md_log" ]; then
+        log "Parsing markdown errors..."
+        while IFS=: read -r file line rest; do
+            if [[ $file == ./* ]] && [[ $file == *.md ]]; then
+                if [[ $rest =~ MD[0-9]+/[a-zA-Z-]+ ]]; then
+                    echo "$file:$line:$rest" >> "$ERROR_PATTERN_FILE"
+                    ((found_errors++))
+                fi
+            fi
+        done < "$md_log"
+    fi
+    
+    # Then check Python errors from verify_and_fix.log
+    if [ -f "$log_file" ]; then
+        log "Parsing verify_and_fix.log for errors..."
+        
+        # Extract pytest failures
+        grep -A 2 "FAILED" "$log_file" | while read -r line; do
+            if [[ $line =~ ^tests/.*\.py ]]; then
+                local file=$(echo "$line" | cut -d: -f1)
+                local message=$(echo "$line" | cut -d: -f2-)
+                echo "$file:$message" >> "$ERROR_PATTERN_FILE"
+                ((found_errors++))
+            fi
+        done
+        
+        # Extract pylint errors
+        grep -A 1 "Your code has been rated at" "$log_file" | while read -r line; do
+            if [[ $line =~ ([0-9]+\.[0-9]+)/10 ]]; then
+                local score=${BASH_REMATCH[1]}
+                if (( $(echo "$score < 10.0" | bc -l) )); then
+                    pylint src tests --output-format=text 2>/dev/null | grep "^[A-Z]:" | while read -r error; do
+                        local file=$(echo "$error" | cut -d: -f2)
+                        local message=$(echo "$error" | cut -d: -f4-)
+                        echo "$file:$message" >> "$ERROR_PATTERN_FILE"
+                        ((found_errors++))
+                    done
                 fi
             fi
         done
     fi
     
-    # Count errors
-    local error_count=$(wc -l < "$ERROR_PATTERN_FILE")
-    
-    if [ "$error_count" -gt 0 ]; then
-        log "Found $error_count errors to fix"
+    if [ "$found_errors" -gt 0 ]; then
+        log "Found $found_errors errors to fix"
         log "Error summary:"
         sort "$ERROR_PATTERN_FILE" | uniq -c | while read -r count error; do
             log "  $count occurrences: $error"
         done
         return 0
     else
-        log "No errors found in log"
+        log "No errors found in logs"
         return 1
     fi
 }
