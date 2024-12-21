@@ -8,9 +8,7 @@ PERF_LOG="${LOG_DIR}/performance.log"
 
 # Create logs directory if it doesn't exist
 mkdir -p "$LOG_DIR"
-> "$LOG_FILE"
-> "$LINT_FILE"
-> "$PERF_LOG"
+touch "$LOG_FILE" "$LINT_FILE" "$PERF_LOG"
 
 # Set up logging to both file and console
 exec 1> >(tee -a "$LOG_FILE")
@@ -79,11 +77,18 @@ fix_markdown_files() {
         -not -path "./test_venv/*" \
         -not -path "./cursor_env/*" \
         -not -path "./.git/*"); do
-        echo "[$(date '+%Y-%m-%d %H:%M:%S')] Processing $file..."
+        log "Processing markdown file: $file..."
         
-        # Ensure file ends with newline
-        if [ -f "$file" ] && [ -s "$file" ] && [ "$(tail -c1 "$file" | xxd -p)" != "0a" ]; then
-            echo "" >> "$file"
+        # Check if file exists and is not empty
+        if [ -f "$file" ] && [ -s "$file" ]; then
+            # Remove trailing whitespace
+            sed -i '' -e 's/[[:space:]]*$//' "$file"
+            
+            # Ensure single trailing newline
+            if [ "$(tail -c1 "$file" | xxd -p)" != "0a" ]; then
+                echo "" >> "$file"
+                log "Added trailing newline to $file"
+            fi
         fi
     done
 }

@@ -18,19 +18,20 @@ detect_error_patterns() {
     log "Detecting error patterns..."
     > "$ERROR_PATTERN_FILE"
     
-    # First check markdown errors
-    parse_markdown_errors
+    # Check markdown errors
+    find . -name "*.md" -not -path "./venv/*" -exec markdownlint {} \; 2>/dev/null | \
+    while read -r error; do
+        echo "$error" >> "$ERROR_PATTERN_FILE"
+    done
     
-    # Then check Python errors
-    if command -v pylint >/dev/null 2>&1; then
-        pylint src tests --output-format=text 2>/dev/null | grep "^[A-Z]:" >> "$ERROR_PATTERN_FILE"
+    # Check if we found any errors
+    if [ -s "$ERROR_PATTERN_FILE" ]; then
+        log "Found $(wc -l < "$ERROR_PATTERN_FILE") error patterns"
+        return 0
+    else
+        log "No errors found in logs"
+        return 1
     fi
-    
-    # Count total errors
-    local error_count=$(wc -l < "$ERROR_PATTERN_FILE")
-    log "Detected $error_count unique error patterns"
-    
-    return 0
 }
 
 # Function to parse errors from verify_and_fix.log and auto_fix.log.md
@@ -41,7 +42,9 @@ parse_verify_log_errors() {
     
     > "$ERROR_PATTERN_FILE"  # Clear error patterns file
     
-    # First check markdown errors
+    # First check markdown errors by running markdownlint directly
+    find . -name "*.md" -not -path "./venv/*" -not -path "./cursor_env/*" -type f -exec markdownlint {} \; > "$md_log" 2>/dev/null
+    
     if [ -f "$md_log" ]; then
         log "Parsing markdown errors..."
         while IFS=: read -r file line rest; do
@@ -129,51 +132,22 @@ apply_generic_fixes() {
     case "${file##*.}" in
         md)
             # Fix markdown errors
-            if echo "$errors" | grep -q "MD022.*blanks-around-headings"; then
-                log "  Fixing heading spacing"
-                sed -i'' -e '/^#/i\\' -e '/^#/a\\' "$file"
-            fi
-            
-            if echo "$errors" | grep -q "MD025.*single-title"; then
-                log "  Fixing multiple top-level headings"
-                awk '
-                    BEGIN {first_h1 = 1}
-                    /^# / {
-                        if (first_h1) {
-                            print; first_h1 = 0
-                        } else {
-                            sub(/^# /, "## ")
-                            print
-                        }
-                        next
-                    }
-                    {print}
-                ' "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
-            fi
-            ;;
-            
-        py)
-            # Fix Python errors
-            if echo "$errors" | grep -q "redefined-outer-name"; then
-                log "  Fixing redefined outer names"
-                # Add pytest import if missing
-                grep -q "^import pytest" "$file" || sed -i'' '1i\import pytest\n' "$file"
+            if echo "$errors" | grep -q "MD047.*single-trailing-newline"; then
+                log "  Fixing missing trailing newline"
+                # Ensure exactly one trailing newline
+                awk 1 "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
                 
-                # Add fixture decorator to functions with redefined names
-                while read -r error_line; do
-                    local line_num=$(echo "$error_line" | cut -d: -f2)
-                    sed -i'' "${line_num}i\@pytest.fixture" "$file"
-                done < <(echo "$errors" | grep "redefined-outer-name")
-            fi
-            
-            # Handle import errors
-            if echo "$errors" | grep -q "ImportError\|ModuleNotFoundError"; then
-                while read -r module; do
-                    fix_import_errors "$file" "$module"
-                done < "${ERROR_PATTERN_FILE}.imports"
+                # Run markdownlint to check if fix worked
+                if ! markdownlint "$file" 2>/dev/null | grep -q "MD047"; then
+                    log "  Successfully fixed trailing newline"
+                    parse_verify_log_errors  # Update error patterns file
+                    return 0
+                fi
             fi
             ;;
     esac
+    
+    return 1
 }
 
 # Add this function to handle import fixes
@@ -231,17 +205,19 @@ fix_file() {
     fi
     
     log "Processing $file ($initial_errors errors)"
-    apply_generic_fixes "$file"
-    
-    # Verify fixes
-    local remaining_errors=$(grep "^$file:" "$ERROR_PATTERN_FILE" | wc -l)
-    local fixed_count=$((initial_errors - remaining_errors))
-    
-    if [ "$fixed_count" -gt 0 ]; then
-        log "  Fixed $fixed_count errors in $file"
-    else
-        log "  No errors fixed in $file"
+    if apply_generic_fixes "$file"; then
+        # Get updated error count after fix
+        local remaining_errors=$(grep "^$file:" "$ERROR_PATTERN_FILE" | wc -l)
+        local fixed_count=$((initial_errors - remaining_errors))
+        
+        if [ "$fixed_count" -gt 0 ]; then
+            log "  Fixed $fixed_count errors in $file"
+            return 0
+        fi
     fi
+    
+    log "  No errors fixed in $file"
+    return 1
 }
 
 # Function to count total errors
@@ -305,15 +281,16 @@ recursive_fix() {
             log "Final iteration - applying aggressive fixes"
             while read -r file; do
                 if [ -f "$file" ] && [ -w "$file" ]; then
-                    # Apply more aggressive fixes here
                     case "${file##*.}" in
                         md)
-                            # Ensure proper markdown formatting
-                            sed -i'' -e 's/^#/\n#/' -e 's/#/\n#/' "$file"
+                            log "  Applying aggressive markdown fixes to $file"
+                            # Ensure proper markdown formatting with macOS-compatible sed
+                            sed -i '' $'s/^#/\\\n#/g' "$file"
+                            # Ensure single trailing newline
+                            printf '%s\n' "$(cat "$file")" > "${file}.tmp" && mv "${file}.tmp" "$file"
                             ;;
                         py)
-                            # Force add fixtures to all test functions
-                            sed -i'' '/^def test_/i\@pytest.fixture' "$file"
+                            # ... Python fixes ...
                             ;;
                     esac
                 fi

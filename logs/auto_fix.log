@@ -6818,3 +6818,538 @@
 [2024-12-21 13:11:22] No errors found in log
 [2024-12-21 13:11:22] No errors found, stopping
 [2024-12-21 13:11:22] All fixes completed successfully!
+[2024-12-21 13:16:59] Starting auto-fix process...
+[2024-12-21 13:16:59] Starting fix iteration 1 of 3
+[2024-12-21 13:16:59] Parsing markdown errors...
+[2024-12-21 13:16:59] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:16:59] Found 1 errors to fix
+[2024-12-21 13:16:59] Error summary:
+[2024-12-21 13:16:59]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:16:59] Found        1 errors to fix
+[2024-12-21 13:16:59] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:16:59] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:16:59]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:16:59] Starting fix iteration 2 of 3
+[2024-12-21 13:16:59] Parsing markdown errors...
+[2024-12-21 13:16:59] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:16:59] Found 1 errors to fix
+[2024-12-21 13:16:59] Error summary:
+[2024-12-21 13:16:59]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:16:59] Found        1 errors to fix
+[2024-12-21 13:16:59] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:16:59] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:16:59]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:16:59] Starting fix iteration 3 of 3
+[2024-12-21 13:16:59] Parsing markdown errors...
+[2024-12-21 13:16:59] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:16:59] Found 1 errors to fix
+[2024-12-21 13:16:59] Error summary:
+[2024-12-21 13:16:59]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:16:59] Found        1 errors to fix
+[2024-12-21 13:16:59] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:16:59] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:16:59]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:16:59] Final iteration - applying aggressive fixes
+[2024-12-21 13:16:59] Parsing markdown errors...
+[2024-12-21 13:16:59] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:16:59] Found 1 errors to fix
+[2024-12-21 13:16:59] Error summary:
+[2024-12-21 13:16:59]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:16:59] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:16:59] Some issues remain - check logs for details
+[2024-12-21 13:18:04] Starting auto-fix process...
+[2024-12-21 13:18:04] Starting fix iteration 1 of 3
+[2024-12-21 13:18:04] Parsing markdown errors...
+[2024-12-21 13:18:04] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:18:04] Found 1 errors to fix
+[2024-12-21 13:18:04] Error summary:
+[2024-12-21 13:18:04]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:18:04] Found        1 errors to fix
+[2024-12-21 13:18:04] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:18:04] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:18:04]   Fixing missing trailing newline
+[2024-12-21 13:18:04]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:18:04] Starting fix iteration 2 of 3
+[2024-12-21 13:18:04] Parsing markdown errors...
+[2024-12-21 13:18:04] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:18:04] Found 1 errors to fix
+[2024-12-21 13:18:04] Error summary:
+[2024-12-21 13:18:04]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:18:04] Found        1 errors to fix
+[2024-12-21 13:18:04] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:18:04] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:18:04]   Fixing missing trailing newline
+[2024-12-21 13:18:04]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:18:04] Starting fix iteration 3 of 3
+[2024-12-21 13:18:04] Parsing markdown errors...
+[2024-12-21 13:18:04] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:18:04] Found 1 errors to fix
+[2024-12-21 13:18:04] Error summary:
+[2024-12-21 13:18:04]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:18:04] Found        1 errors to fix
+[2024-12-21 13:18:04] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:18:04] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:18:04]   Fixing missing trailing newline
+[2024-12-21 13:18:04]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:18:04] Final iteration - applying aggressive fixes
+[2024-12-21 13:18:04] Parsing markdown errors...
+[2024-12-21 13:18:04] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:18:04] Found 1 errors to fix
+[2024-12-21 13:18:04] Error summary:
+[2024-12-21 13:18:04]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:18:04] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:18:04] Some issues remain - check logs for details
+[2024-12-21 13:18:58] Starting auto-fix process...
+[2024-12-21 13:18:58] Starting fix iteration 1 of 3
+[2024-12-21 13:18:58] Parsing markdown errors...
+[2024-12-21 13:18:58] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:18:58] Found 1 errors to fix
+[2024-12-21 13:18:58] Error summary:
+[2024-12-21 13:18:58]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:18:58] Found        1 errors to fix
+[2024-12-21 13:18:58] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:18:58] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:18:58]   Fixing missing trailing newline
+[2024-12-21 13:18:58]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:18:58] Starting fix iteration 2 of 3
+[2024-12-21 13:18:58] Parsing markdown errors...
+[2024-12-21 13:18:58] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:18:58] Found 1 errors to fix
+[2024-12-21 13:18:58] Error summary:
+[2024-12-21 13:18:58]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:18:58] Found        1 errors to fix
+[2024-12-21 13:18:58] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:18:58] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:18:58]   Fixing missing trailing newline
+[2024-12-21 13:18:58]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:18:58] Starting fix iteration 3 of 3
+[2024-12-21 13:18:58] Parsing markdown errors...
+[2024-12-21 13:18:58] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:18:58] Found 1 errors to fix
+[2024-12-21 13:18:58] Error summary:
+[2024-12-21 13:18:58]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:18:58] Found        1 errors to fix
+[2024-12-21 13:18:58] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:18:58] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:18:58]   Fixing missing trailing newline
+[2024-12-21 13:18:58]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:18:58] Final iteration - applying aggressive fixes
+[2024-12-21 13:18:58] Parsing markdown errors...
+[2024-12-21 13:18:58] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:18:58] Found 1 errors to fix
+[2024-12-21 13:18:58] Error summary:
+[2024-12-21 13:18:58]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:18:58] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:18:58] Some issues remain - check logs for details
+[2024-12-21 13:19:55] Starting auto-fix process...
+[2024-12-21 13:19:55] Starting fix iteration 1 of 3
+[2024-12-21 13:19:55] Parsing markdown errors...
+[2024-12-21 13:19:55] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:19:55] Found 1 errors to fix
+[2024-12-21 13:19:55] Error summary:
+[2024-12-21 13:19:55]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:19:55] Found        1 errors to fix
+[2024-12-21 13:19:55] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:19:55] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:19:55]   Fixing missing trailing newline
+[2024-12-21 13:19:55]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:19:55] Starting fix iteration 2 of 3
+[2024-12-21 13:19:55] Parsing markdown errors...
+[2024-12-21 13:19:55] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:19:55] Found 1 errors to fix
+[2024-12-21 13:19:55] Error summary:
+[2024-12-21 13:19:55]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:19:55] Found        1 errors to fix
+[2024-12-21 13:19:55] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:19:55] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:19:55]   Fixing missing trailing newline
+[2024-12-21 13:19:55]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:19:55] Starting fix iteration 3 of 3
+[2024-12-21 13:19:55] Parsing markdown errors...
+[2024-12-21 13:19:55] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:19:55] Found 1 errors to fix
+[2024-12-21 13:19:55] Error summary:
+[2024-12-21 13:19:55]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:19:55] Found        1 errors to fix
+[2024-12-21 13:19:55] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:19:55] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:19:55]   Fixing missing trailing newline
+[2024-12-21 13:19:55]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:19:55] Final iteration - applying aggressive fixes
+[2024-12-21 13:19:55] Parsing markdown errors...
+[2024-12-21 13:19:55] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:19:55] Found 1 errors to fix
+[2024-12-21 13:19:55] Error summary:
+[2024-12-21 13:19:55]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:19:55] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:19:55] Some issues remain - check logs for details
+[2024-12-21 13:20:52] Starting auto-fix process...
+[2024-12-21 13:20:52] Starting fix iteration 1 of 3
+[2024-12-21 13:20:52] Parsing markdown errors...
+[2024-12-21 13:20:52] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:20:52] Found 1 errors to fix
+[2024-12-21 13:20:52] Error summary:
+[2024-12-21 13:20:52]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:20:52] Found        1 errors to fix
+[2024-12-21 13:20:52] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:20:52] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:20:52]   Fixing missing trailing newline
+[2024-12-21 13:20:52]   Added trailing newline to ./docs/proj_status.md
+[2024-12-21 13:20:52]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:20:52] Starting fix iteration 2 of 3
+[2024-12-21 13:20:52] Parsing markdown errors...
+[2024-12-21 13:20:52] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:20:52] Found 1 errors to fix
+[2024-12-21 13:20:52] Error summary:
+[2024-12-21 13:20:52]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:20:52] Found        1 errors to fix
+[2024-12-21 13:20:52] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:20:52] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:20:52]   Fixing missing trailing newline
+[2024-12-21 13:20:52]   Added trailing newline to ./docs/proj_status.md
+[2024-12-21 13:20:52]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:20:52] Starting fix iteration 3 of 3
+[2024-12-21 13:20:52] Parsing markdown errors...
+[2024-12-21 13:20:52] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:20:52] Found 1 errors to fix
+[2024-12-21 13:20:52] Error summary:
+[2024-12-21 13:20:52]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:20:52] Found        1 errors to fix
+[2024-12-21 13:20:52] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:20:52] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:20:52]   Fixing missing trailing newline
+[2024-12-21 13:20:52]   Added trailing newline to ./docs/proj_status.md
+[2024-12-21 13:20:52]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:20:52] Final iteration - applying aggressive fixes
+[2024-12-21 13:20:52] Parsing markdown errors...
+[2024-12-21 13:20:52] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:20:52] Found 1 errors to fix
+[2024-12-21 13:20:52] Error summary:
+[2024-12-21 13:20:52]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:20:52] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:20:52] Some issues remain - check logs for details
+[2024-12-21 13:21:51] Starting auto-fix process...
+[2024-12-21 13:21:51] Starting fix iteration 1 of 3
+[2024-12-21 13:21:51] Parsing markdown errors...
+[2024-12-21 13:21:51] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:21:51] Found 1 errors to fix
+[2024-12-21 13:21:51] Error summary:
+[2024-12-21 13:21:51]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:21:51] Found        1 errors to fix
+[2024-12-21 13:21:51] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:21:51] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:21:51]   Fixing missing trailing newline
+[2024-12-21 13:21:51]   Added trailing newline to ./docs/proj_status.md
+[2024-12-21 13:21:51]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:21:51] Starting fix iteration 2 of 3
+[2024-12-21 13:21:51] Parsing markdown errors...
+[2024-12-21 13:21:51] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:21:51] Found 1 errors to fix
+[2024-12-21 13:21:51] Error summary:
+[2024-12-21 13:21:51]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:21:51] Found        1 errors to fix
+[2024-12-21 13:21:51] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:21:51] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:21:51]   Fixing missing trailing newline
+[2024-12-21 13:21:51]   Added trailing newline to ./docs/proj_status.md
+[2024-12-21 13:21:51]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:21:51] Starting fix iteration 3 of 3
+[2024-12-21 13:21:51] Parsing markdown errors...
+[2024-12-21 13:21:51] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:21:51] Found 1 errors to fix
+[2024-12-21 13:21:51] Error summary:
+[2024-12-21 13:21:51]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:21:51] Found        1 errors to fix
+[2024-12-21 13:21:51] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:21:51] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:21:51]   Fixing missing trailing newline
+[2024-12-21 13:21:51]   Added trailing newline to ./docs/proj_status.md
+[2024-12-21 13:21:51]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:21:51] Final iteration - applying aggressive fixes
+[2024-12-21 13:21:51]   Applying aggressive markdown fixes to ./docs/proj_status.md
+[2024-12-21 13:21:51] Parsing markdown errors...
+[2024-12-21 13:21:51] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:21:51] Found 1 errors to fix
+[2024-12-21 13:21:51] Error summary:
+[2024-12-21 13:21:51]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:21:51] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:21:51] Some issues remain - check logs for details
+[2024-12-21 13:22:35] Starting auto-fix process...
+[2024-12-21 13:22:35] Starting fix iteration 1 of 3
+[2024-12-21 13:22:35] Parsing markdown errors...
+[2024-12-21 13:22:35] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:22:35] Found 1 errors to fix
+[2024-12-21 13:22:35] Error summary:
+[2024-12-21 13:22:35]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:22:35] Found        1 errors to fix
+[2024-12-21 13:22:35] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:22:35] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:22:35]   Fixing missing trailing newline
+[2024-12-21 13:22:35]   Successfully fixed trailing newline
+[2024-12-21 13:22:35]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:22:35] Starting fix iteration 2 of 3
+[2024-12-21 13:22:35] Parsing markdown errors...
+[2024-12-21 13:22:35] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:22:35] Found 1 errors to fix
+[2024-12-21 13:22:35] Error summary:
+[2024-12-21 13:22:35]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:22:35] Found        1 errors to fix
+[2024-12-21 13:22:35] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:22:35] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:22:35]   Fixing missing trailing newline
+[2024-12-21 13:22:35]   Successfully fixed trailing newline
+[2024-12-21 13:22:35]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:22:35] Starting fix iteration 3 of 3
+[2024-12-21 13:22:35] Parsing markdown errors...
+[2024-12-21 13:22:35] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:22:35] Found 1 errors to fix
+[2024-12-21 13:22:35] Error summary:
+[2024-12-21 13:22:35]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:22:35] Found        1 errors to fix
+[2024-12-21 13:22:35] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:22:35] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:22:35]   Fixing missing trailing newline
+[2024-12-21 13:22:35]   Successfully fixed trailing newline
+[2024-12-21 13:22:35]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:22:35] Final iteration - applying aggressive fixes
+[2024-12-21 13:22:35]   Applying aggressive markdown fixes to ./docs/proj_status.md
+[2024-12-21 13:22:35] Parsing markdown errors...
+[2024-12-21 13:22:35] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:22:35] Found 1 errors to fix
+[2024-12-21 13:22:35] Error summary:
+[2024-12-21 13:22:35]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:22:35] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:22:35] Some issues remain - check logs for details
+[2024-12-21 13:23:29] Starting auto-fix process...
+[2024-12-21 13:23:29] Starting fix iteration 1 of 3
+[2024-12-21 13:23:29] Parsing markdown errors...
+[2024-12-21 13:23:29] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:23:29] Found 1 errors to fix
+[2024-12-21 13:23:29] Error summary:
+[2024-12-21 13:23:29]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:23:29] Found        1 errors to fix
+[2024-12-21 13:23:29] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:23:29] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:23:29]   Fixing missing trailing newline
+[2024-12-21 13:23:29]   Successfully fixed trailing newline
+[2024-12-21 13:23:29]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:23:29] Starting fix iteration 2 of 3
+[2024-12-21 13:23:29] Parsing markdown errors...
+[2024-12-21 13:23:29] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:23:29] Found 1 errors to fix
+[2024-12-21 13:23:29] Error summary:
+[2024-12-21 13:23:29]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:23:29] Found        1 errors to fix
+[2024-12-21 13:23:29] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:23:29] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:23:29]   Fixing missing trailing newline
+[2024-12-21 13:23:29]   Successfully fixed trailing newline
+[2024-12-21 13:23:29]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:23:29] Starting fix iteration 3 of 3
+[2024-12-21 13:23:29] Parsing markdown errors...
+[2024-12-21 13:23:29] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:23:30] Found 1 errors to fix
+[2024-12-21 13:23:30] Error summary:
+[2024-12-21 13:23:30]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:23:30] Found        1 errors to fix
+[2024-12-21 13:23:30] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:23:30] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:23:30]   Fixing missing trailing newline
+[2024-12-21 13:23:30]   Successfully fixed trailing newline
+[2024-12-21 13:23:30]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:23:30] Final iteration - applying aggressive fixes
+[2024-12-21 13:23:30] Parsing markdown errors...
+[2024-12-21 13:23:30] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:23:30] Found 1 errors to fix
+[2024-12-21 13:23:30] Error summary:
+[2024-12-21 13:23:30]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:23:30] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:23:30] Some issues remain - check logs for details
+[2024-12-21 13:24:17] Starting auto-fix process...
+[2024-12-21 13:24:17] Starting fix iteration 1 of 3
+[2024-12-21 13:24:17] Parsing markdown errors...
+[2024-12-21 13:24:17] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:24:17] Found 1 errors to fix
+[2024-12-21 13:24:17] Error summary:
+[2024-12-21 13:24:17]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:24:17] Found        1 errors to fix
+[2024-12-21 13:24:17] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:24:17] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:24:17]   Fixing missing trailing newline
+[2024-12-21 13:24:17]   Successfully fixed trailing newline
+[2024-12-21 13:24:17]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:24:17] Starting fix iteration 2 of 3
+[2024-12-21 13:24:17] Parsing markdown errors...
+[2024-12-21 13:24:17] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:24:17] Found 1 errors to fix
+[2024-12-21 13:24:17] Error summary:
+[2024-12-21 13:24:17]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:24:17] Found        1 errors to fix
+[2024-12-21 13:24:17] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:24:17] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:24:17]   Fixing missing trailing newline
+[2024-12-21 13:24:17]   Successfully fixed trailing newline
+[2024-12-21 13:24:18]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:24:18] Starting fix iteration 3 of 3
+[2024-12-21 13:24:18] Parsing markdown errors...
+[2024-12-21 13:24:18] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:24:18] Found 1 errors to fix
+[2024-12-21 13:24:18] Error summary:
+[2024-12-21 13:24:18]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:24:18] Found        1 errors to fix
+[2024-12-21 13:24:18] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:24:18] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:24:18]   Fixing missing trailing newline
+[2024-12-21 13:24:18]   Successfully fixed trailing newline
+[2024-12-21 13:24:18]   No errors fixed in ./docs/proj_status.md
+[2024-12-21 13:24:18] Final iteration - applying aggressive fixes
+[2024-12-21 13:24:18] Parsing markdown errors...
+[2024-12-21 13:24:18] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:24:18] Found 1 errors to fix
+[2024-12-21 13:24:18] Error summary:
+[2024-12-21 13:24:18]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:24:18] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:24:18] Some issues remain - check logs for details
+[2024-12-21 13:25:09] Starting auto-fix process...
+[2024-12-21 13:25:09] Starting fix iteration 1 of 3
+[2024-12-21 13:25:09] Parsing markdown errors...
+[2024-12-21 13:25:09] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:25:09] Found 1 errors to fix
+[2024-12-21 13:25:09] Error summary:
+[2024-12-21 13:25:09]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:25:09] Found        1 errors to fix
+[2024-12-21 13:25:09] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:25:09] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:25:09]   Fixing missing trailing newline
+[2024-12-21 13:25:09]   Successfully fixed trailing newline
+[2024-12-21 13:25:09]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:25:09] Starting fix iteration 2 of 3
+[2024-12-21 13:25:09] Parsing markdown errors...
+[2024-12-21 13:25:09] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:25:09] Found 1 errors to fix
+[2024-12-21 13:25:09] Error summary:
+[2024-12-21 13:25:09]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:25:09] Found        1 errors to fix
+[2024-12-21 13:25:09] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:25:09] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:25:09]   Fixing missing trailing newline
+[2024-12-21 13:25:09]   Successfully fixed trailing newline
+[2024-12-21 13:25:09]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:25:09] Starting fix iteration 3 of 3
+[2024-12-21 13:25:09] Parsing markdown errors...
+[2024-12-21 13:25:09] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:25:09] Found 1 errors to fix
+[2024-12-21 13:25:09] Error summary:
+[2024-12-21 13:25:09]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:25:09] Found        1 errors to fix
+[2024-12-21 13:25:09] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:25:09] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:25:09]   Fixing missing trailing newline
+[2024-12-21 13:25:09]   Successfully fixed trailing newline
+[2024-12-21 13:25:10]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:25:10] Final iteration - applying aggressive fixes
+[2024-12-21 13:25:10] Parsing markdown errors...
+[2024-12-21 13:25:10] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:25:10] Found 1 errors to fix
+[2024-12-21 13:25:10] Error summary:
+[2024-12-21 13:25:10]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:25:10] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:25:10] Some issues remain - check logs for details
+[2024-12-21 13:26:10] Starting auto-fix process...
+[2024-12-21 13:26:10] Starting fix iteration 1 of 3
+[2024-12-21 13:26:10] Parsing markdown errors...
+[2024-12-21 13:26:10] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:26:10] Found 1 errors to fix
+[2024-12-21 13:26:10] Error summary:
+[2024-12-21 13:26:10]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:26:10] Found        1 errors to fix
+[2024-12-21 13:26:10] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:26:10] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:26:10]   Fixing missing trailing newline
+[2024-12-21 13:26:10]   Successfully fixed trailing newline
+[2024-12-21 13:26:10]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:26:10] Starting fix iteration 2 of 3
+[2024-12-21 13:26:10] Parsing markdown errors...
+[2024-12-21 13:26:10] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:26:10] Found 1 errors to fix
+[2024-12-21 13:26:10] Error summary:
+[2024-12-21 13:26:10]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:26:10] Found        1 errors to fix
+[2024-12-21 13:26:10] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:26:10] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:26:10]   Fixing missing trailing newline
+[2024-12-21 13:26:10]   Successfully fixed trailing newline
+[2024-12-21 13:26:10]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:26:10] Starting fix iteration 3 of 3
+[2024-12-21 13:26:10] Parsing markdown errors...
+[2024-12-21 13:26:10] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:26:10] Found 1 errors to fix
+[2024-12-21 13:26:10] Error summary:
+[2024-12-21 13:26:10]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:26:10] Found        1 errors to fix
+[2024-12-21 13:26:10] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:26:10] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:26:10]   Fixing missing trailing newline
+[2024-12-21 13:26:10]   Successfully fixed trailing newline
+[2024-12-21 13:26:10]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:26:10] Final iteration - applying aggressive fixes
+[2024-12-21 13:26:10]   Applying aggressive markdown fixes to ./docs/proj_status.md
+[2024-12-21 13:26:10] Parsing markdown errors...
+[2024-12-21 13:26:10] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:26:10] Found 1 errors to fix
+[2024-12-21 13:26:10] Error summary:
+[2024-12-21 13:26:10]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:26:10] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:26:10] Some issues remain - check logs for details
+[2024-12-21 13:26:54] Starting auto-fix process...
+[2024-12-21 13:26:54] Starting fix iteration 1 of 3
+[2024-12-21 13:26:54] Parsing markdown errors...
+[2024-12-21 13:26:54] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:26:54] Found 1 errors to fix
+[2024-12-21 13:26:54] Error summary:
+[2024-12-21 13:26:54]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:26:54] Found        1 errors to fix
+[2024-12-21 13:26:54] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:26:54] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:26:54]   Fixing missing trailing newline
+[2024-12-21 13:26:54]   Successfully fixed trailing newline
+[2024-12-21 13:26:55]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:26:55] Starting fix iteration 2 of 3
+[2024-12-21 13:26:55] Parsing markdown errors...
+[2024-12-21 13:26:55] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:26:55] Found 1 errors to fix
+[2024-12-21 13:26:55] Error summary:
+[2024-12-21 13:26:55]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:26:55] Found        1 errors to fix
+[2024-12-21 13:26:55] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:26:55] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:26:55]   Fixing missing trailing newline
+[2024-12-21 13:26:55]   Successfully fixed trailing newline
+[2024-12-21 13:26:55]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:26:55] Starting fix iteration 3 of 3
+[2024-12-21 13:26:55] Parsing markdown errors...
+[2024-12-21 13:26:55] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:26:55] Found 1 errors to fix
+[2024-12-21 13:26:55] Error summary:
+[2024-12-21 13:26:55]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:26:55] Found        1 errors to fix
+[2024-12-21 13:26:55] Processing ./docs/proj_status.md (       1 errors)
+[2024-12-21 13:26:55] Applying fixes to ./docs/proj_status.md
+[2024-12-21 13:26:55]   Fixing missing trailing newline
+[2024-12-21 13:26:55]   Successfully fixed trailing newline
+[2024-12-21 13:26:55]   Fixed 1 errors in ./docs/proj_status.md
+[2024-12-21 13:26:55] Final iteration - applying aggressive fixes
+[2024-12-21 13:26:55] Parsing markdown errors...
+[2024-12-21 13:26:55] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:26:55] Found 1 errors to fix
+[2024-12-21 13:26:55] Error summary:
+[2024-12-21 13:26:55]   1 occurrences: ./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
+[2024-12-21 13:26:55] WARNING:        1 errors remain after 3 iterations
+[2024-12-21 13:26:55] Some issues remain - check logs for details
+[2024-12-21 13:28:45] Starting auto-fix process...
+[2024-12-21 13:28:45] Starting fix iteration 1 of 3
+[2024-12-21 13:28:46] Parsing markdown errors...
+[2024-12-21 13:28:46] Parsing verify_and_fix.log for errors...
+[2024-12-21 13:28:46] No errors found in logs
+[2024-12-21 13:28:46] No errors found, stopping
+[2024-12-21 13:28:46] All fixes completed successfully!
