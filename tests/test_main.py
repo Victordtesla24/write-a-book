@@ -1,3 +1,5 @@
+"""Test suite for main functionality."""
+
 # pylint: disable=redefined-outer-name
 import tempfile
 from pathlib import Path
@@ -6,8 +8,6 @@ from unittest.mock import MagicMock, patch
 import pytest  # pylint: disable=import-error
 
 from src.book_editor.main import BookEditor, main, render_template_manager
-
-"""Test suite for main functionality"""
 
 
 @pytest.fixture

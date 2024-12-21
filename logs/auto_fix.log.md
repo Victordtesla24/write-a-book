@@ -30,9 +30,9 @@
 ./docs/proj_status.md:1 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "# Project Status Report"]
 ./docs/proj_status.md:15 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
 ./docs/proj_status.md:59 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
-./docs/proj_status.md:132 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Recent Changes"]
-./docs/proj_status.md:133 MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- Auto-commit: 2024-12-21 11:5..."]
-./docs/proj_status.md:137:108 MD047/single-trailing-newline Files should end with a single newline character
+./docs/proj_status.md:92 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Recent Changes"]
+./docs/proj_status.md:93 MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- Auto-commit: 2024-12-21 11:5..."]
+./docs/proj_status.md:97:108 MD047/single-trailing-newline Files should end with a single newline character
 ./docs/implementation_plan.md:118 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "### Module Initialization"]
 ./docs/implementation_plan.md:119 MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- `__init__` module setup for ..."]
 ./logs/auto_fix.log.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "./agent_directives.md:3 MD022/..."]

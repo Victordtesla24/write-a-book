@@ -1,5 +1,4 @@
-from typing import Dict, List, Optional  # pylint: disable=redefined-outer-name
-
+# pylint: disable=redefined-outer-name
 """Test module for extended core editor functionality."""
 
 import tempfile

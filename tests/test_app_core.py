@@ -1,3 +1,5 @@
+"""Test suite for app core functionality."""
+
 # pylint: disable=redefined-outer-name
 import tempfile
 from unittest.mock import patch
@@ -11,8 +13,6 @@ from src.book_editor.app.core.editor import (
     PreviewManager,
     TemplateRenderer,
 )
-
-"""Test suite for app core functionality"""
 
 
 @pytest.fixture
