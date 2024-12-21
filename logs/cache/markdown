@@ -1,0 +1,9 @@
+./agent_directives.md
+./.pytest_cache/README.md
+./docs/proj_status.md
+./docs/implementation_plan.md
+./README.md
+./logs/auto_fix.log.md
+./src/book_editor/docs/changelog.md
+./src/book_editor/docs/proj_status.md
+./src/book_editor/README.md

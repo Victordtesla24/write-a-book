@@ -20,7 +20,7 @@ def test_editor_initialization(editor):
     """Test editor initialization."""
     assert editor.storage_dir is not None
     assert editor.current_document is None
-    assert editor._autosave_enabled is True
+    assert editor.autosave_enabled is True
 
 
 def test_editor_document_creation(editor):
@@ -96,18 +96,21 @@ def test_editor_text_analysis(editor):
 
 def test_editor_html_rendering(editor):
     """Test HTML rendering functionality."""
-    # Test markdown rendering
+    # Test markdown rendering with header IDs
     doc = editor.new_document("Test")
     doc.update_content("# Test\n**Bold** text")
     html = doc.get_html()
-    assert '<h1 id="test">Test</h1>' in html
+    assert (
+        '<h1 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h1>'
+        in html
+    )
     assert "<strong>Bold</strong>" in html
 
     # Test code highlighting
     doc.update_content("```python\nprint('test')\n```")
     html = doc.get_html()
-    assert "highlight" in html
-    assert "print" in html
+    assert '<div class="highlight">' in html
+    assert '<span class="nb">print</span>' in html
 
 
 def test_text_analysis_edge_cases(editor):
@@ -138,3 +141,10 @@ def test_text_analysis_edge_cases(editor):
     editor.new_document("Test Document")
     docs = editor.list_documents()
     assert "Test Document" in docs
+
+
+def test_autosave_enabled():
+    """Test autosave enabled property."""
+    with tempfile.TemporaryDirectory() as tmpdirname:
+        editor = Editor(Path(tmpdirname))
+        assert editor.autosave_enabled is True

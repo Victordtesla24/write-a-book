@@ -20,12 +20,88 @@ exec 2> >(tee -a "$LOG_FILE" >&2)
 set -e
 set -o pipefail
 
+# Check bash version and set up file caching mechanism
+if [ "${BASH_VERSINFO[0]}" -ge 4 ]; then
+    declare -A FILE_CACHE
+    USE_ASSOC_ARRAYS=true
+else
+    # Fallback for older bash versions
+    USE_ASSOC_ARRAYS=false
+    # Use temporary files for caching
+    CACHE_DIR="${LOG_DIR}/cache"
+    mkdir -p "$CACHE_DIR"
+fi
+
 log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
 }
 
 error_log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] ERROR: $1" >&2
+}
+
+# Function to get cached value
+get_cache() {
+    local key="$1"
+    if [ "$USE_ASSOC_ARRAYS" = true ]; then
+        echo "${FILE_CACHE[$key]}"
+    else
+        if [ -f "$CACHE_DIR/$key" ]; then
+            cat "$CACHE_DIR/$key"
+        fi
+    fi
+}
+
+# Function to set cached value
+set_cache() {
+    local key="$1"
+    local value="$2"
+    if [ "$USE_ASSOC_ARRAYS" = true ]; then
+        FILE_CACHE[$key]="$value"
+    else
+        echo "$value" > "$CACHE_DIR/$key"
+    fi
+}
+
+# Function to initialize file caches
+init_file_cache() {
+    log "Initializing file cache..."
+    
+    # Cache Python files
+    local python_files=$(find . -name "*.py" \
+        -not -path "./venv/*" \
+        -not -path "./test_venv/*" \
+        -not -path "./cursor_env/*" \
+        -not -path "./.git/*")
+    set_cache "python" "$python_files"
+    
+    # Cache Markdown files
+    local markdown_files=$(find . -name "*.md" \
+        -not -path "./node_modules/*" \
+        -not -path "./venv/*" \
+        -not -path "./test_venv/*" \
+        -not -path "./cursor_env/*" \
+        -not -path "./.git/*")
+    set_cache "markdown" "$markdown_files"
+    
+    # Cache directory existence
+    local dirs_exist=""
+    for dir in docs .streamlit static/images static/css pages src/utils data tests; do
+        if [ -d "$dir" ]; then
+            dirs_exist+="$dir "
+        fi
+    done
+    set_cache "dirs_exist" "$dirs_exist"
+}
+
+# Function to ensure directory exists (cached)
+ensure_dir() {
+    local dir="$1"
+    local dirs_exist=$(get_cache "dirs_exist")
+    if [[ ! " $dirs_exist " =~ " $dir " ]]; then
+        mkdir -p "$dir"
+        set_cache "dirs_exist" "$dirs_exist $dir"
+    fi
 }
 
 # Function to setup virtual environment
@@ -110,12 +186,15 @@ check_markdown_code_blocks() {
 run_linting() {
     log "Running linting checks..."
     
-    # Run pytest
+    # Run pytest with coverage
     log "Running pytest..."
-    python -m pytest tests/ -v || {
+    coverage run -m pytest tests/ -v || {
         error_log "Pytest failed"
         return 1
     }
+    
+    # Generate coverage report
+    coverage report > "$LOG_DIR/coverage.txt"
     
     # Run pylint and save report
     pylint src tests --output-format=text | tee -a "$LINT_FILE" || true
@@ -124,48 +203,54 @@ run_linting() {
     log "Running additional checks..."
     
     # Check for markdown issues
-    find . -name "*.md" -not -path "./venv/*" -not -path "./cursor_env/*" -type f | while read -r file; do
-        log "Checking markdown file: $file"
-        # Check for missing language in code blocks
-        result=$(check_markdown_code_blocks "$file")
-        if [ $? -ne 0 ]; then
-            {
-                echo "=== Error in file: $file ==="
-                echo "$result"
-                echo "==========================="
-                echo
-            } | tee -a "$MARKDOWN_ERRORS_FILE"
-            error_log "Markdown errors found in $file (see $MARKDOWN_ERRORS_FILE for details)"
-            return 1
-        fi
-        
-        # Check for missing final newline
-        if [ -f "$file" ] && [ -s "$file" ] && [ "$(tail -c1 "$file" | xxd -p)" != "0a" ]; then
-            error_log "Missing final newline in $file"
-            return 1
-        fi
-    done
+    local markdown_files=$(get_cache "markdown")
+    if [ ! -z "$markdown_files" ]; then
+        echo "$markdown_files" | while read -r file; do
+            log "Checking markdown file: $file"
+            # Check for missing language in code blocks
+            result=$(check_markdown_code_blocks "$file")
+            if [ $? -ne 0 ]; then
+                {
+                    echo "=== Error in file: $file ==="
+                    echo "$result"
+                    echo "==========================="
+                    echo
+                } | tee -a "$MARKDOWN_ERRORS_FILE"
+                error_log "Markdown errors found in $file (see $MARKDOWN_ERRORS_FILE for details)"
+                return 1
+            fi
+            
+            # Check for missing final newline
+            if [ -f "$file" ] && [ -s "$file" ] && [ "$(tail -c1 "$file" | xxd -p)" != "0a" ]; then
+                error_log "Missing final newline in $file"
+                return 1
+            fi
+        done
+    fi
     
     # Check for Python issues
-    find . -name "*.py" -not -path "./venv/*" -not -path "./cursor_env/*" -type f | while read -r file; do
-        # Check for setuptools import without type ignore
-        if grep -q "^from setuptools" "$file" && ! grep -q "# type: ignore" "$file"; then
-            error_log "Missing type ignore for setuptools import in $file"
-            return 1
-        fi
-        
-        # Check for self imports in __init__.py
-        if [[ "$file" == *"__init__.py" ]] && grep -q "from src\." "$file"; then
-            error_log "Found self import in $file"
-            return 1
-        fi
-        
-        # Check for isoformat usage
-        if grep -q "isoformat" "$file"; then
-            error_log "Found isoformat usage in $file, should use strftime"
-            return 1
-        fi
-    done
+    local python_files=$(get_cache "python")
+    if [ ! -z "$python_files" ]; then
+        echo "$python_files" | while read -r file; do
+            # Check for setuptools import without type ignore
+            if grep -q "^from setuptools" "$file" && ! grep -q "# type: ignore" "$file"; then
+                error_log "Missing type ignore for setuptools import in $file"
+                return 1
+            fi
+            
+            # Check for self imports in __init__.py
+            if [[ "$file" == *"__init__.py" ]] && grep -q "from src\." "$file"; then
+                error_log "Found self import in $file"
+                return 1
+            fi
+            
+            # Check for isoformat usage
+            if grep -q "isoformat" "$file"; then
+                error_log "Found isoformat usage in $file, should use strftime"
+                return 1
+            fi
+        done
+    fi
     
     # Check if there are any errors
     if grep -q "error" "$LINT_FILE"; then
@@ -177,32 +262,46 @@ run_linting() {
     # Show final score
     score=$(tail -n 2 "$LINT_FILE" | grep "rated at" | grep -o "[0-9].[0-9][0-9]" || echo "0.00")
     log "Pylint score: $score/10.00"
+    return 0
 }
 
-# Function to fix Python files
+# Optimized fix_python_files function
 fix_python_files() {
     log "Fixing Python files..."
-    for file in $(find . -name "*.py" \
-        -not -path "./venv/*" \
-        -not -path "./test_venv/*" \
-        -not -path "./cursor_env/*" \
-        -not -path "./.git/*"); do
-        log "Processing $file..."
+    
+    # Batch process imports first
+    local python_files=$(get_cache "python")
+    if [ ! -z "$python_files" ]; then
+        log "Batch processing imports..."
+        echo "$python_files" | xargs -P 4 -I {} isort {} 2>/dev/null || true
         
-        # Fix imports
-        isort "$file" 2>/dev/null || true
+        log "Batch processing code style..."
+        echo "$python_files" | xargs -P 4 -I {} autopep8 --in-place --aggressive --aggressive {} 2>/dev/null || true
         
-        # Fix code style
-        autopep8 --in-place --aggressive --aggressive "$file" 2>/dev/null || true
-        
-        # Add docstring if missing
-        if ! grep -q '"""' "$file"; then
-            sed -i '' '1i\
+        # Process docstrings
+        echo "$python_files" | while read -r file; do
+            if ! grep -q '"""' "$file"; then
+                sed -i '' '1i\
 """Module docstring."""\
 \
 ' "$file" 2>/dev/null || true
-        fi
-    done
+            fi
+        done
+    fi
+    return 0
+}
+
+# Optimized fix_markdown_files function
+fix_markdown_files() {
+    log "Fixing markdown files..."
+    local markdown_files=$(get_cache "markdown")
+    if [ ! -z "$markdown_files" ]; then
+        echo "$markdown_files" | while read -r file; do
+            log "Processing $file..."
+            # Add your markdown fixing logic here
+        done
+    fi
+    return 0
 }
 
 # Function to setup markdown tools
@@ -220,30 +319,20 @@ setup_markdown_tools() {
 }
 EOL
     fi
+    return 0
 }
 
-# Function to fix markdown files
-fix_markdown_files() {
-    log "Fixing markdown files..."
-    for file in $(find . -name "*.md" \
-        -not -path "./node_modules/*" \
-        -not -path "./venv/*" \
-        -not -path "./test_venv/*" \
-        -not -path "./cursor_env/*" \
-        -not -path "./.git/*"); do
-        echo "[$(date '+%Y-%m-%d %H:%M:%S')] Processing $file..."
-    done
-}
-
-# Function to setup Streamlit structure
+# Optimized setup_streamlit_structure function
 setup_streamlit_structure() {
-    log "Setting up Streamlit directory structure..."
-    for dir in pages src/utils data tests docs .streamlit; do
-        mkdir -p "$dir"
-    done
-
+    log "Setting up advanced Streamlit directory structure..."
+    
+    # Create directories in parallel
+    echo "pages src/utils data tests docs static/images static/css .streamlit scripts" | \
+    tr ' ' '\n' | xargs -P 4 -I {} mkdir -p {}
+    
     if [ ! -f .streamlit/config.toml ]; then
-        cat > .streamlit/config.toml << EOL
+        ensure_dir ".streamlit"
+        cat > .streamlit/config.toml <<EOL
 [theme]
 primaryColor = "#F63366"
 backgroundColor = "#FFFFFF"
@@ -253,8 +342,10 @@ font = "sans serif"
 
 [server]
 enableCORS = false
+headless = true
 EOL
     fi
+    return 0
 }
 
 # Function to verify Streamlit dependencies
@@ -264,72 +355,160 @@ verify_streamlit_deps() {
     if ! grep -q "streamlit" requirements.txt; then
         echo "streamlit" >> requirements.txt
     fi
+    return 0
 }
 
-# Function to update project status
-update_project_status() {
-    log "Updating project status..."
+# Optimized update_documentation function
+update_documentation() {
+    log "Updating project documentation..."
+    
     STATUS_FILE="docs/proj_status.md"
-    mkdir -p docs
+    PLAN_FILE="docs/implementation_plan.md"
+    ensure_dir "docs"
+    
+    # Cache git status
+    local git_history=$(git log -5 --pretty=format:"- %s" 2>/dev/null || echo "No Git history available.")
+    local python_files=$(get_cache "python")
+    local python_count=$(echo "$python_files" | wc -l)
+    local test_count=$(echo "$python_files" | grep -c "test_" || echo "0")
+    
+    # Get resolved errors
+    local resolved_errors=$(grep -E "FIXED|RESOLVED" "$LOG_FILE" 2>/dev/null || echo "No errors resolved in this run.")
+    
+    # Generate documentation with cached values
     {
         echo "# Project Status Report"
-        echo
         echo "Last Updated: $(date)"
         echo
-        echo "## Directory Structure"
+        echo "## Summary of Resolved Errors"
         echo
-        echo "\`\`\`shell"
-        tree -L 3 --dirsfirst 2>/dev/null || echo "tree command not available"
-        echo "\`\`\`"
+        echo "$resolved_errors"
         echo
-        echo "## Recent Changes"
+        echo "## Current Implementation Status"
         echo
-        git log -5 --pretty=format:"- %s" 2>/dev/null || echo "No git history available"
+        echo "- Python files updated: $python_count"
+        echo "- Test files updated: $test_count"
+        echo
+        echo "## Test Coverage Report"
+        echo
+        if [ -f "$LOG_DIR/coverage.txt" ]; then
+            cat "$LOG_DIR/coverage.txt"
+        else
+            echo "No coverage report available."
+        fi
         echo
         echo "## Lint Report"
         echo
         if [ -f "$LINT_FILE" ]; then
-            echo "\`\`\`shell"
             cat "$LINT_FILE"
-            echo "\`\`\`"
+            score=$(tail -n 2 "$LINT_FILE" | grep "rated at" | grep -o "[0-9].[0-9][0-9]" || echo "0.00")
+            echo
+            echo "Pylint Score: $score/10.00"
+        else
+            echo "No lint report available."
         fi
+        echo
+        echo "## Recent Changes"
+        echo "$git_history"
     } > "$STATUS_FILE"
+    
+    # Create implementation plan if it doesn't exist
+    if [ ! -f "$PLAN_FILE" ]; then
+        {
+            echo "# Implementation Plan"
+            echo
+            echo "## Editor Implementation"
+            echo
+            echo "### Editor Components"
+            echo "- Document class"
+            echo "- Editor class"
+            echo "- Text Editor"
+            echo
+            echo "### Core Editor Features"
+            echo "- Basic text editing"
+            echo "- Template management"
+            echo "- Document history"
+            echo
+            echo "### Editor Testing Strategy"
+            echo "- Unit tests for core components"
+            echo "- Integration tests for editor features"
+            echo "- End-to-end testing for user workflows"
+            echo
+        } > "$PLAN_FILE"
+    fi
+    
+    # Update implementation plan with unimplemented features
+    local unimplemented_features=$(grep -B 1 "- \[ \]" "$STATUS_FILE" 2>/dev/null || echo "None")
+    if [ "$unimplemented_features" != "None" ]; then
+        echo -e "\n## Pending Features\n" >> "$PLAN_FILE"
+        echo "$unimplemented_features" | sed 's/^/- /' >> "$PLAN_FILE"
+    fi
+    
+    return 0
 }
 
-# Function to generate commit message based on changes
-generate_commit_message() {
-    local message=""
+# Optimized auto_commit_to_github function
+auto_commit_to_github() {
+    log "Auto-committing changes to GitHub..."
     
-    # Get list of modified files by type
-    local python_changes=$(git diff --cached --name-only -- '*.py')
-    local markdown_changes=$(git diff --cached --name-only -- '*.md')
-    local test_changes=$(git diff --cached --name-only -- 'tests/*.py')
-    
-    # Build commit message based on changes
-    if [ ! -z "$python_changes" ]; then
-        message+="Update Python files: "
-        message+=$(echo "$python_changes" | xargs -n1 basename | tr '\n' ',' | sed 's/,$//')
-        message+=". "
+    # Early exit if no git
+    if [ ! -d ".git" ]; then
+        error_log "Git repository not initialized. Skipping commit."
+        return 1
     fi
     
-    if [ ! -z "$markdown_changes" ]; then
-        message+="Update documentation: "
-        message+=$(echo "$markdown_changes" | xargs -n1 basename | tr '\n' ',' | sed 's/,$//')
-        message+=". "
+    # Cache git status
+    local current_branch=$(git rev-parse --abbrev-ref HEAD)
+    local has_remote=$(git remote -v | grep -q origin && echo "true" || echo "false")
+    
+    # Branch management
+    if [ "$current_branch" != "main" ]; then
+        log "Not on main branch. Switching to main..."
+        git checkout main || return 1
     fi
     
-    if [ ! -z "$test_changes" ]; then
-        message+="Update tests: "
-        message+=$(echo "$test_changes" | xargs -n1 basename | tr '\n' ',' | sed 's/,$//')
-        message+=". "
-    fi
+    # Optimize git operations
+    git add -A || return 1
     
-    # If no specific changes detected, use a generic message
-    if [ -z "$message" ]; then
-        message="Update project files"
+    if ! git diff --cached --quiet; then
+        # Cache log analysis results
+        local error_count=$(grep -c "ERROR" "$LOG_FILE" 2>/dev/null || echo "0")
+        local fixed_count=$(grep -c "FIXED\|RESOLVED" "$LOG_FILE" 2>/dev/null || echo "0")
+        local test_passed=$(grep -c "PASSED" "$LOG_FILE" 2>/dev/null || echo "0")
+        local test_failed=$(grep -c "FAILED" "$LOG_FILE" 2>/dev/null || echo "0")
+        local lint_score="0.00"
+        
+        if [ -f "$LINT_FILE" ]; then
+            lint_score=$(tail -n 2 "$LINT_FILE" | grep "rated at" | grep -o "[0-9].[0-9][0-9]" || echo "0.00")
+        fi
+        
+        # Generate commit message
+        local commit_message="Auto-commit: $(date '+%Y-%m-%d %H:%M:%S')"
+        if [ "$fixed_count" -gt 0 ] 2>/dev/null; then 
+            commit_message+=" - Resolved Errors: $fixed_count"
+        fi
+        if [ "$error_count" -gt 0 ] 2>/dev/null; then
+            commit_message+=" - Remaining Errors: $error_count"
+        fi
+        commit_message+=" - Test Results: $test_passed passed, $test_failed failed"
+        commit_message+=" - Lint Score: $lint_score/10.00"
+        
+        # Commit and push
+        if ! git commit -m "$commit_message"; then
+            error_log "Failed to commit changes."
+            return 1
+        fi
+        
+        if [ "$has_remote" = "true" ]; then
+            log "Pushing changes to GitHub..."
+            git push origin main || return 1
+        fi
+        
+        log "Changes committed successfully."
+    else
+        log "No changes to commit."
     fi
-    
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $message"
+    return 0
 }
 
 # Function to setup git configuration
@@ -342,6 +521,12 @@ setup_git_config() {
         fi
         if ! git config --get user.name >/dev/null; then
             git config --global user.name "Cline"
+        fi
+        
+        # Setup pre-commit hook
+        if [ -f "scripts/setup_hooks.sh" ]; then
+            chmod +x scripts/setup_hooks.sh
+            ./scripts/setup_hooks.sh
         fi
     fi
 }
@@ -357,73 +542,16 @@ cleanup_git() {
     fi
 }
 
-# Function to setup GitHub repository
-setup_github() {
-    log "Setting up GitHub repository..."
-    if [ -d ".git" ]; then
-        # Setup git config first
-        setup_git_config
-        
-        # Add all changes
-        git add . || {
-            error_log "Failed to stage changes"
-            cleanup_git
-            return 1
-        }
-        
-        # Check if there are any changes to commit
-        if ! git diff --cached --quiet; then
-            # Generate timestamp
-            timestamp=$(date '+%Y-%m-%d %H:%M:%S')
-            
-            # Generate commit message based on actual changes
-            commit_msg=$(git diff --cached --name-status | awk '
-                BEGIN { OFS=". "; python=""; markdown=""; tests="" }
-                /^[AM].*\.py$/ && $2 !~ /^tests\// { python = python $2 " " }
-                /^[AM].*\.md$/ { markdown = markdown $2 " " }
-                /^[AM].*test.*\.py$/ { tests = tests $2 " " }
-                END {
-                    msg = ""
-                    if (python != "") msg = msg "Update Python files: " python
-                    if (markdown != "") msg = msg "Update documentation: " markdown
-                    if (tests != "") msg = msg "Update tests: " tests
-                    if (msg == "") msg = "Update project files"
-                    print msg
-                }')
-            
-            # Combine timestamp and message
-            commit_msg="[$timestamp] $commit_msg"
-            
-            # Commit changes with the generated message
-            if ! git commit -m "$commit_msg"; then
-                error_log "Failed to commit changes"
-                cleanup_git
-                return 1
-            fi
-            
-            # Rename branch to main if needed
-            if [ "$(git rev-parse --abbrev-ref HEAD)" != "main" ]; then
-                git branch -M main || {
-                    error_log "Failed to rename branch to main"
-                    cleanup_git
-                    return 1
-                }
-            fi
-            
-            log "Successfully committed changes"
-        else
-            log "No changes to commit"
-        fi
-    fi
-}
-
-# Main function
+# Main function with optimized flow
 main() {
     log "Starting verification and fixes..."
     
     # Set up error handling
     trap 'echo "Error: Script failed" >&2; cleanup_git; exit 1' ERR
     trap 'echo "Script interrupted" >&2; cleanup_git; exit 1' INT TERM
+    
+    # Initialize file cache first
+    init_file_cache
     
     # Run all tasks
     setup_venv || exit 1
@@ -434,8 +562,8 @@ main() {
     fix_markdown_files || exit 1
     fix_python_files || exit 1
     run_linting || exit 1
-    update_project_status || exit 1
-    setup_github || exit 1
+    update_documentation || exit 1
+    auto_commit_to_github || exit 1
     
     # Clean exit
     log "All verifications and fixes completed successfully!"
@@ -445,3 +573,4 @@ main() {
 
 # Run main function
 main
+

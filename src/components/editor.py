@@ -73,8 +73,8 @@ class Editor:
             raise ValueError("No book loaded")
         if not title:
             raise ValueError("Chapter title cannot be empty")
-        if content is None:
-            raise ValueError("Chapter content cannot be None")
+        if not content or content.strip() == "":
+            raise ValueError("Chapter content cannot be empty")
 
         self.current_book.add_chapter(title, content)
 

@@ -5,63 +5,52 @@ A streamlit-based web application for writing and editing books with template su
 ## Features
 
 - Modern, intuitive web interface
-
 - Template management system
-
 - Real-time text analysis
-
 - Auto-save functionality
-
 - Export capabilities
-
 - Document versioning
 
 ## Installation
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/yourusername/book-editor.git
-cd book-editor
-```
+   ```bash
+   git clone https://github.com/Victordtesla24/write-a-book.git
+   cd book-editor
+   ```
 
-2.Create and activate a virtual environment:
+1. Create and activate a virtual environment:
 
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-3.Install the package:
+1. Install the package:
 
-```bash
-pip install -e ".[dev]"
-```
+   ```bash
+   pip install -e ".[dev]"
+   ```
 
 ## Usage
 
 1. Start the application:
 
-```bash
-streamlit run app/main.py
-```
+   ```bash
+   streamlit run app/main.py
+   ```
 
-2.Open your web browser and navigate to the URL shown in the terminal (typically <http://localhost:8501>)
+1. Open your web browser and navigate to `http://localhost:8501`
 
-3. Use the sidebar to:
-
+1. Use the sidebar to:
    - Upload templates
-
    - Create new documents
-
    - Access saved documents
 
-4. Use the main editor to:
-
+1. Use the main editor to:
    - Write and edit text
-
    - View word count and statistics
-
    - Save and export your work
 
 ## Development

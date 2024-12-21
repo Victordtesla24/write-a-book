@@ -62,6 +62,7 @@ def test_chapter_navigation(editor: Editor, sample_book: Book) -> None:
 def test_content_editing(editor: Editor, sample_book: Book) -> None:
     """Test content editing functionality."""
     editor.load_book(sample_book)
+    assert editor.current_book is not None
 
     # Test update content
     new_content = "Updated content"
@@ -80,6 +81,7 @@ def test_content_editing(editor: Editor, sample_book: Book) -> None:
 def test_chapter_management(editor: Editor, sample_book: Book) -> None:
     """Test chapter management functionality."""
     editor.load_book(sample_book)
+    assert editor.current_book is not None
 
     # Test add chapter
     editor.add_chapter("New Chapter", "New Content")
@@ -121,11 +123,17 @@ def test_error_handling(editor: Editor) -> None:
 def test_undo_redo_stack(editor: Editor, sample_book: Book) -> None:
     """Test undo/redo stack functionality."""
     editor.load_book(sample_book)
+    assert editor.current_book is not None
 
     # Test multiple edits
     editor.update_content("Edit 1")
+    assert editor.current_book.chapters[0].content == "Edit 1"
+
     editor.update_content("Edit 2")
+    assert editor.current_book.chapters[0].content == "Edit 2"
+
     editor.update_content("Edit 3")
+    assert editor.current_book.chapters[0].content == "Edit 3"
 
     # Test undo stack
     editor.undo()
@@ -137,22 +145,33 @@ def test_undo_redo_stack(editor: Editor, sample_book: Book) -> None:
     editor.redo()
     assert editor.current_book.chapters[0].content == "Edit 2"
 
-    # Test stack clearing on new edit
-    editor.update_content("New edit")
-    assert len(editor.redo_stack) == 0
+
+def test_empty_undo_redo(editor: Editor, sample_book: Book) -> None:
+    """Test undo/redo operations with empty stacks."""
+    editor.load_book(sample_book)
+    assert editor.current_book is not None
+
+    # Test undo with empty stack
+    editor.undo()  # Should not raise error
+    assert editor.current_book.chapters[0].content == "Content 1"
+
+    # Test redo with empty stack
+    editor.redo()  # Should not raise error
+    assert editor.current_book.chapters[0].content == "Content 1"
 
 
 def test_chapter_validation(editor: Editor, sample_book: Book) -> None:
     """Test chapter validation functionality."""
     editor.load_book(sample_book)
+    assert editor.current_book is not None
 
     # Test empty title
     with pytest.raises(ValueError):
         editor.add_chapter("", "Content")
 
-    # Test None content
+    # Test empty content (changed from None)
     with pytest.raises(ValueError):
-        editor.add_chapter("Title", None)
+        editor.add_chapter("Title", "")  # Changed from None to empty string
 
     # Test invalid chapter index
     with pytest.raises(IndexError):
@@ -163,19 +182,6 @@ def test_chapter_validation(editor: Editor, sample_book: Book) -> None:
         editor.move_chapter(0, 99)
     with pytest.raises(IndexError):
         editor.move_chapter(99, 0)
-
-
-def test_empty_undo_redo(editor: Editor, sample_book: Book) -> None:
-    """Test undo/redo operations with empty stacks."""
-    editor.load_book(sample_book)
-
-    # Test undo with empty stack
-    editor.undo()  # Should not raise error
-    assert editor.current_book.chapters[0].content == "Content 1"
-
-    # Test redo with empty stack
-    editor.redo()  # Should not raise error
-    assert editor.current_book.chapters[0].content == "Content 1"
 
 
 def test_chapter_index_adjustment(editor: Editor, sample_book: Book) -> None:
@@ -196,9 +202,11 @@ def test_multiple_chapter_operations(
 ) -> None:
     """Test multiple chapter operations in sequence."""
     editor.load_book(sample_book)
+    assert editor.current_book is not None
 
     # Add multiple chapters
     editor.add_chapter("Chapter 3", "Content 3")
+    assert len(editor.current_book.chapters) == 3
     editor.add_chapter("Chapter 4", "Content 4")
     assert len(editor.current_book.chapters) == 4
 

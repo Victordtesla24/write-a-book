@@ -75,14 +75,20 @@ def test_document_html_rendering() -> None:
     html = doc.get_html()
 
     # Check markdown conversion
-    assert '<h1 id="title">Title</h1>' in html
+    assert (
+        '<h1 id="title">Title<a class="headerlink" href="#title" title="Permanent link">&para;</a></h1>'
+        in html
+    )
 
     # Check syntax highlighting
     assert '<div class="highlight">' in html
     assert '<span class="nb">print</span>' in html
 
     # Check invalid language handling
-    assert "<pre><code>code\n</code></pre>" in html
+    assert (
+        '<div class="highlight"><pre><span></span><code>code\n</code></pre></div>'
+        in html
+    )
 
 
 def test_document_serialization() -> None:
@@ -110,7 +116,7 @@ def test_editor_initialization(editor: Editor) -> None:
     assert editor.storage_dir.exists()
     assert editor.storage_dir.is_dir()
     assert editor.current_document is None
-    assert editor._autosave_enabled
+    assert editor.autosave_enabled
 
 
 def test_document_management(editor: Editor) -> None:
@@ -189,17 +195,17 @@ def test_document_format_handling() -> None:
     """Test handling of different document formats."""
     # Test plain text format
     doc = Document(content="Plain text", title="Test")
-    doc._metadata["format"] = "text"  # pylint: disable=protected-access
+    doc.set_format("text")
     html = doc.get_html()
     assert "<pre>Plain text</pre>" in html
 
     # Test HTML caching
-    cached_html = doc._html_content  # pylint: disable=protected-access
+    cached_html = doc.get_cached_html()
     assert cached_html == html
 
     # Test cache invalidation
     doc.update_content("New content")
-    assert doc._html_content is None  # pylint: disable=protected-access
+    assert doc.get_cached_html() is None
 
 
 def test_empty_document_handling() -> None:
@@ -285,12 +291,9 @@ def test_document_to_dict_error_handling() -> None:
         def strftime(self, _):
             raise AttributeError("No strftime")
 
-    doc._metadata["created_at"] = (
-        BrokenDateTime.now()
-    )  # pylint: disable=protected-access
-    doc._metadata["updated_at"] = (
-        BrokenDateTime.now()
-    )  # pylint: disable=protected-access
+    # Use setter methods instead of direct _metadata access
+    doc.set_created_at(BrokenDateTime.now())
+    doc.set_updated_at(BrokenDateTime.now())
 
     data = doc.to_dict()
     assert "No strftime" in str(data["created_at"])

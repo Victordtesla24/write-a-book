@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: book-editor
+Version: 0.1.0
+Summary: A Streamlit-based book editor with template management
+Requires-Python: >=3.8
+Requires-Dist: streamlit>=1.41.1
+Requires-Dist: markdown>=3.7
+Requires-Dist: pygments>=2.18.0
+Provides-Extra: dev
+Requires-Dist: black>=24.1.1; extra == "dev"
+Requires-Dist: isort>=5.13.2; extra == "dev"
+Requires-Dist: autopep8>=2.0.4; extra == "dev"
+Requires-Dist: autoflake>=2.2.1; extra == "dev"
+Requires-Dist: pylint>=3.0.3; extra == "dev"

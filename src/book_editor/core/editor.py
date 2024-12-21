@@ -8,12 +8,10 @@ import json
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 import markdown
-from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
-from pygments.lexers import get_lexer_by_name
 
 
 class DateTimeEncoder(json.JSONEncoder):
@@ -30,126 +28,103 @@ class DateTimeEncoder(json.JSONEncoder):
 
 
 class Document:
-    """Document class representing a single text document.
+    """Document class for managing text content and metadata."""
 
-    Handles content storage, revision history, and HTML rendering.
-    """
-
-    def __init__(self, content: str = "", title: str = "Untitled"):
-        self.content = content
-        self.title = title
-        self._metadata = {
+    def __init__(self, content: str = "", title: str = "Untitled") -> None:
+        """Initialize a new document."""
+        self._content: str = content
+        self._title: str = title
+        self._revision_history: List[Dict[str, Any]] = []
+        self._metadata: Dict[str, Any] = {
+            "title": title,
+            "content": content,
+            "format": "markdown",
             "created_at": datetime.now(),
             "updated_at": datetime.now(),
             "word_count": len(content.split()),
-            "format": "markdown",  # Default format
         }
+        self._html_content: Optional[str] = None
+
+    @property
+    def title(self) -> str:
+        """Get document title."""
+        return self._title
+
+    @property
+    def content(self) -> str:
+        """Get document content."""
+        return self._content
+
+    def set_format(self, format_type: str) -> None:
+        """Set document format."""
+        self._metadata["format"] = format_type
         self._html_content = None
-        self._revision_history = []
 
-    @property
-    def created_at(self) -> datetime:
-        """Get document creation time."""
-        return self._metadata["created_at"]
+    def get_cached_html(self) -> Optional[str]:
+        """Get cached HTML content."""
+        return self._html_content
 
-    @property
-    def updated_at(self) -> datetime:
-        """Get document last update time."""
-        return self._metadata["updated_at"]
+    def set_created_at(self, timestamp: datetime) -> None:
+        """Set document creation timestamp."""
+        self._metadata["created_at"] = timestamp
 
-    @property
-    def word_count(self) -> int:
-        """Get document word count."""
-        return self._metadata["word_count"]
-
-    @property
-    def format(self) -> str:
-        """Get document format."""
-        return self._metadata["format"]
-
-    @property
-    def metadata(self) -> Dict:
-        """Get document metadata."""
-        return self._metadata
+    def set_updated_at(self, timestamp: datetime) -> None:
+        """Set document update timestamp."""
+        self._metadata["updated_at"] = timestamp
 
     def update_content(self, new_content: Optional[str]) -> None:
         """Update document content and metadata."""
+        if new_content is None or new_content.strip() == "":
+            raise ValueError("Content cannot be empty")
+
         # Store current version in revision history
         self._revision_history.append(
-            {"content": self.content, "timestamp": self.updated_at}
-        )
-
-        self.content = new_content or ""
-        self._metadata.update(
             {
-                "updated_at": datetime.now(),
-                "word_count": len(self.content.split()) if self.content else 0,
+                "content": self._content,
+                "timestamp": self._metadata["updated_at"],
             }
         )
-        self._html_content = None  # Reset cached HTML
 
-    def get_html(self) -> str:
-        """Convert content to HTML based on format."""
-        if self._html_content is None:
-            if self.format == "markdown":
-                md = markdown.Markdown(
-                    extensions=["fenced_code", "tables", "toc"]
-                )
-                html = md.convert(self.content)
+        self._content = new_content
+        self._metadata.update(
+            {
+                "content": self._content,
+                "updated_at": datetime.now(),
+                "word_count": len(self._content.split()),
+            }
+        )
+        self._html_content = None
 
-                # Apply syntax highlighting to code blocks
-                formatter = HtmlFormatter(
-                    style="monokai", cssclass="highlight"
-                )
-
-                def replace_code(match):
-                    code = match.group(2)
-                    lang = match.group(1) or "text"
-                    try:
-                        lexer = get_lexer_by_name(lang)
-                        return highlight(code, lexer, formatter)
-                    except (ImportError, ValueError):
-                        return f"<pre><code>{code}</code></pre>"
-
-                html = re.sub(
-                    r'<pre><code class="language-(\w+)">(.*?)</code></pre>',
-                    replace_code,
-                    html,
-                    flags=re.DOTALL,
-                )
-
-                self._html_content = html
-            else:
-                self._html_content = f"<pre>{self.content}</pre>"
-
-        return self._html_content
-
-    def get_revision_history(self) -> List[Dict]:
+    def get_revision_history(self) -> List[Dict[str, Any]]:
         """Get document revision history."""
         return self._revision_history
 
-    def to_dict(self) -> Dict:
+    def to_dict(self) -> Dict[str, Any]:
         """Convert document to dictionary for serialization."""
         try:
-            created_at = self.created_at.strftime("%Y-%m-%d %H:%M:%S")
-            updated_at = self.updated_at.strftime("%Y-%m-%d %H:%M:%S")
+            created_at = self._metadata["created_at"].strftime(
+                "%Y-%m-%d %H:%M:%S"
+            )
+            updated_at = self._metadata["updated_at"].strftime(
+                "%Y-%m-%d %H:%M:%S"
+            )
         except AttributeError:
             created_at = "No strftime"
             updated_at = "No strftime"
 
         return {
-            "title": self.title,
-            "content": self.content,
-            "format": self.format,
+            "title": self._title,
+            "content": self._content,
+            "format": self._metadata["format"],
             "created_at": created_at,
             "updated_at": updated_at,
-            "word_count": self.word_count,
+            "word_count": self._metadata["word_count"],
             "revision_history": self._revision_history,
-            "metadata": self._metadata.copy(),  # Make a copy to avoid modifying original
+            "metadata": self._metadata.copy(),
         }
 
     @classmethod
-    def from_dict(cls, data: Dict) -> "Document":
+    def from_dict(cls, data: Dict[str, Any]) -> "Document":
         """Create document from dictionary."""
         doc = cls(content=data["content"], title=data["title"])
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -172,6 +147,44 @@ class Document:
         doc._revision_history = data.get("revision_history", [])
         return doc
 
+    @property
+    def format(self) -> str:
+        """Get document format."""
+        return self._metadata["format"]
+
+    @property
+    def created_at(self) -> datetime:
+        """Get document creation timestamp."""
+        return self._metadata["created_at"]
+
+    @property
+    def updated_at(self) -> datetime:
+        """Get document update timestamp."""
+        return self._metadata["updated_at"]
+
+    @property
+    def word_count(self) -> int:
+        """Get document word count."""
+        return self._metadata["word_count"]
+
+    def get_html(self) -> str:
+        """Get HTML representation of the document."""
+        if self._metadata["format"] == "markdown":
+            # Use extensions to enable header IDs and syntax highlighting
+            html = markdown.markdown(
+                self._content,
+                extensions=["toc", "attr_list", "fenced_code", "codehilite"],
+                extension_configs={
+                    "toc": {"permalink": True},
+                    "attr_list": {},
+                    "codehilite": {"css_class": "highlight"},
+                },
+            )
+        else:
+            html = f"<pre>{self._content}</pre>"
+        self._html_content = html
+        return html
+
 
 class Editor:
     """Editor class managing document operations.
@@ -184,6 +197,11 @@ class Editor:
         self.current_document: Optional[Document] = None
         self.ensure_storage()
         self._autosave_enabled = True
+
+    @property
+    def autosave_enabled(self) -> bool:
+        """Check if autosave is enabled."""
+        return self._autosave_enabled
 
     def ensure_storage(self) -> None:
         """Ensure storage directory exists."""

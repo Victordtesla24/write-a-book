@@ -2,6 +2,8 @@
 
 """Test module for template functionality."""
 
+from typing import Any, Dict, cast
+
 import pytest  # pylint: disable=import-error
 
 from book_editor.core.template import (
@@ -32,7 +34,8 @@ def test_template_creation():
 
     assert template.name == "Test Template"
     assert template.category == "fiction"
-    assert template.metadata["format"] == "markdown"
+    # Use get() for optional TypedDict fields
+    assert template.metadata.get("format", "") == "markdown"
     assert isinstance(template.styles, dict)
     assert isinstance(template.layouts, list)
 
@@ -40,15 +43,19 @@ def test_template_creation():
 def test_template_serialization():
     """Test template serialization and deserialization"""
     template = Template("Test")
+    # Set optional metadata fields explicitly
     template.metadata["description"] = "Test template"
     template.add_style("borders", "classic", VINTAGE_BORDERS["classic"])
     template.add_layout(PAGE_LAYOUTS["manuscript"])
 
     data = template.to_dict()
-    loaded = Template.from_dict(data)
+    # Cast the dictionary to the correct type
+    template_data = cast(Dict[str, Any], data)
+    loaded = Template.from_dict(template_data)
 
     assert loaded.name == template.name
-    assert loaded.metadata["description"] == "Test template"
+    # Use get() for optional TypedDict fields
+    assert loaded.metadata.get("description") == "Test template"
     assert loaded.styles["borders"]["classic"] == VINTAGE_BORDERS["classic"]
     assert loaded.layouts[0] == PAGE_LAYOUTS["manuscript"]
 
