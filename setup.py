@@ -1,8 +1,8 @@
 import book
-import configuration
 import editor
 import for
 import package."""
+import script
 import streamlit as st"""Setup
 import the
 from setuptools import find_packages, setup  # type: ignore

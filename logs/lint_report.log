@@ -44,5 +44,5 @@ tests/test_main.py:7:0: C0411: standard import "unittest.mock.MagicMock" should 
 tests/test_main.py:1:0: W0611: Unused streamlit imported as st (unused-import)
 
 ------------------------------------------------------------------
-Your code has been rated at 9.78/10 (previous run: 9.78/10, -0.00)
+Your code has been rated at 9.78/10 (previous run: 9.78/10, +0.00)
 
