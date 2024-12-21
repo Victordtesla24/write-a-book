@@ -1,6 +1,11 @@
-import module."""
-import streamlit as st"""setup
-from setuptools import find_packages, setup  # type: ignore
+import book
+import configuration
+import editor
+import for
+import package."""
+import streamlit as st"""Setup
+import the
+from setuptools import find_packages, setup
 
 setup(
     name="book_editor",
@@ -44,5 +49,8 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
     ],
 )

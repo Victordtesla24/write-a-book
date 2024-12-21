@@ -1,5 +1,5 @@
-import streamlit as st"""
-Book Editor - A streamlit-based book editing application
-"""
+"""Book editor core package."""
+
+import streamlit as st
 
 __version__ = "0.1.0"
