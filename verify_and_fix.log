@@ -1989,9 +1989,9 @@
 	"severity": 4,
 	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
 	"source": "markdownlint",
-	"startLineNumber": 70,
+	"startLineNumber": 74,
 	"startColumn": 1,
-	"endLineNumber": 70,
+	"endLineNumber": 74,
 	"endColumn": 18
 },{
 	"resource": "/Users/admin/cursor/write-a-book/docs/proj_status.md",
@@ -2008,9 +2008,9 @@
 	"severity": 4,
 	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
 	"source": "markdownlint",
-	"startLineNumber": 71,
+	"startLineNumber": 75,
 	"startColumn": 1,
-	"endLineNumber": 71,
+	"endLineNumber": 75,
 	"endColumn": 109
 },{
 	"resource": "/Users/admin/cursor/write-a-book/docs/proj_status.md",
@@ -2027,29 +2027,10 @@
 	"severity": 4,
 	"message": "MD047/single-trailing-newline: Files should end with a single newline character",
 	"source": "markdownlint",
-	"startLineNumber": 75,
+	"startLineNumber": 79,
 	"startColumn": 108,
-	"endLineNumber": 75,
+	"endLineNumber": 79,
 	"endColumn": 109
-},{
-	"resource": "/Users/admin/cursor/write-a-book/logs/auto_fix.log.md",
-	"owner": "markdownlint",
-	"code": {
-		"value": "MD041",
-		"target": {
-			"$mid": 1,
-			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md041.md",
-			"scheme": "https",
-			"authority": "github.com"
-		}
-	},
-	"severity": 4,
-	"message": "MD041/first-line-heading/first-line-h1: First line in a file should be a top-level heading",
-	"source": "markdownlint",
-	"startLineNumber": 1,
-	"startColumn": 1,
-	"endLineNumber": 1,
-	"endColumn": 145
 },{
 	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/docs/proj_status.md",
 	"owner": "markdownlint",

@@ -37,16 +37,20 @@ detect_error_patterns() {
 # Function to parse errors from verify_and_fix.log and auto_fix.log.md
 parse_verify_log_errors() {
     local log_file="logs/verify_and_fix.log"
-    local md_log="logs/auto_fix.log.md"
     local found_errors=0
     
     > "$ERROR_PATTERN_FILE"  # Clear error patterns file
     
-    # First check markdown errors by running markdownlint directly
-    find . -name "*.md" -not -path "./venv/*" -not -path "./cursor_env/*" -type f -exec markdownlint {} \; > "$md_log" 2>/dev/null
-    
-    if [ -f "$md_log" ]; then
-        log "Parsing markdown errors..."
+    # First try parsing JSON format
+    if grep -q '"owner": "markdownlint"' "$log_file"; then
+        log "Parsing JSON markdownlint errors..."
+        # Use jq to parse JSON and extract relevant fields
+        jq -r '.[] | select(.owner == "markdownlint") | 
+            "\(.resource):\(.startLineNumber):\(.endLineNumber) \(.code.value)/\(.message)"' "$log_file" > "$ERROR_PATTERN_FILE"
+        found_errors=$(wc -l < "$ERROR_PATTERN_FILE")
+    else
+        # Fall back to parsing plain text format
+        log "Parsing plain text markdownlint errors..."
         while IFS=: read -r file line rest; do
             if [[ $file == ./* ]] && [[ $file == *.md ]]; then
                 if [[ $rest =~ MD[0-9]+/[a-zA-Z-]+ ]]; then
@@ -54,37 +58,7 @@ parse_verify_log_errors() {
                     ((found_errors++))
                 fi
             fi
-        done < "$md_log"
-    fi
-    
-    # Then check Python errors from verify_and_fix.log
-    if [ -f "$log_file" ]; then
-        log "Parsing verify_and_fix.log for errors..."
-        
-        # Extract pytest failures
-        grep -A 2 "FAILED" "$log_file" | while read -r line; do
-            if [[ $line =~ ^tests/.*\.py ]]; then
-                local file=$(echo "$line" | cut -d: -f1)
-                local message=$(echo "$line" | cut -d: -f2-)
-                echo "$file:$message" >> "$ERROR_PATTERN_FILE"
-                ((found_errors++))
-            fi
-        done
-        
-        # Extract pylint errors
-        grep -A 1 "Your code has been rated at" "$log_file" | while read -r line; do
-            if [[ $line =~ ([0-9]+\.[0-9]+)/10 ]]; then
-                local score=${BASH_REMATCH[1]}
-                if (( $(echo "$score < 10.0" | bc -l) )); then
-                    pylint src tests --output-format=text 2>/dev/null | grep "^[A-Z]:" | while read -r error; do
-                        local file=$(echo "$error" | cut -d: -f2)
-                        local message=$(echo "$error" | cut -d: -f4-)
-                        echo "$file:$message" >> "$ERROR_PATTERN_FILE"
-                        ((found_errors++))
-                    done
-                fi
-            fi
-        done
+        done < "$log_file"
     fi
     
     if [ "$found_errors" -gt 0 ]; then

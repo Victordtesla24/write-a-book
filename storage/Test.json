@@ -2,21 +2,21 @@
   "title": "Test",
   "content": "Test content",
   "format": "markdown",
-  "created_at": "2024-12-21 13:28:51",
-  "updated_at": "2024-12-21 13:28:51",
+  "created_at": "2024-12-21 13:31:21",
+  "updated_at": "2024-12-21 13:31:21",
   "word_count": 2,
   "revision_history": [
     {
       "content": "",
-      "timestamp": "2024-12-21 13:28:51"
+      "timestamp": "2024-12-21 13:31:21"
     }
   ],
   "metadata": {
     "title": "Test",
     "content": "Test content",
     "format": "markdown",
-    "created_at": "2024-12-21 13:28:51",
-    "updated_at": "2024-12-21 13:28:51",
+    "created_at": "2024-12-21 13:31:21",
+    "updated_at": "2024-12-21 13:31:21",
     "word_count": 2
   }
 }
