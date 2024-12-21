@@ -27,7 +27,7 @@ A streamlit-based web application for writing and editing books with template su
    cd book-editor
    ```
 
-1. Create and activate a virtual environment:
+2. Create and activate a virtual environment:
 
    ```bash
    python -m venv venv
@@ -35,7 +35,7 @@ A streamlit-based web application for writing and editing books with template su
 
    ```
 
-1. Install the package:
+3. Install the package:
 
    ```bash
    pip install -e ".[dev]"
@@ -50,14 +50,14 @@ A streamlit-based web application for writing and editing books with template su
    streamlit run app/main.py
    ```
 
-1. Open your web browser and navigate to `<http://localhost:8501`>
+2. Open your web browser and navigate to `<http://localhost:8501`>
 
-1. Use the sidebar to:
+3. Use the sidebar to:
    - Upload templates
    - Create new documents
    - Access saved documents
 
-1. Use the main editor to:
+4. Use the main editor to:
    - Write and edit text
    - View word count and statistics
    - Save and export your work

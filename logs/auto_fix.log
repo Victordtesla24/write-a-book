@@ -4259,3 +4259,191 @@
 ./src/book_editor/README.md:103 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "License"]
 [2024-12-21 11:28:01] WARNING: Some Markdown errors remain
 [2024-12-21 11:28:01] Some errors remain - check logs for details
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_components.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_app_config.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_core_editor_extended.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_editor.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_app_core.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_text_editor_extended.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/__init__.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_book.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_storage.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_app_core_editor.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_main.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_core_editor.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_template.py...
+[2024-12-21 11:29:41] Processing Python file: ./tests/test_settings.py...
+[2024-12-21 11:29:41] Processing Python file: ./streamlit_app.py...
+[2024-12-21 11:29:41] Processing Python file: ./setup.py...
+[2024-12-21 11:29:41] Processing Python file: ./src/__init__.py...
+[2024-12-21 11:29:41] Processing Python file: ./src/utils/__init__.py...
+[2024-12-21 11:29:41] Processing Python file: ./src/models/__init__.py...
+[2024-12-21 11:29:41] Processing Python file: ./src/models/book.py...
+[2024-12-21 11:29:41] Processing Python file: ./src/components/__init__.py...
+[2024-12-21 11:29:41] Processing Python file: ./src/components/text_editor.py...
+[2024-12-21 11:29:41] Processing Python file: ./src/components/editor.py...
+[2024-12-21 11:29:41] Processing Python file: ./src/book_editor/core/__init__.py...
+[2024-12-21 11:29:41] Processing Python file: ./src/book_editor/core/template.py...
+[2024-12-21 11:29:41] Processing Python file: ./src/book_editor/core/editor.py...
+[2024-12-21 11:29:41] Processing Python file: ./src/book_editor/app/core/__init__.py...
+[2024-12-21 11:29:42] Processing Python file: ./src/book_editor/app/core/editor.py...
+[2024-12-21 11:29:42] Processing Python file: ./src/book_editor/app/config/__init__.py...
+[2024-12-21 11:29:42] Processing Python file: ./src/book_editor/app/config/settings.py...
+[2024-12-21 11:29:42] Processing Python file: ./src/book_editor/app/__init__.py...
+[2024-12-21 11:29:42] Processing Python file: ./src/book_editor/config/__init__.py...
+[2024-12-21 11:29:42] Processing Python file: ./src/book_editor/config/settings.py...
+[2024-12-21 11:29:42] Processing Python file: ./src/book_editor/__init__.py...
+[2024-12-21 11:29:42] Processing Python file: ./src/book_editor/types.py...
+[2024-12-21 11:29:42] Processing Python file: ./src/book_editor/main.py...
+[2024-12-21 11:29:42] Processing Python file: ./src/data/__init__.py...
+[2024-12-21 11:29:42] Processing Python file: ./src/data/storage.py...
+[2024-12-21 11:29:42] Processing markdown file: ./agent_directives.md...
+[2024-12-21 11:29:42] Some Markdown issues remain in ./agent_directives.md:
+./agent_directives.md:3 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./agent_directives.md:3 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./agent_directives.md:4 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Core Responsibilities"]
+./agent_directives.md:4 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Core Responsibilities"]
+./agent_directives.md:14 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./agent_directives.md:14 MD024/no-duplicate-heading Multiple headings with the same content
+./agent_directives.md:14 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./agent_directives.md:15 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Script Management"]
+./agent_directives.md:15 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Script Management"]
+./agent_directives.md:25 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./agent_directives.md:25 MD024/no-duplicate-heading Multiple headings with the same content
+./agent_directives.md:25 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./agent_directives.md:26 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Resource Management"]
+./agent_directives.md:26 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Resource Management"]
+./agent_directives.md:30 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./agent_directives.md:30 MD024/no-duplicate-heading Multiple headings with the same content
+./agent_directives.md:30 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./agent_directives.md:31 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Automation & Error Handling"]
+./agent_directives.md:31 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Automation & Error Handling"]
+./agent_directives.md:39 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./agent_directives.md:39 MD024/no-duplicate-heading Multiple headings with the same content
+./agent_directives.md:39 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./agent_directives.md:40 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Version Control & Testing"]
+./agent_directives.md:40 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Version Control & Testing"]
+./agent_directives.md:48 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./agent_directives.md:48 MD024/no-duplicate-heading Multiple headings with the same content
+./agent_directives.md:48 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./agent_directives.md:49 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Documentation"]
+./agent_directives.md:49 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Documentation"]
+[2024-12-21 11:29:42] Processing markdown file: ./.pytest_cache/README.md...
+[2024-12-21 11:29:42] Successfully fixed all Markdown issues in ./.pytest_cache/README.md
+[2024-12-21 11:29:42] Processing markdown file: ./docs/proj_status.md...
+[2024-12-21 11:29:43] Some Markdown issues remain in ./docs/proj_status.md:
+./docs/proj_status.md:5 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./docs/proj_status.md:5 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./docs/proj_status.md:6 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Summary of Resolved Errors"]
+./docs/proj_status.md:6 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Summary of Resolved Errors"]
+./docs/proj_status.md:10 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./docs/proj_status.md:10 MD024/no-duplicate-heading Multiple headings with the same content
+./docs/proj_status.md:10 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./docs/proj_status.md:11 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Current Implementation Status"]
+./docs/proj_status.md:11 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Current Implementation Status"]
+./docs/proj_status.md:17 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./docs/proj_status.md:17 MD024/no-duplicate-heading Multiple headings with the same content
+./docs/proj_status.md:17 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./docs/proj_status.md:18 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Test Coverage Report"]
+./docs/proj_status.md:18 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Test Coverage Report"]
+./docs/proj_status.md:59 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./docs/proj_status.md:59 MD024/no-duplicate-heading Multiple headings with the same content
+./docs/proj_status.md:59 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./docs/proj_status.md:60 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Lint Report"]
+./docs/proj_status.md:60 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Lint Report"]
+./docs/proj_status.md:70 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./docs/proj_status.md:70 MD024/no-duplicate-heading Multiple headings with the same content
+./docs/proj_status.md:70 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./docs/proj_status.md:71 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Recent Changes"]
+./docs/proj_status.md:71 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Recent Changes"]
+[2024-12-21 11:29:43] Processing markdown file: ./docs/implementation_plan.md...
+[2024-12-21 11:29:43] Some Markdown issues remain in ./docs/implementation_plan.md:
+./docs/implementation_plan.md:3 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./docs/implementation_plan.md:3 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./docs/implementation_plan.md:4 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Editor Implementation"]
+./docs/implementation_plan.md:4 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Editor Implementation"]
+./docs/implementation_plan.md:6 MD001/heading-increment Heading levels should only increment by one level at a time [Expected: h2; Actual: h3]
+./docs/implementation_plan.md:48 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./docs/implementation_plan.md:48 MD024/no-duplicate-heading Multiple headings with the same content
+./docs/implementation_plan.md:48 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./docs/implementation_plan.md:49 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Current Features"]
+./docs/implementation_plan.md:49 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Current Features"]
+./docs/implementation_plan.md:65 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./docs/implementation_plan.md:65 MD024/no-duplicate-heading Multiple headings with the same content
+./docs/implementation_plan.md:65 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./docs/implementation_plan.md:66 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Planned Features"]
+./docs/implementation_plan.md:66 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Planned Features"]
+[2024-12-21 11:29:43] Processing markdown file: ./README.md...
+[2024-12-21 11:29:43] Successfully fixed all Markdown issues in ./README.md
+[2024-12-21 11:29:43] Processing markdown file: ./logs/auto_fix.log.md...
+[2024-12-21 11:29:43] Some Markdown issues remain in ./logs/auto_fix.log.md:
+./logs/auto_fix.log.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "./agent_directives.md:3 MD022/..."]
+[2024-12-21 11:29:43] Processing markdown file: ./venv/lib/python3.13/site-packages/idna-3.10.dist-info/LICENSE.md...
+[2024-12-21 11:29:43] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/idna-3.10.dist-info/LICENSE.md
+[2024-12-21 11:29:43] Processing markdown file: ./venv/lib/python3.13/site-packages/Markdown-3.7.dist-info/LICENSE.md...
+[2024-12-21 11:29:43] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/Markdown-3.7.dist-info/LICENSE.md
+[2024-12-21 11:29:43] Processing markdown file: ./venv/lib/python3.13/site-packages/narwhals-1.19.0.dist-info/licenses/LICENSE.md...
+[2024-12-21 11:29:43] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/narwhals-1.19.0.dist-info/licenses/LICENSE.md
+[2024-12-21 11:29:43] Processing markdown file: ./venv/lib/python3.13/site-packages/altair/jupyter/js/README.md...
+[2024-12-21 11:29:43] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/altair/jupyter/js/README.md
+[2024-12-21 11:29:43] Processing markdown file: ./venv/lib/python3.13/site-packages/numpy/random/LICENSE.md...
+[2024-12-21 11:29:43] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/numpy/random/LICENSE.md
+[2024-12-21 11:29:43] Processing markdown file: ./venv/lib/python3.13/site-packages/README.md...
+[2024-12-21 11:29:43] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/README.md
+[2024-12-21 11:29:43] Processing markdown file: ./venv/lib/python3.13/site-packages/black-24.10.0.dist-info/licenses/AUTHORS.md...
+[2024-12-21 11:29:43] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/black-24.10.0.dist-info/licenses/AUTHORS.md
+[2024-12-21 11:29:43] Processing markdown file: ./venv/lib/python3.13/site-packages/pyarrow/tests/data/orc/README.md...
+[2024-12-21 11:29:43] Skipping markdown file in excluded directory: ./venv/lib/python3.13/site-packages/pyarrow/tests/data/orc/README.md
+[2024-12-21 11:29:43] Processing markdown file: ./src/book_editor/docs/changelog.md...
+[2024-12-21 11:29:44] Successfully fixed all Markdown issues in ./src/book_editor/docs/changelog.md
+[2024-12-21 11:29:44] Processing markdown file: ./src/book_editor/docs/proj_status.md...
+[2024-12-21 11:29:44] Some Markdown issues remain in ./src/book_editor/docs/proj_status.md:
+./src/book_editor/docs/proj_status.md:3 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./src/book_editor/docs/proj_status.md:3 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./src/book_editor/docs/proj_status.md:4 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Phase 1 Implementation Status"]
+./src/book_editor/docs/proj_status.md:4 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Phase 1 Implementation Status"]
+./src/book_editor/docs/proj_status.md:6 MD001/heading-increment Heading levels should only increment by one level at a time [Expected: h2; Actual: h3]
+./src/book_editor/docs/proj_status.md:78 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./src/book_editor/docs/proj_status.md:78 MD024/no-duplicate-heading Multiple headings with the same content
+./src/book_editor/docs/proj_status.md:78 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./src/book_editor/docs/proj_status.md:79 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Development Guidelines"]
+./src/book_editor/docs/proj_status.md:79 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Development Guidelines"]
+./src/book_editor/docs/proj_status.md:89 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./src/book_editor/docs/proj_status.md:89 MD024/no-duplicate-heading Multiple headings with the same content
+./src/book_editor/docs/proj_status.md:89 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./src/book_editor/docs/proj_status.md:90 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Recent Changes"]
+./src/book_editor/docs/proj_status.md:90 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Recent Changes"]
+[2024-12-21 11:29:44] Processing markdown file: ./src/book_editor/README.md...
+[2024-12-21 11:29:44] Some Markdown issues remain in ./src/book_editor/README.md:
+./src/book_editor/README.md:5 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./src/book_editor/README.md:5 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./src/book_editor/README.md:6 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Features"]
+./src/book_editor/README.md:6 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Features"]
+./src/book_editor/README.md:20 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./src/book_editor/README.md:20 MD024/no-duplicate-heading Multiple headings with the same content
+./src/book_editor/README.md:20 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./src/book_editor/README.md:21 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Installation"]
+./src/book_editor/README.md:21 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Installation"]
+./src/book_editor/README.md:44 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./src/book_editor/README.md:44 MD024/no-duplicate-heading Multiple headings with the same content
+./src/book_editor/README.md:44 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./src/book_editor/README.md:45 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Usage"]
+./src/book_editor/README.md:45 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Usage"]
+./src/book_editor/README.md:65 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./src/book_editor/README.md:65 MD024/no-duplicate-heading Multiple headings with the same content
+./src/book_editor/README.md:65 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./src/book_editor/README.md:66 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Development"]
+./src/book_editor/README.md:66 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Development"]
+./src/book_editor/README.md:68 MD001/heading-increment Heading levels should only increment by one level at a time [Expected: h2; Actual: h3]
+./src/book_editor/README.md:89 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./src/book_editor/README.md:89 MD024/no-duplicate-heading Multiple headings with the same content
+./src/book_editor/README.md:89 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./src/book_editor/README.md:90 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# Contributing"]
+./src/book_editor/README.md:90 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "Contributing"]
+./src/book_editor/README.md:102 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "#"]
+./src/book_editor/README.md:102 MD024/no-duplicate-heading Multiple headings with the same content
+./src/book_editor/README.md:102 MD025/single-title/single-h1 Multiple top-level headings in the same document
+./src/book_editor/README.md:103 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Above] [Context: "# License"]
+./src/book_editor/README.md:103 MD025/single-title/single-h1 Multiple top-level headings in the same document [Context: "License"]
+[2024-12-21 11:29:50] WARNING: Some Markdown errors remain
+[2024-12-21 11:29:50] Some errors remain - check logs for details
