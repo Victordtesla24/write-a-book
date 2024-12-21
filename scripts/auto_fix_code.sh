@@ -44,9 +44,10 @@ parse_verify_log_errors() {
     # First try parsing JSON format
     if grep -q '"owner": "markdownlint"' "$log_file"; then
         log "Parsing JSON markdownlint errors..."
-        # Use jq to parse JSON and extract relevant fields
+        # Extract full path and convert to relative path
         jq -r '.[] | select(.owner == "markdownlint") | 
-            "\(.resource):\(.startLineNumber):\(.endLineNumber) \(.code.value)/\(.message)"' "$log_file" > "$ERROR_PATTERN_FILE"
+            (.resource | sub("^/Users/[^/]+/[^/]+/[^/]+/"; "./")) as $path |
+            "\($path):\(.startLineNumber):\(.endLineNumber) \(.code.value)/\(.message)"' "$log_file" > "$ERROR_PATTERN_FILE"
         found_errors=$(wc -l < "$ERROR_PATTERN_FILE")
     else
         # Fall back to parsing plain text format
