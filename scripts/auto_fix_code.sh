@@ -102,6 +102,7 @@ apply_generic_fixes() {
     fi
     
     log "Applying fixes to $file"
+    local fixed=0
     
     # Handle different file types
     case "${file##*.}" in
@@ -109,12 +110,48 @@ apply_generic_fixes() {
             # Fix markdown errors
             if echo "$errors" | grep -q "MD047.*single-trailing-newline"; then
                 log "  Fixing missing trailing newline"
-                # Ensure exactly one trailing newline
-                awk 1 "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
-                
-                # Run markdownlint to check if fix worked
-                if ! markdownlint "$file" 2>/dev/null | grep -q "MD047"; then
-                    log "  Successfully fixed trailing newline"
+                echo "" >> "$file"
+                ((fixed++))
+            fi
+            
+            if echo "$errors" | grep -q "MD022.*blanks-around-headings"; then
+                log "  Fixing blank lines around headings"
+                # Add blank lines around headings
+                sed -i'' -e '/^#/i\\' -e '/^#/a\\' "$file"
+                ((fixed++))
+            fi
+            
+            if echo "$errors" | grep -q "MD025.*single-title"; then
+                log "  Fixing multiple top-level headings"
+                # Convert subsequent H1s to H2s
+                awk '
+                    BEGIN {first_h1 = 0}
+                    /^# / {
+                        if (first_h1 == 0) {
+                            first_h1 = 1
+                            print
+                        } else {
+                            sub(/^# /, "## ")
+                            print
+                        }
+                        next
+                    }
+                    {print}
+                ' "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
+                ((fixed++))
+            fi
+            
+            if echo "$errors" | grep -q "MD032.*blanks-around-lists"; then
+                log "  Fixing blank lines around lists"
+                # Add blank lines around lists
+                sed -i'' -e '/^[*-]/i\\' -e '/^[*-]/a\\' "$file"
+                ((fixed++))
+            fi
+            
+            # Run markdownlint to check if fixes worked
+            if [ "$fixed" -gt 0 ]; then
+                if ! markdownlint "$file" 2>/dev/null | grep -q "MD[0-9]"; then
+                    log "  Successfully fixed $fixed issues"
                     parse_verify_log_errors  # Update error patterns file
                     return 0
                 fi
