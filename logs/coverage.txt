@@ -1,7 +1,7 @@
 Name                                     Stmts   Miss  Cover
 ------------------------------------------------------------
-src/__init__.py                              2      0   100%
-src/book_editor/__init__.py                  2      0   100%
+src/__init__.py                              1      0   100%
+src/book_editor/__init__.py                  1      0   100%
 src/book_editor/app/__init__.py              1      0   100%
 src/book_editor/app/config/__init__.py       0      0   100%
 src/book_editor/app/config/settings.py      11      0   100%
@@ -28,7 +28,7 @@ tests/test_app_core_editor.py               73      2    97%
 tests/test_book.py                          70      0   100%
 tests/test_components.py                    36      0   100%
 tests/test_core_editor.py                  162      3    98%
-tests/test_core_editor_extended.py          88      0   100%
+tests/test_core_editor_extended.py          52      0   100%
 tests/test_editor.py                       119      0   100%
 tests/test_main.py                          99     13    87%
 tests/test_settings.py                      46      0   100%
@@ -36,4 +36,4 @@ tests/test_storage.py                       60      0   100%
 tests/test_template.py                      76      0   100%
 tests/test_text_editor_extended.py          84      0   100%
 ------------------------------------------------------------
-TOTAL                                     2007    168    92%
+TOTAL                                     1969    168    91%

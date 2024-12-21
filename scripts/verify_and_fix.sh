@@ -273,18 +273,32 @@ fix_python_files() {
     local python_files=$(get_cache "python")
     if [ ! -z "$python_files" ]; then
         log "Batch processing imports..."
-        echo "$python_files" | xargs -P 4 -I {} isort {} 2>/dev/null || true
+        # Run isort with settings to handle import order
+        echo "$python_files" | xargs -P 4 -I {} isort --profile black --combine-as --remove-redundant-aliases {} 2>/dev/null || true
         
         log "Batch processing code style..."
+        # Run black with strict settings
+        echo "$python_files" | xargs -P 4 -I {} black --line-length 79 {} 2>/dev/null || true
+        
+        # Run autopep8 for additional fixes
         echo "$python_files" | xargs -P 4 -I {} autopep8 --in-place --aggressive --aggressive {} 2>/dev/null || true
         
-        # Process docstrings
+        # Process docstrings and imports
         echo "$python_files" | while read -r file; do
+            # Add docstring if missing
             if ! grep -q '"""' "$file"; then
                 sed -i '' '1i\
 """Module docstring."""\
 \
 ' "$file" 2>/dev/null || true
+            fi
+            
+            # Fix import order and unused imports
+            if [ -f "$file" ]; then
+                # Remove unused imports
+                autoflake --remove-all-unused-imports --in-place "$file" 2>/dev/null || true
+                # Ensure standard imports come before third party
+                isort --profile black --combine-as --remove-redundant-aliases "$file" 2>/dev/null || true
             fi
         done
     fi

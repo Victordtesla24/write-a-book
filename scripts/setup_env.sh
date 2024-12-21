@@ -55,7 +55,7 @@ setup_python_env() {
     python -m pip install --upgrade pip
     
     # Install base requirements
-    pip install -q streamlit python-dotenv pytest pytest-cov black isort pylint
+    pip install -q streamlit python-dotenv pytest pytest-cov black isort pylint autoflake autopep8 flake8
     
     # Install project in development mode if setup.py exists
     if [ -f "setup.py" ]; then

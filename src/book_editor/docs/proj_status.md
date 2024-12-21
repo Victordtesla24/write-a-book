@@ -21,43 +21,43 @@
 
 1. Main Application (`app/main.py`)
 
-   - Streamlit interface
+  - Streamlit interface
 
-   - Template management
+  - Template management
 
-   - Basic text editing
+  - Basic text editing
 
 2. Core Editor (`app/core/editor.py`)
 
-   - Document management
+  - Document management
 
-   - Text analysis
+  - Text analysis
 
-   - File operations
+  - File operations
 
 3. Configuration (`app/config/settings.py`)
 
-   - Project settings
+  - Project settings
 
-   - Feature flags
+  - Feature flags
 
-   - Path configurations
+  - Path configurations
 
 4. Testing (`tests/test_editor.py`)
 
-   - Unit tests for core functionality
+  - Unit tests for core functionality
 
-   - Document management tests
+  - Document management tests
 
-   - Text analysis tests
+  - Text analysis tests
 
 5. Templates (`templates/base.html`)
 
-   - Modern UI design
+  - Modern UI design
 
-   - Responsive layout
+  - Responsive layout
 
-   - Basic editor functionality
+  - Basic editor functionality
 
 ### Next Steps
 

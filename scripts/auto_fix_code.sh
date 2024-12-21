@@ -57,6 +57,25 @@ fix_markdown() {
     # Fix MD047: Files should end with a single newline
     perl -0pe 's/\n+$/\n/' "$temp_file" > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
     
+    # Fix MD003: Heading style
+    perl -0pe 's/^(.+)\n=+$/# \1/gm' "$temp_file" | \
+    perl -0pe 's/^(.+)\n-+$/## \1/gm' > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Fix MD004: Unordered list style
+    perl -0pe 's/^(\s*)[+*](\s+)/\1-\2/gm' "$temp_file" > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Fix MD007: Unordered list indentation
+    perl -0pe 's/^   ([-*+])/  \1/gm' "$temp_file" > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Fix MD009: Trailing spaces
+    perl -0pe 's/[ \t]+$//' "$temp_file" > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Fix MD010: Hard tabs
+    perl -0pe 's/\t/    /g' "$temp_file" > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
+    # Fix MD012: Multiple consecutive blank lines
+    perl -0pe 's/\n{3,}/\n\n/g' "$temp_file" > "$temp_file.2" && mv "$temp_file.2" "$temp_file"
+    
     # Apply fixes back to original file
     mv "$temp_file" "$file"
     

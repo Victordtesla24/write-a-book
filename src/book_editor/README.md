@@ -53,14 +53,14 @@ A streamlit-based web application for writing and editing books with template su
 2. Open your web browser and navigate to `<http://localhost:8501`>
 
 3. Use the sidebar to:
-   - Upload templates
-   - Create new documents
-   - Access saved documents
+  - Upload templates
+  - Create new documents
+  - Access saved documents
 
 4. Use the main editor to:
-   - Write and edit text
-   - View word count and statistics
-   - Save and export your work
+  - Write and edit text
+  - View word count and statistics
+  - Save and export your work
 
 #
 # Development
