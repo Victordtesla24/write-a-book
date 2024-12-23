@@ -197,9 +197,7 @@ def test_chapter_index_adjustment(editor: Editor, sample_book: Book) -> None:
     assert editor.current_chapter_index == 0  # Should adjust to valid index
 
 
-def test_multiple_chapter_operations(
-    editor: Editor, sample_book: Book
-) -> None:
+def test_multiple_chapter_operations(editor: Editor, sample_book: Book) -> None:
     """Test multiple chapter operations in sequence."""
     editor.load_book(sample_book)
     assert editor.current_book is not None

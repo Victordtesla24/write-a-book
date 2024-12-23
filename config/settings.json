@@ -1,0 +1,29 @@
+{
+    "project": {
+        "name": "write-a-book",
+        "version": "0.1.0",
+        "description": "Book writing and editing application"
+    },
+    "security": {
+        "allow_file_creation": true,
+        "disable_file_watcher": true
+    },
+    "paths": {
+        "data": "data",
+        "templates": "templates",
+        "output": "output",
+        "metrics": "metrics"
+    },
+    "dashboard": {
+        "refresh_interval": 60,
+        "cpu_threshold": 80,
+        "memory_threshold": 80,
+        "disk_threshold": 90,
+        "test_coverage_threshold": 80
+    },
+    "github": {
+        "repository": "write-a-book",
+        "owner": "admin",
+        "token": "${GITHUB_TOKEN}"
+    }
+}

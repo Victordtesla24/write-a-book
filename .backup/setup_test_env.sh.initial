@@ -1,0 +1,114 @@
+#!/bin/bash
+
+# Test environment setup script
+# Sets up a dedicated test environment
+
+set -e
+
+# Project root directory
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Load core scripts
+source "${PROJECT_ROOT}/core_scripts/config_manager.sh"
+source "${PROJECT_ROOT}/core_scripts/resource_manager.sh"
+
+# Initialize logging
+LOG_DIR="${PROJECT_ROOT}/logs"
+mkdir -p "${LOG_DIR}"
+TEST_LOG="${LOG_DIR}/test_setup.log"
+
+log() {
+    local level="$1"
+    local message="$2"
+    local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "[${timestamp}] [${level}] ${message}" | tee -a "${TEST_LOG}"
+}
+
+# Test environment paths
+TEST_ENV_DIR="${PROJECT_ROOT}/test_env"
+TEST_DATA_DIR="${TEST_ENV_DIR}/data"
+TEST_CONFIG_DIR="${TEST_ENV_DIR}/config"
+
+# Create test environment structure
+create_test_env() {
+    log "INFO" "Creating test environment structure..."
+    
+    # Create test directories
+    for dir in "${TEST_ENV_DIR}" "${TEST_DATA_DIR}" "${TEST_CONFIG_DIR}"; do
+        mkdir -p "${dir}"
+        chmod 755 "${dir}"
+    done
+    
+    # Create test configuration
+    safe_create_file "${TEST_CONFIG_DIR}/test_settings.json" '{
+    "test": {
+        "mode": "unit",
+        "coverage": true,
+        "parallel": true
+    },
+    "paths": {
+        "test_data": "test_env/data",
+        "test_output": "test_env/output"
+    }
+}'
+    
+    log "INFO" "Test environment structure created"
+}
+
+# Set up Python test environment
+setup_python_env() {
+    log "INFO" "Setting up Python test environment..."
+    
+    # Create virtual environment if it doesn't exist
+    if [[ ! -d "${TEST_ENV_DIR}/venv" ]]; then
+        python3 -m venv "${TEST_ENV_DIR}/venv"
+        source "${TEST_ENV_DIR}/venv/bin/activate"
+        
+        # Install test dependencies
+        pip install pytest pytest-cov pytest-asyncio pytest-mock mypy pylint black
+        
+        # Install project in editable mode
+        pip install -e ".[test]"
+    fi
+    
+    log "INFO" "Python test environment setup complete"
+}
+
+# Create test data
+create_test_data() {
+    log "INFO" "Creating test data..."
+    
+    # Create sample test files
+    safe_create_file "${TEST_DATA_DIR}/test_document.json" '{
+    "title": "Test Document",
+    "content": "This is a test document.",
+    "author": "Test Author"
+}'
+    
+    safe_create_file "${TEST_DATA_DIR}/test_template.json" '{
+    "name": "Test Template",
+    "type": "test",
+    "description": "Template for testing"
+}'
+    
+    log "INFO" "Test data created"
+}
+
+# Main execution
+main() {
+    log "INFO" "Starting test environment setup..."
+    
+    # Create test environment structure
+    create_test_env
+    
+    # Set up Python environment
+    setup_python_env
+    
+    # Create test data
+    create_test_data
+    
+    log "INFO" "Test environment setup completed successfully"
+}
+
+# Execute main function
+main 

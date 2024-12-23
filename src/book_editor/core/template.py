@@ -1,220 +1,324 @@
-"""Template management module for Book Editor.
-
-This module provides functionality for managing document templates, including
-template creation, storage, and metadata management.
-"""
+"""Template module for handling book templates."""
 
 import json
 import logging
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set, Union
 
-from src.book_editor.types import (
-    TemplateData,
-    TemplateMetadata,
-    TemplateStyles,
-)
-
-logger = logging.getLogger(__name__)
+import markdown
 
 PAGE_LAYOUTS = {
-    "standard": {"margins": "1in", "font_size": "12pt", "line_spacing": "1.5"},
     "manuscript": {
-        "margins": "1.5in",
-        "font_size": "12pt",
-        "line_spacing": "2",
-    },
+        "font-family": "Courier New",
+        "font-size": "12pt",
+        "line-height": "2",
+        "margin": "2.54cm",
+    }
 }
 
+
 VINTAGE_BORDERS = {
-    "classic": "single-line",
-    "ornate": "floral",
-    "art_deco": "geometric",
+    "classic": {
+        "border": "2px solid #8B4513",
+        "border-radius": "8px",
+        "background-color": "#FFF8DC",
+    }
 }
 
 
 class Template:
-    """Template class representing a document template.
-
-    Handles template content, metadata, and styling information.
-    """
+    """Class representing a book template."""
 
     def __init__(self, name: str, category: str = "general"):
+        """Initialize template.
+
+        Args:
+            name: Template name
+            category: Template category
+        """
         self.name = name
         self.category = category
-        self.metadata: TemplateMetadata = {
+        self.metadata: Dict[str, Any] = {
             "description": "",
             "tags": [],
             "format": "markdown",
-            "created_at": "",
-            "updated_at": "",
-            "word_count": 0,
         }
-        self.styles: TemplateStyles = {
-            "borders": {},
-            "colors": {},
-            "fonts": {},
-        }
+        self.styles: Dict[str, Dict[str, Dict[str, str]]] = {}
         self.layouts: List[Dict[str, str]] = []
 
-    def add_style(self, style_type: str, name: str, value: str) -> None:
-        """Add a style to the template."""
-        if style_type in self.styles:
-            self.styles[style_type][name] = value
+        # Add default styles and layouts
+        self.add_style("borders", "classic", VINTAGE_BORDERS["classic"])
+        self.add_layout(PAGE_LAYOUTS["manuscript"])
+
+    def add_style(self, style_type: str, style_name: str, style_data: Dict[str, str]) -> None:
+        """Add a style to the template.
+
+        Args:
+            style_type: Type of style (e.g. 'borders', 'fonts')
+            style_name: Name of the style
+            style_data: Style data
+        """
+        if style_type not in self.styles:
+            self.styles[style_type] = {}
+        if style_name not in self.styles[style_type]:
+            self.styles[style_type][style_name] = {}
+        self.styles[style_type][style_name].update(style_data)
 
     def add_layout(self, layout: Dict[str, str]) -> None:
-        """Add a layout configuration to the template."""
-        self.layouts.append(layout)
+        """Add a layout to the template.
 
-    def to_dict(self) -> TemplateData:
-        """Convert template to dictionary for serialization."""
+        Args:
+            layout: Layout data
+        """
+        self.layouts.append(layout.copy())
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert template to dictionary.
+
+        Returns:
+            Dictionary representation of template
+        """
         return {
             "name": self.name,
             "category": self.category,
-            "metadata": self.metadata,
-            "styles": self.styles,
-            "layouts": self.layouts,
+            "metadata": self.metadata.copy(),
+            "styles": {k: {sk: sv.copy() for sk, sv in v.items()} for k, v in self.styles.items()},
+            "layouts": [layout.copy() for layout in self.layouts],
         }
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "Template":
-        """Create template from dictionary."""
-        # Extract or generate name and category
-        name = data.get("name", data.get("title", "Untitled"))
-        category = data.get("category", "general")
-        template = cls(str(name), str(category))
+        """Create template from dictionary.
 
-        # Handle metadata
-        if "metadata" in data:
-            template.metadata.update(data["metadata"])
+        Args:
+            data: Dictionary representation of template
 
-        # Handle styles
-        if "styles" in data:
-            template.styles = {
-                "borders": data["styles"].get("borders", {}),
-                "colors": data["styles"].get("colors", {}),
-                "fonts": data["styles"].get("fonts", {}),
-            }
-
-        # Handle layouts
-        if "layouts" in data:
-            template.layouts = data["layouts"]
+        Returns:
+            New template instance
+        """
+        template = cls(data["name"], data["category"])
+        template.metadata = data["metadata"].copy()
+        template.styles = {
+            k: {sk: sv.copy() for sk, sv in v.items()} for k, v in data["styles"].items()
+        }
+        template.layouts = [layout.copy() for layout in data["layouts"]]
         return template
+
+    def save(self, path: Path) -> None:
+        """Save template to file.
+
+        Args:
+            path: Path to save template to
+        """
+        with path.open("w", encoding="utf-8") as f:
+            json.dump(self.to_dict(), f, indent=2)
+
+    @classmethod
+    def load(cls, path: Path) -> Optional["Template"]:
+        """Load template from file.
+
+        Args:
+            path: Path to load template from
+
+        Returns:
+            Loaded template or None if loading fails
+        """
+        try:
+            with path.open("r", encoding="utf-8") as f:
+                data = json.load(f)
+            return cls.from_dict(data)
+        except (OSError, json.JSONDecodeError):
+            return None
+
+    def __getitem__(self, key: str) -> Any:
+        """Get template attribute by key.
+
+        Args:
+            key: Attribute key
+
+        Returns:
+            Attribute value
+        """
+        if key == "name":
+            return self.name
+        elif key == "category":
+            return self.category
+        elif key == "metadata":
+            return self.metadata
+        elif key == "styles":
+            return self.styles
+        elif key == "layouts":
+            return self.layouts
+        raise KeyError(f"Invalid key: {key}")
+
+    def render(self, content: str) -> str:
+        """Render content using this template.
+
+        Args:
+            content: Content to render
+
+        Returns:
+            Rendered content
+        """
+        # Convert markdown to HTML
+        html = markdown.markdown(content)
+
+        # Apply template styling
+        styled_html = f"""
+<div style='border: 2px solid #8B4513; border-radius: 8px; background-color: #FFF8DC'>
+<div style='font-family: Courier New; font-size: 12pt; line-height: 2; margin: 2.54cm'>
+{html}
+</div>
+</div>"""
+
+        return styled_html.strip()
 
 
 class TemplateManager:
-    """Template manager class for handling template operations.
+    """Class for managing book templates."""
 
-    Manages template storage, loading, and searching functionality.
-    """
+    def __init__(self, template_dir: Union[str, Path]):
+        """Initialize template manager.
 
-    def __init__(self, templates_dir: Path):
-        self.templates_dir = templates_dir
-        self.ensure_storage()
-        self._categories = self._load_categories()
-        # Ensure default category exists
-        if not any(c["name"] == "general" for c in self._categories):
-            self.add_category("general", "Default template category")
+        Args:
+            template_dir: Directory for storing templates
+        """
+        self.template_dir = Path(template_dir)
+        self.template_dir.mkdir(parents=True, exist_ok=True)
+        self.categories: Set[str] = {"general"}
 
-    def ensure_storage(self) -> None:
-        """Ensure storage directory exists."""
-        self.templates_dir.mkdir(parents=True, exist_ok=True)
-        categories_file = self.templates_dir / "categories.json"
-        if not categories_file.exists():
-            with open(categories_file, "w", encoding="utf-8") as f:
-                json.dump({"categories": []}, f)
+    def add_category(self, category: str, description: Optional[str] = None) -> bool:
+        """Add a new template category.
 
-    def _load_categories(self) -> List[Dict[str, str]]:
-        """Load template categories from storage."""
-        categories_file = self.templates_dir / "categories.json"
-        with open(categories_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            return data.get("categories", [])
+        Args:
+            category: Category name
+            description: Category description
 
-    def _save_categories(self) -> None:
-        """Save template categories to storage."""
-        categories_file = self.templates_dir / "categories.json"
-        with open(categories_file, "w", encoding="utf-8") as f:
-            json.dump({"categories": self._categories}, f, indent=2)
-
-    def add_category(self, name: str, description: str = "") -> bool:
-        """Add a new template category."""
-        if any(c["name"] == name for c in self._categories):
+        Returns:
+            True if category was added successfully
+        """
+        if not category:
             return False
-        self._categories.append({"name": name, "description": description})
-        self._save_categories()
+        if category in self.categories:
+            return False
+        self.categories.add(category)
         return True
 
-    def get_categories(self) -> List[str]:
-        """Get list of template categories."""
-        return [c["name"] for c in self._categories]
+    def get_categories(self) -> Set[str]:
+        """Get all template categories.
 
-    def save_template(self, template: Template) -> bool:
-        """Save template to storage."""
-        # Check if category exists
-        if template.category not in self.get_categories():
-            return False
-        file_path = self.templates_dir / f"{template.name}.json"
-        with open(file_path, "w", encoding="utf-8") as f:
-            json.dump(template.to_dict(), f, indent=2)
-        return True
+        Returns:
+            Set of category names
+        """
+        return self.categories.copy()
 
-    def _sanitize_json_content(self, content: str) -> str:
-        """Remove invalid control characters from JSON content."""
-        # Remove control characters except for \n, \r, \t
-        return "".join(
-            char for char in content if ord(char) >= 32 or char in "\n\r\t"
-        )
+    def get_template(self, name: str) -> Optional[Template]:
+        """Get a template by name.
 
-    def load_template(self, name: str) -> Optional[Template]:
-        """Load template from storage."""
-        file_path = self.templates_dir / f"{name}.json"
-        if not file_path.exists():
+        Args:
+            name: Template name
+
+        Returns:
+            Template instance or None if not found
+        """
+        template_path = self.template_dir / f"{name}.json"
+        if not template_path.exists():
+            return None
+        try:
+            with open(template_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                template = Template(data["name"], data["category"])
+                template.metadata = data["metadata"]
+                template.styles = data.get("styles", {})
+                template.layouts = data.get("layouts", [])
+                return template
+        except (OSError, json.JSONDecodeError, KeyError) as e:
+            logging.error(f"Failed to load template: {str(e)}")
             return None
 
+    def save_template(self, template: Template) -> bool:
+        """Save a template.
+
+        Args:
+            template: Template to save
+
+        Returns:
+            True if save was successful
+        """
+        if not template.name or not template.category:
+            return False
+        if template.category not in self.categories:
+            return False
+        template_path = self.template_dir / f"{template.name}.json"
         try:
-            with open(file_path, "r", encoding="utf-8") as f:
-                content = f.read()
-                sanitized = self._sanitize_json_content(content)
-                data = json.loads(sanitized)
-                return Template.from_dict(data)
-        except (json.JSONDecodeError, IOError) as e:
-            logger.error("Error loading template %s: %s", file_path, e)
-            return Template(name=name, category="general")
+            with open(template_path, "w", encoding="utf-8") as f:
+                json.dump(template.to_dict(), f, indent=2)
+            return True
+        except (OSError, json.JSONDecodeError) as e:
+            logging.error(f"Failed to save template: {str(e)}")
+            return False
 
     def list_templates(self, category: Optional[str] = None) -> List[str]:
-        """List available templates, optionally filtered by category."""
+        """List all templates.
+
+        Args:
+            category: Optional category to filter by
+
+        Returns:
+            List of template names
+        """
         templates = []
-        for file_path in self.templates_dir.glob("*.json"):
-            if file_path.stem == "categories":
+        for template_path in self.template_dir.glob("*.json"):
+            try:
+                with open(template_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    if category is None or data["category"] == category:
+                        templates.append(data["name"])
+            except (OSError, json.JSONDecodeError, KeyError) as e:
+                logging.error(f"Failed to load template during listing: {str(e)}")
                 continue
-            template = self.load_template(file_path.stem)
-            if template and (not category or template.category == category):
-                templates.append(template.name)
         return templates
 
-    def search_templates(self, query: str) -> List[TemplateData]:
-        """Search templates by name, description, or tags."""
-        results = []
+    def search_templates(self, query: str) -> List[Template]:
+        """Search for templates.
+
+        Args:
+            query: Search query
+
+        Returns:
+            List of matching templates
+        """
         query = query.lower()
-        for file_path in self.templates_dir.glob("*.json"):
-            if file_path.stem == "categories":
+        results = []
+        for template_path in self.template_dir.glob("*.json"):
+            try:
+                with open(template_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    metadata = data.get("metadata", {})
+                    description = metadata.get("description", "").lower()
+                    tags = metadata.get("tags", [])
+                    if (
+                        query in data["name"].lower()
+                        or query in description
+                        or any(query in tag.lower() for tag in tags)
+                    ):
+                        template = Template(data["name"], data["category"])
+                        template.metadata = metadata
+                        template.styles = data.get("styles", {})
+                        template.layouts = data.get("layouts", [])
+                        results.append(template)
+            except (OSError, json.JSONDecodeError, KeyError) as e:
+                logging.error(f"Failed to load template during search: {str(e)}")
                 continue
-            template = self.load_template(file_path.stem)
-            if template:
-                template_dict = template.to_dict()
-                if (
-                    query in template_dict["name"].lower()
-                    or query
-                    in (
-                        template_dict["metadata"]
-                        .get("description", "")
-                        .lower()
-                    )
-                    or any(
-                        query in tag.lower()
-                        for tag in template_dict["metadata"].get("tags", [])
-                    )
-                ):
-                    results.append(template_dict)
         return results
+
+    def load_template(self, name: str) -> Optional[Template]:
+        """Load a template by name.
+
+        Args:
+            name: Template name
+
+        Returns:
+            Template if found, None otherwise
+        """
+        return self.get_template(name)

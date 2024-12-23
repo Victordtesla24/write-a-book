@@ -1,0 +1,19 @@
+{
+    "cpu": {
+        "warning": 70,
+        "critical": 85
+    },
+    "memory": {
+        "warning": 75,
+        "critical": 90
+    },
+    "disk": {
+        "warning": 80,
+        "critical": 90
+    },
+    "ai": {
+        "max_tokens": 4096,
+        "cost_per_token": 0.000002,
+        "daily_budget": 1.00
+    }
+}

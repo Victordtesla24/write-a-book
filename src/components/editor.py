@@ -123,9 +123,7 @@ class Editor:
         chapter = self.current_book.chapters[chapter_index]
         current_content = chapter.content
 
-        self.redo_stack.append(
-            {"chapter_index": chapter_index, "content": current_content}
-        )
+        self.redo_stack.append({"chapter_index": chapter_index, "content": current_content})
         chapter.content = current_state["content"]
 
     def redo(self) -> None:
@@ -138,7 +136,5 @@ class Editor:
         chapter = self.current_book.chapters[chapter_index]
         current_content = chapter.content
 
-        self.undo_stack.append(
-            {"chapter_index": chapter_index, "content": current_content}
-        )
+        self.undo_stack.append({"chapter_index": chapter_index, "content": current_content})
         chapter.content = next_state["content"]

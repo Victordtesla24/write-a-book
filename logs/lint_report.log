@@ -18,3 +18,574 @@ Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 --------------------------------------------------------------------
 Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+All done! ✨ 🍰 ✨
+1 file would be left unchanged.
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+src/book_editor/core/document.py:102: error: Returning Any from function declared to return "str"  [no-any-return]
+src/book_editor/core/template.py:270: error: Returning Any from function declared to return "List[Dict[str, str]]"  [no-any-return]
+src/book_editor/core/template.py:362: error: Incompatible return value type (got "List[Dict[str, Any]]", expected "List[TemplateData]")  [return-value]
+Found 3 errors in 2 files (checked 1 source file)
+src/book_editor/core/document.py:102: error: Returning Any from function declared to return "str"  [no-any-return]
+src/book_editor/core/template.py:270: error: Returning Any from function declared to return "List[Dict[str, str]]"  [no-any-return]
+src/book_editor/core/template.py:362: error: Incompatible return value type (got "List[Dict[str, Any]]", expected "List[TemplateData]")  [return-value]
+Found 3 errors in 2 files (checked 1 source file)
+src/book_editor/core/document.py:102: error: Returning Any from function declared to return "str"  [no-any-return]
+src/book_editor/core/template.py:270: error: Returning Any from function declared to return "List[Dict[str, str]]"  [no-any-return]
+src/book_editor/core/template.py:362: error: Incompatible return value type (got "List[Dict[str, Any]]", expected "List[TemplateData]")  [return-value]
+Found 3 errors in 2 files (checked 1 source file)
+src/book_editor/core/document.py:102: error: Returning Any from function declared to return "str"  [no-any-return]
+src/book_editor/core/template.py:270: error: Returning Any from function declared to return "List[Dict[str, str]]"  [no-any-return]
+src/book_editor/core/template.py:362: error: Incompatible return value type (got "List[Dict[str, Any]]", expected "List[TemplateData]")  [return-value]
+Found 3 errors in 2 files (checked 1 source file)
+Success: no issues found in 1 source file
+src/book_editor/core/document.py:102: error: Returning Any from function declared to return "str"  [no-any-return]
+src/book_editor/core/template.py:270: error: Returning Any from function declared to return "List[Dict[str, str]]"  [no-any-return]
+src/book_editor/core/template.py:362: error: Incompatible return value type (got "List[Dict[str, Any]]", expected "List[TemplateData]")  [return-value]
+Found 3 errors in 2 files (checked 1 source file)
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+Success: no issues found in 1 source file
+src/book_editor/core/document.py:102: error: Returning Any from function declared to return "str"  [no-any-return]
+src/book_editor/core/template.py:270: error: Returning Any from function declared to return "List[Dict[str, str]]"  [no-any-return]
+src/book_editor/core/template.py:362: error: Incompatible return value type (got "List[Dict[str, Any]]", expected "List[TemplateData]")  [return-value]
+src/book_editor/main.py:62: error: Returning Any from function declared to return "str"  [no-any-return]
+src/book_editor/main.py:111: error: Need type annotation for "category"  [var-annotated]
+Found 5 errors in 3 files (checked 1 source file)
+Success: no issues found in 1 source file
+src/data/storage.py:41: error: Returning Any from function declared to return "Union[str, Dict[str, Any]]"  [no-any-return]
+Found 1 error in 1 file (checked 1 source file)
+/Users/admin/cursor/write-a-book/venv/lib/python3.13/site-packages/pytest_asyncio/plugin.py:207: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.3.4, pluggy-1.5.0 -- /Users/admin/cursor/write-a-book/venv/bin/python3.13
+cachedir: .pytest_cache
+rootdir: /Users/admin/cursor/write-a-book
+configfile: pyproject.toml
+plugins: cov-6.0.0, asyncio-0.25.0, anyio-4.7.0, mock-3.14.0
+asyncio: mode=Mode.STRICT, asyncio_default_fixture_loop_scope=None
+collecting ... collected 92 items
+
+tests/test_app_config.py::test_app_settings PASSED                       [  1%]
+tests/test_app_config.py::test_supported_formats PASSED                  [  2%]
+tests/test_app_config.py::test_theme_config PASSED                       [  3%]
+tests/test_app_config.py::test_editor_config PASSED                      [  4%]
+tests/test_app_config.py::test_preview_config PASSED                     [  5%]
+tests/test_app_config.py::test_logging_config PASSED                     [  6%]
+tests/test_app_core.py::test_editor_app_initialization PASSED            [  7%]
+tests/test_app_core.py::test_document_manager_operations PASSED          [  8%]
+tests/test_app_core.py::test_template_renderer_operations PASSED         [  9%]
+tests/test_app_core.py::test_preview_manager_operations FAILED           [ 10%]
+tests/test_app_core.py::test_editor_app_document_handling PASSED         [ 11%]
+tests/test_app_core.py::test_editor_app_template_handling FAILED         [ 13%]
+tests/test_app_core.py::test_editor_app_error_handling PASSED            [ 14%]
+tests/test_app_core.py::test_document_manager_validation PASSED          [ 15%]
+tests/test_app_core.py::test_template_renderer_validation PASSED         [ 16%]
+tests/test_app_core_editor.py::test_template_renderer_operations PASSED  [ 17%]
+tests/test_app_core_editor.py::test_preview_manager_operations FAILED    [ 18%]
+tests/test_app_core_editor.py::test_editor_app_initialization PASSED     [ 19%]
+tests/test_app_core_editor.py::test_editor_app_document_operations PASSED [ 20%]
+tests/test_app_core_editor.py::test_editor_app_template_operations FAILED [ 21%]
+tests/test_app_core_editor.py::test_editor_app_validation PASSED         [ 22%]
+tests/test_book.py::test_book_creation PASSED                            [ 23%]
+tests/test_book.py::test_chapter_management PASSED                       [ 25%]
+tests/test_book.py::test_section_management PASSED                       [ 26%]
+tests/test_book.py::test_metadata_management PASSED                      [ 27%]
+tests/test_book.py::test_content_operations PASSED                       [ 28%]
+tests/test_book.py::test_chapter_operations PASSED                       [ 29%]
+tests/test_components.py::test_editor_component_initialization PASSED    [ 30%]
+tests/test_components.py::test_editor_content_update PASSED              [ 31%]
+tests/test_components.py::test_cursor_movement PASSED                    [ 32%]
+tests/test_components.py::test_text_selection PASSED                     [ 33%]
+tests/test_components.py::test_undo_redo PASSED                          [ 34%]
+tests/test_core_editor.py::test_document_creation PASSED                 [ 35%]
+tests/test_core_editor.py::test_document_content PASSED                  [ 36%]
+tests/test_core_editor.py::test_document_metadata PASSED                 [ 38%]
+tests/test_core_editor.py::test_document_serialization FAILED            [ 39%]
+tests/test_core_editor.py::test_datetime_encoder PASSED                  [ 40%]
+tests/test_core_editor.py::test_save_without_document PASSED             [ 41%]
+tests/test_core_editor_extended.py::test_document_empty_metadata PASSED  [ 42%]
+tests/test_core_editor_extended.py::test_document_metadata_update PASSED [ 43%]
+tests/test_core_editor_extended.py::test_document_content_versioning PASSED [ 44%]
+tests/test_core_editor_extended.py::test_document_timestamps PASSED      [ 45%]
+tests/test_core_editor_extended.py::test_editor_document_management PASSED [ 46%]
+tests/test_core_editor_extended.py::test_document_serialization_edge_cases PASSED [ 47%]
+tests/test_core_editor_extended.py::test_document_load_errors PASSED     [ 48%]
+tests/test_editor.py::test_editor_initialization PASSED                  [ 50%]
+tests/test_editor.py::test_book_loading PASSED                           [ 51%]
+tests/test_editor.py::test_chapter_navigation PASSED                     [ 52%]
+tests/test_editor.py::test_content_editing PASSED                        [ 53%]
+tests/test_editor.py::test_chapter_management PASSED                     [ 54%]
+tests/test_editor.py::test_error_handling PASSED                         [ 55%]
+tests/test_editor.py::test_undo_redo_stack PASSED                        [ 56%]
+tests/test_editor.py::test_empty_undo_redo PASSED                        [ 57%]
+tests/test_editor.py::test_chapter_validation PASSED                     [ 58%]
+tests/test_editor.py::test_chapter_index_adjustment PASSED               [ 59%]
+tests/test_editor.py::test_multiple_chapter_operations PASSED            [ 60%]
+tests/test_main.py::test_book_editor_initialization PASSED               [ 61%]
+tests/test_main.py::test_render_template_manager PASSED                  [ 63%]
+tests/test_main.py::test_main PASSED                                     [ 64%]
+tests/test_main.py::test_auto_save FAILED                                [ 65%]
+tests/test_main.py::test_template_management FAILED                      [ 66%]
+tests/test_main.py::test_template_search FAILED                          [ 67%]
+tests/test_main.py::test_template_preview PASSED                         [ 68%]
+tests/test_main.py::test_editor_content_handling PASSED                  [ 69%]
+tests/test_main.py::test_editor_statistics FAILED                        [ 70%]
+tests/test_main.py::test_document_history PASSED                         [ 71%]
+tests/test_settings.py::test_app_settings PASSED                         [ 72%]
+tests/test_settings.py::test_supported_formats PASSED                    [ 73%]
+tests/test_settings.py::test_theme_config PASSED                         [ 75%]
+tests/test_settings.py::test_editor_config PASSED                        [ 76%]
+tests/test_settings.py::test_preview_config PASSED                       [ 77%]
+tests/test_settings.py::test_logging_config PASSED                       [ 78%]
+tests/test_storage.py::test_storage_initialization PASSED                [ 79%]
+tests/test_storage.py::test_file_operations PASSED                       [ 80%]
+tests/test_storage.py::test_directory_operations PASSED                  [ 81%]
+tests/test_storage.py::test_backup_operations PASSED                     [ 82%]
+tests/test_storage.py::test_error_handling PASSED                        [ 83%]
+tests/test_template.py::test_template_creation FAILED                    [ 84%]
+tests/test_template.py::test_template_serialization FAILED               [ 85%]
+tests/test_template.py::test_template_manager_categories PASSED          [ 86%]
+tests/test_template.py::test_template_manager_save_load PASSED           [ 88%]
+tests/test_template.py::test_template_manager_listing PASSED             [ 89%]
+tests/test_template.py::test_template_search PASSED                      [ 90%]
+tests/test_text_editor_extended.py::test_editor_initialization PASSED    [ 91%]
+tests/test_text_editor_extended.py::test_content_management PASSED       [ 92%]
+tests/test_text_editor_extended.py::test_cursor_movement_bounds PASSED   [ 93%]
+tests/test_text_editor_extended.py::test_text_selection_operations PASSED [ 94%]
+tests/test_text_editor_extended.py::test_undo_redo_operations PASSED     [ 95%]
+tests/test_text_editor_extended.py::test_empty_operations PASSED         [ 96%]
+tests/test_text_editor_extended.py::test_cursor_selection_interaction PASSED [ 97%]
+tests/test_text_editor_extended.py::test_content_state_management PASSED [ 98%]
+tests/test_text_editor_extended.py::test_selection_edge_cases PASSED     [100%]
+
+=================================== FAILURES ===================================
+_______________________ test_preview_manager_operations ________________________
+
+preview_manager = <src.book_editor.app.core.editor.PreviewManager object at 0x103974f50>
+document_manager = <src.book_editor.app.core.editor.DocumentManager object at 0x103975810>
+
+    def test_preview_manager_operations(
+        preview_manager: PreviewManager,
+        document_manager: DocumentManager,
+    ) -> None:
+        """Test PreviewManager operations."""
+        # Create a test document
+        doc = document_manager.create_document("Test", "# Test\nThis is a test")
+    
+        # Test preview without template
+        preview = preview_manager.get_preview(doc)
+        assert "# Test" in preview
+        assert "This is a test" in preview
+    
+        # Test preview with template
+        template = Template("default", "general")
+        preview_manager.set_template(template)
+        preview = preview_manager.get_preview(doc)
+>       assert preview == ""  # Empty because template has no render implementation
+E       AssertionError: assert '\n        <!...ml>\n        ' == ''
+E         
+E         + 
+E         +         <!DOCTYPE html>
+E         +         <html>
+E         +         <head>
+E         +             <title>Test</title>
+E         +             <style>...
+E         
+E         ...Full output truncated (15 lines hidden), use '-vv' to show
+
+tests/test_app_core.py:118: AssertionError
+______________________ test_editor_app_template_handling _______________________
+
+editor_app = <src.book_editor.app.core.editor.EditorApp object at 0x103975590>
+
+    def test_editor_app_template_handling(editor_app: EditorApp) -> None:
+        """Test EditorApp template handling."""
+        # Create and save a test template
+        template = Template("default", "general")
+        editor_app.template_renderer._template_manager.save_template(  # pylint: disable=protected-access
+            template
+        )
+    
+        # Test template setting
+        assert editor_app.set_template("default")
+    
+        # Test preview with template
+        doc = editor_app.new_document("Test")
+        doc.update_content("Test content")
+        preview = editor_app.get_preview()
+>       assert preview == ""  # Empty because template has no render implementation
+E       AssertionError: assert '\n        <!...ml>\n        ' == ''
+E         
+E         + 
+E         +         <!DOCTYPE html>
+E         +         <html>
+E         +         <head>
+E         +             <title>Test</title>
+E         +             <style>...
+E         
+E         ...Full output truncated (14 lines hidden), use '-vv' to show
+
+tests/test_app_core.py:155: AssertionError
+_______________________ test_preview_manager_operations ________________________
+
+preview_manager = <src.book_editor.app.core.editor.PreviewManager object at 0x1039dc710>
+document_manager = <src.book_editor.app.core.editor.DocumentManager object at 0x10394f790>
+
+    def test_preview_manager_operations(
+        preview_manager: PreviewManager,
+        document_manager: DocumentManager,
+    ) -> None:
+        """Test preview manager operations."""
+        # Create a test document
+        doc = document_manager.create_document("Test", "# Test\nThis is a test")
+    
+        # Test preview without template
+        preview = preview_manager.get_preview(doc)
+        assert "# Test" in preview
+        assert "This is a test" in preview
+    
+        # Test preview with template
+        template = Template("default", "general")
+        preview_manager.set_template(template)
+        preview = preview_manager.get_preview(doc)
+>       assert preview == ""  # Empty because template has no render implementation
+E       AssertionError: assert '\n        <!...ml>\n        ' == ''
+E         
+E         + 
+E         +         <!DOCTYPE html>
+E         +         <html>
+E         +         <head>
+E         +             <title>Test</title>
+E         +             <style>...
+E         
+E         ...Full output truncated (15 lines hidden), use '-vv' to show
+
+tests/test_app_core_editor.py:86: AssertionError
+_____________________ test_editor_app_template_operations ______________________
+
+editor_app = <src.book_editor.app.core.editor.EditorApp object at 0x103a40490>
+
+    def test_editor_app_template_operations(editor_app: EditorApp) -> None:
+        """Test editor app template operations."""
+        # Create and save a test template
+        template = Template("default", "general")
+        editor_app.template_renderer._template_manager.save_template(  # pylint: disable=protected-access
+            template
+        )
+    
+        # Test template setting
+        assert editor_app.set_template("default")
+    
+        # Test preview with template
+        doc = editor_app.new_document("Test")
+        doc.update_content("Test content")
+        preview = editor_app.get_preview()
+>       assert preview == ""  # Empty because template has no render implementation
+E       AssertionError: assert '\n        <!...ml>\n        ' == ''
+E         
+E         + 
+E         +         <!DOCTYPE html>
+E         +         <html>
+E         +         <head>
+E         +             <title>Test</title>
+E         +             <style>...
+E         
+E         ...Full output truncated (14 lines hidden), use '-vv' to show
+
+tests/test_app_core_editor.py:131: AssertionError
+_________________________ test_document_serialization __________________________
+
+editor = <src.book_editor.core.editor.Editor object at 0x103105130>
+
+    def test_document_serialization(editor):
+        """Test document serialization."""
+        doc = editor.new_document("Test", "Author")
+        doc.content = "Test content"
+    
+        # Mock file operations
+        mock_file = mock_open()
+        with patch("builtins.open", mock_file):
+            editor.save_document("test.json")
+    
+        # Check if file was written with correct data
+        mock_file.assert_called_once_with("test.json", "w", encoding="utf-8")
+        handle = mock_file()
+>       written_data = json.loads(handle.write.call_args[0][0])
+
+tests/test_core_editor.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:345: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.decoder.JSONDecoder object at 0x1019696a0>, s = '}', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:363: JSONDecodeError
+________________________________ test_auto_save ________________________________
+
+editor_instance = <src.book_editor.main.BookEditor object at 0x103a25f30>
+
+    def test_auto_save(editor_instance):  # pylint: disable=redefined-outer-name
+        """Test auto-save functionality."""
+        # Create and modify document
+        doc = editor_instance.editor.new_document("test")
+        doc.update_content("Test content")
+    
+        # Test auto-save
+>       assert editor_instance.auto_save()
+E       assert False
+E        +  where False = auto_save()
+E        +    where auto_save = <src.book_editor.main.BookEditor object at 0x103a25f30>.auto_save
+
+tests/test_main.py:57: AssertionError
+___________________________ test_template_management ___________________________
+
+editor_instance = <src.book_editor.main.BookEditor object at 0x103a25ba0>
+
+    def test_template_management(
+        editor_instance,
+    ):  # pylint: disable=redefined-outer-name
+        """Test template management."""
+        # Test template creation
+        assert editor_instance.create_template("test", "general")
+>       assert "test" in editor_instance.list_templates()
+
+tests/test_main.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/book_editor/main.py:75: in list_templates
+    return self.template_manager.list_templates(category)
+src/book_editor/core/template.py:333: in list_templates
+    template = self.load_template(file_path.stem)
+src/book_editor/core/template.py:318: in load_template
+    return Template.from_dict(data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'src.book_editor.core.template.Template'>
+data = {'content': '', 'created_at': '2024-12-20 13:30:34', 'format': 'markdown', 'metadata': {'created_at': '2024-12-20 13:30:34', 'format': 'markdown', 'updated_at': '2024-12-20 13:30:34', 'word_count': 0}, ...}
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "Template":
+        """Create template from dictionary."""
+>       template = cls(data["name"], data["category"])
+E       KeyError: 'name'
+
+src/book_editor/core/template.py:127: KeyError
+_____________________________ test_template_search _____________________________
+
+editor_instance = <src.book_editor.main.BookEditor object at 0x103ab7d10>
+
+    def test_template_search(
+        editor_instance,
+    ):  # pylint: disable=redefined-outer-name
+        """Test template search functionality."""
+        # Create test templates
+        editor_instance.create_template("test1", "general")
+        editor_instance.create_template("test2", "fiction")
+    
+        # Test search
+>       results = editor_instance.search_templates("test")
+
+tests/test_main.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/book_editor/main.py:80: in search_templates
+    all_templates = self.list_templates()
+src/book_editor/main.py:75: in list_templates
+    return self.template_manager.list_templates(category)
+src/book_editor/core/template.py:333: in list_templates
+    template = self.load_template(file_path.stem)
+src/book_editor/core/template.py:318: in load_template
+    return Template.from_dict(data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'src.book_editor.core.template.Template'>
+data = {'content': '', 'created_at': '2024-12-20 13:30:34', 'format': 'markdown', 'metadata': {'created_at': '2024-12-20 13:30:34', 'format': 'markdown', 'updated_at': '2024-12-20 13:30:34', 'word_count': 0}, ...}
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "Template":
+        """Create template from dictionary."""
+>       template = cls(data["name"], data["category"])
+E       KeyError: 'name'
+
+src/book_editor/core/template.py:127: KeyError
+____________________________ test_editor_statistics ____________________________
+
+editor_instance = <src.book_editor.main.BookEditor object at 0x103b35050>
+
+    def test_editor_statistics(
+        editor_instance,
+    ):  # pylint: disable=redefined-outer-name
+        """Test editor statistics calculation."""
+        # Test with empty content
+        stats = editor_instance.editor.analyze_text("")
+        assert stats["word_count"] == 0
+>       assert stats["char_count"] == 0
+E       KeyError: 'char_count'
+
+tests/test_main.py:120: KeyError
+____________________________ test_template_creation ____________________________
+
+    def test_template_creation():
+        """Test template creation and metadata"""
+        template = Template("Test Template", "fiction")
+    
+        assert template.name == "Test Template"
+        assert template.category == "fiction"
+        # Use get() for optional TypedDict fields
+>       assert template.metadata.get("format", "") == "markdown"
+E       AssertionError: assert '' == 'markdown'
+E         
+E         - markdown
+
+tests/test_template.py:38: AssertionError
+_________________________ test_template_serialization __________________________
+
+    def test_template_serialization():
+        """Test template serialization and deserialization"""
+        template = Template("Test")
+        # Set optional metadata fields explicitly
+        template.metadata["description"] = "Test template"
+        template.add_style("borders", "classic", VINTAGE_BORDERS["classic"])
+        template.add_layout(PAGE_LAYOUTS["manuscript"])
+    
+        data = template.to_dict()
+        # Cast the dictionary to the correct type
+        template_data = cast(Dict[str, Any], data)
+        loaded = Template.from_dict(template_data)
+    
+        assert loaded.name == template.name
+        # Use get() for optional TypedDict fields
+        assert loaded.metadata.get("description") == "Test template"
+>       assert loaded.styles["borders"]["classic"] == VINTAGE_BORDERS["classic"]
+E       KeyError: 'classic'
+
+tests/test_template.py:59: KeyError
+=========================== short test summary info ============================
+FAILED tests/test_app_core.py::test_preview_manager_operations - AssertionErr...
+FAILED tests/test_app_core.py::test_editor_app_template_handling - AssertionE...
+FAILED tests/test_app_core_editor.py::test_preview_manager_operations - Asser...
+FAILED tests/test_app_core_editor.py::test_editor_app_template_operations - A...
+FAILED tests/test_core_editor.py::test_document_serialization - json.decoder....
+FAILED tests/test_main.py::test_auto_save - assert False
+FAILED tests/test_main.py::test_template_management - KeyError: 'name'
+FAILED tests/test_main.py::test_template_search - KeyError: 'name'
+FAILED tests/test_main.py::test_editor_statistics - KeyError: 'char_count'
+FAILED tests/test_template.py::test_template_creation - AssertionError: asser...
+FAILED tests/test_template.py::test_template_serialization - KeyError: 'classic'
+======================== 11 failed, 81 passed in 0.78s =========================

@@ -1,0 +1,6 @@
+/Users/admin/cursor/write-a-book/config/.env
+/Users/admin/cursor/write-a-book/config/settings.json
+/Users/admin/cursor/write-a-book/scripts/setup_test_env.sh
+/Users/admin/cursor/write-a-book/test_env/config/test_settings.json
+/Users/admin/cursor/write-a-book/test_env/data/test_document.json
+/Users/admin/cursor/write-a-book/test_env/data/test_template.json

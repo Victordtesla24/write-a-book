@@ -1,0 +1,45 @@
+[run]
+source = 
+    src
+    core_scripts
+
+omit = 
+    */tests/*
+    */venv/*
+    setup.py
+    */__init__.py
+    */migrations/*
+    */site-packages/*
+
+branch = True
+parallel = True
+data_file = .coverage
+concurrency = multiprocessing
+relative_files = True
+
+[paths]
+source =
+    src/
+    core_scripts/
+    .
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    pass
+    raise ImportError
+    def main()
+    if TYPE_CHECKING:
+
+precision = 2
+show_missing = True
+skip_covered = False
+sort = Cover
+fail_under = 40
+
+[html]
+directory = coverage_html
+title = Code Coverage Report

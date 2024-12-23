@@ -17,6 +17,7 @@ src/book_editor/app/core/editor.py
 src/book_editor/config/__init__.py
 src/book_editor/config/settings.py
 src/book_editor/core/__init__.py
+src/book_editor/core/document.py
 src/book_editor/core/editor.py
 src/book_editor/core/template.py
 src/components/__init__.py

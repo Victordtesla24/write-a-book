@@ -18,7 +18,9 @@ from book_editor.core.editor import Editor
 
 def test_editor_integration():
     # Test basic editor functionality
-    editor = Editor(Path('test_storage'))
+    storage_dir = Path('test_storage')
+    template_dir = Path('test_templates')
+    editor = Editor(storage_dir, template_dir)
     doc = editor.new_document('Test')
     doc.update_content('Test content')
     assert editor.save_document()
@@ -31,6 +33,7 @@ def test_editor_integration():
     # Clean up
     import shutil
     shutil.rmtree('test_storage')
+    shutil.rmtree('test_templates')
 
 test_editor_integration()
 print('Integration tests passed!')
@@ -44,7 +47,9 @@ from book_editor.core.editor import Editor
 from pathlib import Path
 
 def test_performance():
-    editor = Editor(Path('perf_test'))
+    storage_dir = Path('perf_test_storage')
+    template_dir = Path('perf_test_templates')
+    editor = Editor(storage_dir, template_dir)
     
     # Test document creation performance
     start = time.time()
@@ -58,7 +63,8 @@ def test_performance():
     
     # Clean up
     import shutil
-    shutil.rmtree('perf_test')
+    shutil.rmtree('perf_test_storage')
+    shutil.rmtree('perf_test_templates')
 
 test_performance()
 "

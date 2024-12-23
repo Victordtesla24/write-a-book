@@ -1,134 +1,120 @@
-#!/bin/bash
+#!/bin/zsh
 
-# Exit on error
+# Environment setup script
+# Sets up project environment and dependencies
+
 set -e
 
-echo "Setting up Book Editor project environment..."
+# Load configuration
+source "$(dirname "$0")/../core_scripts/config_manager.sh"
 
-# Function to check if a command exists
-command_exists() {
-    command -v "$1" >/dev/null 2>&1
+# Initialize logging
+LOG_DIR="${CONFIG[project_root]}/logs"
+mkdir -p "${LOG_DIR}"
+SETUP_LOG="${LOG_DIR}/setup.log"
+
+log() {
+    local level="$1"
+    local message="$2"
+    local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "[${timestamp}] [${level}] ${message}" | tee -a "${SETUP_LOG}"
 }
 
-# Function to check read/write access
-check_access() {
-    if [ -r "$1" ] && [ -w "$1" ]; then
-        echo "Read and write access granted for $1"
-    elif [ -r "$1" ]; then
-        echo "Only read access granted for $1"
-    elif [ -w "$1" ]; then
-        echo "Only write access granted for $1"
-    else
-        echo "No read or write access for $1"
-    fi
-}
-
-# Check current working directory and access
-echo "Current working directory: $(pwd)"
-check_access "$(pwd)"
-check_access "$HOME"
-
-# Ensure read/write access for current directory
-if [ ! -r "$(pwd)" ] || [ ! -w "$(pwd)" ]; then
-    echo "Requesting sudo access to grant read/write permissions..."
-    sudo chmod u+rw "$(pwd)"
-    echo "Granted read/write access to current directory"
-fi
-
-# Install Homebrew if not present
-if ! command_exists brew; then
-    echo "Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Setup GitHub configuration
+setup_github() {
+    log "INFO" "Setting up GitHub configuration..."
     
-    # Setup Homebrew path based on architecture
-    if [[ $(uname -m) == "arm64" ]]; then
-        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-    else
-        echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.zprofile
-        eval "$(/usr/local/bin/brew shellenv)"
+    # Create .env from template if it doesn't exist
+    if [[ ! -f "${CONFIG[project_root]}/.env" ]] && [[ -f "${CONFIG[project_root]}/.env.template" ]]; then
+        cp "${CONFIG[project_root]}/.env.template" "${CONFIG[project_root]}/.env"
+        log "INFO" "Created .env file from template"
     fi
-fi
-
-# Install Python if not present
-if ! command_exists python3; then
-    echo "Installing Python..."
-    brew install python@3
-    # Refresh shell environment
-    source ~/.zprofile
-fi
-
-# Install additional tools (example: git, node)
-echo "Installing additional tools..."
-for tool in git node; do
-    if ! command_exists "$tool"; then
-        brew install "$tool"
-    else
-        echo "$tool is already installed"
+    
+    # Initialize Git repository if needed
+    if [[ ! -d "${CONFIG[project_root]}/.git" ]]; then
+        git init
+        log "INFO" "Initialized Git repository"
+        
+        # Create .gitignore
+        cat > "${CONFIG[project_root]}/.gitignore" << EOF
+.env
+*.log
+__pycache__/
+*.pyc
+.coverage
+.pytest_cache/
+metrics/
+reports/
+EOF
+        log "INFO" "Created .gitignore file"
     fi
-done
-
-# Create project structure
-mkdir -p src/book_editor/{core,config}
-mkdir -p templates
-mkdir -p static
-mkdir -p docs
-mkdir -p tests
-
-# Setup Python virtual environment
-if [ ! -d "venv" ]; then
-    echo "Setting up Python virtual environment..."
-    python3 -m venv venv || {
-        echo "Failed to create virtual environment"
-        exit 1
-    }
-fi
-
-# Activate virtual environment
-echo "Activating virtual environment..."
-source venv/bin/activate || {
-    echo "Failed to activate virtual environment"
-    exit 1
+    
+    # Configure Git if credentials are available
+    if [[ -n "${CONFIG[github_token]}" ]] && [[ -n "${CONFIG[github_username]}" ]]; then
+        git config user.name "${CONFIG[github_username]}"
+        git config user.email "${CONFIG[github_username]}@users.noreply.github.com"
+        
+        # Add GitHub remote if repo is configured
+        if [[ -n "${CONFIG[github_repo]}" ]]; then
+            git remote remove origin 2>/dev/null || true
+            git remote add origin "https://${CONFIG[github_token]}@github.com/${CONFIG[github_username]}/${CONFIG[github_repo]}.git"
+            log "INFO" "Configured GitHub remote"
+        fi
+    else
+        log "WARN" "GitHub credentials not found in .env file"
+    fi
 }
 
-# Install dependencies
-echo "Installing Python packages..."
-pip install --upgrade pip
-pip install streamlit python-dotenv pytest pytest-cov black isort flake8 pylint
-pip install numpy pandas matplotlib jupyter || {
-    echo "Failed to install Python packages"
-    exit 1
+# Setup project structure
+setup_project() {
+    log "INFO" "Setting up project structure..."
+    
+    # Create necessary directories
+    mkdir -p "${CONFIG[project_root]}/{src,tests,docs,config,metrics,reports}"
+    
+    # Create basic README if it doesn't exist
+    if [[ ! -f "${CONFIG[project_root]}/README.md" ]]; then
+        cat > "${CONFIG[project_root]}/README.md" << EOF
+# ${CONFIG[project_name]}
+
+## Description
+${CONFIG[project_name]} - A new project
+
+## Setup
+1. Copy .env.template to .env and configure
+2. Run setup_env.sh to initialize
+3. Configure GitHub repository
+
+## Development
+- Use verify_and_fix.sh for code quality
+- Monitor progress through dashboard
+EOF
+    fi
+    
+    log "INFO" "Project structure setup complete"
 }
 
-# Initialize git repository if not exists
-if [ ! -d .git ]; then
-    git init
-    echo "venv/" > .gitignore
-    echo "__pycache__/" >> .gitignore
-    echo "*.pyc" >> .gitignore
-    git add .
-    git commit -m "Initial project setup"
+# Main setup function
+main() {
+    log "INFO" "Starting environment setup..."
+    
+    # Setup project structure
+    setup_project
+    
+    # Setup GitHub
+    setup_github
+    
+    # Initial commit if repository is fresh
+    if [[ -z "$(git rev-parse --verify HEAD 2>/dev/null)" ]]; then
+        git add .
+        git commit -m "Initial commit"
+        log "INFO" "Created initial commit"
+    fi
+    
+    log "INFO" "Environment setup complete"
+}
+
+# Run if executed directly
+if [[ "${(%):-%x}" == "${0}" ]]; then
+    main
 fi
-
-# Create initial documentation
-if [ ! -f docs/proj_status.md ]; then
-    cat > docs/proj_status.md << EOL
-# Project Status
-
-## Current Phase: 1
-- Basic template upload functionality
-- Text input via file upload or copy/paste
-- Simple editing interface
-- Basic project documentation
-- Essential test structure
-
-## Next Steps
-1. Implement basic template upload
-2. Create simple text editor interface
-3. Set up basic AI integration structure
-4. Establish core testing framework
-5. Deploy minimal viable product
-EOL
-fi
-
-echo "Environment setup complete!" 

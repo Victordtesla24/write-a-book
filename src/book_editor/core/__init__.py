@@ -1,9 +1,6 @@
-"""Core package for Book Editor.
+"""Core package for book editor."""
 
-This package provides the core functionality for the Book Editor application.
-"""
+from .document import Document
+from .template import Template, TemplateManager
 
-from book_editor.core.editor import Document, Editor
-from book_editor.core.template import Template, TemplateManager
-
-__all__ = ["Document", "Editor", "Template", "TemplateManager"]
+__all__ = ["Document", "Template", "TemplateManager"]

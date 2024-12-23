@@ -6,7 +6,7 @@ from typing import Any, Dict, cast
 
 import pytest  # pylint: disable=import-error
 
-from book_editor.core.template import (
+from src.book_editor.core.template import (
     PAGE_LAYOUTS,
     VINTAGE_BORDERS,
     Template,

@@ -1,383 +1,326 @@
-#!/bin/bash
+#!/bin/sh
 
-# Set up logging
-LOG_DIR="logs"
-LOG_FILE="${LOG_DIR}/verify_and_fix.log"
-LINT_FILE="${LOG_DIR}/lint_report.log"
-PERF_LOG="${LOG_DIR}/performance.log"
+# Verify and fix script
+# Follows agent_directives.md for project verification and fixes
 
-# Create logs directory if it doesn't exist
-mkdir -p "$LOG_DIR"
-touch "$LOG_FILE" "$LINT_FILE" "$PERF_LOG"
+# Project root directory
+PROJECT_ROOT="$(cd "$(dirname "${0}")/.." && pwd)"
 
-# Set up logging to both file and console
-exec 1> >(tee -a "$LOG_FILE")
-exec 2> >(tee -a "$LOG_FILE" >&2)
-
-# Exit on error
-set -e
-set -o pipefail
+# Initialize logging
+LOG_DIR="${PROJECT_ROOT}/logs"
+mkdir -p "${LOG_DIR}"
+VERIFY_LOG="${LOG_DIR}/verify_and_fix.log"
+ERROR_LOG="${LOG_DIR}/error.log"
 
 log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
+    level="$1"
+    message="$2"
+    timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "[${timestamp}] [${level}] ${message}"
+    echo "[${timestamp}] [${level}] ${message}" >> "${VERIFY_LOG}"
 }
 
-error_log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] ERROR: $1" >&2
-}
-
-# Function to setup virtual environment
-setup_venv() {
-    log "Setting up virtual environment..."
-    if [ ! -d "venv" ]; then
-        python3 -m venv venv
-    fi
-    source venv/bin/activate
-    pip install -q -e ".[dev]" 2>/dev/null || {
-        error_log "Failed to install package in development mode"
-        return 1
-    }
-}
-
-# Function to run auto_fix_code.sh
-run_auto_fix() {
-    log "Running auto_fix_code.sh..."
-    if [ -f "scripts/auto_fix_code.sh" ]; then
-        chmod +x scripts/auto_fix_code.sh
-        ./scripts/auto_fix_code.sh
-    else
-        error_log "auto_fix_code.sh not found"
-        return 1
-    fi
-}
-
-# Function to setup markdown tools
-setup_markdown_tools() {
-    log "Setting up markdown linting tools..."
-    if [ ! -f .markdownlint.json ]; then
-        cat > .markdownlint.json << EOL
-{
-    "MD022": true,
-    "MD031": true,
-    "MD032": true,
-    "MD034": true,
-    "MD041": true,
-    "line-length": false
-}
-EOL
-    fi
-}
-
-# Function to fix markdown files
-fix_markdown_files() {
-    log "Fixing markdown files..."
-    for file in $(find . -name "*.md" \
-        -not -path "./node_modules/*" \
-        -not -path "./venv/*" \
-        -not -path "./test_venv/*" \
-        -not -path "./cursor_env/*" \
-        -not -path "./.git/*"); do
-        log "Processing markdown file: $file..."
+# Function to verify Python code
+verify_python() {
+    log "INFO" "Verifying Python code..."
+    errors_found=false
+    
+    # Run pylint
+    if command -v pylint > /dev/null; then
+        pylint "${PROJECT_ROOT}/src" > "${ERROR_LOG}" 2>&1 || true
         
-        # Check if file exists and is not empty
-        if [ -f "$file" ] && [ -s "$file" ]; then
-            # Remove trailing whitespace
-            sed -i '' -e 's/[[:space:]]*$//' "$file"
-            
-            # Ensure single trailing newline
-            if [ "$(tail -c1 "$file" | xxd -p)" != "0a" ]; then
-                echo "" >> "$file"
-                log "Added trailing newline to $file"
+        if [ -f "${ERROR_LOG}" ]; then
+            error_count=$(grep -c "ERROR\|CRITICAL" "${ERROR_LOG}" || echo "0")
+            if [ "$error_count" -gt 0 ] 2>/dev/null; then
+                log "ERROR" "Found ${error_count} Python errors"
+                errors_found=true
+                
+                # Extract error messages for fixing
+                grep "ERROR:\|CRITICAL:" "${ERROR_LOG}" > "${LOG_DIR}/python_errors.txt"
+                
+                # Run auto-fix for these specific errors
+                "${PROJECT_ROOT}/scripts/auto_fix_code.sh"
+                
+                # Verify if errors were fixed
+                pylint "${PROJECT_ROOT}/src" > "${ERROR_LOG}.new" 2>&1 || true
+                new_error_count=$(grep -c "ERROR\|CRITICAL" "${ERROR_LOG}.new" || echo "0")
+                
+                if [ "$new_error_count" -lt "$error_count" ] 2>/dev/null; then
+                    log "INFO" "Fixed $((error_count - new_error_count)) errors"
+                else
+                    log "WARN" "Could not fix all errors automatically"
+                fi
             fi
         fi
-    done
-}
-
-# Function to fix Python files
-fix_python_files() {
-    log "Fixing Python files..."
-    for file in $(find . -name "*.py" \
-        -not -path "./venv/*" \
-        -not -path "./test_venv/*" \
-        -not -path "./cursor_env/*" \
-        -not -path "./.git/*"); do
-        log "Processing $file..."
+    fi
+    
+    # Run mypy
+    if command -v mypy > /dev/null; then
+        mypy --ignore-missing-imports --disallow-untyped-defs "${PROJECT_ROOT}/src" > "${LOG_DIR}/type_check.log" 2>&1
+        type_errors=$(grep -c "error:" "${LOG_DIR}/type_check.log" || echo "0")
         
-        # Fix imports
-        isort "$file" 2>/dev/null || true
-        
-        # Fix code style
-        autopep8 --in-place --aggressive --aggressive "$file" 2>/dev/null || true
-        
-        # Add docstring if missing
-        if ! grep -q '"""' "$file"; then
-            sed -i '' '1i\
-"""Module docstring."""\
-\
-' "$file" 2>/dev/null || true
+        if [ "$type_errors" -gt 0 ] 2>/dev/null; then
+            log "WARN" "Found ${type_errors} type errors"
+            errors_found=true
+            
+            # Extract type errors for fixing
+            grep "error:" "${LOG_DIR}/type_check.log" > "${LOG_DIR}/type_errors.txt"
+            
+            # Run type hint fixes
+            "${PROJECT_ROOT}/scripts/auto_fix_code.sh"
+            
+            # Verify if errors were fixed
+            mypy --ignore-missing-imports --disallow-untyped-defs "${PROJECT_ROOT}/src" > "${LOG_DIR}/type_check.log.new" 2>&1
+            new_type_errors=$(grep -c "error:" "${LOG_DIR}/type_check.log.new" || echo "0")
+            
+            if [ "$new_type_errors" -lt "$type_errors" ] 2>/dev/null; then
+                log "INFO" "Fixed $((type_errors - new_type_errors)) type errors"
+            else
+                log "WARN" "Could not fix all type errors automatically"
+            fi
         fi
-    done
+    fi
+    
+    if [ "${errors_found}" = true ]; then
+        return 1
+    fi
+    return 0
 }
 
-# Function to run linting checks
-run_linting() {
-    log "Running linting checks..."
+# Function to verify tests
+verify_tests() {
+    log "INFO" "Verifying tests..."
     
     # Run pytest with coverage
-    log "Running pytest..."
-    coverage run -m pytest tests/ -v || {
-        error_log "Pytest failed"
-        return 1
-    }
-    
-    # Generate coverage report
-    coverage report > "$LOG_DIR/coverage.txt"
-    
-    # Run pylint and save report
-    pylint src tests --output-format=text | tee -a "$LINT_FILE" || true
-    
-    # Check if there are any errors
-    if grep -q "error" "$LINT_FILE"; then
-        log "Found linting errors:"
-        grep "error" "$LINT_FILE"
-        return 1
-    fi
-    
-    # Show final score
-    score=$(tail -n 2 "$LINT_FILE" | grep "rated at" | grep -o "[0-9].[0-9][0-9]" || echo "0.00")
-    log "Pylint score: $score/10.00"
-}
-
-# Function to setup Streamlit structure
-setup_streamlit_structure() {
-    log "Setting up advanced Streamlit directory structure..."
-
-    for dir in pages src/utils data tests docs static/images static/css .streamlit scripts; do
-        mkdir -p "$dir"
-    done
-
-    if [ ! -f .streamlit/config.toml ]; then
-        cat > .streamlit/config.toml <<EOL
-[theme]
-primaryColor = "#F63366"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F0F2F6"
-textColor = "#262730"
-font = "sans serif"
-
-[server]
-enableCORS = false
-headless = true
-EOL
-    fi
-}
-
-# Function to verify Streamlit dependencies
-verify_streamlit_deps() {
-    log "Verifying Streamlit dependencies..."
-    touch requirements.txt
-    if ! grep -q "streamlit" requirements.txt; then
-        echo "streamlit" >> requirements.txt
-    fi
-}
-
-# Function to update project status
-update_documentation() {
-    log "Updating project documentation..."
-
-    STATUS_FILE="docs/proj_status.md"
-    PLAN_FILE="docs/implementation_plan.md"
-
-    # Ensure docs directory exists
-    mkdir -p docs
-
-    # Update project status with enriched details
-    log "Generating detailed project status..."
-    {
-        echo "# Project Status Report"
-        echo "Last Updated: $(date)"
-        echo
-        echo "## Summary of Resolved Errors"
-        echo
-        grep -E "FIXED|RESOLVED" "$LOG_FILE" 2>/dev/null || echo "No errors resolved in this run."
-        echo
-        echo "## Current Implementation Status"
-        echo
-        echo "- Python files updated: $(find src -name '*.py' | wc -l)"
-        echo "- Test files updated: $(find tests -name 'test_*.py' | wc -l)"
-        echo
-        echo "## Test Coverage Report"
-        echo
-        if [ -f "$LOG_DIR/coverage.txt" ]; then
-            echo '```'
-            cat "$LOG_DIR/coverage.txt"
-            echo '```'
-        else
-            echo "No coverage report available."
-        fi
-        echo
-        echo "## Lint Report"
-        echo
-        if [ -f "$LINT_FILE" ]; then
-            echo '```'
-            cat "$LINT_FILE"
-            echo '```'
-            # Extract and display lint score
-            score=$(tail -n 2 "$LINT_FILE" | grep "rated at" | grep -o "[0-9].[0-9][0-9]" || echo "0.00")
-            echo
-            echo "Pylint Score: $score/10.00"
-        else
-            echo "No lint report available."
-        fi
-        echo
-        echo "## Recent Changes"
-        git log -5 --pretty=format:"- %s" 2>/dev/null || echo "No Git history available."
-    } > "$STATUS_FILE"
-
-    # Sync implementation plan with unimplemented features
-    log "Syncing implementation plan..."
-    if [ -f "$PLAN_FILE" ]; then
-        unimplemented_features=$(grep -B 1 "\[ \]" "$STATUS_FILE" 2>/dev/null || echo "None")
-        if [ "$unimplemented_features" != "None" ]; then
-            echo "## Pending Features" >> "$PLAN_FILE"
-            echo "$unimplemented_features" | sed 's/^/- /' >> "$PLAN_FILE"
-        fi
-    else
-        log "Implementation plan not found. Skipping sync."
-    fi
-
-    log "Documentation updated successfully."
-}
-
-# Function to setup git configuration
-setup_git_config() {
-    log "Setting up git configuration..."
-    if [ -d ".git" ]; then
-        # Configure git if not already configured
-        if ! git config --get user.email >/dev/null; then
-            git config --global user.email "cline@example.com"
-        fi
-        if ! git config --get user.name >/dev/null; then
-            git config --global user.name "Cline"
-        fi
+    if command -v pytest > /dev/null; then
+        # Clean up previous coverage data
+        coverage erase
         
-        # Setup pre-commit hook
-        if [ -f "scripts/setup_hooks.sh" ]; then
-            chmod +x scripts/setup_hooks.sh
-            ./scripts/setup_hooks.sh
-        fi
-    fi
-}
-
-# Function to cleanup git state
-cleanup_git() {
-    log "Cleaning up git state..."
-    if [ -d ".git" ]; then
-        # Reset any staged changes that weren't committed
-        git reset >/dev/null 2>&1 || true
-        # Clean untracked files
-        git clean -fd >/dev/null 2>&1 || true
-    fi
-}
-
-# Enhanced function to generate detailed commit messages and commit to GitHub
-auto_commit_to_github() {
-    log "Auto-committing changes to GitHub..."
-
-    if [ ! -d ".git" ]; then
-        error_log "Git repository not initialized. Skipping commit."
-        return 1
-    fi
-
-    # Check if we're on main branch
-    current_branch=$(git rev-parse --abbrev-ref HEAD)
-    if [ "$current_branch" != "main" ]; then
-        log "Not on main branch. Switching to main..."
-        git checkout main || {
-            error_log "Failed to switch to main branch."
+        # Set PYTHONPATH to include source directories
+        export PYTHONPATH="${PROJECT_ROOT}/src:${PROJECT_ROOT}/core_scripts:${PROJECT_ROOT}/tests:${PYTHONPATH}"
+        
+        # Create metrics directory if it doesn't exist
+        mkdir -p "${PROJECT_ROOT}/metrics"
+        
+        # Run tests with coverage
+        coverage run --source="${PROJECT_ROOT}/src,${PROJECT_ROOT}/core_scripts" -m pytest "${PROJECT_ROOT}/tests" > "${ERROR_LOG}" 2>&1 || {
+            log "ERROR" "Tests failed"
+            
+            # Extract test failures
+            grep "FAILED" "${ERROR_LOG}" > "${LOG_DIR}/test_failures.txt"
+            
+            # Try to fix test failures
+            if [ -s "${LOG_DIR}/test_failures.txt" ]; then
+                log "INFO" "Attempting to fix test failures..."
+                "${PROJECT_ROOT}/scripts/auto_fix_code.sh"
+            fi
+            
             return 1
         }
-    fi
-
-    # Stage all changes
-    git add . || {
-        error_log "Failed to stage changes."
-        return 1
-    }
-
-    # Check if there are any changes to commit
-    if ! git diff --cached --quiet; then
-        # Generate dynamic commit message
-        commit_message="Auto-commit: $(date '+%Y-%m-%d %H:%M:%S')"
         
-        # Add error resolution info
-        if grep -q "FIXED\|RESOLVED" "$LOG_FILE"; then
-            commit_message+=" - Resolved Errors: $(grep -c 'FIXED\|RESOLVED' "$LOG_FILE")"
-        fi
-        if grep -q "ERROR" "$LOG_FILE"; then
-            commit_message+=" - Remaining Errors: $(grep -c 'ERROR' "$LOG_FILE")"
-        fi
+        # Combine coverage data if parallel mode is enabled
+        coverage combine 2>/dev/null || true
         
-        # Add test results
-        test_passed=$(grep -c 'PASSED' "$LOG_FILE" || echo "0")
-        test_failed=$(grep -c 'FAILED' "$LOG_FILE" || echo "0")
-        commit_message+=" - Test Results: $test_passed passed, $test_failed failed"
-        
-        # Add lint score if available
-        if [ -f "$LINT_FILE" ]; then
-            score=$(tail -n 2 "$LINT_FILE" | grep "rated at" | grep -o "[0-9].[0-9][0-9]" || echo "0.00")
-            commit_message+=" - Lint Score: $score/10.00"
-        fi
-
-        # Commit changes
-        git commit -m "$commit_message" || {
-            error_log "Failed to commit changes."
+        # Generate coverage reports
+        coverage report --include="src/*,core_scripts/*" > "${PROJECT_ROOT}/metrics/coverage.txt" || {
+            log "ERROR" "Failed to generate coverage report"
+            cat "${ERROR_LOG}"
             return 1
         }
-
-        # Check if remote exists and push
-        if git remote -v | grep -q origin; then
-            log "Pushing changes to GitHub..."
-            git push origin main || {
-                error_log "Failed to push changes to GitHub."
-                return 1
-            }
-        else
-            log "No remote repository found. Skipping push."
+        coverage html || true
+        
+        # Check if coverage report exists and has content
+        if [ ! -s "${PROJECT_ROOT}/metrics/coverage.txt" ]; then
+            log "ERROR" "Coverage report is empty"
+            return 1
         fi
-
-        log "Changes committed successfully."
+        
+        # Extract coverage data from the TOTAL line
+        if ! total_line=$(grep "^TOTAL" "${PROJECT_ROOT}/metrics/coverage.txt"); then
+            log "ERROR" "Could not find TOTAL line in coverage report"
+            return 1
+        fi
+        
+        # Parse coverage percentage from the last field (removing %)
+        total_coverage=$(echo "${total_line}" | awk '{gsub(/%/, "", $NF); print $NF}')
+        if [ -z "${total_coverage}" ]; then
+            log "ERROR" "Could not parse coverage percentage"
+            return 1
+        fi
+        
+        # Validate coverage is a reasonable number
+        if ! echo "${total_coverage}" | grep -q "^[0-9][0-9]*\(\.[0-9][0-9]*\)\?$" || [ "$(echo "${total_coverage}" | cut -d. -f1)" -gt 100 ]; then
+            log "ERROR" "Invalid coverage percentage: ${total_coverage}%"
+            return 1
+        fi
+        
+        # Convert to integer by truncating decimal part
+        coverage_int=${total_coverage%.*}
+        if [ -n "${coverage_int}" ] && [ "${coverage_int:-0}" -lt 40 ] 2>/dev/null; then
+            log "WARN" "Coverage below threshold: ${total_coverage}%"
+            log "INFO" "Attempting to improve test coverage..."
+            
+            # Generate coverage report to see what needs testing
+            coverage report --show-missing > "${LOG_DIR}/coverage_missing.txt"
+            
+            # Try to fix coverage issues
+            "${PROJECT_ROOT}/scripts/auto_fix_code.sh"
+        else
+            log "INFO" "Coverage at ${total_coverage}%"
+        fi
+        
+        # Extract detailed test metrics
+        total_tests=$(grep -o "[0-9]* items" "${ERROR_LOG}" | head -1 | awk '{print $1}' || echo "0")
+        passed_tests=$(grep -o "[0-9]* passed" "${ERROR_LOG}" | head -1 | awk '{print $1}' || echo "0")
+        failed_tests=$(grep -o "[0-9]* failed" "${ERROR_LOG}" | head -1 | awk '{print $1}' || echo "0")
+        skipped_tests=$(grep -o "[0-9]* skipped" "${ERROR_LOG}" | head -1 | awk '{print $1}' || echo "0")
+        
+        log "INFO" "Test Results:"
+        log "INFO" "  Total Tests: ${total_tests}"
+        log "INFO" "  Passed: ${passed_tests}"
+        log "INFO" "  Failed: ${failed_tests}"
+        log "INFO" "  Skipped: ${skipped_tests}"
+        log "INFO" "  Coverage: ${total_coverage}%"
     else
-        log "No changes to commit."
+        log "ERROR" "pytest not found"
+        return 1
     fi
+    
+    return 0
 }
 
-# Main function
+# Function to update metrics
+update_metrics() {
+    log "INFO" "Updating metrics..."
+    
+    # Create metrics directory if it doesn't exist
+    mkdir -p "${PROJECT_ROOT}/metrics"
+    
+    # Update test metrics
+    if [ -f "${PROJECT_ROOT}/metrics/coverage.txt" ]; then
+        # Parse coverage percentage from the TOTAL line
+        total_line=$(grep "^TOTAL" "${PROJECT_ROOT}/metrics/coverage.txt")
+        coverage=$(echo "${total_line}" | awk '{gsub(/%/, "", $NF); print $NF}')
+        
+        # Validate coverage is a reasonable number
+        if ! echo "${coverage}" | grep -q "^[0-9][0-9]*\(\.[0-9][0-9]*\)\?$" || [ "$(echo "${coverage}" | cut -d. -f1)" -gt 100 ]; then
+            log "ERROR" "Invalid coverage percentage: ${coverage}%"
+            coverage=0
+        fi
+        
+        # Parse test results
+        passed=$(grep -o "[0-9]* passed" "${ERROR_LOG}" | head -1 | awk '{print $1}' || echo "0")
+        failed=$(grep -o "[0-9]* failed" "${ERROR_LOG}" | head -1 | awk '{print $1}' || echo "0")
+        
+        cat > "${PROJECT_ROOT}/metrics/test.json" << EOF
+{
+    "coverage": ${coverage:-0},
+    "tests_passed": ${passed:-0},
+    "tests_failed": ${failed:-0},
+    "test_suites": {
+        "unit": {
+            "total": ${passed:-0},
+            "passed": ${passed:-0},
+            "failed": ${failed:-0},
+            "coverage": ${coverage:-0}
+        },
+        "integration": {
+            "total": 0,
+            "passed": 0,
+            "failed": 0,
+            "coverage": 0
+        },
+        "e2e": {
+            "total": 0,
+            "passed": 0,
+            "failed": 0,
+            "coverage": 0
+        }
+    },
+    "last_run": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+    "execution_time": 0,
+    "timestamp": $(date +%s)
+}
+EOF
+    fi
+    
+    # Update system metrics
+    top -l 1 > /tmp/top.txt
+    cpu=$(grep "CPU usage" /tmp/top.txt | awk '{print $3}' | tr -d '%')
+    memory=$(grep "PhysMem" /tmp/top.txt | awk '{print $2}' | tr -d 'M')
+    disk=$(df -h . | tail -1 | awk '{print $5}' | tr -d '%')
+    
+    cat > "${PROJECT_ROOT}/metrics/system.json" << EOF
+{
+    "cpu_usage": ${cpu:-0},
+    "memory_usage": ${memory:-0},
+    "disk_usage": ${disk:-0},
+    "timestamp": $(date +%s)
+}
+EOF
+    
+    rm -f /tmp/top.txt
+    
+    # Update project status
+    "${PROJECT_ROOT}/scripts/update_status.sh"
+    
+    # Sync with GitHub
+    log "INFO" "Syncing with GitHub..."
+    if ! "${PROJECT_ROOT}/scripts/github_sync.sh"; then
+        log "ERROR" "Failed to sync with GitHub"
+        return 1
+    fi
+    
+    log "INFO" "Metrics updated successfully"
+}
+
+# Main execution
 main() {
-    log "Starting verification and fixes..."
+    log "INFO" "Starting verification and fix process..."
     
-    # Set up error handling
-    trap 'echo "Error: Script failed" >&2; cleanup_git; exit 1' ERR
-    trap 'echo "Script interrupted" >&2; cleanup_git; exit 1' INT TERM
+    # Create iteration counter
+    iteration=1
+    max_iterations=3
+    errors_found=true
     
-    # Run all tasks
-    setup_venv || exit 1
-    run_auto_fix || exit 1
-    setup_markdown_tools || exit 1
-    setup_streamlit_structure || exit 1
-    verify_streamlit_deps || exit 1
-    fix_markdown_files || exit 1
-    fix_python_files || exit 1
-    run_linting || exit 1
-    update_documentation || exit 1
-    auto_commit_to_github || exit 1
+    while [ "${errors_found}" = true ] && [ "${iteration}" -le "${max_iterations}" ]; do
+        log "INFO" "Starting verification iteration ${iteration}"
+        
+        # Run verifications
+        verify_python
+        verify_tests
+        
+        # Check if any errors remain
+        if [ -f "${ERROR_LOG}" ]; then
+            error_count=$(grep -c "ERROR\|CRITICAL" "${ERROR_LOG}" || echo "0")
+            if [ "$error_count" -eq 0 ] 2>/dev/null; then
+                errors_found=false
+                log "INFO" "All verifications passed successfully"
+            else
+                log "WARN" "Found ${error_count} errors after iteration ${iteration}"
+                if [ "${iteration}" -eq "${max_iterations}" ]; then
+                    log "ERROR" "Max iterations reached. Manual intervention required."
+                    cat "${ERROR_LOG}"
+                    exit 1
+                fi
+                
+                # Run auto-fix script
+                "${PROJECT_ROOT}/scripts/auto_fix_code.sh"
+            fi
+        else
+            errors_found=false
+            log "INFO" "No errors found"
+        fi
+        
+        iteration=$((iteration + 1))
+    done
     
-    # Clean exit
-    log "All verifications and fixes completed successfully!"
-    trap - ERR INT TERM
-    exit 0
+    # Update metrics after verification
+    update_metrics
+    
+    log "INFO" "Verification and fix process completed successfully"
 }
 
-# Run main function
-main
+# Execute main function
+main "$@"
 

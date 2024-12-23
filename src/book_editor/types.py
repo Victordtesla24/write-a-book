@@ -1,17 +1,67 @@
 """Type definitions for the book editor."""
 
-from typing import Dict, List, TypedDict
+from typing import Any, Dict, List, TypedDict
+
+
+class DocumentMetadata(TypedDict, total=False):
+    """Document metadata type."""
+
+    title: str
+    author: str
+    created_at: str
+    updated_at: str
+    version: str
+
+
+class DocumentData(TypedDict):
+    """Document data type."""
+
+    title: str
+    content: str
+    metadata: DocumentMetadata
+    created_at: str
+    updated_at: str
+    version: str
 
 
 class TemplateMetadata(TypedDict, total=False):
-    """Template metadata type definition."""
+    """Template metadata type."""
 
+    name: str
+    category: str
     description: str
-    tags: List[str]
-    format: str
     created_at: str
     updated_at: str
-    word_count: int
+    version: str
+
+
+class TemplateData(TypedDict):
+    """Template data type."""
+
+    name: str
+    category: str
+    content: str
+    metadata: TemplateMetadata
+
+
+class BookMetadata(TypedDict, total=False):
+    """Book metadata type."""
+
+    title: str
+    author: str
+    created_at: str
+    updated_at: str
+    version: str
+    chapters: List[str]
+
+
+class BookData(TypedDict):
+    """Book data type."""
+
+    title: str
+    content: str
+    metadata: BookMetadata
+    chapters: List[Dict[str, Any]]
 
 
 class StyleCategory(TypedDict, total=False):
@@ -32,24 +82,3 @@ class TemplateStyles(TypedDict):
     borders: Dict[str, str]
     colors: Dict[str, str]
     fonts: Dict[str, str]
-
-
-class TemplateData(TypedDict):
-    """Template data definition."""
-
-    name: str  # Required
-    category: str  # Required
-    metadata: TemplateMetadata  # Required but fields within are optional
-    styles: TemplateStyles  # Required
-    layouts: List[Dict[str, str]]  # Required
-
-
-class DocumentData(TypedDict):
-    """Document data type definition."""
-
-    title: str
-    content: str
-    metadata: Dict[str, str]
-    created_at: str
-    updated_at: str
-    version: str

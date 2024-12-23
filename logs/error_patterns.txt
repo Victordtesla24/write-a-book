@@ -1,0 +1,73 @@
+tests/conftest.py:12:42 redefined-outer-name/Redefining name 'temp_dir' from outer scope (line 10)
+tests/test_core_editor_extended.py:19:14 too-many-function-args/Too many positional arguments for constructor call
+tests/test_core_editor_extended.py:86:13 too-many-function-args/Too many positional arguments for constructor call
+tests/test_core_editor_extended.py:108:17 too-many-function-args/Too many positional arguments for constructor call
+tests/test_app_core.py:31:20 redefined-outer-name/Redefining name 'template_manager' from outer scope (line 25)
+tests/test_app_core.py:44:35 redefined-outer-name/Redefining name 'editor_app' from outer scope (line 37)
+tests/test_app_core.py:51:4 redefined-outer-name/Redefining name 'document_manager' from outer scope (line 19)
+tests/test_app_core.py:74:4 redefined-outer-name/Redefining name 'template_manager' from outer scope (line 25)
+tests/test_app_core.py:94:4 redefined-outer-name/Redefining name 'preview_manager' from outer scope (line 31)
+tests/test_app_core.py:95:4 redefined-outer-name/Redefining name 'document_manager' from outer scope (line 19)
+tests/test_app_core.py:113:38 redefined-outer-name/Redefining name 'editor_app' from outer scope (line 37)
+tests/test_app_core.py:126:38 redefined-outer-name/Redefining name 'editor_app' from outer scope (line 37)
+tests/test_app_core.py:137:35 redefined-outer-name/Redefining name 'editor_app' from outer scope (line 37)
+tests/test_app_core.py:154:4 redefined-outer-name/Redefining name 'document_manager' from outer scope (line 19)
+tests/test_app_core.py:172:4 redefined-outer-name/Redefining name 'template_manager' from outer scope (line 25)
+tests/test_app_core.py:8:0 unused-import/Unused Editor imported from src.book_editor.app.core.editor
+tests/test_app_core.py:14:0 unused-import/Unused Document imported from src.book_editor.core.document
+tests/test_app_core_editor.py:23:31 redefined-outer-name/Redefining name 'editor' from outer scope (line 12)
+tests/test_app_core_editor.py:28:34 redefined-outer-name/Redefining name 'editor' from outer scope (line 12)
+tests/test_app_core_editor.py:41:31 redefined-outer-name/Redefining name 'editor' from outer scope (line 12)
+tests/test_app_core_editor.py:52:4 redefined-outer-name/Redefining name 'document_manager' from outer scope (line 18)
+tests/test_app_core_editor.py:75:4 redefined-outer-name/Redefining name 'document_manager' from outer scope (line 18)
+tests/test_app_core_editor.py:4:0 unused-import/Unused patch imported from unittest.mock
+tests/test_main.py:19:36 redefined-outer-name/Redefining name 'book_editor' from outer scope (line 12)
+tests/test_main.py:25:39 redefined-outer-name/Redefining name 'book_editor' from outer scope (line 12)
+tests/test_main.py:38:36 redefined-outer-name/Redefining name 'book_editor' from outer scope (line 12)
+tests/test_core_editor.py:21:14 too-many-function-args/Too many positional arguments for constructor call
+tests/test_core_editor.py:86:26 too-many-function-args/Too many positional arguments for constructor call
+tests/test_template.py:48:4 no-member/Instance of 'Template' has no 'add_style' member
+tests/test_template.py:49:4 no-member/Instance of 'Template' has no 'add_layout' member
+tests/test_template.py:51:11 no-member/Instance of 'Template' has no 'to_dict' member
+tests/test_template.py:54:13 no-member/Class 'Template' has no 'from_dict' member
+src/book_editor/core/document.py:102:15 broad-exception-caught/Catching too general exception Exception
+src/book_editor/core/document.py:110:4 arguments-renamed/Parameter 'o' has been renamed to 'obj' in overriding 'DateTimeEncoder.default' method
+src/book_editor/core/document.py:6:0 unused-import/Unused Path imported from pathlib
+src/book_editor/core/template.py:60:8 redefined-builtin/Redefining built-in 'format'
+src/book_editor/core/template.py:124:15 broad-exception-caught/Catching too general exception Exception
+src/book_editor/core/template.py:167:15 broad-exception-caught/Catching too general exception Exception
+src/book_editor/core/template.py:179:15 broad-exception-caught/Catching too general exception Exception
+src/book_editor/core/template.py:192:15 broad-exception-caught/Catching too general exception Exception
+src/book_editor/core/template.py:212:15 broad-exception-caught/Catching too general exception Exception
+src/book_editor/core/template.py:6:0 unused-import/Unused Set imported from typing
+src/book_editor/core/template.py:6:0 unused-import/Unused Union imported from typing
+src/book_editor/core/editor.py:6:0 unused-import/Unused Any imported from typing
+src/book_editor/core/editor.py:9:0 unused-import/Unused Template imported from src.book_editor.core.template
+src/book_editor/core/editor.py:9:0 unused-import/Unused TemplateManager imported from src.book_editor.core.template
+src/book_editor/app/core/editor.py:39:15 broad-exception-caught/Catching too general exception Exception
+src/book_editor/app/core/editor.py:50:15 broad-exception-caught/Catching too general exception Exception
+src/book_editor/app/core/editor.py:62:15 broad-exception-caught/Catching too general exception Exception
+src/book_editor/app/core/editor.py:72:15 broad-exception-caught/Catching too general exception Exception
+src/book_editor/app/core/editor.py:5:0 unused-import/Unused List imported from typing
+src/book_editor/app/core/editor.py:8:0 unused-import/Unused Template imported from src.book_editor.core.template
+./agent_directives.md:80:1 MD007/./agent_directives.md:80:1 MD007/ul-indent Unordered list indentation [Expected: 0; Actual: 3]
+./agent_directives.md:80:1 MD032/./agent_directives.md:80 MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- Use config_manager.sh for co..."]
+./agent_directives.md:81:1 MD007/./agent_directives.md:81:1 MD007/ul-indent Unordered list indentation [Expected: 0; Actual: 3]
+./agent_directives.md:82:1 MD007/./agent_directives.md:82:1 MD007/ul-indent Unordered list indentation [Expected: 0; Actual: 3]
+./agent_directives.md:83:1 MD007/./agent_directives.md:83:1 MD007/ul-indent Unordered list indentation [Expected: 0; Actual: 3]
+./agent_directives.md:84:1 MD007/./agent_directives.md:84:1 MD007/ul-indent Unordered list indentation [Expected: 0; Actual: 3]
+./README.md:3:1 MD022/./README.md:3 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Setup"]
+./README.md:4:1 MD032/./README.md:4 MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "1. Run `./scripts/init_project..."]
+./README.md:8:1 MD022/./README.md:8 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Project Structure"]
+./README.md:9:1 MD031/./README.md:9 MD031/blanks-around-fences Fenced code blocks should be surrounded by blank lines [Context: "```"]
+./README.md:9:1 MD040/./README.md:9 MD040/fenced-code-language Fenced code blocks should have a language specified [Context: "```"]
+./README.md:114:1 MD022/./README.md:114 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Workflow Scripts"]
+./README.md:115:1 MD032/./README.md:115 MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- `verify_and_fix.sh`: Verifie..."]
+./README.md:121:1 MD022/./README.md:121 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Configuration"]
+./README.md:122:1 MD009/./README.md:122:59 MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
+./test_report.md:3:1 MD022/./test_report.md:3 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Coverage Report"]
+./test_report.md:39:1 MD009/./test_report.md:39:2 MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 9]
+./test_report.md:54:1 MD009/./test_report.md:54:2 MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 9]
+./test_report.md:148:1 MD022/./test_report.md:148 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Performance Metrics"]
+./test_report.md:149:1 MD032/./test_report.md:149 MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- Document creation and save t..."]
+./test_report.md:153:1 MD022/./test_report.md:153 MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Status"]

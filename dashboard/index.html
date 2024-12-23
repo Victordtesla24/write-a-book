@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --success-color: #27ae60;
+            --warning-color: #f1c40f;
+            --danger-color: #e74c3c;
+            --text-color: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--secondary-color);
+            border-radius: 10px;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            background: var(--secondary-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-title {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .chart-container {
+            background: var(--secondary-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .status-success { background-color: var(--success-color); }
+        .status-warning { background-color: var(--warning-color); }
+        .status-danger { background-color: var(--danger-color); }
+
+        .resource-bar {
+            height: 20px;
+            background: #465669;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .resource-progress {
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .metric-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Project Management Dashboard</h1>
+            <div id="last-updated"></div>
+        </div>
+
+        <div class="metric-grid">
+            <!-- Project Health -->
+            <div class="metric-card">
+                <h2 class="metric-title">Project Health</h2>
+                <div class="metric-value" id="project-health">--</div>
+                <div class="status-indicator status-success"></div>
+                <div id="health-status">Loading...</div>
+            </div>
+
+            <!-- GitHub Status -->
+            <div class="metric-card">
+                <h2 class="metric-title">GitHub Status</h2>
+                <div id="github-metrics">
+                    <div>Commits (24h): <span id="commit-count">--</span></div>
+                    <div>Open PRs: <span id="pr-count">--</span></div>
+                    <div>Issues: <span id="issue-count">--</span></div>
+                </div>
+            </div>
+
+            <!-- Resource Utilization -->
+            <div class="metric-card">
+                <h2 class="metric-title">Resource Utilization</h2>
+                <div id="resource-metrics">
+                    <div>
+                        <span>CPU Usage:</span>
+                        <div class="resource-bar">
+                            <div id="cpu-usage" class="resource-progress" style="width: 0%; background: var(--success-color);"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Memory Usage:</span>
+                        <div class="resource-bar">
+                            <div id="memory-usage" class="resource-progress" style="width: 0%; background: var(--success-color);"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Disk Usage:</span>
+                        <div class="resource-bar">
+                            <div id="disk-usage" class="resource-progress" style="width: 0%; background: var(--success-color);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Test Coverage -->
+            <div class="metric-card">
+                <h2 class="metric-title">Test Coverage</h2>
+                <div class="metric-value" id="test-coverage">--</div>
+                <div id="test-status">Loading...</div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="chart-container">
+            <canvas id="commit-history"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="resource-trends"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Update timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            document.getElementById('last-updated').textContent = 
+                `Last Updated: ${now.toLocaleString()}`;
+        }
+
+        // Update metrics
+        function updateMetrics() {
+            // Fetch GitHub metrics
+            fetch('/metrics/github.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('issue-count').textContent = data.open_issues_count || 0;
+                })
+                .catch(console.error);
+
+            // Fetch commit metrics
+            fetch('/metrics/commits.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('commit-count').textContent = data.length || 0;
+                })
+                .catch(console.error);
+
+            // Fetch PR metrics
+            fetch('/metrics/pulls.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('pr-count').textContent = data.length || 0;
+                })
+                .catch(console.error);
+
+            // Fetch system metrics
+            fetch('/metrics/system.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Update resource usage
+                    const cpuBar = document.getElementById('cpu-usage');
+                    const memBar = document.getElementById('memory-usage');
+                    const diskBar = document.getElementById('disk-usage');
+
+                    cpuBar.style.width = `${data.cpu_usage}%`;
+                    memBar.style.width = `${data.memory_usage}%`;
+                    diskBar.style.width = `${data.disk_usage}%`;
+
+                    // Update colors based on thresholds
+                    [cpuBar, memBar, diskBar].forEach(bar => {
+                        const value = parseFloat(bar.style.width);
+                        if (value >= 90) {
+                            bar.style.background = 'var(--danger-color)';
+                        } else if (value >= 70) {
+                            bar.style.background = 'var(--warning-color)';
+                        } else {
+                            bar.style.background = 'var(--success-color)';
+                        }
+                    });
+                })
+                .catch(console.error);
+
+            // Fetch test metrics
+            fetch('/metrics/tests.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('test-coverage').textContent = `${data.coverage}%`;
+                    document.getElementById('test-status').textContent = 
+                        `${data.passed} passed, ${data.failed} failed`;
+                })
+                .catch(console.error);
+        }
+
+        // Initialize dashboard
+        function initDashboard() {
+            updateTimestamp();
+            updateMetrics();
+
+            // Set up auto-refresh
+            setInterval(() => {
+                updateTimestamp();
+                updateMetrics();
+            }, 120000); // Refresh every 2 minutes
+        }
+
+        // Start dashboard
+        document.addEventListener('DOMContentLoaded', initDashboard);
+    </script>
+</body>
+</html>

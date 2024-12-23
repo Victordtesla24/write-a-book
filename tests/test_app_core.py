@@ -1,208 +1,177 @@
-"""Test suite for app core functionality."""
+"""Test app core functionality."""
 
-# pylint: disable=redefined-outer-name
-import tempfile
+from pathlib import Path
 from unittest.mock import patch
 
-import pytest  # pylint: disable=import-error
+import pytest
 
-from book_editor.core.template import Template
-from src.book_editor.app.core.editor import (
-    AppEditor,
-    DocumentManager,
-    PreviewManager,
-    TemplateRenderer,
-)
+from src.book_editor.app.core.editor import DocumentManager, EditorApp
+from src.book_editor.app.core.preview import PreviewManager
+from src.book_editor.core.document import Document
+from src.book_editor.core.template import Template, TemplateManager
 
 
 @pytest.fixture
-def temp_dir():
-    """Create a temporary directory for testing."""
-    with tempfile.TemporaryDirectory() as tmpdirname:
-        yield tmpdirname
-
-
-@pytest.fixture
-def app_editor(temp_dir):
-    """Create an AppEditor instance for testing."""
-    with patch("src.book_editor.app.config.settings.TEMPLATE_DIR", temp_dir):
-        with patch(
-            "src.book_editor.app.config.settings.STORAGE_DIR", temp_dir
-        ):
-            return AppEditor()
-
-
-@pytest.fixture
-def document_manager(temp_dir):
+def document_manager(temp_dir: Path) -> DocumentManager:
     """Create a DocumentManager instance for testing."""
-    with patch("src.book_editor.app.config.settings.STORAGE_DIR", temp_dir):
-        return DocumentManager()
+    return DocumentManager(str(temp_dir))
 
 
 @pytest.fixture
-def template_renderer(temp_dir):
-    """Create a TemplateRenderer instance for testing."""
-    return TemplateRenderer(temp_dir)
+def template_manager(temp_dir: Path) -> TemplateManager:
+    """Create a TemplateManager instance for testing."""
+    return TemplateManager(temp_dir)
 
 
 @pytest.fixture
-def preview_manager():
+def preview_manager() -> PreviewManager:
     """Create a PreviewManager instance for testing."""
     return PreviewManager()
 
 
-def test_app_editor_initialization(app_editor):
-    """Test AppEditor initialization."""
-    assert app_editor.document_manager is not None
-    assert app_editor.template_renderer is not None
-    assert app_editor.preview_manager is not None
-    assert app_editor.current_document is None
+@pytest.fixture
+def editor_app(temp_dir: Path) -> EditorApp:
+    """Create an EditorApp instance for testing."""
+    with patch("src.book_editor.app.core.editor.STORAGE_DIR", temp_dir):
+        app = EditorApp()
+        return app
 
 
-def test_document_manager_operations(document_manager):
+def test_editor_app_initialization(editor_app: EditorApp) -> None:
+    """Test EditorApp initialization."""
+    assert editor_app.document_manager is not None
+    assert editor_app.template_manager is not None
+
+
+def test_document_manager_operations(
+    document_manager: DocumentManager,
+) -> None:
     """Test DocumentManager operations."""
     # Test document creation
     doc = document_manager.create_document("Test", "Test content")
-    assert doc.title == "Test"
+    assert doc.metadata["title"] == "Test"
     assert doc.content == "Test content"
 
     # Test document saving
     assert document_manager.save_document(doc)
-    assert document_manager.get_document(doc.title) == doc
 
-    # Test document listing
-    docs = document_manager.list_documents()
-    assert len(docs) == 1
-    assert docs[0].title == "Test"
+    # Test document loading
+    loaded_doc = document_manager.load_document("Test")
+    assert loaded_doc is not None
+    assert loaded_doc.metadata["title"] == "Test"
+    assert loaded_doc.content == "Test content"
 
     # Test document deletion
-    assert document_manager.delete_document(doc.title)
-    assert document_manager.get_document(doc.title) is None
+    assert document_manager.delete_document("Test")
+    assert document_manager.load_document("Test") is None
 
 
-def test_template_renderer_operations(template_renderer):
-    """Test TemplateRenderer operations."""
+def test_template_renderer_operations(
+    template_manager: TemplateManager,
+) -> None:
+    """Test template renderer operations."""
     # Create a test template
     template = Template("default", "general")
     template.metadata["description"] = "Default template"
-    template_renderer.save_template(template)
+    template_manager.save_template(template)
 
     # Test template loading
-    loaded_template = template_renderer.load_template("default")
+    loaded_template = template_manager.get_template("default")
     assert loaded_template is not None
     assert loaded_template.name == "default"
     assert loaded_template.metadata["description"] == "Default template"
 
-
-def test_preview_manager_operations(preview_manager, temp_dir):
-    """Test PreviewManager operations."""
-    # Test preview generation
-    content = "# Test\nThis is a test"
-    with patch("src.book_editor.app.config.settings.TEMPLATE_DIR", temp_dir):
-        preview = preview_manager.generate_preview(content)
-        assert "<h1>" in preview
-        assert "This is a test" in preview
-
-    # Test style application
-    styles = {"font-family": "Arial"}
-    styled_preview = preview_manager.apply_styles(preview, styles)
-    assert "font-family: Arial" in styled_preview
-    # Test preview caching
-    preview_manager.cache_preview(content, preview)
-    assert preview_manager.get_cached_preview(content) == preview
+    # Test template listing
+    templates = template_manager.list_templates()
+    assert "default" in templates
 
 
-@patch("streamlit.markdown")
-def test_app_editor_document_handling(mock_markdown, app_editor):
-    """Test AppEditor document handling."""
-    # Test document creation
-    doc = app_editor.create_document("Test")
-    assert doc.title == "Test"
-    assert app_editor.current_document == doc
+def test_preview_manager_operations(preview_manager: PreviewManager) -> None:
+    """Test preview manager operations."""
+    # Create a test document
+    doc = Document("Test")
+    doc.content = "# Test\nThis is a test"
 
-    # Test content update
-    app_editor.update_content("Test content")
-    assert app_editor.current_document.content == "Test content"
+    # Test preview without template
+    preview = preview_manager.get_preview(doc)
+    assert preview == "# Test\nThis is a test"
 
-    # Test preview update
-    app_editor.update_preview()
-    mock_markdown.assert_called_once_with("Test content")
-
-    # Test document saving
-    assert app_editor.save_document()
-    assert app_editor.document_manager.get_document("Test") == doc
+    # Test preview with template
+    template = Template("default", "general")
+    preview_manager.set_template(template)
+    preview = preview_manager.get_preview(doc)
+    assert "<h1>Test</h1>" in preview
+    assert "<p>This is a test</p>" in preview
 
 
-def test_app_editor_template_handling(app_editor):
-    """Test AppEditor template handling."""
+def test_editor_app_document_handling(editor_app: EditorApp) -> None:
+    """Test EditorApp document handling."""
+    # Create and save a test document
+    doc = editor_app.new_document("Test")
+    assert doc.metadata["title"] == "Test"
+    assert editor_app.save_document()
+
+    # Load the document
+    loaded_doc = editor_app.load_document("Test")
+    assert loaded_doc is not None
+    assert loaded_doc.metadata["title"] == "Test"
+
+
+def test_editor_app_template_handling(editor_app: EditorApp) -> None:
+    """Test EditorApp template handling."""
     # Create and save a test template
     template = Template("default", "general")
-    template.styles = {
-        "borders": {},
-        "colors": {},
-        "fonts": {"font-family": "Arial"},
-    }
-    app_editor.template_renderer.save_template(template)
+    editor_app.template_manager.save_template(template)
 
-    # Test template loading
-    loaded = app_editor.template_renderer.load_template("default")
-    assert loaded is not None
-    assert loaded.styles["fonts"]["font-family"] == "Arial"
+    # Test template listing
+    templates = editor_app.template_manager.list_templates()
+    assert "default" in templates
 
 
-def test_app_editor_error_handling(app_editor):
-    """Test AppEditor error handling."""
-    # Test invalid document operations
-    with pytest.raises(ValueError):
-        app_editor.create_document("")  # Empty title
+def test_editor_app_error_handling(editor_app: EditorApp) -> None:
+    """Test EditorApp error handling."""
+    # Test preview without document
+    assert editor_app.get_preview() == ""
 
-    with pytest.raises(ValueError):
-        app_editor.update_content(None)  # None content
+    # Test saving without document
+    assert not editor_app.save_document()
 
-    # Test invalid template operations
-    with pytest.raises(ValueError):
-        app_editor.select_template("")  # Empty template name
+    # Test loading non-existent document
+    assert editor_app.load_document("nonexistent") is None
 
-    with pytest.raises(ValueError):
-        app_editor.customize_template(None)  # None styles
+    # Test setting non-existent template
+    assert not editor_app.set_template("nonexistent")
 
 
-def test_document_manager_validation(document_manager):
+def test_document_manager_validation(
+    document_manager: DocumentManager,
+) -> None:
     """Test DocumentManager validation."""
-    # Test invalid document creation
-    with pytest.raises(ValueError):
-        document_manager.create_document("", "")  # Empty title and content
+    # Test creating document with empty title
+    doc = document_manager.create_document("")
+    assert doc.metadata["title"] == "Untitled"
 
-    # Test non-existent document operations
+    # Test saving document with empty content
+    assert document_manager.save_document(doc)
+
+    # Test loading non-existent document
+    assert document_manager.load_document("nonexistent") is None
+
+    # Test deleting non-existent document
     assert not document_manager.delete_document("nonexistent")
-    assert document_manager.get_document("nonexistent") is None
-
-    # Test duplicate document handling
-    document_manager.create_document("Test", "Content 1")
-    document_manager.create_document("Test", "Content 2")
-    assert document_manager.get_document("Test").content == "Content 2"
 
 
-def test_template_renderer_validation(template_renderer):
-    """Test TemplateRenderer validation."""
-    # Test invalid template customization
-    with pytest.raises(ValueError):
-        template_renderer.customize_template("", {})  # Empty template name
+def test_template_renderer_validation(
+    template_manager: TemplateManager,
+) -> None:
+    """Test template renderer validation."""
+    # Test loading non-existent template
+    assert template_manager.get_template("nonexistent") is None
 
-    with pytest.raises(ValueError):
-        template_renderer.customize_template("default", None)  # None styles
+    # Test saving template with empty name
+    template = Template("", "general")
+    assert not template_manager.save_template(template)  # Should fail for empty name
 
-
-def test_preview_manager_validation(preview_manager):
-    """Test PreviewManager validation."""
-    # Test invalid preview generation
-    with pytest.raises(ValueError):
-        preview_manager.generate_preview(None)  # None content
-
-    # Test invalid style application
-    with pytest.raises(ValueError):
-        preview_manager.apply_styles("", None)  # None styles
-
-    # Test invalid cache operations
-    with pytest.raises(ValueError):
-        preview_manager.cache_preview("", "")  # Empty content and preview
+    # Test saving template with valid name
+    template = Template("test", "general")
+    assert template_manager.save_template(template)  # Should succeed

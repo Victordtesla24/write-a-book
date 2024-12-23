@@ -1,0 +1,16 @@
+{
+    "project": {
+        "name": "write-a-book",
+        "version": "0.1.0",
+        "description": "Book writing and editing application"
+    },
+    "security": {
+        "allow_file_creation": true,
+        "disable_file_watcher": true
+    },
+    "paths": {
+        "data": "data",
+        "templates": "templates",
+        "output": "output"
+    }
+}
