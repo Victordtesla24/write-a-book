@@ -77,9 +77,7 @@ def render_category_management():
         new_category = st.text_input("Category Name")
         category_desc = st.text_area("Description")
         if st.button("Add Category"):
-            if st.session_state.editor.template_manager.add_category(
-                new_category, category_desc
-            ):
+            if st.session_state.editor.template_manager.add_category(new_category, category_desc):
                 st.success(f"Added category: {new_category}")
                 st.rerun()
             else:
@@ -91,16 +89,10 @@ def render_category_management():
 def render_template_upload(selected_category):
     """Render template upload section."""
     st.subheader("Upload Template")
-    uploaded_file = st.file_uploader(
-        "Choose a template file", type=["txt", "md", "docx"]
-    )
+    uploaded_file = st.file_uploader("Choose a template file", type=["txt", "md", "docx"])
     if uploaded_file is not None:
-        if st.session_state.editor.save_template(
-            uploaded_file, selected_category
-        ):
-            st.success(
-                f"Template '{uploaded_file.name}' uploaded successfully!"
-            )
+        if st.session_state.editor.save_template(uploaded_file, selected_category):
+            st.success(f"Template '{uploaded_file.name}' uploaded successfully!")
 
 
 def render_template_search():
@@ -108,9 +100,7 @@ def render_template_search():
     st.subheader("Search Templates")
     search_query = st.text_input("Search templates", "")
     if search_query:
-        results = st.session_state.editor.template_manager.search_templates(
-            search_query
-        )
+        results = st.session_state.editor.template_manager.search_templates(search_query)
         if results:
             st.write("Search Results:")
             for result in results:
@@ -124,32 +114,22 @@ def render_template_search():
 def render_template_list(selected_category):
     """Render template list section."""
     st.subheader("Available Templates")
-    templates = st.session_state.editor.template_manager.list_templates(
-        selected_category
-    )
+    templates = st.session_state.editor.template_manager.list_templates(selected_category)
     if templates:
         for template_name in templates:
-            template = st.session_state.editor.template_manager.load_template(
-                template_name
-            )
+            template = st.session_state.editor.template_manager.load_template(template_name)
             if template:
                 with st.expander(template_name):
                     st.write(f"Category: {template.category}")
-                    st.write(
-                        f"Description: {template.metadata['description']}"
-                    )
+                    st.write(f"Description: {template.metadata['description']}")
                     if template.metadata["tags"]:
-                        st.write(
-                            f"Tags: {', '.join(template.metadata['tags'])}"
-                        )
+                        st.write(f"Tags: {', '.join(template.metadata['tags'])}")
 
                     # Preview section
                     if st.button(f"Preview {template_name}"):
                         st.write("Template Preview:")
                         if template.styles.get("borders"):
-                            st.code(
-                                "".join(template.styles["borders"].values())
-                            )
+                            st.code("".join(template.styles["borders"].values()))
                         if template.layouts:
                             st.json(template.layouts)
     else:
@@ -194,9 +174,7 @@ def render_editor():
             st.session_state.editor.editor.current_document = (
                 st.session_state.editor.editor.new_document()
             )
-        st.session_state.editor.editor.current_document.update_content(
-            text_content
-        )
+        st.session_state.editor.editor.current_document.update_content(text_content)
         if st.session_state.editor.editor.save_document():
             st.success("Changes saved successfully!")
     return text_content
@@ -232,9 +210,7 @@ def render_preview(text_content):
             with cols[1]:
                 st.metric("Paragraphs", stats["paragraph_count"])
                 st.metric("Sentences", stats["sentence_count"])
-                st.metric(
-                    "Avg. Word Length", f"{stats['avg_word_length']:.1f}"
-                )
+                st.metric("Avg. Word Length", f"{stats['avg_word_length']:.1f}")
 
 
 def main():
@@ -248,9 +224,7 @@ def main():
     # Sidebar for settings and template management
     with st.sidebar:
         st.header("Settings")
-        st.session_state.auto_save = st.checkbox(
-            "Enable Auto-Save", value=True
-        )
+        st.session_state.auto_save = st.checkbox("Enable Auto-Save", value=True)
         st.selectbox("Theme", ["Light", "Dark"])
 
         # Template management section
