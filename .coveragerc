@@ -2,6 +2,7 @@
 source = 
     src
     core_scripts
+    metrics
 
 omit = 
     */tests/*
@@ -21,6 +22,7 @@ relative_files = True
 source =
     src/
     core_scripts/
+    metrics/
     .
 
 [report]

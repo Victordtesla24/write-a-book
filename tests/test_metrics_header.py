@@ -4,7 +4,7 @@ import tempfile
 import pandas as pd
 import pytest
 
-from metrics_header import write_header
+from metrics.metrics_header import write_header
 
 
 def test_write_header_creates_directory():

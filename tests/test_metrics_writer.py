@@ -3,7 +3,7 @@ import tempfile
 
 import pandas as pd
 
-from metrics_writer import write_metric_row
+from metrics.metrics_writer import write_metric_row
 
 
 def test_write_metric_row_creates_directory():

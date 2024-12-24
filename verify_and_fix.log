@@ -1,215 +1,61 @@
-[{
-	"resource": "/Users/admin/cursor/write-a-book/metrics_header.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
-	"code": {
-		"value": "C0411:wrong-import-order",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/wrong-import-order.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "standard import \"os\" should be placed before third party import \"pandas\"",
-	"source": "Pylint",
-	"startLineNumber": 4,
+[[{
+	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 177,
 	"startColumn": 1,
-	"endLineNumber": 4,
-	"endColumn": 10
-},{
-	"resource": "/Users/admin/cursor/write-a-book/metrics_header.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
-	"code": {
-		"value": "C0303:trailing-whitespace",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "Trailing whitespace",
-	"source": "Pylint",
-	"startLineNumber": 10,
-	"startColumn": 1,
-	"endLineNumber": 10,
-	"endColumn": 1
-},{
-	"resource": "/Users/admin/cursor/write-a-book/metrics_header.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
-	"code": {
-		"value": "C0303:trailing-whitespace",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "Trailing whitespace",
-	"source": "Pylint",
-	"startLineNumber": 20,
-	"startColumn": 1,
-	"endLineNumber": 20,
-	"endColumn": 1
-},{
-	"resource": "/Users/admin/cursor/write-a-book/metrics_header.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
-	"code": {
-		"value": "C0303:trailing-whitespace",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "Trailing whitespace",
-	"source": "Pylint",
-	"startLineNumber": 29,
-	"startColumn": 1,
-	"endLineNumber": 29,
-	"endColumn": 1
-},{
-	"resource": "/Users/admin/cursor/write-a-book/metrics_pandas.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
-	"code": {
-		"value": "C0411:wrong-import-order",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/wrong-import-order.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "standard import \"os\" should be placed before third party import \"pandas\"",
-	"source": "Pylint",
-	"startLineNumber": 4,
-	"startColumn": 1,
-	"endLineNumber": 4,
-	"endColumn": 10
-},{
-	"resource": "/Users/admin/cursor/write-a-book/metrics_pandas.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
-	"code": {
-		"value": "C0303:trailing-whitespace",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "Trailing whitespace",
-	"source": "Pylint",
-	"startLineNumber": 18,
-	"startColumn": 1,
-	"endLineNumber": 18,
-	"endColumn": 1
-},{
-	"resource": "/Users/admin/cursor/write-a-book/metrics_pandas.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
-	"code": {
-		"value": "C0303:trailing-whitespace",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "Trailing whitespace",
-	"source": "Pylint",
-	"startLineNumber": 28,
-	"startColumn": 1,
-	"endLineNumber": 28,
-	"endColumn": 1
-},{
-	"resource": "/Users/admin/cursor/write-a-book/metrics_pandas.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
-	"code": {
-		"value": "C0303:trailing-whitespace",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "Trailing whitespace",
-	"source": "Pylint",
-	"startLineNumber": 43,
-	"startColumn": 1,
-	"endLineNumber": 43,
+	"endLineNumber": 177,
 	"endColumn": 1
 },{
 	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
-	"code": {
-		"value": "C0303:trailing-whitespace",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "Trailing whitespace",
-	"source": "Pylint",
-	"startLineNumber": 16,
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 197,
 	"startColumn": 1,
-	"endLineNumber": 16,
+	"endLineNumber": 197,
 	"endColumn": 1
 },{
 	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
-	"code": {
-		"value": "C0303:trailing-whitespace",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "Trailing whitespace",
-	"source": "Pylint",
-	"startLineNumber": 32,
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 211,
 	"startColumn": 1,
-	"endLineNumber": 32,
+	"endLineNumber": 211,
 	"endColumn": 1
 },{
 	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
-	"code": {
-		"value": "C0303:trailing-whitespace",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "Trailing whitespace",
-	"source": "Pylint",
-	"startLineNumber": 40,
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 224,
 	"startColumn": 1,
-	"endLineNumber": 40,
+	"endLineNumber": 224,
 	"endColumn": 1
 },{
 	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
-	"owner": "_generated_diagnostic_collection_name_#2",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 255,
+	"startColumn": 1,
+	"endLineNumber": 255,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
 	"code": {
 		"value": "C0303:trailing-whitespace",
 		"target": {
@@ -222,9 +68,104 @@
 	"severity": 2,
 	"message": "Trailing whitespace",
 	"source": "Pylint",
-	"startLineNumber": 47,
+	"startLineNumber": 177,
 	"startColumn": 1,
-	"endLineNumber": 47,
+	"endLineNumber": 177,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0301:line-too-long",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/line-too-long.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Line too long (100/88)",
+	"source": "Pylint",
+	"startLineNumber": 188,
+	"startColumn": 1,
+	"endLineNumber": 188,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 197,
+	"startColumn": 1,
+	"endLineNumber": 197,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 211,
+	"startColumn": 1,
+	"endLineNumber": 211,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 224,
+	"startColumn": 1,
+	"endLineNumber": 224,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 255,
+	"startColumn": 1,
+	"endLineNumber": 255,
 	"endColumn": 1
 }]
 
@@ -232,60 +173,184 @@
 ## Pytest
 
 venvadmin@Vics-MacBook-Air write-a-book % pytest
-============================================================== test session starts ===============================================================
-platform darwin -- Python 3.13.1, pytest-8.3.4, pluggy-1.5.0
+========================================================================= test session starts ==========================================================================
+platform darwin -- Python 3.13.1, pytest-8.3.4, pluggy-1.5.0 -- /Users/admin/cursor/write-a-book/venv/bin/python3.13
+cachedir: .pytest_cache
 rootdir: /Users/admin/cursor/write-a-book
-configfile: pyproject.toml
+configfile: pytest.ini
 testpaths: tests
 plugins: cov-6.0.0, asyncio-0.25.0, anyio-4.7.0, mock-3.14.0
 asyncio: mode=Mode.STRICT, asyncio_default_fixture_loop_scope=function
-collected 82 items                                                                                                                               
+collected 105 items                                                                                                                                                    
 
-tests/test_app_config.py ......                                                                                                            [  7%]
-tests/test_app_core.py .........                                                                                                           [ 18%]
-tests/test_app_core_editor.py ...                                                                                                          [ 21%]
-tests/test_book.py ......                                                                                                                  [ 29%]
-tests/test_components.py .....                                                                                                             [ 35%]
-tests/test_core_editor.py ......                                                                                                           [ 42%]
-tests/test_core_editor_extended.py .F.F...                                                                                                 [ 51%]
-tests/test_editor.py ...........                                                                                                           [ 64%]
-tests/test_main.py ...                                                                                                                     [ 68%]
-tests/test_settings.py ......                                                                                                              [ 75%]
-tests/test_storage.py .....                                                                                                                [ 81%]
-tests/test_template.py ......                                                                                                              [ 89%]
-tests/test_text_editor_extended.py .........                                                                                               [100%]
+tests/test_app_config.py::test_app_settings PASSED                                                                                                               [  0%]
+tests/test_app_config.py::test_supported_formats PASSED                                                                                                          [  1%]
+tests/test_app_config.py::test_theme_config PASSED                                                                                                               [  2%]
+tests/test_app_config.py::test_editor_config PASSED                                                                                                              [  3%]
+tests/test_app_config.py::test_preview_config PASSED                                                                                                             [  4%]
+tests/test_app_config.py::test_logging_config PASSED                                                                                                             [  5%]
+tests/test_app_core.py::test_editor_app_initialization PASSED                                                                                                    [  6%]
+tests/test_app_core.py::test_document_manager_operations PASSED                                                                                                  [  7%]
+tests/test_app_core.py::test_template_renderer_operations PASSED                                                                                                 [  8%]
+tests/test_app_core.py::test_preview_manager_operations PASSED                                                                                                   [  9%]
+tests/test_app_core.py::test_editor_app_document_handling PASSED                                                                                                 [ 10%]
+tests/test_app_core.py::test_editor_app_template_handling PASSED                                                                                                 [ 11%]
+tests/test_app_core.py::test_editor_app_error_handling PASSED                                                                                                    [ 12%]
+tests/test_app_core.py::test_document_manager_validation PASSED                                                                                                  [ 13%]
+tests/test_app_core.py::test_template_renderer_validation PASSED                                                                                                 [ 14%]
+tests/test_app_core_editor.py::test_editor_initialization PASSED                                                                                                 [ 15%]
+tests/test_app_core_editor.py::test_editor_document_handling PASSED                                                                                              [ 16%]
+tests/test_app_core_editor.py::test_editor_error_handling PASSED                                                                                                 [ 17%]
+tests/test_basic.py::TestBasicSetup::test_configuration PASSED                                                                                                   [ 18%]
+tests/test_basic.py::TestBasicSetup::test_environment PASSED                                                                                                     [ 19%]
+tests/test_basic.py::TestBasicSetup::test_metrics_collection PASSED                                                                                              [ 20%]
+tests/test_book.py::test_book_creation PASSED                                                                                                                    [ 20%]
+tests/test_book.py::test_chapter_management PASSED                                                                                                               [ 21%]
+tests/test_book.py::test_section_management PASSED                                                                                                               [ 22%]
+tests/test_book.py::test_metadata_management PASSED                                                                                                              [ 23%]
+tests/test_book.py::test_content_operations PASSED                                                                                                               [ 24%]
+tests/test_book.py::test_chapter_operations PASSED                                                                                                               [ 25%]
+tests/test_components.py::test_editor_component_initialization PASSED                                                                                            [ 26%]
+tests/test_components.py::test_editor_content_update PASSED                                                                                                      [ 27%]
+tests/test_components.py::test_cursor_movement PASSED                                                                                                            [ 28%]
+tests/test_components.py::test_text_selection PASSED                                                                                                             [ 29%]
+tests/test_components.py::test_undo_redo PASSED                                                                                                                  [ 30%]
+tests/test_core_editor.py::test_editor_initialization PASSED                                                                                                     [ 31%]
+tests/test_core_editor.py::test_editor_document_handling PASSED                                                                                                  [ 32%]
+tests/test_core_editor.py::test_editor_error_handling PASSED                                                                                                     [ 33%]
+tests/test_core_editor.py::test_document_serialization PASSED                                                                                                    [ 34%]
+tests/test_core_editor.py::test_datetime_encoder PASSED                                                                                                          [ 35%]
+tests/test_core_editor.py::test_save_without_document PASSED                                                                                                     [ 36%]
+tests/test_core_editor_extended.py::test_document_empty_metadata PASSED                                                                                          [ 37%]
+tests/test_core_editor_extended.py::test_document_metadata_update PASSED                                                                                         [ 38%]
+tests/test_core_editor_extended.py::test_document_content_versioning PASSED                                                                                      [ 39%]
+tests/test_core_editor_extended.py::test_document_timestamps PASSED                                                                                              [ 40%]
+tests/test_core_editor_extended.py::test_editor_document_management PASSED                                                                                       [ 40%]
+tests/test_core_editor_extended.py::test_document_serialization_edge_cases PASSED                                                                                [ 41%]
+tests/test_core_editor_extended.py::test_document_load_errors PASSED                                                                                             [ 42%]
+tests/test_editor.py::test_editor_initialization PASSED                                                                                                          [ 43%]
+tests/test_editor.py::test_book_loading PASSED                                                                                                                   [ 44%]
+tests/test_editor.py::test_chapter_navigation PASSED                                                                                                             [ 45%]
+tests/test_editor.py::test_content_editing PASSED                                                                                                                [ 46%]
+tests/test_editor.py::test_chapter_management PASSED                                                                                                             [ 47%]
+tests/test_editor.py::test_error_handling PASSED                                                                                                                 [ 48%]
+tests/test_editor.py::test_undo_redo_stack PASSED                                                                                                                [ 49%]
+tests/test_editor.py::test_empty_undo_redo PASSED                                                                                                                [ 50%]
+tests/test_editor.py::test_chapter_validation PASSED                                                                                                             [ 51%]
+tests/test_editor.py::test_chapter_index_adjustment PASSED                                                                                                       [ 52%]
+tests/test_editor.py::test_multiple_chapter_operations PASSED                                                                                                    [ 53%]
+tests/test_main.py::test_book_editor_initialization PASSED                                                                                                       [ 54%]
+tests/test_main.py::test_book_editor_document_handling PASSED                                                                                                    [ 55%]
+tests/test_main.py::test_book_editor_error_handling PASSED                                                                                                       [ 56%]
+tests/test_metrics_collector.py::test_collect_system_metrics PASSED                                                                                              [ 57%]
+tests/test_metrics_collector.py::test_collect_github_metrics_success FAILED                                                                                      [ 58%]
+tests/test_metrics_collector.py::test_collect_github_metrics_no_config PASSED                                                                                    [ 59%]
+tests/test_metrics_collector.py::test_collect_test_metrics_no_coverage PASSED                                                                                    [ 60%]
+tests/test_metrics_collector.py::test_save_metrics PASSED                                                                                                        [ 60%]
+tests/test_metrics_collector.py::test_collect_all FAILED                                                                                                         [ 61%]
+tests/test_metrics_header.py::test_write_header_creates_directory PASSED                                                                                         [ 62%]
+tests/test_metrics_header.py::test_write_header_creates_file PASSED                                                                                              [ 63%]
+tests/test_metrics_header.py::test_write_header_correct_columns PASSED                                                                                           [ 64%]
+tests/test_metrics_header.py::test_write_header_overwrites_existing PASSED                                                                                       [ 65%]
+tests/test_metrics_pandas.py::test_write_metrics_creates_directory PASSED                                                                                        [ 66%]
+tests/test_metrics_pandas.py::test_write_metrics_creates_file PASSED                                                                                             [ 67%]
+tests/test_metrics_pandas.py::test_write_metrics_appends_data PASSED                                                                                             [ 68%]
+tests/test_metrics_pandas.py::test_write_metrics_handles_float_conversion PASSED                                                                                 [ 69%]
+tests/test_metrics_writer.py::test_write_metric_row_creates_directory PASSED                                                                                     [ 70%]
+tests/test_metrics_writer.py::test_write_metric_row_creates_file PASSED                                                                                          [ 71%]
+tests/test_metrics_writer.py::test_write_metric_row_appends_data PASSED                                                                                          [ 72%]
+tests/test_metrics_writer.py::test_write_metric_row_adds_new_column PASSED                                                                                       [ 73%]
+tests/test_metrics_writer.py::test_write_metric_row_handles_float_conversion PASSED                                                                              [ 74%]
+tests/test_metrics_writer.py::test_write_metric_row_uses_current_timestamp PASSED                                                                                [ 75%]
+tests/test_settings.py::test_app_settings PASSED                                                                                                                 [ 76%]
+tests/test_settings.py::test_supported_formats PASSED                                                                                                            [ 77%]
+tests/test_settings.py::test_theme_config PASSED                                                                                                                 [ 78%]
+tests/test_settings.py::test_editor_config PASSED                                                                                                                [ 79%]
+tests/test_settings.py::test_preview_config PASSED                                                                                                               [ 80%]
+tests/test_settings.py::test_logging_config PASSED                                                                                                               [ 80%]
+tests/test_storage.py::test_storage_initialization PASSED                                                                                                        [ 81%]
+tests/test_storage.py::test_file_operations PASSED                                                                                                               [ 82%]
+tests/test_storage.py::test_directory_operations PASSED                                                                                                          [ 83%]
+tests/test_storage.py::test_backup_operations PASSED                                                                                                             [ 84%]
+tests/test_storage.py::test_error_handling PASSED                                                                                                                [ 85%]
+tests/test_template.py::test_template_creation PASSED                                                                                                            [ 86%]
+tests/test_template.py::test_template_serialization PASSED                                                                                                       [ 87%]
+tests/test_template.py::test_template_manager_categories PASSED                                                                                                  [ 88%]
+tests/test_template.py::test_template_manager_save_load PASSED                                                                                                   [ 89%]
+tests/test_template.py::test_template_manager_listing PASSED                                                                                                     [ 90%]
+tests/test_template.py::test_template_search PASSED                                                                                                              [ 91%]
+tests/test_text_editor_extended.py::test_editor_initialization PASSED                                                                                            [ 92%]
+tests/test_text_editor_extended.py::test_content_management PASSED                                                                                               [ 93%]
+tests/test_text_editor_extended.py::test_cursor_movement_bounds PASSED                                                                                           [ 94%]
+tests/test_text_editor_extended.py::test_text_selection_operations PASSED                                                                                        [ 95%]
+tests/test_text_editor_extended.py::test_undo_redo_operations PASSED                                                                                             [ 96%]
+tests/test_text_editor_extended.py::test_empty_operations PASSED                                                                                                 [ 97%]
+tests/test_text_editor_extended.py::test_cursor_selection_interaction PASSED                                                                                     [ 98%]
+tests/test_text_editor_extended.py::test_content_state_management PASSED                                                                                         [ 99%]
+tests/test_text_editor_extended.py::test_selection_edge_cases PASSED                                                                                             [100%]
 
-==================================================================== FAILURES ====================================================================
-_________________________________________________________ test_document_metadata_update __________________________________________________________
+=============================================================================== FAILURES ===============================================================================
+_________________________________________________________________ test_collect_github_metrics_success __________________________________________________________________
 
-editor_instance = <src.book_editor.core.editor.Editor object at 0x1053549e0>
+metrics_collector = <metrics.metrics_collector.MetricsCollector object at 0x108c1a0d0>
 
-    def test_document_metadata_update(editor_instance):
-        """Test document metadata update operations."""
-        doc = editor_instance.new_document("Test")
-        initial_metadata = doc.metadata
-        doc.update_content("Test content")
-        updated_metadata = doc.metadata
->       assert updated_metadata["version"] > initial_metadata["version"]
-E       assert 2 > 2
+    def test_collect_github_metrics_success(metrics_collector):
+        """Test successful collection of GitHub metrics."""
+        mock_response = MagicMock()
+        mock_response.json.side_effect = [
+            {
+                'stargazers_count': 100,
+                'forks_count': 50,
+                'open_issues_count': 10
+            },
+            ['commit1', 'commit2', 'commit3']  # 3 commits today
+        ]
+        mock_response.status_code = 200
+    
+        with patch('requests.get', return_value=mock_response) as mock_get:
+            metrics = metrics_collector.collect_github_metrics()
+    
+>       assert metrics is not None
+E       assert None is not None
 
-tests/test_core_editor_extended.py:38: AssertionError
-____________________________________________________________ test_document_timestamps ____________________________________________________________
+tests/test_metrics_collector.py:68: AssertionError
+___________________________________________________________________________ test_collect_all ___________________________________________________________________________
 
-editor_instance = <src.book_editor.core.editor.Editor object at 0x10556a750>
+metrics_collector = <metrics.metrics_collector.MetricsCollector object at 0x108cd6ad0>
+mock_psutil = {'cpu': <MagicMock name='cpu_percent' id='4442819280'>, 'disk': <MagicMock name='disk_usage' id='4442818608'>, 'memory': <MagicMock name='virtual_memory' id='4442818944'>}
 
-    def test_document_timestamps(editor_instance):
-        """Test document timestamp tracking."""
-        doc = editor_instance.new_document("Test")
-        initial_metadata = doc.metadata
-        doc.update_content("Test content")
-        updated_metadata = doc.metadata
->       assert updated_metadata["updated_at"] > initial_metadata["updated_at"]
-E       assert datetime.datetime(2024, 12, 23, 18, 10, 8, 370322) > datetime.datetime(2024, 12, 23, 18, 10, 8, 370322)
+    def test_collect_all(metrics_collector, mock_psutil):
+        """Test collection of all metrics."""
+        with tempfile.TemporaryDirectory() as temp_dir:
+            # Update metrics_collector's project root
+            with patch.object(metrics_collector, 'metrics_dir', os.path.join(temp_dir, 'metrics')):
+                # Create metrics directory
+                os.makedirs(metrics_collector.metrics_dir)
+    
+                # Mock GitHub API responses
+                mock_response = MagicMock()
+                mock_response.json.side_effect = [
+                    {
+                        'stargazers_count': 100,
+                        'forks_count': 50,
+                        'open_issues_count': 10
+                    },
+                    ['commit1', 'commit2', 'commit3']
+                ]
+                mock_response.status_code = 200
+    
+                with patch('requests.get', return_value=mock_response):
+                    metrics_collector.collect_all()
+    
+                # Check that files were created
+                files = os.listdir(metrics_collector.metrics_dir)
+>               assert len(files) == 3  # system, github, and test metrics
+E               AssertionError: assert 2 == 3
+E                +  where 2 = len(['test_1735009273.json', 'system_1735009273.json'])
 
-tests/test_core_editor_extended.py:60: AssertionError
-============================================================ short test summary info =============================================================
-FAILED tests/test_core_editor_extended.py::test_document_metadata_update - assert 2 > 2
-FAILED tests/test_core_editor_extended.py::test_document_timestamps - assert datetime.datetime(2024, 12, 23, 18, 10, 8, 370322) > datetime.datetime(2024, 12, 23, 18, 10, 8, 370322)
-========================================================== 2 failed, 80 passed in 1.18s ==========================================================
+tests/test_metrics_collector.py:150: AssertionError
+======================================================================= short test summary info ========================================================================
+FAILED tests/test_metrics_collector.py::test_collect_github_metrics_success - assert None is not None
+FAILED tests/test_metrics_collector.py::test_collect_all - AssertionError: assert 2 == 3
+==================================================================== 2 failed, 103 passed in 1.56s =====================================================================
 venvadmin@Vics-MacBook-Air write-a-book % 
