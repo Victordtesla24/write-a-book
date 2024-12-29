@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# List of critical directories to always attach
+CRITICAL_DIRS=("metrics" "tests" "core_scripts")
+
+# Automatically attach files from critical directories
+for dir in "${CRITICAL_DIRS[@]}"; do
+  if [[ -d "$dir" ]]; then
+    echo "<allowed_files>" > .cursor/auto_attach.txt
+    find "$dir" -type f -name "*.py" >> .cursor/auto_attach.txt
+    echo "</allowed_files>" >> .cursor/auto_attach.txt
+  fi
+done 

@@ -1,0 +1,65 @@
+{
+    "system": {
+        "architecture": "arm64-darwin",
+        "memory_management": "ml_optimised",
+        "gpu_utilization": "advanced",
+        "thread_count": 8,
+        "power_management": "adaptive"
+    },
+    "performance": {
+        "token_optimization": {
+            "compression": "huffman",
+            "cache_strategy": "multi_level",
+            "budget_management": "ml_dynamic",
+            "context_retention": "smart_pruning",
+            "batching": true,
+            "deduplication": true
+        },
+        "monitoring": {
+            "interval": 60,
+            "metrics": {
+                "token_usage": true,
+                "cost_tracking": true,
+                "performance_metrics": true,
+                "resource_utilization": true,
+                "cache_hit_ratio": true,
+                "response_latency": true
+            }
+        }
+    },
+    "thresholds": {
+        "cpu_warning": 70,
+        "cpu_critical": 85,
+        "memory_warning": 75,
+        "memory_critical": 90,
+        "disk_warning": 80,
+        "disk_critical": 90,
+        "token_reduction": 35,
+        "response_time": 25,
+        "cost_reduction": 40,
+        "resource_efficiency": 35
+    },
+    "ui": {
+        "theme": "light",
+        "refresh_rate": 5,
+        "charts": {
+            "coverage_heatmap": true,
+            "resource_trends": true,
+            "code_quality": true,
+            "test_distribution": true
+        },
+        "components": {
+            "metric_cards": true,
+            "system_health": true,
+            "performance_graphs": true,
+            "alerts": true
+        }
+    },
+    "optimization": {
+        "ml_token_management": true,
+        "multi_level_caching": true,
+        "cost_aware_selection": true,
+        "response_minimization": true,
+        "dynamic_resources": true
+    }
+}

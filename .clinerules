@@ -1,0 +1,109 @@
+## Custom Rules for Cline
+
+## System Configuration
+
+architecture: arm64-darwin          # MacBook Air M3 specific
+memory_management: "ml_optimised"   # ML-based memory optimization
+gpu_utilization: "advanced"         # Enhanced Metal API & Neural Engine
+thread_count: 8                     # M3 core optimization
+power_management: "adaptive"        # Dynamic power scaling
+
+## AI Model Configuration
+
+model_preference: [
+    "Anthropic Claude 3-5 Sonnet 20241022",  # Primary implementation model
+    "gpt-4o", "gpt-o1-mini", "o1-preview",   # Complex reasoning & planning
+    "cursor-small",                          # Efficient edits
+    "cline-enhanced"                         # Error handling & fixes
+]
+
+## Token Optimization
+
+token_management: {
+    max_context: 16000,
+    response_limit: 4000,
+    compression: "huffman",                  # Token compression
+    cache_strategy: "multi_level",           # Enhanced caching
+    token_budget_management: "ml_dynamic",   # ML-based budget control
+    context_retention: "smart_pruning",      # Intelligent context management
+    batching: true,                         # Request batching
+    deduplication: true,                    # Duplicate elimination
+    smart_context: true,                    # Context-aware processing
+    predictive_allocation: true             # Predictive token allocation
+}
+
+## Cost Optimization
+
+cost_control: {
+    token_efficiency: "maximum",            # Maximum token efficiency
+    model_selection: "cost_aware",          # Cost-based model selection
+    cache_optimization: "aggressive",        # Aggressive caching
+    request_batching: true,                 # Batch processing
+    response_optimization: "minimal",        # Minimal response tokens
+    smart_retry_strategy: "exponential",    # Optimized retries
+    context_compression: true               # Context size reduction
+}
+
+## Project Configuration
+
+project_settings: {
+    test_framework: "pytest",
+    linting_tools: ["flake8", "black", "isort"],
+    documentation_format: "markdown",
+    monitoring_interval: "60s",
+    auto_fix: true,                        # Automatic error fixing
+    metrics_collection: "continuous"        # Continuous metrics gathering
+}
+
+## Performance Monitoring
+
+metrics_collection: {
+    token_usage: "per_request",            # Per-request token tracking
+    cost_tracking: "real_time",            # Real-time cost monitoring
+    performance_metrics: "detailed",        # Detailed performance data
+    optimization_effectiveness: "tracked",  # Optimization tracking
+    resource_utilization: "monitored",     # Resource monitoring
+    cache_hit_ratio: "tracked",            # Cache effectiveness
+    response_latency: "measured",          # Response time tracking
+    model_efficiency: "analyzed"           # Model performance analysis
+}
+
+## Implementation Phases
+
+phase_1_immediate: {
+    token_compression: true,               # Huffman compression
+    request_batching: true,               # Basic request batching
+    deduplication: true,                  # Basic deduplication
+    ml_token_management: true             # ML-based token management
+}
+
+phase_2_advanced: {
+    multi_level_caching: true,            # Advanced caching
+    cost_aware_selection: true,           # Cost-aware model selection
+    response_minimization: true,          # Response optimization
+    dynamic_resources: true               # Dynamic resource allocation
+}
+
+phase_3_monitoring: {
+    real_time_tracking: true,             # Real-time metrics
+    performance_analytics: true,          # Performance analysis
+    optimization_monitoring: true,        # Optimization tracking
+    cross_model_optimization: true        # Cross-model optimization
+}
+
+## Version Control
+
+version: "2.1.0"
+last_updated: "2024-03-21"
+next_review: "2024-04-21"
+
+## Enforcement Rules
+
+strict_enforcement: true                  # Enforce all optimizations
+validation_required: true                 # Validate all changes
+metrics_threshold: {
+    token_reduction: 0.35,               # 35% token reduction target
+    response_time: 0.25,                 # 25% speed improvement target
+    cost_reduction: 0.40,                # 40% cost reduction target
+    resource_efficiency: 0.35            # 35% resource optimization target
+}

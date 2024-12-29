@@ -1,7 +1,6 @@
 """Core scripts package."""
 
-# Import core functionality
-from core_scripts.config_manager import CONFIG
+# Import individual modules as needed
+from . import config_manager
 
-# Export configuration
-__all__ = ['CONFIG']
+__all__ = ['config_manager']

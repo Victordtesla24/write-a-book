@@ -1,49 +1,100 @@
-# Rules for AI
+# Cursor IDE Rules
 
-## Core Responsibilities
+## System Configuration
 
-- Autonomous, proficient coding agent focused on project quality, automation, and cost-effectiveness.
+architecture: {
+    platform: "arm64-darwin",              # MacBook Air M3 specific
+    memory_management: "ml_predictive",    # ML-based memory prediction
+    gpu_utilization: "dynamic_scaling",    # Adaptive GPU usage
+    thread_optimization: "workload_aware", # Smart thread allocation
+    power_management: "adaptive",          # Dynamic power scaling
+    neural_engine: "optimized"            # Enhanced neural engine usage
+}
 
-- Follow directives precisely for project betterment.
+## Model Configuration
 
-- Optimize input/output token sizes per AI model guidelines.
+model_preference: [
+    "gpt-4o",                             # Primary for complex reasoning
+    "cursor-small",                       # Fast edits and fixes
+    "claude-3-sonnet-20240322",          # Specialized tasks
+    "gemini-1.5-pro"                     # Auxiliary processing
+]
 
-- Prioritize user interests, reduce waste, and find alternative solutions to cut costs.
+## Token Optimization
 
-## Script Management
+token_management: {
+    compression: {
+        algorithm: "advanced_huffman",     # Enhanced compression
+        context_aware: true,              # Smart context compression
+        dynamic_adjustment: true          # Adaptive compression rates
+    },
+    caching: {
+        strategy: "multi_level",          # Hierarchical caching
+        prediction: "ml_based",           # ML-driven cache prefetch
+        invalidation: "smart"             # Intelligent cache clearing
+    },
+    context: {
+        max_size: 16000,                 # Maximum context window
+        response_limit: 4000,            # Response size limit
+        pruning: "intelligent"           # Smart context reduction
+    }
+}
 
-Maintain and execute:
+## Cost Optimization
 
-- @verify_and_fix.sh: Regular project maintenance and error fixing.
+cost_control: {
+    model_selection: {
+        strategy: "cost_aware",           # Cost-based model routing
+        fallback_chain: true,            # Smart model fallback
+        performance_threshold: "adaptive" # Dynamic performance limits
+    },
+    token_efficiency: {
+        compression_ratio: "maximum",     # Aggressive compression
+        context_pruning: "intelligent",   # Smart context reduction
+        response_optimization: "minimal"  # Minimal token responses
+    },
+    batching: {
+        request_aggregation: true,        # Smart request batching
+        priority_queuing: true,          # Priority-based processing
+        dynamic_batch_size: true         # Adaptive batch sizing
+    }
+}
 
-- @setup_test_env.sh: Initial project setup and test environment creation.
+## Performance Monitoring
 
-- @run_tests.sh: Comprehensive testing and reporting.
+metrics_collection: {
+    token_usage: {
+        tracking: "per_request",          # Per-request token tracking
+        analysis: "real_time",           # Real-time usage analysis
+        optimization: "continuous"        # Continuous optimization
+    },
+    performance: {
+        metrics: "detailed",             # Detailed performance data
+        latency: "measured",            # Response time tracking
+        efficiency: "analyzed"          # Efficiency analysis
+    },
+    resource: {
+        utilization: "monitored",        # Resource monitoring
+        optimization: "ml_based",        # ML-based optimization
+        scaling: "dynamic"              # Dynamic resource scaling
+    }
+}
 
-## Resource Management
+## Enforcement Rules
 
-- Monitor and adjust memory, AI response, and token usage thresholds as needed.
+enforcement: {
+    strict_mode: true,                   # Enforce all optimizations
+    validation_required: true,           # Mandatory validation
+    metrics_threshold: {
+        token_reduction: 0.35,           # 35% minimum reduction
+        response_time: 0.25,            # 25% speed improvement
+        cost_reduction: 0.40,           # 40% cost reduction
+        resource_efficiency: 0.35       # 35% resource optimization
+    }
+}
 
-## Automation & Error Handling
+## Version Control
 
-- Monitor and update scripts, logs, and configurations.
-
-- Implement efficient error management, focusing on systematic fixes and online research for solutions.
-
-- Utilize error pattern detection and automated fixing from @verify_and_fix.sh.
-
-## Version Control & Testing
-
-- Maintain clean commit history and handle conflicts.
-
-- Update and run comprehensive test suites for all changes.
-
-- Generate detailed reports and improve test coverage.
-
-## Documentation
-
-- Automatically update README.md, changelog, API docs, and architecture diagrams.
-
-- Track all changes and configurations.
-
-Remember: Prioritize reliability. If a feature can't be made reliable, don't implement it. For persistent errors, conduct extensive online research for alternative solutions.
+version: "3.0.0"
+last_updated: "2024-03-21"
+next_review: "2024-04-21"

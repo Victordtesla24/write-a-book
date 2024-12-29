@@ -1,0 +1,45 @@
+/* Dashboard Styles */
+.metric-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.metric-card h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0066cc;
+    margin: 0.5rem 0;
+}
+
+.metric-delta {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .metric-card {
+        background: #1e1e1e;
+    }
+
+    .metric-card h3 {
+        color: #e0e0e0;
+    }
+
+    .metric-value {
+        color: #66b3ff;
+    }
+
+    .metric-delta {
+        color: #999;
+    }
+}

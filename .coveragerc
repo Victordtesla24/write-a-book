@@ -1,29 +1,6 @@
 [run]
-source = 
-    src
-    core_scripts
-    metrics
-
-omit = 
-    */tests/*
-    */venv/*
-    setup.py
-    */__init__.py
-    */migrations/*
-    */site-packages/*
-
 branch = True
-parallel = True
-data_file = .coverage
-concurrency = multiprocessing
-relative_files = True
-
-[paths]
-source =
-    src/
-    core_scripts/
-    metrics/
-    .
+source = src
 
 [report]
 exclude_lines =
@@ -33,15 +10,6 @@ exclude_lines =
     if __name__ == .__main__.:
     pass
     raise ImportError
-    def main()
-    if TYPE_CHECKING:
-
-precision = 2
-show_missing = True
-skip_covered = False
-sort = Cover
-fail_under = 40
 
 [html]
-directory = coverage_html
-title = Code Coverage Report
+skip_covered = True

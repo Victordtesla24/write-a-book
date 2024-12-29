@@ -208,7 +208,7 @@ def main():
             create_system_metrics_chart(system_metrics),
             use_container_width=True
         )
-        
+
         # Show last update time
         last_update = datetime.fromtimestamp(system_metrics.get("timestamp", 0))
         st.caption(
@@ -234,7 +234,9 @@ def main():
                 test_metrics.get("tests_failed", 0)
             )
             if total_tests > 0:
-                success_rate = (test_metrics.get("tests_passed", 0) / total_tests) * 100
+                success_rate = (
+                    test_metrics.get("tests_passed", 0) / total_tests
+                ) * 100
                 fig = go.Figure(go.Indicator(
                     mode="gauge+number",
                     value=success_rate,

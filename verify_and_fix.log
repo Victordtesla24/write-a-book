@@ -1,60 +1,60 @@
-[[{
-	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+[{
+	"resource": "/Users/admin/cursor/write-a-book/cursor_config.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "E302",
+	"severity": 8,
+	"message": "expected 2 blank lines, found 1",
+	"source": "Flake8",
+	"startLineNumber": 5,
+	"startColumn": 1,
+	"endLineNumber": 5,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/cursor_config.py",
 	"owner": "_generated_diagnostic_collection_name_#4",
 	"code": "W293",
 	"severity": 4,
 	"message": "blank line contains whitespace",
 	"source": "Flake8",
-	"startLineNumber": 177,
+	"startLineNumber": 7,
 	"startColumn": 1,
-	"endLineNumber": 177,
+	"endLineNumber": 7,
 	"endColumn": 1
 },{
-	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"resource": "/Users/admin/cursor/write-a-book/cursor_config.py",
 	"owner": "_generated_diagnostic_collection_name_#4",
 	"code": "W293",
 	"severity": 4,
 	"message": "blank line contains whitespace",
 	"source": "Flake8",
-	"startLineNumber": 197,
+	"startLineNumber": 19,
 	"startColumn": 1,
-	"endLineNumber": 197,
+	"endLineNumber": 19,
 	"endColumn": 1
 },{
-	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"resource": "/Users/admin/cursor/write-a-book/cursor_config.py",
 	"owner": "_generated_diagnostic_collection_name_#4",
-	"code": "W293",
+	"code": "W291",
 	"severity": 4,
-	"message": "blank line contains whitespace",
+	"message": "trailing whitespace",
 	"source": "Flake8",
-	"startLineNumber": 211,
-	"startColumn": 1,
-	"endLineNumber": 211,
-	"endColumn": 1
+	"startLineNumber": 34,
+	"startColumn": 31,
+	"endLineNumber": 34,
+	"endColumn": 31
 },{
-	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"resource": "/Users/admin/cursor/write-a-book/cursor_config.py",
 	"owner": "_generated_diagnostic_collection_name_#4",
-	"code": "W293",
+	"code": "W292",
 	"severity": 4,
-	"message": "blank line contains whitespace",
+	"message": "no newline at end of file",
 	"source": "Flake8",
-	"startLineNumber": 224,
-	"startColumn": 1,
-	"endLineNumber": 224,
-	"endColumn": 1
+	"startLineNumber": 34,
+	"startColumn": 32,
+	"endLineNumber": 34,
+	"endColumn": 32
 },{
-	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
-	"owner": "_generated_diagnostic_collection_name_#4",
-	"code": "W293",
-	"severity": 4,
-	"message": "blank line contains whitespace",
-	"source": "Flake8",
-	"startLineNumber": 255,
-	"startColumn": 1,
-	"endLineNumber": 255,
-	"endColumn": 1
-},{
-	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"resource": "/Users/admin/cursor/write-a-book/cursor_config.py",
 	"owner": "_generated_diagnostic_collection_name_#5",
 	"code": {
 		"value": "C0303:trailing-whitespace",
@@ -68,12 +68,72 @@
 	"severity": 2,
 	"message": "Trailing whitespace",
 	"source": "Pylint",
-	"startLineNumber": 177,
+	"startLineNumber": 7,
 	"startColumn": 1,
-	"endLineNumber": 177,
+	"endLineNumber": 7,
 	"endColumn": 1
 },{
-	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"resource": "/Users/admin/cursor/write-a-book/cursor_config.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 19,
+	"startColumn": 1,
+	"endLineNumber": 19,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/cursor_config.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0304:missing-final-newline",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-final-newline.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Final newline missing",
+	"source": "Pylint",
+	"startLineNumber": 34,
+	"startColumn": 1,
+	"endLineNumber": 34,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/document_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "E501",
+	"severity": 8,
+	"message": "line too long (97 > 88 characters)",
+	"source": "Flake8",
+	"startLineNumber": 21,
+	"startColumn": 89,
+	"endLineNumber": 21,
+	"endColumn": 89
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/document_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 52,
+	"startColumn": 1,
+	"endLineNumber": 52,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/document_manager.py",
 	"owner": "_generated_diagnostic_collection_name_#5",
 	"code": {
 		"value": "C0301:line-too-long",
@@ -85,14 +145,14 @@
 		}
 	},
 	"severity": 2,
-	"message": "Line too long (100/88)",
+	"message": "Line too long (97/88)",
 	"source": "Pylint",
-	"startLineNumber": 188,
+	"startLineNumber": 21,
 	"startColumn": 1,
-	"endLineNumber": 188,
+	"endLineNumber": 21,
 	"endColumn": 1
 },{
-	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/document_manager.py",
 	"owner": "_generated_diagnostic_collection_name_#5",
 	"code": {
 		"value": "C0303:trailing-whitespace",
@@ -105,252 +165,5569 @@
 	},
 	"severity": 2,
 	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 52,
+	"startColumn": 1,
+	"endLineNumber": 52,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "F401",
+	"severity": 8,
+	"message": "'src.book_editor.core.utils.DateTimeEncoder' imported but unused",
+	"source": "Flake8",
+	"startLineNumber": 11,
+	"startColumn": 1,
+	"endLineNumber": 11,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0611:unused-import",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-import.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused DateTimeEncoder imported from src.book_editor.core.utils",
+	"source": "Pylint",
+	"startLineNumber": 11,
+	"startColumn": 1,
+	"endLineNumber": 11,
+	"endColumn": 55
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 89,
+	"startColumn": 1,
+	"endLineNumber": 89,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0718:broad-exception-caught",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/broad-exception-caught.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Catching too general exception Exception",
+	"source": "Pylint",
+	"startLineNumber": 95,
+	"startColumn": 16,
+	"endLineNumber": 95,
+	"endColumn": 25
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0718:broad-exception-caught",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/broad-exception-caught.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Catching too general exception Exception",
+	"source": "Pylint",
+	"startLineNumber": 121,
+	"startColumn": 16,
+	"endLineNumber": 121,
+	"endColumn": 25
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 89,
+	"startColumn": 1,
+	"endLineNumber": 89,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "F841",
+	"severity": 8,
+	"message": "local variable 'doc' is assigned to but never used",
+	"source": "Flake8",
+	"startLineNumber": 110,
+	"startColumn": 5,
+	"endLineNumber": 110,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "F841",
+	"severity": 8,
+	"message": "local variable 'doc' is assigned to but never used",
+	"source": "Flake8",
+	"startLineNumber": 158,
+	"startColumn": 5,
+	"endLineNumber": 158,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#7",
+	"code": {
+		"value": "reportAttributeAccessIssue",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pyright/blob/main/docs/configuration.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "reportAttributeAccessIssue"
+		}
+	},
+	"severity": 8,
+	"message": "Cannot access attribute \"create_template\" for class \"TemplateManager\"\n  Attribute \"create_template\" is unknown",
+	"source": "Pylance",
+	"startLineNumber": 362,
+	"startColumn": 40,
+	"endLineNumber": 362,
+	"endColumn": 55
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#7",
+	"code": {
+		"value": "reportAttributeAccessIssue",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pyright/blob/main/docs/configuration.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "reportAttributeAccessIssue"
+		}
+	},
+	"severity": 8,
+	"message": "Cannot access attribute \"create_template\" for class \"TemplateManager\"\n  Attribute \"create_template\" is unknown",
+	"source": "Pylance",
+	"startLineNumber": 409,
+	"startColumn": 40,
+	"endLineNumber": 409,
+	"endColumn": 55
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#7",
+	"code": {
+		"value": "reportAttributeAccessIssue",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pyright/blob/main/docs/configuration.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "reportAttributeAccessIssue"
+		}
+	},
+	"severity": 8,
+	"message": "Cannot access attribute \"create_template\" for class \"TemplateManager\"\n  Attribute \"create_template\" is unknown",
+	"source": "Pylance",
+	"startLineNumber": 449,
+	"startColumn": 33,
+	"endLineNumber": 449,
+	"endColumn": 48
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#7",
+	"code": {
+		"value": "reportAttributeAccessIssue",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pyright/blob/main/docs/configuration.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "reportAttributeAccessIssue"
+		}
+	},
+	"severity": 8,
+	"message": "Cannot access attribute \"create_template\" for class \"TemplateManager\"\n  Attribute \"create_template\" is unknown",
+	"source": "Pylance",
+	"startLineNumber": 459,
+	"startColumn": 33,
+	"endLineNumber": 459,
+	"endColumn": 48
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#7",
+	"code": {
+		"value": "reportAttributeAccessIssue",
+		"target": {
+			"$mid": 1,
+			"path": "/microsoft/pyright/blob/main/docs/configuration.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "reportAttributeAccessIssue"
+		}
+	},
+	"severity": 8,
+	"message": "Cannot access attribute \"create_template\" for class \"TemplateManager\"\n  Attribute \"create_template\" is unknown",
+	"source": "Pylance",
+	"startLineNumber": 468,
+	"startColumn": 40,
+	"endLineNumber": 468,
+	"endColumn": 55
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0612:unused-variable",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-variable.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused variable 'doc'",
+	"source": "Pylint",
+	"startLineNumber": 110,
+	"startColumn": 5,
+	"endLineNumber": 110,
+	"endColumn": 8
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0612:unused-variable",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-variable.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused variable 'doc'",
+	"source": "Pylint",
+	"startLineNumber": 158,
+	"startColumn": 5,
+	"endLineNumber": 158,
+	"endColumn": 8
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 416,
+	"startColumn": 1,
+	"endLineNumber": 416,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 437,
+	"startColumn": 1,
+	"endLineNumber": 437,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 416,
+	"startColumn": 1,
+	"endLineNumber": 416,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_core_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 437,
+	"startColumn": 1,
+	"endLineNumber": 437,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "F401",
+	"severity": 8,
+	"message": "'pathlib.Path' imported but unused",
+	"source": "Flake8",
+	"startLineNumber": 4,
+	"startColumn": 1,
+	"endLineNumber": 4,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "F401",
+	"severity": 8,
+	"message": "'unittest.mock.MagicMock' imported but unused",
+	"source": "Flake8",
+	"startLineNumber": 5,
+	"startColumn": 1,
+	"endLineNumber": 5,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "F401",
+	"severity": 8,
+	"message": "'src.book_editor.core.document.Document' imported but unused",
+	"source": "Flake8",
+	"startLineNumber": 7,
+	"startColumn": 1,
+	"endLineNumber": 7,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "F841",
+	"severity": 8,
+	"message": "local variable 'doc' is assigned to but never used",
+	"source": "Flake8",
+	"startLineNumber": 134,
+	"startColumn": 5,
+	"endLineNumber": 134,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0611:unused-import",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-import.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused Path imported from pathlib",
+	"source": "Pylint",
+	"startLineNumber": 4,
+	"startColumn": 1,
+	"endLineNumber": 4,
+	"endColumn": 25
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0611:unused-import",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-import.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused MagicMock imported from unittest.mock",
+	"source": "Pylint",
+	"startLineNumber": 5,
+	"startColumn": 1,
+	"endLineNumber": 5,
+	"endColumn": 43
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0611:unused-import",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-import.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused Document imported from src.book_editor.core.document",
+	"source": "Pylint",
+	"startLineNumber": 7,
+	"startColumn": 1,
+	"endLineNumber": 7,
+	"endColumn": 51
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 19,
+	"startColumn": 32,
+	"endLineNumber": 19,
+	"endColumn": 38
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0212:protected-access",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/protected-access.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Access to a protected member _current_document of a client class",
+	"source": "Pylint",
+	"startLineNumber": 23,
+	"startColumn": 12,
+	"endLineNumber": 23,
+	"endColumn": 36
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0212:protected-access",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/protected-access.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Access to a protected member _current_path of a client class",
+	"source": "Pylint",
+	"startLineNumber": 24,
+	"startColumn": 12,
+	"endLineNumber": 24,
+	"endColumn": 32
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 27,
+	"startColumn": 26,
+	"endLineNumber": 27,
+	"endColumn": 32
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0212:protected-access",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/protected-access.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Access to a protected member _current_document of a client class",
+	"source": "Pylint",
+	"startLineNumber": 32,
+	"startColumn": 12,
+	"endLineNumber": 32,
+	"endColumn": 36
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 35,
+	"startColumn": 24,
+	"endLineNumber": 35,
+	"endColumn": 30
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 42,
+	"startColumn": 1,
+	"endLineNumber": 42,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 50,
+	"startColumn": 24,
+	"endLineNumber": 50,
+	"endColumn": 30
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 54,
+	"startColumn": 1,
+	"endLineNumber": 54,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 59,
+	"startColumn": 1,
+	"endLineNumber": 59,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 66,
+	"startColumn": 1,
+	"endLineNumber": 66,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 75,
+	"startColumn": 25,
+	"endLineNumber": 75,
+	"endColumn": 31
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 82,
+	"startColumn": 1,
+	"endLineNumber": 82,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 85,
+	"startColumn": 1,
+	"endLineNumber": 85,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 94,
+	"startColumn": 20,
+	"endLineNumber": 94,
+	"endColumn": 26
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 97,
+	"startColumn": 1,
+	"endLineNumber": 97,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 102,
+	"startColumn": 1,
+	"endLineNumber": 102,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 107,
+	"startColumn": 25,
+	"endLineNumber": 107,
+	"endColumn": 31
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 111,
+	"startColumn": 1,
+	"endLineNumber": 111,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 117,
+	"startColumn": 23,
+	"endLineNumber": 117,
+	"endColumn": 29
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 121,
+	"startColumn": 1,
+	"endLineNumber": 121,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'editor' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 127,
+	"startColumn": 25,
+	"endLineNumber": 127,
+	"endColumn": 31
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 132,
+	"startColumn": 1,
+	"endLineNumber": 132,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0612:unused-variable",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-variable.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused variable 'doc'",
+	"source": "Pylint",
+	"startLineNumber": 134,
+	"startColumn": 5,
+	"endLineNumber": 134,
+	"endColumn": 8
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0411:wrong-import-order",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/wrong-import-order.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "standard import \"pathlib.Path\" should be placed before third party import \"pytest\"",
+	"source": "Pylint",
+	"startLineNumber": 4,
+	"startColumn": 1,
+	"endLineNumber": 4,
+	"endColumn": 25
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0411:wrong-import-order",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/wrong-import-order.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "standard import \"unittest.mock.patch\" should be placed before third party import \"pytest\"",
+	"source": "Pylint",
+	"startLineNumber": 5,
+	"startColumn": 1,
+	"endLineNumber": 5,
+	"endColumn": 43
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 42,
+	"startColumn": 1,
+	"endLineNumber": 42,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 54,
+	"startColumn": 1,
+	"endLineNumber": 54,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 59,
+	"startColumn": 1,
+	"endLineNumber": 59,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 66,
+	"startColumn": 1,
+	"endLineNumber": 66,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 82,
+	"startColumn": 1,
+	"endLineNumber": 82,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 85,
+	"startColumn": 1,
+	"endLineNumber": 85,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 97,
+	"startColumn": 1,
+	"endLineNumber": 97,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 102,
+	"startColumn": 1,
+	"endLineNumber": 102,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 111,
+	"startColumn": 1,
+	"endLineNumber": 111,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 121,
+	"startColumn": 1,
+	"endLineNumber": 121,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_editor.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 132,
+	"startColumn": 1,
+	"endLineNumber": 132,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "F401",
+	"severity": 8,
+	"message": "'json' imported but unused",
+	"source": "Flake8",
+	"startLineNumber": 3,
+	"startColumn": 1,
+	"endLineNumber": 3,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0611:unused-import",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-import.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused import json",
+	"source": "Pylint",
+	"startLineNumber": 3,
+	"startColumn": 1,
+	"endLineNumber": 3,
+	"endColumn": 12
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_dir' from outer scope (line 14)",
+	"source": "Pylint",
+	"startLineNumber": 21,
+	"startColumn": 22,
+	"endLineNumber": 21,
+	"endColumn": 34
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_dir' from outer scope (line 14)",
+	"source": "Pylint",
+	"startLineNumber": 32,
+	"startColumn": 42,
+	"endLineNumber": 32,
+	"endColumn": 54
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 52,
+	"startColumn": 46,
+	"endLineNumber": 52,
+	"endColumn": 62
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 52,
+	"startColumn": 64,
+	"endLineNumber": 52,
+	"endColumn": 72
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 74,
+	"startColumn": 53,
+	"endLineNumber": 74,
+	"endColumn": 69
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 83,
+	"startColumn": 49,
+	"endLineNumber": 83,
+	"endColumn": 65
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 95,
+	"startColumn": 42,
+	"endLineNumber": 95,
+	"endColumn": 58
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 95,
+	"startColumn": 60,
+	"endLineNumber": 95,
+	"endColumn": 68
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 121,
+	"startColumn": 54,
+	"endLineNumber": 121,
+	"endColumn": 70
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 121,
+	"startColumn": 72,
+	"endLineNumber": 121,
+	"endColumn": 80
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 146,
+	"startColumn": 40,
+	"endLineNumber": 146,
+	"endColumn": 56
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 146,
+	"startColumn": 58,
+	"endLineNumber": 146,
+	"endColumn": 66
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 166,
+	"startColumn": 43,
+	"endLineNumber": 166,
+	"endColumn": 59
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 166,
+	"startColumn": 61,
+	"endLineNumber": 166,
+	"endColumn": 69
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 186,
+	"startColumn": 49,
+	"endLineNumber": 186,
+	"endColumn": 65
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 186,
+	"startColumn": 67,
+	"endLineNumber": 186,
+	"endColumn": 75
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 198,
+	"startColumn": 43,
+	"endLineNumber": 198,
+	"endColumn": 59
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 198,
+	"startColumn": 61,
+	"endLineNumber": 198,
+	"endColumn": 69
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 221,
+	"startColumn": 43,
+	"endLineNumber": 221,
+	"endColumn": 59
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 221,
+	"startColumn": 61,
+	"endLineNumber": 221,
+	"endColumn": 69
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 245,
+	"startColumn": 50,
+	"endLineNumber": 245,
+	"endColumn": 66
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 258,
+	"startColumn": 50,
+	"endLineNumber": 258,
+	"endColumn": 66
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 272,
+	"startColumn": 60,
+	"endLineNumber": 272,
+	"endColumn": 76
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 274,
+	"startColumn": 5,
+	"endLineNumber": 274,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 280,
+	"startColumn": 54,
+	"endLineNumber": 280,
+	"endColumn": 70
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 282,
+	"startColumn": 5,
+	"endLineNumber": 282,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 288,
+	"startColumn": 53,
+	"endLineNumber": 288,
+	"endColumn": 69
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 290,
+	"startColumn": 5,
+	"endLineNumber": 290,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 296,
+	"startColumn": 51,
+	"endLineNumber": 296,
+	"endColumn": 67
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 307,
+	"startColumn": 56,
+	"endLineNumber": 307,
+	"endColumn": 72
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 310,
+	"startColumn": 5,
+	"endLineNumber": 310,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 316,
+	"startColumn": 60,
+	"endLineNumber": 316,
+	"endColumn": 76
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 318,
+	"startColumn": 5,
+	"endLineNumber": 318,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 324,
+	"startColumn": 51,
+	"endLineNumber": 324,
+	"endColumn": 67
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 326,
+	"startColumn": 5,
+	"endLineNumber": 326,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 332,
+	"startColumn": 59,
+	"endLineNumber": 332,
+	"endColumn": 75
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 334,
+	"startColumn": 5,
+	"endLineNumber": 334,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 340,
+	"startColumn": 60,
+	"endLineNumber": 340,
+	"endColumn": 76
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 342,
+	"startColumn": 5,
+	"endLineNumber": 342,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 348,
+	"startColumn": 56,
+	"endLineNumber": 348,
+	"endColumn": 72
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 350,
+	"startColumn": 5,
+	"endLineNumber": 350,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template_manager' from outer scope (line 21)",
+	"source": "Pylint",
+	"startLineNumber": 355,
+	"startColumn": 61,
+	"endLineNumber": 355,
+	"endColumn": 77
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 27)",
+	"source": "Pylint",
+	"startLineNumber": 359,
+	"startColumn": 9,
+	"endLineNumber": 359,
+	"endColumn": 17
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W291",
+	"severity": 4,
+	"message": "trailing whitespace",
+	"source": "Flake8",
+	"startLineNumber": 362,
+	"startColumn": 44,
+	"endLineNumber": 362,
+	"endColumn": 44
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W292",
+	"severity": 4,
+	"message": "no newline at end of file",
+	"source": "Flake8",
+	"startLineNumber": 362,
+	"startColumn": 45,
+	"endLineNumber": 362,
+	"endColumn": 45
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template_manager.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0304:missing-final-newline",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-final-newline.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Final newline missing",
+	"source": "Pylint",
+	"startLineNumber": 362,
+	"startColumn": 1,
+	"endLineNumber": 362,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 15,
+	"startColumn": 1,
+	"endLineNumber": 15,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 15,
+	"startColumn": 1,
+	"endLineNumber": 15,
+	"endColumn": 42
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 16,
+	"startColumn": 1,
+	"endLineNumber": 16,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 17,
+	"startColumn": 1,
+	"endLineNumber": 17,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 18,
+	"startColumn": 1,
+	"endLineNumber": 18,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 21,
+	"startColumn": 1,
+	"endLineNumber": 21,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 21,
+	"startColumn": 1,
+	"endLineNumber": 21,
+	"endColumn": 29
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 22,
+	"startColumn": 1,
+	"endLineNumber": 22,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 23,
+	"startColumn": 1,
+	"endLineNumber": 23,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 24,
+	"startColumn": 1,
+	"endLineNumber": 24,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 27,
+	"startColumn": 1,
+	"endLineNumber": 27,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 27,
+	"startColumn": 1,
+	"endLineNumber": 27,
+	"endColumn": 40
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 28,
+	"startColumn": 1,
+	"endLineNumber": 28,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 29,
+	"startColumn": 1,
+	"endLineNumber": 29,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 30,
+	"startColumn": 1,
+	"endLineNumber": 30,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 33,
+	"startColumn": 1,
+	"endLineNumber": 33,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 33,
+	"startColumn": 1,
+	"endLineNumber": 33,
+	"endColumn": 31
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 34,
+	"startColumn": 1,
+	"endLineNumber": 34,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 35,
+	"startColumn": 1,
+	"endLineNumber": 35,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 36,
+	"startColumn": 1,
+	"endLineNumber": 36,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 39,
+	"startColumn": 1,
+	"endLineNumber": 39,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 39,
+	"startColumn": 1,
+	"endLineNumber": 39,
+	"endColumn": 30
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 40,
+	"startColumn": 1,
+	"endLineNumber": 40,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 41,
+	"startColumn": 1,
+	"endLineNumber": 41,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 42,
+	"startColumn": 1,
+	"endLineNumber": 42,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 45,
+	"startColumn": 1,
+	"endLineNumber": 45,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 45,
+	"startColumn": 1,
+	"endLineNumber": 45,
+	"endColumn": 26
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 46,
+	"startColumn": 1,
+	"endLineNumber": 46,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 47,
+	"startColumn": 1,
+	"endLineNumber": 47,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 48,
+	"startColumn": 1,
+	"endLineNumber": 48,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 51,
+	"startColumn": 1,
+	"endLineNumber": 51,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 51,
+	"startColumn": 1,
+	"endLineNumber": 51,
+	"endColumn": 33
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 52,
+	"startColumn": 1,
+	"endLineNumber": 52,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 53,
+	"startColumn": 1,
+	"endLineNumber": 53,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 54,
+	"startColumn": 1,
+	"endLineNumber": 54,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 156,
+	"startColumn": 1,
+	"endLineNumber": 156,
+	"endColumn": 12
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 160,
+	"startColumn": 1,
+	"endLineNumber": 160,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 160,
+	"startColumn": 1,
+	"endLineNumber": 160,
+	"endColumn": 27
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 161,
+	"startColumn": 1,
+	"endLineNumber": 161,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 162,
+	"startColumn": 1,
+	"endLineNumber": 162,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 163,
+	"startColumn": 1,
+	"endLineNumber": 163,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 166,
+	"startColumn": 1,
+	"endLineNumber": 166,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 166,
+	"startColumn": 1,
+	"endLineNumber": 166,
+	"endColumn": 23
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 167,
+	"startColumn": 1,
+	"endLineNumber": 167,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 168,
+	"startColumn": 1,
+	"endLineNumber": 168,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 169,
+	"startColumn": 1,
+	"endLineNumber": 169,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 172,
+	"startColumn": 1,
+	"endLineNumber": 172,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 172,
+	"startColumn": 1,
+	"endLineNumber": 172,
+	"endColumn": 17
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 173,
+	"startColumn": 1,
+	"endLineNumber": 173,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 174,
+	"startColumn": 1,
+	"endLineNumber": 174,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD007",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md007.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD007/ul-indent: Unordered list indentation [Expected: 0; Actual: 2]",
+	"source": "markdownlint",
+	"startLineNumber": 175,
+	"startColumn": 1,
+	"endLineNumber": 175,
+	"endColumn": 5
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 180,
+	"startColumn": 1,
+	"endLineNumber": 180,
+	"endColumn": 7
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD040",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md040.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD040/fenced-code-language: Fenced code blocks should have a language specified",
+	"source": "markdownlint",
+	"startLineNumber": 180,
+	"startColumn": 1,
+	"endLineNumber": 180,
+	"endColumn": 7
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 195,
+	"startColumn": 1,
+	"endLineNumber": 195,
+	"endColumn": 15
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 281,
+	"startColumn": 1,
+	"endLineNumber": 281,
+	"endColumn": 11
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 335,
+	"startColumn": 1,
+	"endLineNumber": 335,
+	"endColumn": 27
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 336,
+	"startColumn": 1,
+	"endLineNumber": 336,
+	"endColumn": 18
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 389,
+	"startColumn": 1,
+	"endLineNumber": 389,
+	"endColumn": 11
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 397,
+	"startColumn": 1,
+	"endLineNumber": 397,
+	"endColumn": 11
+},{
+	"resource": "/Users/admin/cursor/write-a-book/agent_directives.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD031",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md031.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD031/blanks-around-fences: Fenced code blocks should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 409,
+	"startColumn": 1,
+	"endLineNumber": 409,
+	"endColumn": 11
+},{
+	"resource": "/Users/admin/cursor/write-a-book/conftest.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 16,
+	"startColumn": 1,
+	"endLineNumber": 16,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/conftest.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W291",
+	"severity": 4,
+	"message": "trailing whitespace",
+	"source": "Flake8",
+	"startLineNumber": 28,
+	"startColumn": 34,
+	"endLineNumber": 28,
+	"endColumn": 34
+},{
+	"resource": "/Users/admin/cursor/write-a-book/conftest.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W292",
+	"severity": 4,
+	"message": "no newline at end of file",
+	"source": "Flake8",
+	"startLineNumber": 28,
+	"startColumn": 35,
+	"endLineNumber": 28,
+	"endColumn": 35
+},{
+	"resource": "/Users/admin/cursor/write-a-book/conftest.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0411:wrong-import-order",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/wrong-import-order.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "standard import \"pathlib.Path\" should be placed before third party import \"pytest\"",
+	"source": "Pylint",
+	"startLineNumber": 4,
+	"startColumn": 1,
+	"endLineNumber": 4,
+	"endColumn": 25
+},{
+	"resource": "/Users/admin/cursor/write-a-book/conftest.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0411:wrong-import-order",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/wrong-import-order.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "standard import \"contextlib.contextmanager\" should be placed before third party import \"pytest\"",
+	"source": "Pylint",
+	"startLineNumber": 5,
+	"startColumn": 1,
+	"endLineNumber": 5,
+	"endColumn": 38
+},{
+	"resource": "/Users/admin/cursor/write-a-book/conftest.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0411:wrong-import-order",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/wrong-import-order.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "standard import \"typing.List\" should be placed before third party import \"pytest\"",
+	"source": "Pylint",
+	"startLineNumber": 6,
+	"startColumn": 1,
+	"endLineNumber": 6,
+	"endColumn": 24
+},{
+	"resource": "/Users/admin/cursor/write-a-book/conftest.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 16,
+	"startColumn": 1,
+	"endLineNumber": 16,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/conftest.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0304:missing-final-newline",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-final-newline.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Final newline missing",
+	"source": "Pylint",
+	"startLineNumber": 28,
+	"startColumn": 1,
+	"endLineNumber": 28,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/metrics/metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0718:broad-exception-caught",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/broad-exception-caught.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Catching too general exception Exception",
+	"source": "Pylint",
+	"startLineNumber": 34,
+	"startColumn": 16,
+	"endLineNumber": 34,
+	"endColumn": 25
+},{
+	"resource": "/Users/admin/cursor/write-a-book/metrics/metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0718:broad-exception-caught",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/broad-exception-caught.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Catching too general exception Exception",
+	"source": "Pylint",
+	"startLineNumber": 38,
+	"startColumn": 16,
+	"endLineNumber": 38,
+	"endColumn": 25
+},{
+	"resource": "/Users/admin/cursor/write-a-book/metrics/metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0718:broad-exception-caught",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/broad-exception-caught.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Catching too general exception Exception",
+	"source": "Pylint",
+	"startLineNumber": 42,
+	"startColumn": 16,
+	"endLineNumber": 42,
+	"endColumn": 25
+},{
+	"resource": "/Users/admin/cursor/write-a-book/metrics/metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 181,
+	"startColumn": 1,
+	"endLineNumber": 181,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/metrics/metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 181,
+	"startColumn": 1,
+	"endLineNumber": 181,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 3,
+	"startColumn": 1,
+	"endLineNumber": 3,
+	"endColumn": 15
+},{
+	"resource": "/Users/admin/cursor/write-a-book/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 4,
+	"startColumn": 1,
+	"endLineNumber": 4,
+	"endColumn": 19
+},{
+	"resource": "/Users/admin/cursor/write-a-book/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 10,
+	"startColumn": 1,
+	"endLineNumber": 10,
+	"endColumn": 25
+},{
+	"resource": "/Users/admin/cursor/write-a-book/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 11,
+	"startColumn": 1,
+	"endLineNumber": 11,
+	"endColumn": 23
+},{
+	"resource": "/Users/admin/cursor/write-a-book/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD022",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md022.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD022/blanks-around-headings: Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below]",
+	"source": "markdownlint",
+	"startLineNumber": 15,
+	"startColumn": 1,
+	"endLineNumber": 15,
+	"endColumn": 25
+},{
+	"resource": "/Users/admin/cursor/write-a-book/proj_status.md",
+	"owner": "markdownlint",
+	"code": {
+		"value": "MD032",
+		"target": {
+			"$mid": 1,
+			"path": "/DavidAnson/markdownlint/blob/v0.36.1/doc/md032.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 4,
+	"message": "MD032/blanks-around-lists: Lists should be surrounded by blank lines",
+	"source": "markdownlint",
+	"startLineNumber": 16,
+	"startColumn": 1,
+	"endLineNumber": 16,
+	"endColumn": 29
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W1203:logging-fstring-interpolation",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/logging-fstring-interpolation.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Use lazy % formatting in logging functions",
+	"source": "Pylint",
+	"startLineNumber": 241,
+	"startColumn": 13,
+	"endLineNumber": 241,
+	"endColumn": 64
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0612:unused-variable",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-variable.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused variable 'style_name'",
+	"source": "Pylint",
+	"startLineNumber": 314,
+	"startColumn": 17,
+	"endLineNumber": 314,
+	"endColumn": 27
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0612:unused-variable",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-variable.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused variable 'style_name'",
+	"source": "Pylint",
+	"startLineNumber": 327,
+	"startColumn": 17,
+	"endLineNumber": 327,
+	"endColumn": 27
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0613:unused-argument",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-argument.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused argument 'description'",
+	"source": "Pylint",
+	"startLineNumber": 478,
+	"startColumn": 43,
+	"endLineNumber": 478,
+	"endColumn": 69
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W1203:logging-fstring-interpolation",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/logging-fstring-interpolation.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Use lazy % formatting in logging functions",
+	"source": "Pylint",
+	"startLineNumber": 524,
+	"startColumn": 13,
+	"endLineNumber": 524,
+	"endColumn": 64
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W1203:logging-fstring-interpolation",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/logging-fstring-interpolation.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Use lazy % formatting in logging functions",
+	"source": "Pylint",
+	"startLineNumber": 546,
+	"startColumn": 13,
+	"endLineNumber": 546,
+	"endColumn": 64
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W1203:logging-fstring-interpolation",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/logging-fstring-interpolation.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Use lazy % formatting in logging functions",
+	"source": "Pylint",
+	"startLineNumber": 566,
+	"startColumn": 17,
+	"endLineNumber": 566,
+	"endColumn": 83
+},{
+	"resource": "/Users/admin/cursor/write-a-book/src/book_editor/core/template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W1203:logging-fstring-interpolation",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/logging-fstring-interpolation.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Use lazy % formatting in logging functions",
+	"source": "Pylint",
+	"startLineNumber": 599,
+	"startColumn": 17,
+	"endLineNumber": 599,
+	"endColumn": 82
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_app_settings.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'settings' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 20,
+	"startColumn": 5,
+	"endLineNumber": 20,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_app_settings.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'settings' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 45,
+	"startColumn": 5,
+	"endLineNumber": 45,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_app_settings.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'settings' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 70,
+	"startColumn": 9,
+	"endLineNumber": 70,
+	"endColumn": 17
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_app_settings.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'settings' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 84,
+	"startColumn": 5,
+	"endLineNumber": 84,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_app_settings.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'settings' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 112,
+	"startColumn": 9,
+	"endLineNumber": 112,
+	"endColumn": 17
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_app_settings.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'settings' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 120,
+	"startColumn": 27,
+	"endLineNumber": 120,
+	"endColumn": 35
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_app_settings.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W291",
+	"severity": 4,
+	"message": "trailing whitespace",
+	"source": "Flake8",
+	"startLineNumber": 133,
+	"startColumn": 67,
+	"endLineNumber": 133,
+	"endColumn": 67
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_app_settings.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W292",
+	"severity": 4,
+	"message": "no newline at end of file",
+	"source": "Flake8",
+	"startLineNumber": 133,
+	"startColumn": 68,
+	"endLineNumber": 133,
+	"endColumn": 68
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_app_settings.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0304:missing-final-newline",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-final-newline.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Final newline missing",
+	"source": "Pylint",
+	"startLineNumber": 133,
+	"startColumn": 1,
+	"endLineNumber": 133,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_document.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'document' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 39,
+	"startColumn": 31,
+	"endLineNumber": 39,
+	"endColumn": 39
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_document.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'document' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 53,
+	"startColumn": 35,
+	"endLineNumber": 53,
+	"endColumn": 43
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_document.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'document' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 73,
+	"startColumn": 27,
+	"endLineNumber": 73,
+	"endColumn": 35
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_document.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'document' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 120,
+	"startColumn": 29,
+	"endLineNumber": 120,
+	"endColumn": 37
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_document.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'document' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 153,
+	"startColumn": 37,
+	"endLineNumber": 153,
+	"endColumn": 45
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_document.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'document' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 159,
+	"startColumn": 28,
+	"endLineNumber": 159,
+	"endColumn": 36
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_document.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'document' from outer scope (line 13)",
+	"source": "Pylint",
+	"startLineNumber": 193,
+	"startColumn": 29,
+	"endLineNumber": 193,
+	"endColumn": 37
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_document.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W291",
+	"severity": 4,
+	"message": "trailing whitespace",
+	"source": "Flake8",
+	"startLineNumber": 249,
+	"startColumn": 51,
+	"endLineNumber": 249,
+	"endColumn": 51
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_document.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W292",
+	"severity": 4,
+	"message": "no newline at end of file",
+	"source": "Flake8",
+	"startLineNumber": 249,
+	"startColumn": 52,
+	"endLineNumber": 249,
+	"endColumn": 52
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_document.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0301:line-too-long",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/line-too-long.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Line too long (105/88)",
+	"source": "Pylint",
+	"startLineNumber": 28,
+	"startColumn": 1,
+	"endLineNumber": 28,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_document.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0304:missing-final-newline",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-final-newline.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Final newline missing",
+	"source": "Pylint",
+	"startLineNumber": 249,
+	"startColumn": 1,
+	"endLineNumber": 249,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0613:unused-argument",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-argument.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused argument 'mock_psutil_fixture'",
+	"source": "Pylint",
+	"startLineNumber": 38,
+	"startColumn": 44,
+	"endLineNumber": 38,
+	"endColumn": 63
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 76,
+	"startColumn": 1,
+	"endLineNumber": 76,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0613:unused-argument",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-argument.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused argument 'mock_psutil_fixture'",
+	"source": "Pylint",
+	"startLineNumber": 147,
+	"startColumn": 33,
+	"endLineNumber": 147,
+	"endColumn": 52
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0613:unused-argument",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-argument.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused argument 'kwargs'",
+	"source": "Pylint",
+	"startLineNumber": 173,
+	"startColumn": 1,
+	"endLineNumber": 173,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0613:unused-argument",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-argument.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused argument 'mock_psutil_fixture'",
+	"source": "Pylint",
+	"startLineNumber": 189,
+	"startColumn": 50,
+	"endLineNumber": 189,
+	"endColumn": 69
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 205,
+	"startColumn": 1,
+	"endLineNumber": 205,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 227,
+	"startColumn": 1,
+	"endLineNumber": 227,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 233,
+	"startColumn": 1,
+	"endLineNumber": 233,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 239,
+	"startColumn": 1,
+	"endLineNumber": 239,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 242,
+	"startColumn": 1,
+	"endLineNumber": 242,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0613:unused-argument",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-argument.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused argument 'mock_psutil_fixture'",
+	"source": "Pylint",
+	"startLineNumber": 249,
+	"startColumn": 45,
+	"endLineNumber": 249,
+	"endColumn": 64
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 254,
+	"startColumn": 1,
+	"endLineNumber": 254,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 260,
+	"startColumn": 1,
+	"endLineNumber": 260,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 264,
+	"startColumn": 1,
+	"endLineNumber": 264,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0212:protected-access",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/protected-access.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Access to a protected member _make_github_request of a client class",
+	"source": "Pylint",
+	"startLineNumber": 275,
+	"startColumn": 18,
+	"endLineNumber": 275,
+	"endColumn": 48
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 284,
+	"startColumn": 1,
+	"endLineNumber": 284,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0212:protected-access",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/protected-access.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Access to a protected member _make_github_request of a client class",
+	"source": "Pylint",
+	"startLineNumber": 286,
+	"startColumn": 18,
+	"endLineNumber": 286,
+	"endColumn": 48
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 313,
+	"startColumn": 1,
+	"endLineNumber": 313,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 325,
+	"startColumn": 1,
+	"endLineNumber": 325,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0613:unused-argument",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-argument.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused argument 'params'",
+	"source": "Pylint",
+	"startLineNumber": 345,
+	"startColumn": 32,
+	"endLineNumber": 345,
+	"endColumn": 38
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 353,
+	"startColumn": 1,
+	"endLineNumber": 353,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 364,
+	"startColumn": 1,
+	"endLineNumber": 364,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 370,
+	"startColumn": 1,
+	"endLineNumber": 370,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 375,
+	"startColumn": 1,
+	"endLineNumber": 375,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0613:unused-argument",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/unused-argument.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Unused argument 'mock_psutil_fixture'",
+	"source": "Pylint",
+	"startLineNumber": 380,
+	"startColumn": 49,
+	"endLineNumber": 380,
+	"endColumn": 68
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 385,
+	"startColumn": 1,
+	"endLineNumber": 385,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 390,
+	"startColumn": 1,
+	"endLineNumber": 390,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W293",
+	"severity": 4,
+	"message": "blank line contains whitespace",
+	"source": "Flake8",
+	"startLineNumber": 393,
+	"startColumn": 1,
+	"endLineNumber": 393,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 76,
+	"startColumn": 1,
+	"endLineNumber": 76,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0301:line-too-long",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/line-too-long.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Line too long (92/88)",
+	"source": "Pylint",
+	"startLineNumber": 142,
+	"startColumn": 1,
+	"endLineNumber": 142,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 205,
+	"startColumn": 1,
+	"endLineNumber": 205,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 227,
+	"startColumn": 1,
+	"endLineNumber": 227,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 233,
+	"startColumn": 1,
+	"endLineNumber": 233,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 239,
+	"startColumn": 1,
+	"endLineNumber": 239,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 242,
+	"startColumn": 1,
+	"endLineNumber": 242,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 254,
+	"startColumn": 1,
+	"endLineNumber": 254,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 260,
+	"startColumn": 1,
+	"endLineNumber": 260,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 264,
+	"startColumn": 1,
+	"endLineNumber": 264,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0301:line-too-long",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/line-too-long.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Line too long (94/88)",
+	"source": "Pylint",
+	"startLineNumber": 267,
+	"startColumn": 1,
+	"endLineNumber": 267,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 284,
+	"startColumn": 1,
+	"endLineNumber": 284,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 313,
+	"startColumn": 1,
+	"endLineNumber": 313,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 325,
+	"startColumn": 1,
+	"endLineNumber": 325,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 353,
+	"startColumn": 1,
+	"endLineNumber": 353,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 364,
+	"startColumn": 1,
+	"endLineNumber": 364,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 370,
+	"startColumn": 1,
+	"endLineNumber": 370,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 375,
+	"startColumn": 1,
+	"endLineNumber": 375,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 385,
+	"startColumn": 1,
+	"endLineNumber": 385,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 390,
+	"startColumn": 1,
+	"endLineNumber": 390,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0303:trailing-whitespace",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Trailing whitespace",
+	"source": "Pylint",
+	"startLineNumber": 393,
+	"startColumn": 1,
+	"endLineNumber": 393,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_metrics_collector.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0301:line-too-long",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/line-too-long.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 2,
+	"message": "Line too long (94/88)",
+	"source": "Pylint",
+	"startLineNumber": 396,
+	"startColumn": 1,
+	"endLineNumber": 396,
+	"endColumn": 1
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 19,
+	"startColumn": 5,
+	"endLineNumber": 19,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 39,
+	"startColumn": 30,
+	"endLineNumber": 39,
+	"endColumn": 38
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 72,
+	"startColumn": 31,
+	"endLineNumber": 72,
+	"endColumn": 39
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 82,
+	"startColumn": 32,
+	"endLineNumber": 82,
+	"endColumn": 40
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 90,
+	"startColumn": 27,
+	"endLineNumber": 90,
+	"endColumn": 35
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 110,
+	"startColumn": 29,
+	"endLineNumber": 110,
+	"endColumn": 37
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 134,
+	"startColumn": 26,
+	"endLineNumber": 134,
+	"endColumn": 34
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0622:redefined-builtin",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-builtin.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining built-in 'format'",
+	"source": "Pylint",
+	"startLineNumber": 151,
+	"startColumn": 9,
+	"endLineNumber": 151,
+	"endColumn": 15
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 163,
+	"startColumn": 27,
+	"endLineNumber": 163,
+	"endColumn": 35
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0104:pointless-statement",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/pointless-statement.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Statement seems to have no effect",
+	"source": "Pylint",
+	"startLineNumber": 172,
+	"startColumn": 9,
+	"endLineNumber": 172,
+	"endColumn": 28
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 175,
+	"startColumn": 29,
+	"endLineNumber": 175,
+	"endColumn": 37
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
 	"source": "Pylint",
 	"startLineNumber": 197,
-	"startColumn": 1,
+	"startColumn": 30,
 	"endLineNumber": 197,
-	"endColumn": 1
+	"endColumn": 38
 },{
-	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
 	"owner": "_generated_diagnostic_collection_name_#5",
 	"code": {
-		"value": "C0303:trailing-whitespace",
+		"value": "W0621:redefined-outer-name",
 		"target": {
 			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 213,
+	"startColumn": 37,
+	"endLineNumber": 213,
+	"endColumn": 45
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 243,
+	"startColumn": 5,
+	"endLineNumber": 243,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 259,
+	"startColumn": 5,
+	"endLineNumber": 259,
+	"endColumn": 13
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 269,
+	"startColumn": 38,
+	"endLineNumber": 269,
+	"endColumn": 46
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 293,
+	"startColumn": 39,
+	"endLineNumber": 293,
+	"endColumn": 47
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 316,
+	"startColumn": 32,
+	"endLineNumber": 316,
+	"endColumn": 40
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 349,
+	"startColumn": 33,
+	"endLineNumber": 349,
+	"endColumn": 41
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 382,
+	"startColumn": 25,
+	"endLineNumber": 382,
+	"endColumn": 33
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 408,
+	"startColumn": 24,
+	"endLineNumber": 408,
+	"endColumn": 32
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 437,
+	"startColumn": 37,
+	"endLineNumber": 437,
+	"endColumn": 45
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 470,
+	"startColumn": 35,
+	"endLineNumber": 470,
+	"endColumn": 43
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 491,
+	"startColumn": 36,
+	"endLineNumber": 491,
+	"endColumn": 44
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 512,
+	"startColumn": 31,
+	"endLineNumber": 512,
+	"endColumn": 39
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 521,
+	"startColumn": 31,
+	"endLineNumber": 521,
+	"endColumn": 39
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 531,
+	"startColumn": 40,
+	"endLineNumber": 531,
+	"endColumn": 48
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_template.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "W0621:redefined-outer-name",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/warning/redefined-outer-name.html",
+			"scheme": "https",
+			"authority": "pylint.readthedocs.io"
+		}
+	},
+	"severity": 4,
+	"message": "Redefining name 'template' from outer scope (line 12)",
+	"source": "Pylint",
+	"startLineNumber": 539,
+	"startColumn": 41,
+	"endLineNumber": 539,
+	"endColumn": 49
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_types.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W291",
+	"severity": 4,
+	"message": "trailing whitespace",
+	"source": "Flake8",
+	"startLineNumber": 195,
+	"startColumn": 49,
+	"endLineNumber": 195,
+	"endColumn": 49
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_types.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W292",
+	"severity": 4,
+	"message": "no newline at end of file",
+	"source": "Flake8",
+	"startLineNumber": 195,
+	"startColumn": 50,
+	"endLineNumber": 195,
+	"endColumn": 50
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_types.py",
+	"owner": "_generated_diagnostic_collection_name_#5",
+	"code": {
+		"value": "C0304:missing-final-newline",
+		"target": {
+			"$mid": 1,
+			"path": "/en/latest/user_guide/messages/convention/missing-final-newline.html",
 			"scheme": "https",
 			"authority": "pylint.readthedocs.io"
 		}
 	},
 	"severity": 2,
-	"message": "Trailing whitespace",
+	"message": "Final newline missing",
 	"source": "Pylint",
-	"startLineNumber": 211,
+	"startLineNumber": 195,
 	"startColumn": 1,
-	"endLineNumber": 211,
+	"endLineNumber": 195,
 	"endColumn": 1
 },{
-	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_utils.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W291",
+	"severity": 4,
+	"message": "trailing whitespace",
+	"source": "Flake8",
+	"startLineNumber": 70,
+	"startColumn": 46,
+	"endLineNumber": 70,
+	"endColumn": 46
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_utils.py",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": "W292",
+	"severity": 4,
+	"message": "no newline at end of file",
+	"source": "Flake8",
+	"startLineNumber": 70,
+	"startColumn": 47,
+	"endLineNumber": 70,
+	"endColumn": 47
+},{
+	"resource": "/Users/admin/cursor/write-a-book/tests/test_utils.py",
 	"owner": "_generated_diagnostic_collection_name_#5",
 	"code": {
-		"value": "C0303:trailing-whitespace",
+		"value": "C0304:missing-final-newline",
 		"target": {
 			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
+			"path": "/en/latest/user_guide/messages/convention/missing-final-newline.html",
 			"scheme": "https",
 			"authority": "pylint.readthedocs.io"
 		}
 	},
 	"severity": 2,
-	"message": "Trailing whitespace",
+	"message": "Final newline missing",
 	"source": "Pylint",
-	"startLineNumber": 224,
+	"startLineNumber": 70,
 	"startColumn": 1,
-	"endLineNumber": 224,
-	"endColumn": 1
-},{
-	"resource": "/Users/admin/cursor/write-a-book/serve_dashboard.py",
-	"owner": "_generated_diagnostic_collection_name_#5",
-	"code": {
-		"value": "C0303:trailing-whitespace",
-		"target": {
-			"$mid": 1,
-			"path": "/en/latest/user_guide/messages/convention/trailing-whitespace.html",
-			"scheme": "https",
-			"authority": "pylint.readthedocs.io"
-		}
-	},
-	"severity": 2,
-	"message": "Trailing whitespace",
-	"source": "Pylint",
-	"startLineNumber": 255,
-	"startColumn": 1,
-	"endLineNumber": 255,
+	"endLineNumber": 70,
 	"endColumn": 1
 }]
 
 ————— 
 ## Pytest
 
-venvadmin@Vics-MacBook-Air write-a-book % pytest
-========================================================================= test session starts ==========================================================================
-platform darwin -- Python 3.13.1, pytest-8.3.4, pluggy-1.5.0 -- /Users/admin/cursor/write-a-book/venv/bin/python3.13
+venvadmin@Vics-MacBook-Air write-a-book % python -m pytest tests/test_template_manager.py -v
+=========================================== test session starts ============================================
+platform darwin -- Python 3.13.1, pytest-8.3.4, pluggy-1.5.0 -- /Users/admin/cursor/write-a-book/venv/bin/python
 cachedir: .pytest_cache
 rootdir: /Users/admin/cursor/write-a-book
 configfile: pytest.ini
-testpaths: tests
 plugins: cov-6.0.0, asyncio-0.25.0, anyio-4.7.0, mock-3.14.0
 asyncio: mode=Mode.STRICT, asyncio_default_fixture_loop_scope=function
-collected 105 items                                                                                                                                                    
+collected 25 items                                                                                         
 
-tests/test_app_config.py::test_app_settings PASSED                                                                                                               [  0%]
-tests/test_app_config.py::test_supported_formats PASSED                                                                                                          [  1%]
-tests/test_app_config.py::test_theme_config PASSED                                                                                                               [  2%]
-tests/test_app_config.py::test_editor_config PASSED                                                                                                              [  3%]
-tests/test_app_config.py::test_preview_config PASSED                                                                                                             [  4%]
-tests/test_app_config.py::test_logging_config PASSED                                                                                                             [  5%]
-tests/test_app_core.py::test_editor_app_initialization PASSED                                                                                                    [  6%]
-tests/test_app_core.py::test_document_manager_operations PASSED                                                                                                  [  7%]
-tests/test_app_core.py::test_template_renderer_operations PASSED                                                                                                 [  8%]
-tests/test_app_core.py::test_preview_manager_operations PASSED                                                                                                   [  9%]
-tests/test_app_core.py::test_editor_app_document_handling PASSED                                                                                                 [ 10%]
-tests/test_app_core.py::test_editor_app_template_handling PASSED                                                                                                 [ 11%]
-tests/test_app_core.py::test_editor_app_error_handling PASSED                                                                                                    [ 12%]
-tests/test_app_core.py::test_document_manager_validation PASSED                                                                                                  [ 13%]
-tests/test_app_core.py::test_template_renderer_validation PASSED                                                                                                 [ 14%]
-tests/test_app_core_editor.py::test_editor_initialization PASSED                                                                                                 [ 15%]
-tests/test_app_core_editor.py::test_editor_document_handling PASSED                                                                                              [ 16%]
-tests/test_app_core_editor.py::test_editor_error_handling PASSED                                                                                                 [ 17%]
-tests/test_basic.py::TestBasicSetup::test_configuration PASSED                                                                                                   [ 18%]
-tests/test_basic.py::TestBasicSetup::test_environment PASSED                                                                                                     [ 19%]
-tests/test_basic.py::TestBasicSetup::test_metrics_collection PASSED                                                                                              [ 20%]
-tests/test_book.py::test_book_creation PASSED                                                                                                                    [ 20%]
-tests/test_book.py::test_chapter_management PASSED                                                                                                               [ 21%]
-tests/test_book.py::test_section_management PASSED                                                                                                               [ 22%]
-tests/test_book.py::test_metadata_management PASSED                                                                                                              [ 23%]
-tests/test_book.py::test_content_operations PASSED                                                                                                               [ 24%]
-tests/test_book.py::test_chapter_operations PASSED                                                                                                               [ 25%]
-tests/test_components.py::test_editor_component_initialization PASSED                                                                                            [ 26%]
-tests/test_components.py::test_editor_content_update PASSED                                                                                                      [ 27%]
-tests/test_components.py::test_cursor_movement PASSED                                                                                                            [ 28%]
-tests/test_components.py::test_text_selection PASSED                                                                                                             [ 29%]
-tests/test_components.py::test_undo_redo PASSED                                                                                                                  [ 30%]
-tests/test_core_editor.py::test_editor_initialization PASSED                                                                                                     [ 31%]
-tests/test_core_editor.py::test_editor_document_handling PASSED                                                                                                  [ 32%]
-tests/test_core_editor.py::test_editor_error_handling PASSED                                                                                                     [ 33%]
-tests/test_core_editor.py::test_document_serialization PASSED                                                                                                    [ 34%]
-tests/test_core_editor.py::test_datetime_encoder PASSED                                                                                                          [ 35%]
-tests/test_core_editor.py::test_save_without_document PASSED                                                                                                     [ 36%]
-tests/test_core_editor_extended.py::test_document_empty_metadata PASSED                                                                                          [ 37%]
-tests/test_core_editor_extended.py::test_document_metadata_update PASSED                                                                                         [ 38%]
-tests/test_core_editor_extended.py::test_document_content_versioning PASSED                                                                                      [ 39%]
-tests/test_core_editor_extended.py::test_document_timestamps PASSED                                                                                              [ 40%]
-tests/test_core_editor_extended.py::test_editor_document_management PASSED                                                                                       [ 40%]
-tests/test_core_editor_extended.py::test_document_serialization_edge_cases PASSED                                                                                [ 41%]
-tests/test_core_editor_extended.py::test_document_load_errors PASSED                                                                                             [ 42%]
-tests/test_editor.py::test_editor_initialization PASSED                                                                                                          [ 43%]
-tests/test_editor.py::test_book_loading PASSED                                                                                                                   [ 44%]
-tests/test_editor.py::test_chapter_navigation PASSED                                                                                                             [ 45%]
-tests/test_editor.py::test_content_editing PASSED                                                                                                                [ 46%]
-tests/test_editor.py::test_chapter_management PASSED                                                                                                             [ 47%]
-tests/test_editor.py::test_error_handling PASSED                                                                                                                 [ 48%]
-tests/test_editor.py::test_undo_redo_stack PASSED                                                                                                                [ 49%]
-tests/test_editor.py::test_empty_undo_redo PASSED                                                                                                                [ 50%]
-tests/test_editor.py::test_chapter_validation PASSED                                                                                                             [ 51%]
-tests/test_editor.py::test_chapter_index_adjustment PASSED                                                                                                       [ 52%]
-tests/test_editor.py::test_multiple_chapter_operations PASSED                                                                                                    [ 53%]
-tests/test_main.py::test_book_editor_initialization PASSED                                                                                                       [ 54%]
-tests/test_main.py::test_book_editor_document_handling PASSED                                                                                                    [ 55%]
-tests/test_main.py::test_book_editor_error_handling PASSED                                                                                                       [ 56%]
-tests/test_metrics_collector.py::test_collect_system_metrics PASSED                                                                                              [ 57%]
-tests/test_metrics_collector.py::test_collect_github_metrics_success FAILED                                                                                      [ 58%]
-tests/test_metrics_collector.py::test_collect_github_metrics_no_config PASSED                                                                                    [ 59%]
-tests/test_metrics_collector.py::test_collect_test_metrics_no_coverage PASSED                                                                                    [ 60%]
-tests/test_metrics_collector.py::test_save_metrics PASSED                                                                                                        [ 60%]
-tests/test_metrics_collector.py::test_collect_all FAILED                                                                                                         [ 61%]
-tests/test_metrics_header.py::test_write_header_creates_directory PASSED                                                                                         [ 62%]
-tests/test_metrics_header.py::test_write_header_creates_file PASSED                                                                                              [ 63%]
-tests/test_metrics_header.py::test_write_header_correct_columns PASSED                                                                                           [ 64%]
-tests/test_metrics_header.py::test_write_header_overwrites_existing PASSED                                                                                       [ 65%]
-tests/test_metrics_pandas.py::test_write_metrics_creates_directory PASSED                                                                                        [ 66%]
-tests/test_metrics_pandas.py::test_write_metrics_creates_file PASSED                                                                                             [ 67%]
-tests/test_metrics_pandas.py::test_write_metrics_appends_data PASSED                                                                                             [ 68%]
-tests/test_metrics_pandas.py::test_write_metrics_handles_float_conversion PASSED                                                                                 [ 69%]
-tests/test_metrics_writer.py::test_write_metric_row_creates_directory PASSED                                                                                     [ 70%]
-tests/test_metrics_writer.py::test_write_metric_row_creates_file PASSED                                                                                          [ 71%]
-tests/test_metrics_writer.py::test_write_metric_row_appends_data PASSED                                                                                          [ 72%]
-tests/test_metrics_writer.py::test_write_metric_row_adds_new_column PASSED                                                                                       [ 73%]
-tests/test_metrics_writer.py::test_write_metric_row_handles_float_conversion PASSED                                                                              [ 74%]
-tests/test_metrics_writer.py::test_write_metric_row_uses_current_timestamp PASSED                                                                                [ 75%]
-tests/test_settings.py::test_app_settings PASSED                                                                                                                 [ 76%]
-tests/test_settings.py::test_supported_formats PASSED                                                                                                            [ 77%]
-tests/test_settings.py::test_theme_config PASSED                                                                                                                 [ 78%]
-tests/test_settings.py::test_editor_config PASSED                                                                                                                [ 79%]
-tests/test_settings.py::test_preview_config PASSED                                                                                                               [ 80%]
-tests/test_settings.py::test_logging_config PASSED                                                                                                               [ 80%]
-tests/test_storage.py::test_storage_initialization PASSED                                                                                                        [ 81%]
-tests/test_storage.py::test_file_operations PASSED                                                                                                               [ 82%]
-tests/test_storage.py::test_directory_operations PASSED                                                                                                          [ 83%]
-tests/test_storage.py::test_backup_operations PASSED                                                                                                             [ 84%]
-tests/test_storage.py::test_error_handling PASSED                                                                                                                [ 85%]
-tests/test_template.py::test_template_creation PASSED                                                                                                            [ 86%]
-tests/test_template.py::test_template_serialization PASSED                                                                                                       [ 87%]
-tests/test_template.py::test_template_manager_categories PASSED                                                                                                  [ 88%]
-tests/test_template.py::test_template_manager_save_load PASSED                                                                                                   [ 89%]
-tests/test_template.py::test_template_manager_listing PASSED                                                                                                     [ 90%]
-tests/test_template.py::test_template_search PASSED                                                                                                              [ 91%]
-tests/test_text_editor_extended.py::test_editor_initialization PASSED                                                                                            [ 92%]
-tests/test_text_editor_extended.py::test_content_management PASSED                                                                                               [ 93%]
-tests/test_text_editor_extended.py::test_cursor_movement_bounds PASSED                                                                                           [ 94%]
-tests/test_text_editor_extended.py::test_text_selection_operations PASSED                                                                                        [ 95%]
-tests/test_text_editor_extended.py::test_undo_redo_operations PASSED                                                                                             [ 96%]
-tests/test_text_editor_extended.py::test_empty_operations PASSED                                                                                                 [ 97%]
-tests/test_text_editor_extended.py::test_cursor_selection_interaction PASSED                                                                                     [ 98%]
-tests/test_text_editor_extended.py::test_content_state_management PASSED                                                                                         [ 99%]
-tests/test_text_editor_extended.py::test_selection_edge_cases PASSED                                                                                             [100%]
+tests/test_template_manager.py::test_template_manager_initialization PASSED                          [  4%]
+tests/test_template_manager.py::test_template_manager_initialization_validation PASSED               [  8%]
+tests/test_template_manager.py::test_template_manager_save_load_template PASSED                      [ 12%]
+tests/test_template_manager.py::test_template_manager_load_nonexistent_template PASSED               [ 16%]
+tests/test_template_manager.py::test_template_manager_load_invalid_template PASSED                   [ 20%]
+tests/test_template_manager.py::test_template_manager_list_templates PASSED                          [ 24%]
+tests/test_template_manager.py::test_template_manager_list_templates_by_category PASSED              [ 28%]
+tests/test_template_manager.py::test_template_manager_get_template PASSED                            [ 32%]
+tests/test_template_manager.py::test_template_manager_delete_template PASSED                         [ 36%]
+tests/test_template_manager.py::test_template_manager_save_invalid_template PASSED                   [ 40%]
+tests/test_template_manager.py::test_template_manager_update_template PASSED                         [ 44%]
+tests/test_template_manager.py::test_template_manager_list_categories PASSED                         [ 48%]
+tests/test_template_manager.py::test_template_manager_validate_template_name PASSED                  [ 52%]
+tests/test_template_manager.py::test_template_manager_validate_category_name PASSED                  [ 56%]
+tests/test_template_manager.py::test_template_manager_save_template_with_special_chars FAILED        [ 60%]
+tests/test_template_manager.py::test_template_manager_save_template_with_unicode PASSED              [ 64%]
+tests/test_template_manager.py::test_template_manager_save_template_with_spaces FAILED               [ 68%]
+tests/test_template_manager.py::test_template_manager_save_template_with_case PASSED                 [ 72%]
+tests/test_template_manager.py::test_template_manager_save_template_with_long_name FAILED            [ 76%]
+tests/test_template_manager.py::test_template_manager_save_template_with_invalid_chars FAILED        [ 80%]
+tests/test_template_manager.py::test_template_manager_save_template_with_dots FAILED                 [ 84%]
+tests/test_template_manager.py::test_template_manager_save_template_with_leading_dots FAILED         [ 88%]
+tests/test_template_manager.py::test_template_manager_save_template_with_trailing_dots FAILED        [ 92%]
+tests/test_template_manager.py::test_template_manager_save_template_with_only_dots FAILED            [ 96%]
+tests/test_template_manager.py::test_template_manager_save_template_with_reserved_names FAILED       [100%]
 
-=============================================================================== FAILURES ===============================================================================
-_________________________________________________________________ test_collect_github_metrics_success __________________________________________________________________
+================================================= FAILURES =================================================
+__________________________ test_template_manager_save_template_with_special_chars __________________________
 
-metrics_collector = <metrics.metrics_collector.MetricsCollector object at 0x108c1a0d0>
+template_manager = <src.book_editor.core.template_manager.TemplateManager object at 0x10469f110>
 
-    def test_collect_github_metrics_success(metrics_collector):
-        """Test successful collection of GitHub metrics."""
-        mock_response = MagicMock()
-        mock_response.json.side_effect = [
-            {
-                'stargazers_count': 100,
-                'forks_count': 50,
-                'open_issues_count': 10
-            },
-            ['commit1', 'commit2', 'commit3']  # 3 commits today
-        ]
-        mock_response.status_code = 200
-    
-        with patch('requests.get', return_value=mock_response) as mock_get:
-            metrics = metrics_collector.collect_github_metrics()
-    
->       assert metrics is not None
-E       assert None is not None
+    def test_template_manager_save_template_with_special_chars(template_manager):
+        """Test saving template with special characters in name."""
+        template = Template("Test/Template\\With:Special*Chars", "test")
+        path = template_manager.save_template(template)
+        assert path.exists()
+>       assert path.name == "Test_Template_With_Special_Chars.json"
+E       AssertionError: assert 'Template\\With:Special*Chars.json' == 'Test_Template_With_Special_Chars.json'
+E         
+E         - Test_Template_With_Special_Chars.json
+E         ? -----        ^    ^       ^
+E         + Template\With:Special*Chars.json
+E         ?         ^    ^       ^
 
-tests/test_metrics_collector.py:68: AssertionError
-___________________________________________________________________________ test_collect_all ___________________________________________________________________________
+tests/test_template_manager.py:277: AssertionError
+_____________________________ test_template_manager_save_template_with_spaces ______________________________
 
-metrics_collector = <metrics.metrics_collector.MetricsCollector object at 0x108cd6ad0>
-mock_psutil = {'cpu': <MagicMock name='cpu_percent' id='4442819280'>, 'disk': <MagicMock name='disk_usage' id='4442818608'>, 'memory': <MagicMock name='virtual_memory' id='4442818944'>}
+template_manager = <src.book_editor.core.template_manager.TemplateManager object at 0x104a34b50>
 
-    def test_collect_all(metrics_collector, mock_psutil):
-        """Test collection of all metrics."""
-        with tempfile.TemporaryDirectory() as temp_dir:
-            # Update metrics_collector's project root
-            with patch.object(metrics_collector, 'metrics_dir', os.path.join(temp_dir, 'metrics')):
-                # Create metrics directory
-                os.makedirs(metrics_collector.metrics_dir)
-    
-                # Mock GitHub API responses
-                mock_response = MagicMock()
-                mock_response.json.side_effect = [
-                    {
-                        'stargazers_count': 100,
-                        'forks_count': 50,
-                        'open_issues_count': 10
-                    },
-                    ['commit1', 'commit2', 'commit3']
-                ]
-                mock_response.status_code = 200
-    
-                with patch('requests.get', return_value=mock_response):
-                    metrics_collector.collect_all()
-    
-                # Check that files were created
-                files = os.listdir(metrics_collector.metrics_dir)
->               assert len(files) == 3  # system, github, and test metrics
-E               AssertionError: assert 2 == 3
-E                +  where 2 = len(['test_1735009273.json', 'system_1735009273.json'])
+    def test_template_manager_save_template_with_spaces(template_manager):
+        """Test saving template with spaces in name."""
+        template = Template("  Test   Template  ", "test")
+        path = template_manager.save_template(template)
+        assert path.exists()
+>       assert path.name == "Test_Template.json"
+E       AssertionError: assert '__Test___Template__.json' == 'Test_Template.json'
+E         
+E         - Test_Template.json
+E         + __Test___Template__.json
+E         ? ++    ++         ++
 
-tests/test_metrics_collector.py:150: AssertionError
-======================================================================= short test summary info ========================================================================
-FAILED tests/test_metrics_collector.py::test_collect_github_metrics_success - assert None is not None
-FAILED tests/test_metrics_collector.py::test_collect_all - AssertionError: assert 2 == 3
-==================================================================== 2 failed, 103 passed in 1.56s =====================================================================
+tests/test_template_manager.py:293: AssertionError
+____________________________ test_template_manager_save_template_with_long_name ____________________________
+
+template_manager = <src.book_editor.core.template_manager.TemplateManager object at 0x10473adf0>
+
+    def test_template_manager_save_template_with_long_name(template_manager):
+        """Test saving template with a very long name."""
+        long_name = "A" * 255
+        template = Template(long_name, "test")
+>       path = template_manager.save_template(template)
+
+tests/test_template_manager.py:311: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/book_editor/core/template_manager.py:45: in save_template
+    with path.open("w") as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/var/folders/fk/0lh15gkd79l3t56_fp_v6_xw0000gn/T/tmp342py31t/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.json')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+E       OSError: [Errno 63] File name too long: '/var/folders/fk/0lh15gkd79l3t56_fp_v6_xw0000gn/T/tmp342py31t/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.json'
+
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py:537: OSError
+__________________________ test_template_manager_save_template_with_invalid_chars __________________________
+
+template_manager = <src.book_editor.core.template_manager.TemplateManager object at 0x104a45eb0>
+
+    def test_template_manager_save_template_with_invalid_chars(template_manager):
+        """Test saving template with invalid characters in name."""
+        template = Template("Test\0Template\nWith\tInvalid\rChars", "test")
+>       path = template_manager.save_template(template)
+
+tests/test_template_manager.py:319: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/book_editor/core/template_manager.py:45: in save_template
+    with path.open("w") as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/var/folders/fk/0lh15gkd79l3t56_fp_v6_xw0000gn/T/tmpq7euiud0/Test\x00Template\nWith\tInvalid\rChars.json')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+E       ValueError: embedded null byte
+
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py:537: ValueError
+______________________________ test_template_manager_save_template_with_dots _______________________________
+
+template_manager = <src.book_editor.core.template_manager.TemplateManager object at 0x1043e94d0>
+
+    def test_template_manager_save_template_with_dots(template_manager):
+        """Test saving template with dots in name."""
+        template = Template("Test.Template.With.Dots", "test")
+        path = template_manager.save_template(template)
+        assert path.exists()
+>       assert path.name == "Test_Template_With_Dots.json"
+E       AssertionError: assert 'Test.Template.With.Dots.json' == 'Test_Template_With_Dots.json'
+E         
+E         - Test_Template_With_Dots.json
+E         ?     ^        ^    ^
+E         + Test.Template.With.Dots.json
+E         ?     ^        ^    ^
+
+tests/test_template_manager.py:329: AssertionError
+__________________________ test_template_manager_save_template_with_leading_dots ___________________________
+
+template_manager = <src.book_editor.core.template_manager.TemplateManager object at 0x1043e8a50>
+
+    def test_template_manager_save_template_with_leading_dots(template_manager):
+        """Test saving template with leading dots in name."""
+        template = Template("...Test Template", "test")
+        path = template_manager.save_template(template)
+        assert path.exists()
+>       assert path.name == "Test_Template.json"
+E       AssertionError: assert '...Test_Template.json' == 'Test_Template.json'
+E         
+E         - Test_Template.json
+E         + ...Test_Template.json
+E         ? +++
+
+tests/test_template_manager.py:337: AssertionError
+__________________________ test_template_manager_save_template_with_trailing_dots __________________________
+
+template_manager = <src.book_editor.core.template_manager.TemplateManager object at 0x1049d6f20>
+
+    def test_template_manager_save_template_with_trailing_dots(template_manager):
+        """Test saving template with trailing dots in name."""
+        template = Template("Test Template...", "test")
+        path = template_manager.save_template(template)
+        assert path.exists()
+>       assert path.name == "Test_Template.json"
+E       AssertionError: assert 'Test_Template....json' == 'Test_Template.json'
+E         
+E         - Test_Template.json
+E         + Test_Template....json
+E         ?               +++
+
+tests/test_template_manager.py:345: AssertionError
+____________________________ test_template_manager_save_template_with_only_dots ____________________________
+
+template_manager = <src.book_editor.core.template_manager.TemplateManager object at 0x1049d72a0>
+
+    def test_template_manager_save_template_with_only_dots(template_manager):
+        """Test saving template with only dots in name."""
+        template = Template("...", "test")
+>       with pytest.raises(ValueError, match="Invalid template name"):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_template_manager.py:351: Failed
+_________________________ test_template_manager_save_template_with_reserved_names __________________________
+
+template_manager = <src.book_editor.core.template_manager.TemplateManager object at 0x1049f1c10>
+
+    def test_template_manager_save_template_with_reserved_names(template_manager):
+        """Test saving template with reserved file names."""
+        reserved_names = ["CON", "PRN", "AUX", "NUL", "COM1", "LPT1"]
+        for name in reserved_names:
+            template = Template(name, "test")
+            path = template_manager.save_template(template)
+            assert path.exists()
+>           assert path.name == f"{name}_.json"
+E           AssertionError: assert 'CON.json' == 'CON_.json'
+E             
+E             - CON_.json
+E             ?    -
+E             + CON.json
+
+tests/test_template_manager.py:362: AssertionError
+========================================= short test summary info ==========================================
+FAILED tests/test_template_manager.py::test_template_manager_save_template_with_special_chars - AssertionError: assert 'Template\\With:Special*Chars.json' == 'Test_Template_With_Special_Chars.json'
+  
+  - Test_Template_With_Special_Chars.json
+  ? -----        ^    ^       ^
+  + Template\With:Special*Chars.json
+  ?         ^    ^       ^
+FAILED tests/test_template_manager.py::test_template_manager_save_template_with_spaces - AssertionError: assert '__Test___Template__.json' == 'Test_Template.json'
+  
+  - Test_Template.json
+  + __Test___Template__.json
+  ? ++    ++         ++
+FAILED tests/test_template_manager.py::test_template_manager_save_template_with_long_name - OSError: [Errno 63] File name too long: '/var/folders/fk/0lh15gkd79l3t56_fp_v6_xw0000gn/T/tmp342py31t/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.json'
+FAILED tests/test_template_manager.py::test_template_manager_save_template_with_invalid_chars - ValueError: embedded null byte
+FAILED tests/test_template_manager.py::test_template_manager_save_template_with_dots - AssertionError: assert 'Test.Template.With.Dots.json' == 'Test_Template_With_Dots.json'
+  
+  - Test_Template_With_Dots.json
+  ?     ^        ^    ^
+  + Test.Template.With.Dots.json
+  ?     ^        ^    ^
+FAILED tests/test_template_manager.py::test_template_manager_save_template_with_leading_dots - AssertionError: assert '...Test_Template.json' == 'Test_Template.json'
+  
+  - Test_Template.json
+  + ...Test_Template.json
+  ? +++
+FAILED tests/test_template_manager.py::test_template_manager_save_template_with_trailing_dots - AssertionError: assert 'Test_Template....json' == 'Test_Template.json'
+  
+  - Test_Template.json
+  + Test_Template....json
+  ?               +++
+FAILED tests/test_template_manager.py::test_template_manager_save_template_with_only_dots - Failed: DID NOT RAISE <class 'ValueError'>
+FAILED tests/test_template_manager.py::test_template_manager_save_template_with_reserved_names - AssertionError: assert 'CON.json' == 'CON_.json'
+  
+  - CON_.json
+  ?    -
+  + CON.json
+======================================= 9 failed, 16 passed in 0.40s =======================================
 venvadmin@Vics-MacBook-Air write-a-book % 

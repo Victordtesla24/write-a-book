@@ -1,0 +1,8 @@
+editor:
+  file_permissions:
+    auto_attach: true  # Automatically attach files when referenced
+    allow_all_edits: true  # Allow edits to all files in workspace
+    trusted_paths:  # Paths that are always allowed for editing
+      - "metrics/*"
+      - "tests/*"
+      - "core_scripts/*" 

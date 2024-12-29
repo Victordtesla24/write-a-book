@@ -1,6 +1,6 @@
-"""Core package for book editor."""
+"""Core module."""
 
-from .document import Document
-from .template import Template, TemplateManager
+# Import modules as needed
+from .enforcement_strategy import EnforcementStrategy, EnforcementMetrics
 
-__all__ = ["Document", "Template", "TemplateManager"]
+__all__ = ['EnforcementStrategy', 'EnforcementMetrics']
